@@ -29,7 +29,7 @@
                   <a href="#">Équation différentielle</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="integration.html">Integration</a>
+                  <a href="integration.html">Intégration</a>
                 </li>
                 <li class="submenu-item"><a href="#">Dérivation</a></li>
               </ul>
@@ -76,31 +76,31 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{-1}^{2}(5x^{3}-3x+4) dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \left[\frac{5x^4}{4} - \frac{3x^2}{2} + 4x\right]_{-1}^{2}$$</p>
-              <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} - \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
+              <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \left[\frac{5x^4}{4} - \frac{3x^2}{2} + 4x\right]_{-1}^{2}$$
+              </p>
+              <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} -
+                \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
               <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \frac{105}{4}$$</p>
             </div>
             <!-- Question 2 -->
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{3}(4x^{2} - 2x + 1) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>
-                $$\int_{0}^{3} (4x^2 - 2x + 1) \, dx = \left[\frac{4x^3}{3} - \frac{x^2}{1} + x\right]_0^3 =
-                \left(\frac{4(3)^3}{3} - (3)^2 + 3\right) - (0)$$
-              </p>
+              <p>$$\int_{0}^{3} (4x^2 - 2x + 1) \, dx = \left[\frac{4x^3}{3} - \frac{x^2}{1} + x\right]_0^3$$</p>
+              <p>$$ = \left(\frac{4(3)^3}{3} - (3)^2 + 3\right) - (0)$$</p>
               <p>$$ = \frac{108}{3} - 9 + 3 = 36 - 9 + 3 = 30$$</p>
             </div>
             <!-- Question 3 -->
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{5}(8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>$$\int_{0}^{5} (8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
@@ -122,7 +122,7 @@
                 $$\int_{-\pi}^{\frac{\pi}{2}} \cos(2\theta-\pi) -
                 \sin\left(\theta-\frac{\pi}{4}\right) d\theta$$
               </p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -140,44 +140,28 @@
                 \pi\right)}{2} + \cos\left(-\pi -
                 \frac{\pi}{4}\right)\right)$$
               </p>
-              <p>
-                $$= \left(\frac{\sin(0)}{2} +
-                \cos\left(\frac{\pi}{4}\right)\right) -
-                \left(\frac{\sin(-3\pi)}{2} +
-                \cos\left(-\frac{5\pi}{4}\right)\right) = \left(0 +
-                \frac{\sqrt{2}}{2}\right) - \left(0 -
-                \frac{\sqrt{2}}{2}\right)$$
-              </p>
+              <p>$$= \left(\frac{\sin(0)}{2} + \cos\left(\frac{\pi}{4}\right)\right) - \left(\frac{\sin(-3\pi)}{2} +
+                \cos\left(-\frac{5\pi}{4}\right)\right)$$</p>
+              <p>$$= \left(0 + \frac{\sqrt{2}}{2}\right) - \left(0 - \frac{\sqrt{2}}{2}\right)$$</p>
               <p>$$= \frac{2\sqrt{2}}{2}= \sqrt{2}$$</p>
             </div>
             <!-- Question 2 -->
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>
-                $$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx = 3 \int
-                (\sin(20x) \cos(23x))dx + 20 \int \sin(43x)dx$$
-              </p>
-              <p>
-                Nous rappelons que : \(\sin(\theta) \cos(\varphi) =
-                \frac{1}{2} [\sin(\theta + \varphi) + \sin(\theta -
-                \varphi)]\), ainsi nous avons :
-              </p>
-              <p>
-                $$ 3 \int \frac{1}{2}(\sin(43x) + \sin(-3x))dx + 20 \int
-                \sin(43x)dx = \frac{3}{2}(-\frac{1}{43} \cos(43x)
-                -\frac{1}{-3} \cos(-3x)) - 20 \times \frac{1}{43}cos(43x) + C
-                $$
-              </p>
-              <p>
-                $$ = -\frac{3}{86} \cos(43x) + \frac{3}{6} \cos(-3x) -
-                \frac{20}{43}cos(43x) + C = \frac{-3 - 40}{86}cos(43x) +
-                \frac{1}{2} \cos(-3x) + C = -\frac{1}{2}cos(43x) + \frac{1}{2}
-                \cos(-3x) + C$$
-              </p>
+              <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx $$</p>
+              <p>$$= 3 \int (\sin(20x) \cos(23x))dx + 20 \int \sin(43x)dx $$</p>
+              <p>Nous rappelons l'indentité suivante :</p>
+              <p>$$\sin(\theta) \cos(\varphi) = \frac{1}{2} [\sin(\theta + \varphi) + \sin(\theta - \varphi)]$$</p>
+              <p>Ainsi nous pouvons désormais écrire :</p>
+              <p>$$ 3 \int \frac{1}{2}(\sin(43x) + \sin(-3x))dx + 20 \int \sin(43x)dx $$</p>
+              <p>$$= \frac{3}{2}(-\frac{1}{43} \cos(43x) -\frac{1}{-3} \cos(-3x)) - 20 \frac{1}{43}cos(43x) + C $$</p>
+              <p>$$= -\frac{3}{86} \cos(43x) + \frac{3}{6} \cos(-3x) - \frac{20}{43}cos(43x) + C $$</p>
+              <p>$$= \frac{-3 - 40}{86}\cos(43x) + \frac{1}{2} \cos(-3x) + C $$</p>
+              <p>$$= -\frac{1}{2}cos(43x) + \frac{1}{2} \cos(-3x) + C $$</p>
             </div>
             <!-- Question 3 -->
 
@@ -190,7 +174,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{-1}^{1}\frac{-14}{(5x+9)^{2}} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Dans un premier lieu, nous pouvons identifier la forme \( -\frac{u'}{u^2} \) donc la primitive est \(
@@ -199,9 +183,9 @@
               <p>Ainsi \( u = 5x + 9 \) et \( u' = 5 \). Il faut désormais adapter les coefficients dans l'intégrales
               </p>
               <p>$$\int_{-1}^{1} \frac{-14}{(5x+9)^{2}} \, dx = \frac{14}{5} \cdot \int_{-1}^{1} \frac{-5}{(5x+9)^{2}}
-                \, dx$$</p>
+                \, dx $$</p>
               <p>$$= \frac{14}{5} \left[ \frac{1}{5x+9} \right]_{-1}^{1}$$</p>
-              <p>$$\left[ \frac{14}{5(5x+9)} \right]_{-1}^{1}$$</p>
+              <p>$$= \left[ \frac{14}{5(5x+9)} \right]_{-1}^{1}$$</p>
               <p>$$= \frac{14}{5} \cdot ( \frac{1}{5+9} - \frac{1}{-5+9})$$</p>
               <p>$$= \frac{14}{5} \cdot ( \frac{1}{14} - \frac{1}{4})$$</p>
               <p>$$= \frac{14}{5} \cdot \frac{2-7}{28}$$</p>
@@ -214,20 +198,19 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1}dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>
-                $$\int_{0}^{1}\frac{2x+2}{x^{2}+1} \, dx = \left[\ln(x^2+1) +
-                2\arctan(x)\right]_{0}^{1} = \ln(2) + 2\arctan(1) - \ln(1) -
-                2\arctan(0) = \ln(2) + \frac{\pi}{2}$$
-              </p>
+              <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1} \, dx $$</p>
+              <p>$$= \left[\ln(x^2+1) + 2\arctan(x)\right]_{0}^{1} $$</p>
+              <p>$$= \ln(2) + 2\arctan(1) - \ln(1) - 2\arctan(0) $$</p>
+              <p>$$= \ln(2) + \frac{\pi}{2}$$</p>
             </div>
             <!-- Question 3 -->
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{-1}^{1}\frac{2x-\pi}{\sqrt{1-x^{2}}}dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -249,23 +232,29 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Commençons par décomposer l'intégrale en deux parties :</p>
-              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx + 5\int_{0}^{1} \frac{1}{x^2 + 3} \, dx$$</p>
+              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx + 5\int_{0}^{1}
+                \frac{1}{x^2 + 3} \, dx$$</p>
               <p><b>1. Première partie :</b></p>
               <p>Pour l'intégrale de la première partie, utilisons la forme \( \frac{u'}{u} \) :</p>
-              <p>$$6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx = 6 \cdot \frac{1}{2} \left[\ln(x^2 + 3)\right]_{0}^{1} = 3\left[\ln(4) - \ln(3)\right] = 3\ln\left(\frac{4}{3}\right)$$</p>
+              <p>$$6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx = 6 \cdot \frac{1}{2} \left[\ln(x^2 + 3)\right]_{0}^{1} =
+                3\left[\ln(4) - \ln(3)\right] = 3\ln\left(\frac{4}{3}\right)$$</p>
               <p><b>2. Seconde partie :</b></p>
-              <p>Pour la seconde partie, utilisons la primitive de \( \frac{1}{x^2 + a^2} \), qui est liée à l'arctangente :</p>
-              <p>$$5\int_{0}^{1} \frac{1}{x^2 + 3} \, dx = \frac{5}{\sqrt{3}} \left[\arctan\left(\frac{x}{\sqrt{3}}\right)\right]_{0}^{1}$$</p>
+              <p>Pour la seconde partie, utilisons la primitive de \( \frac{1}{x^2 + a^2} \), qui est liée à
+                l'arctangente :</p>
+              <p>$$5\int_{0}^{1} \frac{1}{x^2 + 3} \, dx = \frac{5}{\sqrt{3}}
+                \left[\arctan\left(\frac{x}{\sqrt{3}}\right)\right]_{0}^{1}$$</p>
               <p>En calculant cette intégrale, nous obtenons :</p>
-              <p>$$\frac{5}{\sqrt{3}} \left[\arctan\left(\frac{1}{\sqrt{3}}\right) - \arctan\left(0\right)\right] = \frac{5}{\sqrt{3}} \cdot \frac{\pi}{6} = \frac{5\pi}{6\sqrt{3}}$$</p>
+              <p>$$\frac{5}{\sqrt{3}} \left[\arctan\left(\frac{1}{\sqrt{3}}\right) - \arctan\left(0\right)\right] =
+                \frac{5}{\sqrt{3}} \cdot \frac{\pi}{6} = \frac{5\pi}{6\sqrt{3}}$$</p>
               <p><b>3. Résultat final :</b></p>
               <p>En combinant les deux parties, nous obtenons le résultat final :</p>
-              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 3\ln\left(\frac{4}{3}\right) + \frac{5\pi}{6\sqrt{3}}$$</p>
-            </div>            
+              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 3\ln\left(\frac{4}{3}\right) + \frac{5\pi}{6\sqrt{3}}$$
+              </p>
+            </div>
           </div>
           <!-- Exercise 5 -->
           <div class="exercise">
@@ -274,7 +263,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{2\pi} \sin^2(x) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Utilisons l'identité trigonométrique \( \sin^2(x) = \frac{1 - \cos(2x)}{2} \) :</p>
@@ -289,7 +278,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) - 2\sin^2(x) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Commençons par séparer l'intégrale en deux intégrales plus simples :</p>
@@ -308,8 +297,8 @@
               <p>$$\int_{0}^{\frac{\pi}{2}} \cos(3x) \sin^2(3x) \, dx = \frac{1}{9} \int_{0}^{\frac{\pi}{2}} 3 \cdot 3
                 \cos(3x) \cdot \sin^2(3x) \, dx $$</p>
               <p>On sait que \( n \cdot u' \cdot u^{n-1} \, dx = u^n + C \), ainsi nous obtenons : </p>
-              <p>$$= \frac{1}{9} \left[ \sin^3(3x) \right]_0^{\frac{\pi}{2}} = \frac{1}{9} \left[ (-1)^3 - 0 \right] =
-                -\frac{1}{9} $$</p>
+              <p>$$= \frac{1}{9} \left[ \sin^3(3x) \right]_0^{\frac{\pi}{2}} $$</p>
+              <p>$$= \frac{1}{9} \left[ (-1)^3 - 0 \right] = -\frac{1}{9} $$</p>
               <p>Le résultat de la première intégrale est donc : </p>
               <h3>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx = -\frac{1}{3} - (-\frac{1}{9}) = -\frac{2}{9}$$</h3>
               <h3>2. Seconde intégrale : $$ -2 \int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx$$</h3>
@@ -344,7 +333,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int\frac{x^{3}}{1+x^{4}}dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -367,7 +356,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int\frac{x}{1+x^{4}}dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -388,7 +377,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int_{-2}^{1} \frac{4x}{(x^2 + 2)^3} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -411,7 +400,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \frac{\sqrt{x}}{x + 1} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -448,7 +437,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \tan(x) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Pour résoudre cette intégrale, nous devons utiliser la définition de la tangente :</p>
@@ -469,7 +458,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \cot(3x + 1) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>
@@ -501,7 +490,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \cos^{-6}(x) \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>$$ \cos^{-6}(x) = \frac{1}{\cos^6(x)} = \frac{1}{\cos^2(x)} \times \frac{1}{\cos^4(x)} $$</p>
@@ -538,7 +527,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int x e^x \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Pour résoudre cette intégrale, nous allons utiliser la méthode d'intégration par parties. Cette méthode
@@ -562,7 +551,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int_0^2 x^2 e^{2x+1} \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Nous choisissons \( u = x^2 \) et \( v' = e^{2x+1} \, dx \), ce qui donne :</p>
@@ -601,7 +590,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int \ln(x) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Prenons \( u = \ln(x) \) et \( v' = 1 \). Ainsi :</p>
@@ -614,7 +603,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int_{1}^{e} x \ln(x) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Soient \( u = \ln(x) \) et \( v' = x \, dx \). Ainsi :</p>
@@ -632,9 +621,9 @@
             </div>
             <!-- Question 3 -->
             <div class="question">
-              <p><b>Calculer l'intégrale \( \forall x \in ]-1,\infty[ \) :</b></p>
+              <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int \ln(x+1) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>En choisissant \( u = \ln(x+1) \) et \( v' = dx \), nous avons :</p>
@@ -658,7 +647,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Commençons par réécrire l'intégrale sous une forme plus simple :</p>
@@ -685,7 +674,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int e^x \cos(x) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Pour résoudre cette intégrale, nous utilisons la méthode de l'intégration par parties.</p>
@@ -709,14 +698,14 @@
             <h2>Fonctions trigonométriques réciproques</h2>
             <!-- Question 1 -->
             <div class="question">
-              <p><b>Calculer l'intégrale \( \forall x \in ]-1,1[ \) :</b></p>
+              <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int \arccos(x) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Pour calculer cette intégrale, nous utilisons la méthode del'intégration par parties.</p>
               <p>En choisissant \( u = \arccos(x) \) et \( v' = 1 \), nousavons :</p>
-              <p>$$ u' = \frac{-1}{\sqrt{1 - x^2}} \, dx \quad \text{et} \quadv = x $$</p>
+              <p>$$ u' = \frac{-1}{\sqrt{1 - x^2}} \, dx \quad \text{et} \quad v = x $$</p>
               <p>Appliquons la formule :</p>
               <p>$$ \int \arccos(x) \, dx = x \arccos(x) - \int\frac{-x}{\sqrt{1 - x^2}} \, dx $$</p>
               <p>$$ = x \arccos(x) - \int -x(1 - x^2)^{-\frac{1}{2}} \, dx $$</p>
@@ -726,9 +715,9 @@
             </div>
             <!-- Question 2 -->
             <div class="question">
-              <p><b>Calculer l'intégrale \( \forall x \in \mathbb{R} \) :</b></p>
+              <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int 8x \arctan(2x) \, dx $$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Effectuons une intégration par parties en choisissant \( u = \arctan(2x) \) et \( v' = x \, dx \).
@@ -770,7 +759,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \frac{1}{x^2 + 4x - 12} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Pour résoudre cette intégrale en utilisant la méthode des fractions partielles, nous devons d'abord
@@ -798,7 +787,7 @@
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$\int \frac{x}{x^2 - 10x + 21} \, dx$$</p>
-              <button class="toggle-correction">✔</button>
+              <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>Nous commençons par factoriser le dénominateur :</p>

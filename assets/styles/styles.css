@@ -110,11 +110,13 @@ body {
 .menu-toggle {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: var(--white);
   background: none;
   border: none;
   cursor: pointer;
 }
+
+
 
 /* Style du titre supérieur de chaque pages avec menu latéral */
 .titre-page {
@@ -412,8 +414,8 @@ body {
 }
 
 /* Menu sur téléphone (format portrait) */
-@media (max-aspect-ratio: 1.1) {
-  .header {
+@media (max-aspect-ratio: 0.9), (max-width: 768px) {
+  header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -427,7 +429,6 @@ body {
     font-size: 2em;
     text-align: center;
   }
-  
 
   .navbar {
     flex-direction: column;

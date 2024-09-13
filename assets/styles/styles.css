@@ -412,7 +412,7 @@ body {
 }
 
 /* Menu sur téléphone (format portrait) */
-@media (max-aspect-ratio: 0.9) {
+@media (max-aspect-ratio: 1.1) {
   .header {
     display: flex;
     flex-direction: column;

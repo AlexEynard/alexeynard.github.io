@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Équations différentielles</title>
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li class="menu-item"><a href="../index.html">Accueil</a></li>
+        <!-- Exercices -->
+        <li class="menu-item dropdown">
+          <a href="#">Exercices</a>
+          <ul class="submenu">
+            <li class="submenu-item"><a href="#">Algèbre</a></li>
+            <li class="submenu-item">
+              <a href="#">Probabilités et statistiques</a>
+            </li>
+            <li class="submenu-item dropdown">
+              <a href="#">Analyse</a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="equations_differentielles.html">Équation différentielle</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="integration.html">Intégration</a>
+                </li>
+                <li class="submenu-item"><a href="#">Dérivation</a></li>
+              </ul>
+            </li>
+            <li class="submenu-item dropdown">
+              <a href="#">Automatismes</a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="#">Identités trigonométriques</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#">Simplification d'expressions</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Ressources -->
+        <li class="menu-item"><a href="ressources.html">Resources</a></li>
+        <li class="menu-item"><a href="#">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Thèmes du chapitre</h2>
+      <ul>
+        <li><a href="#page1">Équations homogènes</a></li>
+        <li><a href="#page2">Équations linéaires du premier ordre</a></li>
+        <li><a href="#page3">Équations différentielles du second ordre</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content" id="bases">
+          <h1 class="titre-page">Les équations homogènes</h1>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_1): y'+2xy=0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>L'équation \( (E_1) \) est une équation différentielle linéaire homogène du premier ordre.</p>
+              <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = 0 \)</p>
+              <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( C \in \mathbb{R} \):</p>
+              <p>$$y_{h}(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int 2x \, dx} = Ce^{-x^2}$$</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_2): y' + e^x y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$ y_h(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int e^x \, dx} = Ce^{-e^x} $$</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_3): y' + \frac{y}{x} = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$ y_h(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int \frac{1}{x} \, dx} = Ce^{-\ln|x|} = \frac{C}{x} $$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Équations linéaires du premier ordre -->
+      <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+        <div class="section-content" id="changements_de_variable">
+          <h1 class="titre-page">Équations linéaires du premier ordre</h1>
+          <!-- Exercise 1 - Coefficients constants -->
+          <div class="exercise">
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_1): y'+2xy = x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>L'équation \( (E_1) \) est une équation différentielle linéaire du premier ordre.</p>
+              <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = b(x) \)</p>
+
+              <p>Commençons par résoudre l'équation homogène associée, c'est à dire \( y'+2xy = 0 \):</p>
+              <p>$$y_{h}(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int 2x \, dx} = Ce^{-x^2}$$</p>
+              <p>LA solution homogène de l'équation homogène s'exprime alors \(y_{h}(x) = Ce^{-x^2}\) avec \( C \in \mathbb{R} \) </p>
+
+              <p>Nous pouvons identifier une solution particulière apparente de l'équation \((E_1)\) :</p>
+              <p>$$y_{p}(x) = \frac{b(x)}{a(x)} = \frac{x}{2x} = \frac{1}{2}$$</p>
+
+              <p>Nous savons que  \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
+              <p>$$y(x) = Ce^{-x^2} + \frac{1}{2}$$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Équations différentielles du second ordre -->
+      <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">
+        <div class="section-content" id="integrations_par_parties">
+          <h1 class="titre-page">Équations différentielles du second ordre</h1>
+          <!-- Exercice 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne"></p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

@@ -82,8 +82,8 @@
             <div class="exercise-correction hidden">
               <p>L'équation \( (E_1) \) est une équation différentielle linéaire homogène du premier ordre.</p>
               <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = 0 \)</p>
-              <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( C \in \mathbb{R} \):</p>
-              <p>$$y_{h}(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int 2x \, dx} = Ce^{-x^2}$$</p>
+              <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( \lambda \in \mathbb{R} \):</p>
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
             </div>
 
             <div class="question">
@@ -92,7 +92,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>$$ y_h(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int e^x \, dx} = Ce^{-e^x} $$</p>
+              <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int e^x \, dx} = \lambda e^{-e^x} $$</p>
             </div>
 
             <div class="question">
@@ -101,7 +101,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>$$ y_h(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int \frac{1}{x} \, dx} = Ce^{-\ln|x|} = \frac{C}{x} $$</p>
+              <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int \frac{1}{x} \, dx} = \lambda e^{-\ln|x|} = \frac{\lambda}{x} $$</p>
             </div>
           </div>
         </div>
@@ -113,6 +113,7 @@
           <h1 class="titre-page">Équations linéaires du premier ordre</h1>
           <!-- Exercise 1 - Coefficients constants -->
           <div class="exercise">
+            <h2>Avec solutions particulières évidentes</h2>
             <div class="question">
               <p class="consigne">Résoudre :</p>
               <p>$$(E_1): y'+2xy = x$$</p>
@@ -123,15 +124,15 @@
               <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = b(x) \)</p>
 
               <p>Commençons par résoudre l'équation homogène associée, c'est à dire \( y'+2xy = 0 \):</p>
-              <p>$$y_{h}(x) = Ce^{-\int a(x) \, dx} = Ce^{-\int 2x \, dx} = Ce^{-x^2}$$</p>
-              <p>LA solution homogène de l'équation homogène s'exprime alors \(y_{h}(x) = Ce^{-x^2}\) avec \( C \in
-                \mathbb{R} \) </p>
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
+              <p>Les solutions homogènes de l'équation homogène s'expriment alors \(y_{h}(x) = \lambda e^{-x^2}\) avec \( \lambda \in \mathbb{R} \) </p>
 
-              <p>Nous pouvons identifier une solution particulière apparente de l'équation \((E_1)\) :</p>
-              <p>$$y_{p}(x) = \frac{b(x)}{a(x)} = \frac{x}{2x} = \frac{1}{2}$$</p>
+              <p>Nous pouvons identifier une solution particulière évidente de l'équation \((E_1)\) :</p>
+              <p>$$y_{p}(x) = \frac{1}{2}$$</p>
+              <p>En effet, on voit assez aisément que \((\frac{1}{2})' + 2x(\frac{1}{2})\) fait bien \(x\)</p>
 
               <p>Nous savons que \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
-              <p>$$y(x) = Ce^{-x^2} + \frac{1}{2}$$</p>
+              <p>$$y(x) = \lambda e^{-x^2} + \frac{1}{2}$$</p>
             </div>
           </div>
         </div>

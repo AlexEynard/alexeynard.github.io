@@ -26,10 +26,13 @@
               <a href="#">Analyse</a>
               <ul class="submenu">
                 <li class="submenu-item">
-                  <a href="equations_differentielles.html">Équation différentielle</a>
+                  <a href="equations_differentielles.html">Équations différentielles</a>
                 </li>
                 <li class="submenu-item">
                   <a href="integration.html">Intégration</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="developpements_limites.html">Développements limités</a>
                 </li>
                 <li class="submenu-item"><a href="#">Dérivation</a></li>
               </ul>
@@ -81,8 +84,7 @@
             <div class="exercise-correction hidden">
               <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \left[\frac{5x^4}{4} - \frac{3x^2}{2} + 4x\right]_{-1}^{2}$$
               </p>
-              <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} -
-                \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
+              <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} - \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
               <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \frac{105}{4}$$</p>
             </div>
             <!-- Question 2 -->
@@ -574,7 +576,8 @@
               <p>$$ 2\sqrt{x+1} -2\operatorname{artanh}\left(\sqrt{x+1}\right) + C$$</p>
 
               <p>Ainsi, après simplifications, nous obtenons finalement :</p>
-              <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx = 2 \left( \sqrt{x+1} - \operatorname{artanh}\left(\sqrt{x+1}\right)\right) + C$$</p>
+              <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx = 2 \left( \sqrt{x+1} -
+                \operatorname{artanh}\left(\sqrt{x+1}\right)\right) + C$$</p>
             </div>
           </div>
 
@@ -856,7 +859,8 @@
               <p>$$ = 4x^2 \arctan(2x) - 8 \int \frac{x^2}{1 + 4x^2} \, dx $$</p>
               <p>$$ = 4x^2 \arctan(2x) - 2 \int \frac{4x^2}{1 + 4x^2} \, dx $$</p>
               <p>$$ = 4x^2 \arctan(2x) - 2 \int \frac{4x^2 +1}{1 + 4x^2} - \frac{1}{1 + 4x^2} \, dx $$</p>
-              <p>Nous reconnaissons la forme \frac{1}{1 + u^2} qui a pour primitive la fonction u' \cdot \arctan(u), ainsi
+              <p>Nous reconnaissons la forme \frac{1}{1 + u^2} qui a pour primitive la fonction u' \cdot \arctan(u),
+                ainsi
                 nous obtenons :</p>
               <p>$$ = 4x^2 \arctan(2x) - 2 (x - 2 \arctan(2x)) + C$$</p>
               <p>$$ \int 8x \arctan(2x) \, dx = 4x^2 \arctan(2x) - 2x + 4 \arctan(2x) + C$$</p>

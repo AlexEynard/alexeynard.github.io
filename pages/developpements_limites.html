@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Développements limités</title>
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li class="menu-item"><a href="../index.html">Accueil</a></li>
+        <!-- Exercices -->
+        <li class="menu-item dropdown">
+          <a href="#">Exercices</a>
+          <ul class="submenu">
+            <li class="submenu-item"><a href="#">Algèbre</a></li>
+            <li class="submenu-item">
+              <a href="#">Probabilités et statistiques</a>
+            </li>
+            <li class="submenu-item dropdown">
+              <a href="#">Analyse</a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="equations_differentielles.html">Équations différentielles</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="integration.html">Intégration</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="developpements_limites.html">Développements limités</a>
+                </li>
+                <li class="submenu-item"><a href="#">Dérivation</a></li>
+              </ul>
+            </li>
+            <li class="submenu-item dropdown">
+              <a href="#">Automatismes</a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="#">Identités trigonométriques</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#">Simplification d'expressions</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Ressources -->
+        <li class="menu-item"><a href="ressources.html">Resources</a></li>
+        <li class="menu-item"><a href="#">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Thèmes du chapitre</h2>
+      <ul>
+        <li><a href="#page1">Formes usuelles</a></li>
+        <li><a href="#page2">Produits de fonctions</a></li>
+        <li><a href="#page3">Compositions de fonctions</a></li>
+        <li><a href="#page4">Pas en zéro</a></li>
+        <li><a href="#page5">Calculs de limites</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content" id="bases">
+          <h1 class="titre-page">Les formes usuelles</h1>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2>Les fonctions indispensables</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(e^x\) à l'ordre 5 en 0 est :</p>
+              <p>$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + o(x^5)$$</p>
+              <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} + o(x^5)$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \sin(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\sin(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \cos(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\cos(x)\) à l'ordre 4 en 0 est :</p>
+              <p>$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4)$$</p>
+              <p>$$\cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4)$$</p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : (x+1)^\alpha$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \((x+1)^\alpha\) à l'ordre 4 en 0 est :</p>
+              <p>$$ (x+1)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2}x^2 + \frac{\alpha(\alpha-1)(\alpha-2)}{6}x^3 + \frac{\alpha(\alpha-1)(\alpha-2)(\alpha-3)}{24}x^4 + o(x^4) $$</p>
+            </div>
+          </div>
+
+          <!-- Exercise 2 -->
+          <div class="exercise">
+            <h2>Les formes usuelles importantes</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \tan(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\tan(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \ln(1 + x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\ln(1 + x)\) à l'ordre 5 en 0 est :</p>
+              <p>$$\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} + o(x^5)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \frac{1}{1 - x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\frac{1}{1 - x}\) à l'ordre 6 en 0 est :</p>
+              <p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + x^5 + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \arctan(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\arctan(x)\) à l'ordre 4 en 0 est :</p>
+              <p>$$\arctan(x) = x - \frac{x^3}{3} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \arcsin(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\arcsin(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\arcsin(x) = x + \frac{x^3}{6} + \frac{3x^5}{40} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \arccos(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\arccos(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \cosh(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\cosh(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_6(0) : \sinh(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \(\sinh(x)\) à l'ordre 6 en 0 est :</p>
+              <p>$$\sinh(x) = x + \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \sqrt{x + 1}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On commence par réécrire la fonction :</p>
+              <p>$$\sqrt{1 + x} = (1 + x)^{\frac{1}{2}}$$</p>
+              <p>Nous utilisons ensuite le développement limité de \( (1 + x)^\alpha \) à l'ordre 4 en 0 pour \( \alpha = \frac{1}{2} \) :</p>
+              <p>$$\sqrt{x + 1} = (1 + x)^{\frac{1}{2}} = 1 + \frac{1}{2}x + \left(\frac{1}{2} \times \frac{-1}{2}\right)\frac{x^2}{2} + \left(\frac{1}{2} \times \frac{-1}{2} \times \frac{-3}{2}\right)\frac{x^3}{6} + \left(\frac{1}{2} \times \frac{-1}{2} \times \frac{-3}{2} \times \frac{-5}{2}\right)\frac{x^4}{24} + o(x^4)$$</p>
+              <p>En simplifiant, nous obtenons :</p>
+              <p>$$\sqrt{x + 1} = 1 + \frac{1}{2}x - \frac{1}{8}x^2 + \frac{1}{16}x^3 - \frac{5}{128}x^4 + o(x^4)$$</p>
+            </div>
+          </div>
+
+          <!-- Exercise 3 -->
+          <div class="exercise">
+            <h2>Cas simples</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \frac{1}{2 + 2x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\frac{1}{2 + 2x} = \frac{1}{2(1 + x)} = \frac{1}{2} \times \frac{1}{1 + x}$$</p>
+              <p>En utilisant le développement de \( \frac{1}{1+x}\), nous avons :</p>
+              <p>$$f(x) = \frac{1}{2}\left(1 - x + x^2 - x^3 + x^4 + o(x^4)\right)$$</p>
+              <p>$$f(x) = \frac{1}{2} - \frac{1}{2}x + \frac{1}{2}x^2 - \frac{1}{2}x^3 + \frac{1}{2}x^4 + o(x^4)$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \frac{1}{(1-x)^2}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Utilisons le fait que :</p>
+              <p>$$\frac{1}{(1-x)^2} = (1-x)^{-2}$$</p>
+              <p>Le développement limité de \( (1-x)^\alpha \) est donné par :</p>
+              <p>$$ (1-x)^\alpha = 1 - \alpha x + \frac{\alpha(\alpha-1)}{2}x^2 - \frac{\alpha(\alpha-1)(\alpha-2)}{6}x^3 + \frac{\alpha(\alpha-1)(\alpha-2)(\alpha-3)}{24}x^4 + o(x^4)$$</p>
+              <p>En posant \( \alpha = -2 \), nous obtenons :</p>
+              <p>$$ (1-x)^{-2} = 1 + 2x + 3x^2 + 4x^3 + 5x^4 + o(x^4)$$</p>
+              <p>Donc, le développement limité de \( \frac{1}{(1-x)^2} \) à l'ordre 4 est :</p>
+              <p>$$ \frac{1}{(1-x)^2} = 1 + 2x + 3x^2 + 4x^3 + 5x^4 + o(x^4)$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \ln(1 + 2x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Le développement limité de \( \ln(1+u) \) est :</p>
+              <p>$$\ln(1+u) = u - \frac{u^2}{2} + \frac{u^3}{3} - \frac{u^4}{4} + \frac{u^5}{5} + o(u^5)$$</p>
+              <p>En posant \( u = 2x \), nous obtenons :</p>
+              <p>$$\ln(1+2x) = 2x - 2x^2 + \frac{8x^3}{3} - 4x^4 + \frac{32x^5}{5} + o(x^5)$$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Les produits de fonctions -->
+      <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+        <div class="section-content" id="changements_de_variable">
+          <h1 class="titre-page">Les produits de fonctions</h1>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne"></p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Les compositions de fonctions -->
+      <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">
+        <div class="section-content" id="integrations_par_parties">
+          <h1 class="titre-page">Les compositions de fonctions</h1>
+          <!-- Exercice 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne"></p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pas en zéro -->
+      <div class="page" id="page4" style="background-color: rgba(121, 178, 225, 0.6)">
+        <div class="section-content" id="integrations_par_parties">
+          <h1 class="titre-page">Pas en zéro</h1>
+          <!-- Exercice 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne"></p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculs de limites -->
+      <div class="page" id="page5" style="background-color: rgba(121, 149, 225, 0.6)">
+        <div class="section-content" id="integrations_par_parties">
+          <h1 class="titre-page">Calculs de limites</h1>
+          <!-- Exercice 1 -->
+          <div class="exercise">
+            <h2></h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne"></p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

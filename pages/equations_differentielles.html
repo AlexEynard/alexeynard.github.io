@@ -81,11 +81,12 @@
             </div>
             <div class="exercise-correction hidden">
               <p>L'équation \( (E_1) \) est une équation différentielle linéaire homogène du premier ordre.</p>
-              <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = 0 \)</p>
+              <p>En effet, elle est de la forme : \( y' + a(x) \cdot y = 0 \)</p>
               <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( \lambda \in \mathbb{R} \):</p>
               <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
+              <img src="../assets/gif/equations_differentielles/ed_1.1.1.gif" class="gif">
             </div>
-
+            <!-- Question 2 -->
             <div class="question">
               <p class="consigne">Résoudre :</p>
               <p>$$(E_2): y' + e^x y = 0$$</p>
@@ -93,8 +94,9 @@
             </div>
             <div class="exercise-correction hidden">
               <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int e^x \, dx} = \lambda e^{-e^x} $$</p>
+              <img src="../assets/gif/equations_differentielles/ed_1.1.2.gif" class="gif">
             </div>
-
+            <!-- Question 3 -->
             <div class="question">
               <p class="consigne">Résoudre :</p>
               <p>$$(E_3): y' + \frac{y}{x} = 0$$</p>
@@ -102,6 +104,7 @@
             </div>
             <div class="exercise-correction hidden">
               <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int \frac{1}{x} \, dx} = \lambda e^{-\ln|x|} = \frac{\lambda}{x} $$</p>
+              <img src="../assets/gif/equations_differentielles/ed_1.1.3.gif" class="gif">
             </div>
           </div>
         </div>
@@ -114,16 +117,31 @@
           <!-- Exercise 1 - Coefficients constants -->
           <div class="exercise">
             <h2>Avec solutions particulières évidentes</h2>
+            <!-- Question 1 -->
             <div class="question">
               <p class="consigne">Résoudre :</p>
-              <p>$$(E_1): y'+2xy = x$$</p>
+              <p>$$(E_1): y' + y = x + 1$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p>L'équation \( (E_1) \) est une équation différentielle linéaire du premier ordre.</p>
-              <p>En effet, on peut écrire l'équation sous la forme : \( y' + a(x) \cdot y = b(x) \)</p>
+              <p>Dans un premier temps, nous allons résoudre l'équation homogène associée, c'est-à-dire \( y' + y = 0 \):</p>
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 1 \, dx} = \lambda e^{-x}$$</p>
+              <p>Les solutions homogènes sont \(y_{h}(x) = \lambda e^{-x}\) avec \( \lambda \in \mathbb{R} \)</p>
 
-              <p>Commençons par résoudre l'équation homogène associée, c'est à dire \( y'+2xy = 0 \):</p>
+              <p>Désormais, nous devons trouver la solution particulière \( y_{p}(x)\). Nous voyons que \( y_{p}(x) = x \) est une solution particulière évidente :</p>
+              <p>$$y_{p}(x) = y' + y = (x)' + x = x + 1$$</p>
+
+              <p>Nous savons que \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
+              <p>$$y(x) = \lambda e^{-x} + x $$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_2): y'+2xy = x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Commençons par résoudre l'équation homogène associée, c'est à dire \( y'+ 2xy = 0 \):</p>
               <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
               <p>Les solutions homogènes de l'équation homogène s'expriment alors \(y_{h}(x) = \lambda e^{-x^2}\) avec \( \lambda \in \mathbb{R} \) </p>
 
@@ -134,6 +152,49 @@
               <p>Nous savons que \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
               <p>$$y(x) = \lambda e^{-x^2} + \frac{1}{2}$$</p>
             </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_3): y' + y = 2e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Commençons par résoudre l'équation homogène associée, soit \( y' + y = 0 \):</p>
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 1 \, dx} = \lambda e^{-x}$$</p>
+
+              <p>Pour une solution particulière, essayons \( y_p(x) = e^x \), car :</p>
+              <p>$$y' + y = (e^x)' + e^x = e^x + e^x = 2e^x$$</p>
+              <p>\( y_p(x) = e^{x} \) est bien solution particulière de \( (E_3) \).</p>
+
+              <p>Nous obtenons ainsi :</p>
+              <p>$$y(x) = y_{h}(x) + y_{p}(x) = \lambda e^{-x} + \frac{1}{2}e^x$$</p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_4): 2y' - y = 3e^{2x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre l'équation différentielle \( (E_4) \), nous commençons par la mettre sous forme normalisée, de manière à rendre le coefficient du terme de plus haut ordre, ici \( y' \), égal à 1. Cela revient à diviser l'ensemble des termes de l'équation par le coefficient de \( y' \). Ainsi, l'équation devient :</p>
+
+              <p>$$2y' - y = 3e^{2x}$$</p>
+              <p>$$\frac{1}{2} \cdot 2y' - \frac{1}{2} \cdot y = \frac{1}{2} \cdot 3e^{2x}$$</p>
+              <p>$$y' - \frac{1}{2}y = \frac{3}{2}e^{2x}$$</p>
+              <p>Dès lors, nous pouvons résoudre l'équation homogène associée à l'équation normalisée, \( y' - \frac{1}{2}y = 0 \):</p>
+
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int -\frac{1}{2} \, dx} = \lambda e^{\frac{1}{2}x}$$</p>
+
+              <p>Pour une solution particulière, essayons \( y_p(x) = e^{2x} \) :</p>
+              <p>$$2y' - y = 2 \cdot (e^{2x})' - e^{2x} = 4e^{2x} - e^{2x} = 3e^{2x}$$</p>
+              <p>Ainsi, \( y_p(x) = e^{2x} \) est bien solution particulière de \( (E_4) \).</p>
+              <p>Nous obtenons donc :</p>
+              <p>$$y(x) = y_{h}(x) + y_{p}(x) = \lambda e^{\frac{1}{2}x} + e^{2x}$$</p>
+            </div>
+
+
+
+
           </div>
         </div>
       </div>

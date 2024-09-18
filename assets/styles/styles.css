@@ -11,7 +11,7 @@ html {
   --shadow: 0.15em 0.15em 0.25em rgba(0, 0, 0, 0.15);
   --dark-shadow: 0.15em 0.15em 0.3em rgba(0, 0, 0, 0.2);
   --shadow-footer: 0 -0.15em 0.3em rgba(0, 0, 0, 0.2);
-  --border-radius : 0.5em;
+  --border-radius: 0.5em;
 }
 
 /* Style de la page */
@@ -192,6 +192,12 @@ body {
   font-size: 110%;
 }
 
+.gif {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 30vw;
+}
+
 /* Style de la partie correction */
 .exercise-correction {
   background-color: #7bc51b62;
@@ -350,9 +356,9 @@ body {
   }
 
   .exercise {
-  width: 90%;
-  float: none;
-  margin: 2% auto;
+    width: 90%;
+    float: none;
+    margin: 2% auto;
   }
 
   .exercise-menu {
@@ -399,7 +405,8 @@ body {
   .sidebar a:hover {
     background-color: var(--primary-color-transparent);
     color: #8deeff;
-    transform: scale(1); /* Retire l'effet de grossissment */
+    transform: scale(1);
+    /* Retire l'effet de grossissment */
     box-shadow: var(--shadow);
   }
 
@@ -411,10 +418,16 @@ body {
   .section-content {
     padding: 0.5em;
   }
+
+  .gif {
+    width: 50vw;
+  }
+
 }
 
 /* Menu sur téléphone (format portrait) */
-@media (max-aspect-ratio: 0.9), (max-width: 768px) {
+@media (max-aspect-ratio: 0.9),
+(max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
@@ -447,7 +460,8 @@ body {
     padding: 0.75rem 1rem;
   }
 
-  .question p, .exercise-correction p {
+  .question p,
+  .exercise-correction p {
     font-size: 3vw;
   }
 
@@ -475,5 +489,8 @@ body {
   .dropdown .submenu .submenu {
     left: 0;
   }
-}
 
+  .gif {
+    width: 70vw;
+  }
+}

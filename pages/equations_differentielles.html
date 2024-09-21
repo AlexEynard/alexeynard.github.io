@@ -131,8 +131,8 @@
               <p>Désormais, nous devons trouver la solution particulière \( y_{p}(x)\). Nous voyons que \( y_{p}(x) = x \) est une solution particulière évidente :</p>
               <p>$$y_{p}(x) = y' + y = (x)' + x = x + 1$$</p>
 
-              <p>Nous savons que \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
-              <p>$$y(x) = \lambda e^{-x} + x $$</p>
+              <p>Nous savons que \( y_{g}(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
+              <p>$$y_{g}(x) = \lambda e^{-x} + x $$</p>
             </div>
             <!-- Question 2 -->
             <div class="question">
@@ -149,8 +149,8 @@
               <p>$$y_{p}(x) = \frac{1}{2}$$</p>
               <p>En effet, on voit assez aisément que \((\frac{1}{2})' + 2x(\frac{1}{2})\) fait bien \(x\)</p>
 
-              <p>Nous savons que \( y(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
-              <p>$$y(x) = \lambda e^{-x^2} + \frac{1}{2}$$</p>
+              <p>Nous savons que \( y_{g}(x) = y_{h}(x) + y_{p}(x)\), ainsi :</p>
+              <p>$$y_{g}(x) = \lambda e^{-x^2} + \frac{1}{2}$$</p>
             </div>
             <!-- Question 3 -->
             <div class="question">
@@ -164,10 +164,10 @@
 
               <p>Pour une solution particulière, essayons \( y_p(x) = e^x \), car :</p>
               <p>$$y' + y = (e^x)' + e^x = e^x + e^x = 2e^x$$</p>
-              <p>\( y_p(x) = e^{x} \) est bien solution particulière de \( (E_3) \).</p>
+              <p>\( e^{x} \) est bien solution particulière de \( (E_3) \).</p>
 
               <p>Nous obtenons ainsi :</p>
-              <p>$$y(x) = y_{h}(x) + y_{p}(x) = \lambda e^{-x} + \frac{1}{2}e^x$$</p>
+              <p>$$y_{g}(x) = y_{h}(x) + y_{p}(x) = \lambda e^{-x} + \frac{1}{2}e^x$$</p>
             </div>
             <!-- Question 4 -->
             <div class="question">
@@ -187,17 +187,72 @@
 
               <p>Pour une solution particulière, essayons \( y_p(x) = e^{2x} \) :</p>
               <p>$$2y' - y = 2 \cdot (e^{2x})' - e^{2x} = 4e^{2x} - e^{2x} = 3e^{2x}$$</p>
-              <p>Ainsi, \( y_p(x) = e^{2x} \) est bien solution particulière de \( (E_4) \).</p>
+              <p>Ainsi, \( e^{2x} \) est bien solution particulière de \( (E_4) \).</p>
               <p>Nous obtenons donc :</p>
-              <p>$$y(x) = y_{h}(x) + y_{p}(x) = \lambda e^{\frac{1}{2}x} + e^{2x}$$</p>
+              <p>$$y_{g}(x) = y_{h}(x) + y_{p}(x) = \lambda e^{\frac{1}{2}x} + e^{2x}$$</p>
             </div>
+          </div>
+          <!-- Exercice 2 -->
+          <div class="exercise">
+            <h2>Comprendre la méthode</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_1): (x+1)y' + y = x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous allons normaliser l'équation :</p>
+              <p>$$y' + \frac{1}{x+1} y = \frac{x}{x+1}$$</p>
 
+              <p>Nous pouvons désormais déterminer les solutions de l'équation homogène associée :</p>
+              <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int \frac{1}{x+1} dx} = \lambda e^{-\ln|x+1|} = \frac{\lambda}{x+1}$$</p>
+              
+              
+              <p>Il y a deux méthodes principales pour trouver les solutions particulières : la méthode de variation des constantes ou l'utilisation d'un facteur intégrant.</p>
+              <p>Pour toutes les équations différentielles de cette partie je vais réaliser la correction en utilisant les 2 méthodes.</p>
 
+              <p><h4>Méthode de variation de la constante :</h4></p>
+              <p>Nous recherchons a priori \( y_{p} \) sous la forme \( \frac{\lambda(x)}{x+1} \) où \lambda(x) est une fonction de classe \( C^1 \) à determiner :</p>
+              <p>Afin de faciliter le calcul, on peut écrire \( y_{p} = \frac{\lambda(x)}{x+1} \) sous la forme \( \lambda(x) \cdot \frac{1}{x+1} \) ce qui correspond à une forme u \cdot v, avec \( u = \lambda(x) \) et \( v = \frac{1}{x+1} \).</p>
 
+              <p>$$y'_{p} = (u \cdot v)' = u'v + uv'$$</p>
+              <p>$$= \lambda'(x)\frac{1}{x+1} + \lambda(x)\frac{-1}{(x+1)^2}$$</p>
+
+              <p>On injecte dans \( (E_1) \), qui ne dois pas obligatoirement être sous sa forme normalisée, ce qui nous donne :</p>
+              <p>$$(x+1)y'_{p} + y_{p} = x$$</p>
+              <p>$$ \text{ssi} \space (x+1)(\lambda'(x)\frac{1}{x+1} + \lambda(x)\frac{-1}{(x+1)^2}) + \frac{\lambda(x)}{x+1} = x$$</p>
+              <p>$$ \text{ssi} \space \lambda'(x) + \frac{-\lambda(x)}{(x+1)} + \frac{\lambda(x)}{x+1} = x$$</p>
+              <p>$$ \text{ssi} \space \lambda'(x) = x$$</p>
+              <p><p>$$ \text{ssi} \space \lambda(x) = \frac{x^2}{2}$$</p></p>
+              <p>Nous pouvons ainsi écrire :</p>
+              <p>$$y_{p} = \frac{\lambda(x)}{x+1} = \frac{\frac{x^2}{2}}{x+1} = \frac{x^2}{2(x+1)}$$</p>
+
+              <p><h4>En utilisant le facteur intégrant :</h4></p>
+              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+              <p>$$\mu(x) = e^{\int \frac{1}{x+1} dx} = e^{\ln|x+1|} = x+1$$</p>
+          
+              <p>En multipliant l'équation normalisé par ce facteur intégrant nous avons :</p>
+              <p>$$(x+1)y' + y = x$$</p>
+              
+              <p>On remarque que le côté gauche fait apparaitre la forme \( u'v + uv' \), avec \( u = (x+1) \) et \( v = y \):</p>
+              
+              <p>$$((x+1)y)' = x$$</p>
+              <p><b>Note :</b> La partie de gauche s'exprimera toujours de la manière suivant avec \( u = \mu(x) \) et \( v = y \), sachant cela nous pouvons écrire :</p>
+              <p>Nous intégrons alors les deux côtés :</p>
+              <p>$$(x+1)y = \frac{x^2}{2}$$</p>
+              <p>$$y = \frac{x^2}{2(x+1)}$$</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales s'écrivent :</p>
+              <p>$$y_{g}(x) = y_{h}(x) + y_{p}(x) = \frac{\lambda}{x+1} + \frac{x^2}{2(x+1)} = \frac{2\lambda + x^2}{2x+2}$$</p>
+            </div>
 
           </div>
         </div>
       </div>
+
+
 
       <!-- Équations différentielles du second ordre -->
       <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">

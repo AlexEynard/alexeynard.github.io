@@ -247,7 +247,161 @@
               <p>Les solutions générales s'écrivent :</p>
               <p>$$y_{g}(x) = y_{h}(x) + y_{p}(x) = \frac{\lambda}{x+1} + \frac{x^2}{2(x+1)} = \frac{2\lambda + x^2}{2x+2}$$</p>
             </div>
-
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_2): y' + 2\tan(x) y = \sin(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            
+            <div class="exercise-correction hidden">
+              <p>Commençons par déterminer les solutions de l'équation homogène associée :</p>
+              <p>$$y_h(x) = \lambda e^{-\int 2\tan(x) dx} = \lambda e^{2\ln|\cos(x)|} = \lambda \cos^2(x)$$</p>
+            
+              <h4>Méthode de variation de la constante :</h4>
+              <p>Nous recherchons \( y_p \) sous la forme \( \lambda(x) \cos^2(x) \), où \( \lambda(x) \) est une fonction de classe \( C^1 \) à déterminer :</p>
+            
+              <p>Calculons la dérivée de \( y_p(x) \) :</p>
+              <p>$$y'_p(x) = \lambda'(x) \cos^2(x) - 2\lambda(x)\sin(x)\cos(x)$$</p>
+            
+              <p>Nous injectons \( y'_p(x) \) dans l'équation initiale \( (E_2) \) :</p>
+              <p>$$ \lambda'(x) \cos^2(x) - 2\lambda(x)\sin(x)\cos(x) + 2\tan(x) \lambda(x) \cos^2(x) = \sin(x)$$</p>
+              <p>$$ \lambda'(x) \cos^2(x) - 2\lambda(x)\sin(x)\cos(x) + 2\lambda(x)\sin(x)\cos(x)  = \sin(x)$$</p>
+              <p>$$ \lambda'(x) = \frac{\sin(x)}{\cos^2(x)}$$</p>
+            
+              <p>En intégrant des deux côtés :</p>
+              <p>$$ \lambda(x) = \int \frac{\sin(x)}{\cos^2(x)} dx$$</p>
+            
+              <p>Nous procédons par substitution, en posant \( u = \cos(x) \) et \( du = -\sin(x) dx \). Ce qui donne :</p>
+              <p>$$ \lambda(x) = \int -\frac{du}{u^2} = \frac{1}{u} = \frac{1}{\cos(x)}$$</p>
+            
+              <p>Nous obtenons donc la solution particulière :</p>
+              <p>$$ y_p(x) = \lambda(x) \cos^2(x) = \frac{1}{\cos(x)}\cos^2(x) = \cos(x)$$</p>
+            
+              <h4>En utilisant le facteur intégrant :</h4>
+              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+              <p>$$ \mu(x) = e^{\int 2\tan(x) dx} = \frac{1}{\cos^2(x)}$$</p>
+            
+              <p>En multipliant l'équation par \( \mu(x) \), nous obtenons :</p>
+              <p>$$ \frac{1}{\cos^2(x)} y' + 2\tan(x) \frac{1}{\cos^2(x)} y = \frac{\sin(x)}{\cos^2(x)}$$</p>
+            
+              <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{1}{\cos^2(x)} y \) :</p>
+              <p>$$ \left( \frac{1}{\cos^2(x)} y \right)' = \frac{\sin(x)}{\cos^2(x)}$$</p>
+            
+              <p>En intégrant les deux côtés :</p>
+              <p>$$ \frac{1}{\cos^2(x)} y = \int \frac{\sin(x)}{\cos^2(x)} dx$$</p>
+              <p>Le calcul de l'intégrale est identique à celui effectué précédemment, nous obtenons donc :</p>
+              <p>$$ \frac{1}{\cos^2(x)} y = \frac{1}{\cos(x)}$$</p>
+              <p>Ce qui donne encore une fois la solution particulière :</p>
+              <p>$$ y_p(x) = \cos(x)$$</p>
+            
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales de l'équation sont donc :</p>
+              <p>$$ y_g(x) = \lambda \cos^2(x) + \cos(x)$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_3): xy' - y = x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            
+            <div class="exercise-correction hidden">
+              <p>Commençons par réécrire l'équation sous forme normalisée :</p>
+              <p>$$ y' - \frac{y}{x} = 1$$</p>
+            
+              <h4>Solutions de l'équation homogène associée :</h4>
+              <p>$$ y_h(x) = \lambda e^{\int \frac{1}{x} dx} = \lambda e^{\ln|x|} = \lambda x$$</p>
+            
+              <h4>Méthode de variation de la constante :</h4>
+              <p>Nous recherchons \( y_p \) sous la forme \( \lambda(x) x \), où \( \lambda(x) \) est une fonction de classe \( C^1 \) à déterminer :</p>
+            
+              <p>Calculons la dérivée de \( y_p(x) \) :</p>
+              <p>$$ y'_p(x) = \lambda'(x) x + \lambda(x) $$</p>
+            
+              <p>Injectons cette expression dans \( (E_3) \) :</p>
+              <p>$$ \lambda'(x) x + \lambda(x) - \frac{\lambda(x) x}{x} = 1$$</p>
+              <p>$$ \lambda'(x) x = 1 $$</p>
+            
+              <p>En divisant par \( x \), nous obtenons :</p>
+              <p>$$ \lambda'(x) = \frac{1}{x}$$</p>
+            
+              <p>En intégrant des deux côtés :</p>
+              <p>$$ \lambda(x) = \ln|x|$$</p>
+            
+              <p>Nous obtenons donc la solution particulière :</p>
+              <p>$$ y_p(x) = \ln|x| \cdot x$$</p>
+            
+              <h4>En utilisant le facteur intégrant :</h4>
+              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+              <p>$$ \mu(x) = e^{\int -\frac{1}{x} dx} = \frac{1}{x} $$</p>
+            
+              <p>En multipliant l'équation normalisée par ce facteur intégrant :</p>
+              <p>$$ \frac{1}{x} y' - \frac{y}{x^2} = \frac{1}{x}$$</p>
+            
+              <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{y}{x} \) :</p>
+              <p>$$ \left( \frac{y}{x} \right)' = \frac{1}{x}$$</p>
+            
+              <p>En intégrant les deux côtés :</p>
+              <p>$$ \frac{y}{x} = \ln|x|$$</p>
+              <p>$$ y_p(x) = x \ln|x|$$</p>
+            
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales de l'équation sont :</p>
+              <p>$$ y_g(x) = \lambda x + x \ln|x|$$</p>
+            </div>
+            <!-- Question 4 -->   
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_4): xy' - y = x\ln(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            
+            <div class="exercise-correction hidden">
+              <p>Réécrivons l'équation sous forme normalisée :</p>
+              <p>$$ y' - \frac{y}{x} = \ln(x)$$</p>
+            
+              <h4>Solutions de l'équation homogène associée :</h4>
+              <p>$$ y_h(x) = \lambda e^{\int \frac{1}{x} dx} = \lambda e^{\ln|x|} = \lambda x$$</p>
+            
+              <h4>Méthode de variation de la constante :</h4>
+              <p>Nous recherchons \( y_p \) sous la forme \( \lambda(x) x \), où \( \lambda(x) \) est une fonction de classe \( C^1 \) à déterminer :</p>
+            
+              <p>Calculons la dérivée de \( y_p(x) \) :</p>
+              <p>$$ y'_p(x) = \lambda'(x) x + \lambda(x) $$</p>
+            
+              <p>Injectons cette expression dans \( (E_4) \) :</p>
+              <p>$$ \lambda'(x) x + \lambda(x) - \frac{\lambda(x) x}{x} = \ln(x)$$</p>
+              <p>$$ \lambda'(x) x = \ln(x) $$</p>
+            
+              <p>En divisant par \( x \), nous obtenons :</p>
+              <p>$$ \lambda'(x) = \frac{\ln(x)}{x}$$</p>
+            
+              <p>En intégrant des deux côtés :</p>
+              <p>$$ \lambda(x) = \frac{1}{2} \ln^2(x)$$</p>
+            
+              <p>Nous obtenons donc la solution particulière :</p>
+              <p>$$ y_p(x) = \frac{1}{2} \ln^2(x) \cdot x = \frac{x}{2} \ln^2(x)$$</p>
+            
+              <h4>En utilisant le facteur intégrant :</h4>
+              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+              <p>$$ \mu(x) = e^{\int -\frac{1}{x} dx} = \frac{1}{x} $$</p>
+            
+              <p>En multipliant l'équation normalisée par ce facteur intégrant :</p>
+              <p>$$ \frac{1}{x} y' - \frac{y}{x^2} = \frac{\ln(x)}{x}$$</p>
+            
+              <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{y}{x} \) :</p>
+              <p>$$ \left( \frac{y}{x} \right)' = \frac{\ln(x)}{x}$$</p>
+            
+              <p>En intégrant les deux côtés :</p>
+              <p>$$ \frac{y}{x} = \frac{1}{2} \ln^2(x)$$</p>
+              <p>$$ y_p(x) = \frac{x}{2} \ln^2(x)$$</p>
+            
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales de l'équation sont :</p>
+              <p>$$ y_g(x) = \lambda x + \frac{x}{2} \ln^2(x)$$</p>
+            </div>
+            
           </div>
         </div>
       </div>

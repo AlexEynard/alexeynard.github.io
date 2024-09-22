@@ -245,8 +245,7 @@ body {
 /* Menu latéral des thèmes traités dans le chapitre */
 .sidebar {
   position: fixed;
-  width: 15%;
-  max-width: 16em;
+  width: 13vw;
   background-color: var(--contrast-color);
   color: var(--white);
   text-align: center;
@@ -348,8 +347,8 @@ body {
 
 
 /* Afin d'éviter que le menu latéral gêne */
-@media (max-aspect-ratio: 1.6) {
-
+@media (max-aspect-ratio: 1.6),
+(max-width: 1080px) {
   .titre-page {
     font-size: 2.2em;
     float: none;
@@ -427,8 +426,8 @@ body {
 }
 
 /* Menu sur téléphone (format portrait) */
-@media (max-aspect-ratio: 0.9),
-(max-width: 768px) {
+@media (max-aspect-ratio: 0.75),
+(max-width: 750px) {
   header {
     display: flex;
     flex-direction: column;

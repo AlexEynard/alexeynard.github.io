@@ -121,9 +121,11 @@ body {
 /* Style du titre supérieur de chaque pages avec menu latéral */
 .titre-page {
   position: static;
+  width: 75%;
+  font-size: 2.5em;
+  text-align: center;
   float: inline-end;
-  font-size: 2rem;
-  margin-right: 20vw;
+  margin: 0.8em 4%;
 }
 
 

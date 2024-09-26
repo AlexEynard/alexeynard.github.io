@@ -61,8 +61,8 @@
       <h2>Thèmes du chapitre</h2>
       <ul>
         <li><a href="#page1">Équations homogènes</a></li>
-        <li><a href="#page2">Équations linéaires du premier ordre</a></li>
-        <li><a href="#page3">Équations différentielles du second ordre</a></li>
+        <li><a href="#page2">Équations linéaires du \( 1^{\text{er}} \) ordre</a></li>
+        <li><a href="#page3">Équations différentielles du \( 2^{\text{nd}} \) ordre</a></li>
       </ul>
     </div>
 
@@ -72,7 +72,7 @@
           <h1 class="titre-page">Les équations homogènes</h1>
           <!-- Exercise 1 -->
           <div class="exercise">
-            <h2></h2>
+            <h2>Équations homogènes linéaires du premier ordre</h2>
             <!-- Question 1 -->
             <div class="question">
               <p class="consigne">Résoudre :</p>
@@ -105,6 +105,106 @@
             <div class="exercise-correction hidden">
               <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int \frac{1}{x} \, dx} = \lambda e^{-\ln|x|} = \frac{\lambda}{x} $$</p>
               <img src="../assets/gif/equations_differentielles/ed_1.1.3.gif" class="gif">
+            </div>
+          </div>
+          <!-- Exercise 2 -->
+          <div class="exercise">
+            <h2>Équations homogènes linéaires du second ordre</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_1): y'' - 5y' + 6y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_1) \).</p>
+              <p>$$r^2 - 5r + 6 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1$$</p>
+              <p>Comme \( \Delta > 0 \) nous avons donc deux racines réelles simples. Les racines de l'équation sont :</p>
+              <p>$$r_1 = \frac{-(-5) + \sqrt{1}}{2} = 3, \quad r_2 = \frac{-(-5) - \sqrt{1}}{2} = 2$$</p>
+              <p>La solution homogène est donc :</p>
+              <p>$$y(x) = \lambda e^{r_1x} + \mu e^{r_2x} = \lambda e^{3x} + \mu e^{2x}$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_2): y'' - 4y' + 4y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_2) \).</p>
+              <p>$$r^2 - 4r + 4 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (-4)^2 - 4 \cdot 1 \cdot 4 = 16 - 16 = 0$$</p>
+              <p>Comme \( \Delta = 0 \) nous avons donc une racine réelle double. La racine de l'équation est :</p>
+              <p>$$r = \frac{4}{2} = 2$$</p>
+              <p>La solution homogène de cette équation est donc :</p>
+              <p>$$y(x) = (\lambda + \mu x) e^{rx} = (\lambda + \mu x) e^{2x}$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_3): y'' - y' - 12y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_3) \).</p>
+              <p>$$r^2 - r - 12 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (-1)^2 - 4 \cdot 1 \cdot (-12) = 1 + 48 = 49$$</p>
+              <p>Comme \( \Delta > 0 \) nous avons donc deux racines réelles simples. Les racines de l'équation sont :</p>
+              <p>$$r_1 = \frac{1 + 7}{2} = 4, \quad r_2 = \frac{1 - 7}{2} = -3$$</p>
+              <p>La solution homogène est donc :</p>
+              <p>$$y(x) = \lambda e^{r_1x} + \mu e^{r_2x} = \lambda e^{4x} + \mu e^{-3x}$$</p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_4): 2y'' + 4y' + 10y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_4) \).</p>
+              <p>$$2r^2 + 4r + 10 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (4)^2 - 4 \cdot 2 \cdot 10 = 16 - 80 = -64$$</p>
+              <p>Comme \( \Delta &lt; 0 \), nous devons trouver \( \alpha \text{ et } \beta \) afin de trouver la solution homogène :</p>
+              <p>$$\alpha = \frac{-b}{2a} = -1 \text{ et } \beta = \frac{\sqrt{-\Delta}}{2a} = 2$$</p>
+              <p>La solution homogène est donc :</p>
+              <p>$$y(x) = e^{\alpha x} \left(\lambda \cos(\beta x) + \mu \sin(\beta x)\right) = e^{-x} \left(\lambda \cos(2x) + \mu \sin(2x)\right)$$</p>
+            </div>
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_5): y'' + 6y' + 10y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_5) \).</p>
+              <p>$$r^2 + 6r + 10 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (6)^2 - 4 \cdot 1 \cdot 10 = 36 - 40 = -4$$</p>
+              <p>Comme \( \Delta &lt; 0 \), nous devons trouver \( \alpha \text{ et } \beta \) afin de trouver la solution homogène :</p>
+              <p>$$\alpha = \frac{-b}{2a} = -3 \text{ et } \beta = \frac{\sqrt{-\Delta}}{2a} = 1$$</p>
+              <p>La solution homogène est donc :</p>
+              <p>$$y(x) = e^{\alpha x} \left(\lambda \cos(\beta x) + \mu \sin(\beta x)\right) = e^{-3x} \left(\lambda \cos(x) + \mu \sin(x)\right)$$</p>
+            </div>
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_6): y'' - 6y' + 9y = 0$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_6) \).</p>
+              <p>$$r^2 - 6r + 9 = 0$$</p>
+              <p>Le discriminant de cette équation caractéristique est :</p>
+              <p>$$\Delta = (-6)^2 - 4 \cdot 1 \cdot 9 = 36 - 36 = 0$$</p>
+              <p>Comme \( \Delta = 0 \), nous avons donc une racine réelle double. La racine de l'équation est :</p>
+              <p>$$r = \frac{6}{2} = 3$$</p>
+              <p>La solution homogène de cette équation est donc :</p>
+              <p>$$y(x) = (\lambda + \mu x) e^{rx} = (\lambda + \mu x) e^{3x}$$</p>
             </div>
           </div>
         </div>
@@ -478,18 +578,215 @@
         <h1 class="titre-page">Équations différentielles du second ordre</h1>
         <!-- Exercice 1 -->
         <div class="exercise">
-          <h2></h2>
+          <h2>Forme exponentielle</h2>
           <!-- Question 1 -->
           <div class="question">
-            <p class="consigne"></p>
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_1): y'' + 3y' + 2y = e^x$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
           <div class="exercise-correction hidden">
-            <p></p>
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
+            <p>$$(H_1): y'' + 3y' + 2y = 0$$</p>
+            <p>L'équation caractéristique de l'équation homogène associée s'écrit ainsi :</p>
+            <p>$$ r^2 + 3r + 2 = 0$$</p>
+            <p>Le discriminant de cette équation est :</p>
+            <p>$$ \Delta = b^2 - 4ac = (3)^2 - 4 \cdot 1 \cdot 2 = 9 - 8 = 1$$</p>
+            <p>Comme \( \Delta > 0 \), nous avons deux racines réelles distinctes :</p>
+            <p>$$ r_1 = \frac{-b + \sqrt{\Delta}}{2a} = \frac{-3 + \sqrt{1}}{2} = -1, \quad r_2 = \frac{-b - \sqrt{\Delta}}{2a} = \frac{-3 - \sqrt{1}}{2} = -2$$</p>
+            <p>La solution générale de l'équation homogène est donc :</p>
+            <p>$$ y_h(x) = \lambda e^{r_1 x} + \mu e^{r_2 x} = \lambda e^{-x} + \mu e^{-2x} $$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Passons maintenant à la partie non homogène de l'équation \( y'' + 3y' + 2y = e^x \).</p>
+            <p>Nous utilisons la méthode des coefficients indéterminés. Puisque le terme non homogène est \( e^x \), essayons une solution particulière de la forme :</p>
+            <p>$$ y_p(x) = A e^x $$</p>
+
+            <p>Calculons les dérivées de \( y_p(x) \) :</p>
+            <p>$$ y'_p(x) = A e^x $$</p>
+            <p>$$ y''_p(x) = A e^x $$</p>
+
+            <p>Substituons ces expressions dans l'équation différentielle :</p>
+            <p>$$ y'' + 3y' + 2y = A e^x + 3A e^x + 2A e^x = (A + 3A + 2A) e^x = 6A e^x $$</p>
+            <p>En comparant avec le terme non homogène \( e^x \), nous obtenons :</p>
+            <p>$$ 6A = 1 \quad \text{donc} \quad A = \frac{1}{6} $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = \frac{1}{6} e^x $$</p>
+            <p>La solution générale de l'équation différentielle complète est la somme de la solution homogène et de la solution particulière :</p>
+            <p>$$ y(x) = y_h(x) + y_p(x) = \lambda e^{-x} + \mu e^{-2x} + \frac{1}{6} e^x $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>La solution générale est :</p>
+            <p>$$ y(x) = \lambda e^{-x} + \mu e^{-2x} + \frac{1}{6} e^x $$</p>
+          </div>
+          <!-- Question 2 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_2): y'' - 4y' + 4y = e^{2x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
+            <p>$$(H_2): y'' - 4y' + 4y = 0$$</p>
+            <p>L'équation caractéristique associée est :</p>
+            <p>$$ r^2 - 4r + 4 = 0 $$</p>
+
+            <p>Le discriminant est donné par :</p>
+            <p>$$ \Delta = b^2 - 4ac = (-4)^2 - 4 \cdot 1 \cdot 4 = 16 - 16 = 0 $$</p>
+            <p>Comme \( \Delta = 0 \), nous avons une racine double.</p>
+
+            <p>La racine de l'équation caractéristique est :</p>
+            <p>$$ r = \frac{-b}{2a} = \frac{4}{2} = 2 $$</p>
+            <p>La solution générale de l'équation homogène dans le cas d'une racine double est :</p>
+            <p>$$ y_h(x) = (\lambda + \mu x) e^{2x} $$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>La partie non homogène est \( e^{2x} \), qui est déjà une solution de l'équation homogène. Nous essayons donc une solution particulière sous la forme :</p>
+            <p>$$ y_p(x) = A x^2 e^{2x} $$</p>
+
+            <p>Calculons les dérivées de \( y_p(x) \) :</p>
+            <p>$$ y'_p(x) = 2A x e^{2x} + 2A x^2 e^{2x} $$</p>
+            <p>$$ y''_p(x) = 2A e^{2x} + 8A x e^{2x} + 4A x^2 e^{2x} $$</p>
+
+            <p>Substituons ces expressions dans l'équation différentielle :</p>
+            <p>$$ (2A e^{2x} + 8A x e^{2x} + 4A x^2 e^{2x}) - 4(2A x e^{2x} + 2A x^2 e^{2x}) + 4A x^2 e^{2x} = e^{2x} $$</p>
+            <p>En simplifiant :</p>
+            <p>$$ 2A e^{2x} = e^{2x} $$</p>
+            <p>Donc :</p>
+            <p>$$ 2A = 1 \quad \text{donc} \quad A = \frac{1}{2} $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = \frac{1}{2} x^2 e^{2x} $$</p>
+
+            <p>La solution générale de l'équation différentielle est :</p>
+            <p>$$ y(x) = (\lambda + \mu x) e^{2x} + \frac{1}{2} x^2 e^{2x} $$</p>
+
+            <h4>Étape 3 : Expression de la solution générale</h4>
+            <p>La solution générale est :</p>
+            <p>$$ y(x) = (\lambda + \mu x) e^{2x} + \frac{1}{2} x^2 e^{2x} $$</p>
+          </div>
+          <!-- Question 2 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_3): y'' - y = e^{2x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Résolvons d'abord l'équation homogène associée :</p>
+            <p>$$(H_3): y'' - y = 0$$</p>
+            <p>L'équation caractéristique est :</p>
+            <p>$$ r^2 - 1 = 0 $$</p>
+            <p>$$ r^2 = 1 $$</p>
+            <p>Les racines sont donc :</p>
+            <p>$$ r_1 = 1, \quad r_2 = -1 $$</p>
+            <p>La solution générale de l'équation homogène est :</p>
+            <p>$$ y_h(x) = \lambda e^x + \mu e^{-x} $$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Comme le terme de droite \( f(x) = e^{2x} \) et que nous n'avons pas de racine égale à 2, essayons une solution particulière de la forme suivante :</p>
+            <p>$$ y_p(x) = A e^{2x} \text{ avec } A \in \mathbb{R} $$</p>
+
+            <p>Calculons les dérivées :</p>
+            <p>$$ y'_p(x) = 2A e^{2x}, \quad y''_p(x) = 4A e^{2x} $$</p>
+
+            <p>Substituons dans l'équation différentielle \( (E_3) \) :</p>
+            <p>$$ 4A e^{2x} - A e^{2x} = e^{2x} $$</p>
+            <p>Nous obtenons :</p>
+            <p>$$ 3A e^{2x} = e^{2x} \quad \text{donc} \quad A = \frac{1}{3} $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = \frac{1}{3} e^{2x} $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>La solution générale est donc :</p>
+            <p>$$ y(x) = \lambda e^x + \mu e^{-x} + \frac{1}{3} e^{2x} $$</p>
+          </div>
+          <!-- Question 3 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_4): y'' - 3y' + 2y = 5 e^{x} - 3 e^{2x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
+            <p>$$(H_4): y'' - 3y' + 2y = 0$$</p>
+
+            <p>Pour cela, nous formons l'équation caractéristique :</p>
+            <p>$$ r^2 - 3r + 2 = 0 $$</p>
+
+            <p>Pour résoudre cette équation, nous appliquons la formule quadratique :</p>
+            <p>$$ r = \frac{-b \pm \sqrt{\Delta}}{2a} $$</p>
+            <p>Où \( \Delta = b^2 - 4ac \) est le discriminant. Ici, \( a = 1 \), \( b = -3 \), et \( c = 2 \).</p>
+
+            <p>Calculons le discriminant :</p>
+            <p>$$ \Delta = (-3)^2 - 4 \cdot 1 \cdot 2 = 9 - 8 = 1 $$</p>
+
+            <p>Comme \( \Delta > 0 \), nous avons deux racines réelles distinctes :</p>
+            <p>$$ r_1 = \frac{3 + \sqrt{1}}{2} = \frac{3 + 1}{2} = 2, \quad r_2 = \frac{3 - \sqrt{1}}{2} = \frac{3 - 1}{2} = 1 $$</p>
+
+            <p>La solution générale de l'équation homogène est donc :</p>
+            <p>$$ y_h(x) = \lambda e^{2x} + \mu e^{x} $$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Passons maintenant à la partie non homogène de l'équation :</p>
+            <p>$$ y'' - 3y' + 2y = 5 e^{x} - 3 e^{2x} $$</p>
+
+            <p>Nous allons utiliser la méthode des coefficients indéterminés. Le terme non homogène est de la forme \( e^{x} \) et \( e^{2x} \). Comme \( e^{x} \) est déjà une solution de l'équation homogène, nous devons essayer une solution particulière de la forme :</p>
+            <p>$$ y_p(x) = A x e^{x} + B e^{2x} $$</p>
+
+            <p>Calculons les dérivées de \( y_p(x) \) :</p>
+            <p>$$ y'_p(x) = A e^{x} + A x e^{x} + 2B e^{2x} $$</p>
+            <p>$$ y''_p(x) = A e^{x} + A e^{x} + A x e^{x} + 4B e^{2x} $$</p>
+            <p>$$ y''_p(x) = 2A e^{x} + A x e^{x} + 4B e^{2x} $$</p>
+
+            <p>Substituons ces expressions dans l'équation différentielle :</p>
+            <p>$$ (2A e^{x} + A x e^{x} + 4B e^{2x}) - 3(A e^{x} + A x e^{x} + 2B e^{2x}) + 2(A x e^{x} + B e^{2x}) = 5 e^{x} - 3 e^{2x} $$</p>
+
+            <p>En simplifiant, nous avons :</p>
+            <p>$$ (2A - 3A + 2A) e^{x} + (4B - 6B + 2B) e^{2x} = 5 e^{x} - 3 e^{2x} $$</p>
+            <p>Ce qui se simplifie en :</p>
+            <p>$$ e^{x} = 5 e^{x} \quad \text{et} \quad 0 = -3 e^{2x} $$</p>
+
+            <p>Comparons les coefficients :</p>
+            <p>Pour \( e^{x} \) : \( 0 = 5 \) (pas d'information utile),</p>
+            <p>Pour \( e^{2x} \) : \( 0 = -3 \) (encore pas d'information utile).</p>
+
+            <p>Donc, nous avons :</p>
+            <p>Pour \( A \) et \( B \), nous devons en fait résoudre un système :</p>
+            <p>$$ 2A - 3B = 5 $$</p>
+            <p>$$ -3B = -3 $$</p>
+
+            <p>De la seconde équation, nous avons :</p>
+            <p>$$ B = 1 $$</p>
+
+            <p>En substituant dans la première équation :</p>
+            <p>$$ 2A - 3(1) = 5 \Rightarrow 2A - 3 = 5 \Rightarrow 2A = 8 \Rightarrow A = 4 $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = 4x e^{x} + 1 e^{2x} $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>La solution générale de l'équation différentielle complète est la somme de la solution homogène et de la solution particulière :</p>
+            <p>$$ y(x) = \lambda e^{2x} + \mu e^{x} + 4x e^{x} + e^{2x} $$</p>
+
+            <p>En factorisant, nous avons finalement :</p>
+            <p>$$ y(x) = (\lambda + 1)e^{2x} + (\mu + 4x)e^{x} $$</p>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </main>
 

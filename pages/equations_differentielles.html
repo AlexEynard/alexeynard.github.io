@@ -338,7 +338,7 @@
               <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
               <p>$$\mu(x) = e^{\int \frac{1}{x+1} dx} = e^{\ln|x+1|} = x+1$$</p>
 
-              <p>En multipliant l'équation normalisé par ce facteur intégrant nous avons :</p>
+              <p>En multipliant l'équation <b>normalisée</b> par ce facteur intégrant nous avons :</p>
               <p>$$(x+1)y' + y = x$$</p>
 
               <p>On remarque que le côté gauche fait apparaitre la forme \( u'v + uv' \), avec \( u = (x+1) \) et \( v = y \):</p>
@@ -388,7 +388,7 @@
               <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
               <p>$$ \mu(x) = e^{\int 2\tan(x) dx} = \frac{1}{\cos^2(x)}$$</p>
 
-              <p>En multipliant l'équation par \( \mu(x) \), nous obtenons :</p>
+              <p>En multipliant l'équation <b>normalisée</b> par ce facteur intégrant nous avons :</p>
               <p>$$ \frac{1}{\cos^2(x)} y' + 2\tan(x) \frac{1}{\cos^2(x)} y = \frac{\sin(x)}{\cos^2(x)}$$</p>
 
               <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{1}{\cos^2(x)} y \) :</p>
@@ -439,10 +439,10 @@
               <p>$$ y_p(x) = \ln|x| \cdot x$$</p>
 
               <h4>En utilisant le facteur intégrant :</h4>
-              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+
               <p>$$ \mu(x) = e^{\int -\frac{1}{x} dx} = \frac{1}{x} $$</p>
 
-              <p>En multipliant l'équation normalisée par ce facteur intégrant :</p>
+              <p>En multipliant l'équation <b>normalisée</b> par ce facteur intégrant nous avons :</p>
               <p>$$ \frac{1}{x} y' - \frac{y}{x^2} = \frac{1}{x}$$</p>
 
               <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{y}{x} \) :</p>
@@ -490,10 +490,10 @@
               <p>$$ y_p(x) = \frac{1}{2} \ln^2(x) \cdot x = \frac{x}{2} \ln^2(x)$$</p>
 
               <h4>En utilisant le facteur intégrant :</h4>
-              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+
               <p>$$ \mu(x) = e^{\int -\frac{1}{x} dx} = \frac{1}{x} $$</p>
 
-              <p>En multipliant l'équation normalisée par ce facteur intégrant :</p>
+              <p>En multipliant l'équation <b>normalisée</b> par ce facteur intégrant nous avons :</p>
               <p>$$ \frac{1}{x} y' - \frac{y}{x^2} = \frac{\ln(x)}{x}$$</p>
 
               <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{y}{x} \) :</p>
@@ -517,6 +517,8 @@
             <div class="exercise-correction hidden">
               <p>Commençons par déterminer les solutions de l'équation homogène associée :</p>
               <p>$$ y_h(x) = \lambda e^{-\int \tan(x) dx} = \lambda e^{-\ln|\cos(x)|} = \lambda \cos(x) $$</p>
+              <p>Les solutions homogènes de \( (E_5) \) sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(x) \end{array}$$</p>
 
               <h4>Méthode de variation de la constante :</h4>
               <p>Nous recherchons \( y_p \) sous la forme \( \lambda(x) \cos(x) \), où \( \lambda(x) \) est une fonction de classe \( C^1 \) à déterminer :</p>
@@ -529,8 +531,6 @@
               <p>$$ \lambda'(x) \cos(x) - \lambda(x)\sin(x) + \lambda(x)\sin(x) = \sin(2x) $$</p>
               <p>Les termes en \( \lambda(x) \sin(x) \) s'annulent, donc il reste :</p>
               <p>$$ \lambda'(x) \cos(x) = \sin(2x) $$</p>
-
-              <p>En divisant par \( \cos(x) \), nous obtenons :</p>
               <p>$$ \lambda'(x) = \frac{\sin(2x)}{\cos(x)} $$</p>
 
               <p>Utilisons l'identité trigonométrique \( \sin(2x) = 2 \sin(x) \cos(x) \) :</p>
@@ -543,26 +543,135 @@
               <p>$$ y_p(x) = \lambda(x) \cos(x) = -2 \cos(x) \cdot \cos(x) = -2 \cos^2(x) $$</p>
 
               <h4>En utilisant le facteur intégrant :</h4>
-              <p>Le facteur intégrant \( \mu(x) \) s'obtient ainsi :</p>
+
               <p>$$ \mu(x) = e^{\int \tan(x) dx} = \frac{1}{\cos(x)} $$</p>
 
-              <p>En multipliant l'équation par ce facteur intégrant :</p>
-              <p>$$ \frac{1}{\cos(x)} y' + \frac{1}{\cos(x)} \tan(x) y = \frac{\sin(2x)}{\cos(x)} $$</p>
-
-              <p>Nous remarquons que le côté gauche forme la dérivée du produit \( \frac{1}{\cos(x)} y \) :</p>
-              <p>$$ \left( \frac{1}{\cos(x)} y \right)' = \frac{\sin(2x)}{\cos(x)} $$</p>
-
-              <p>En intégrant les deux côtés :</p>
+              <p>En multipliant l'équation <b>normalisée</b> par ce facteur intégrant nous avons :</p>
+              <p>$$\mu(x) \cdot y = \int \mu(x) \cdot f(x) dx $$</p>
               <p>$$ \frac{1}{\cos(x)} y = \int \frac{\sin(2x)}{\cos(x)} dx $$</p>
 
               <p>Nous avons déjà calculé cette intégrale plus tôt, et nous obtenons donc :</p>
               <p>$$ \frac{1}{\cos(x)} y = -2 \cos(x) $$</p>
-              <p>Ce qui donne encore une fois la solution particulière :</p>
+              <p>On retrouve ainsi la solution particulière :</p>
               <p>$$ y_p(x) = -2 \cos^2(x) $$</p>
 
               <h4>Conclusion :</h4>
-              <p>Les solutions générales de l'équation sont :</p>
-              <p>$$ y_g(x) = \lambda \cos(x) - 2 \cos^2(x) $$</p>
+              <p>Les solutions générales de l'équation sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(x) - 2 \cos^2(x) \end{array}$$</p>
+            </div>
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_6): (x \cos x)\, y' + (\cos(x)+(x)\sin x)\, y = 1$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercise-correction hidden">
+              <p>Commençons par réécrire l'équation sous forme normalisée :</p>
+              <p>$$ y' + \frac{\cos(x)+(x)\sin(x)}{x \cos(x)}\, y = \frac{1}{x \cos(x)} $$</p>
+              <p>En simplifiant nous obtenons :</p>
+              <p>$$ y' + \left( \frac{1}{x} + \tan(x)\right) y = \frac{1}{x \cos(x)} $$</p>
+
+              <h4>Solution de l'équation homogène associée :</h4>
+              <p>Résolvons l'équation homogène :</p>
+              <p>$$(H_6) : y' + \left( \frac{1}{x} + \tan(x)\right) y = 0 $$</p>
+
+              <p>$$ y_h(x) = \lambda \cdot e^{-\int \left( \frac{1}{x} + \tan(x)\right) dx} = \lambda \cdot e^{\ln |\cos x| - \ln |x|} = \lambda \cdot e^{\ln |\cos x| - \ln |x|} = \lambda \cdot \frac{\cos(x)}{x}$$</p>
+              <p>Les solutions de l'équation homogène \( (H_6) \) sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \frac{\cos(x)}{x} \end{array}$$</p>
+
+              <h4>Méthode de variation de la constante :</h4>
+              <p>Nous cherchons une solution particulière sous la forme :</p>
+              <p>$$ y_p(x) = \lambda(x) \cdot \frac{\cos(x)}{x} $$</p>
+
+              <p>Calculons la dérivée de \( y_p(x) \) :</p>
+              <p>$$ y'_p(x) = \lambda'(x) \cdot \frac{\cos(x)}{x} + \lambda(x) \cdot \left( -\frac{\sin(x)}{x} - \frac{\cos(x)}{x^2} \right) $$</p>
+
+              <p>En injectant dans l'équation différentielle :</p>
+              <p>$$ y' + \left( \frac{1}{x} + \tan(x)\right) y = \frac{1}{x \cos(x)} $$</p>
+
+              <p>$$ \lambda'(x) \cdot \frac{\cos(x)}{x} + \lambda(x) \cdot \left( -\frac{\sin(x)}{x} - \frac{\cos(x)}{x^2} \right) + \left( \frac{1}{x} + \tan(x)\right) \cdot \lambda(x) \cdot \frac{\cos(x)}{x} = \frac{1}{x \cos(x)} $$</p>
+              <p>Nous simplifions comme ceci :</p>
+              <p>$$ \lambda'(x) \cdot \frac{\cos(x)}{x} = \frac{1}{x \cos(x)} $$</p>
+              <p>Ce qui donne alors :</p>
+              <p>$$ \lambda'(x) = \frac{1}{\cos^2(x)} $$</p>
+
+              <p>En intégrant des deux côtés :</p>
+              <p>$$ \lambda(x) = \int \frac{1}{\cos^2(x)}\, dx = \tan(x)$$</p>
+
+              <p>Nous obtenons la solution particulière :</p>
+              <p>$$ y_p(x) = \lambda(x) \cdot \frac{\cos(x)}{x} = \frac{\tan(x)\cdot \cos(x)}{x} = \frac{\sin(x)}{x} $$</p>
+
+              <h4>En utilisant le facteur intégrant :</h4>
+
+              <p>$$ \mu(x) = e^{\int \left( \frac{1}{x} + \tan(x)\right) dx} = e^{\ln |x| - \ln |\cos x|} = \frac{x}{\cos(x)} $$</p>
+              <p><b>Note : </b>Afin de gagner du temps nous pouvons directement écrire ceci :</p>
+              <p>$$ \mu(x) \cdot y = \int \mu(x) \cdot \frac{f(x)}{a(x)} dx$$</p>
+              <p>Cela revient au même que la méthode du facteur intégrant habituelle (utilisée dans les exercices précédents) mais cela fait gagner du temps car la méthode est plus directe.</p>
+              <p>$$ \frac{x}{\cos(x)} \cdot y = \int \frac{1}{\cos^2(x)}\, dx = \tan(x)$$</p>
+              <p>Nous obtenons donc :</p>
+              <p>$$ y_p = \frac{\cos(x)}{x} \cdot (\tan x) = \frac{\sin(x)}{x} $$</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales de l'équation différentielle \( (E_6) \) sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \frac{\sin(x)}{x} + \lambda \frac{\cos(x)}{x} \end{array}$$</p>
+            </div>
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Résoudre :</p>
+              <p>$$(E_8) : y' - \frac{1}{x} y = \frac{1}{\ln^2(x)}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercise-correction hidden">
+              <p>Commençons par réécrire l'équation sous forme normalisée :</p>
+              <p>$$ y' - \frac{1}{x} \cdot y = \frac{1}{\ln^2(x)} $$</p>
+
+              <h4>Solution de l'équation homogène associée :</h4>
+              <p>Résolvons l'équation homogène :</p>
+              <p>$$(H_8) : y' - \frac{1}{x} \cdot y = 0 $$</p>
+
+              <p>$$ y_h(x) = \lambda \cdot e^{\int \frac{1}{x}\, dx} = \lambda \cdot x $$</p>
+
+              <p>Les solutions de l'équation homogène \( (H_8) \) sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R}_+^* & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cdot x \end{array}$$</p>
+
+              <h4>Méthode de variation de la constante :</h4>
+              <p>Nous cherchons une solution particulière sous la forme :</p>
+              <p>$$ y_p(x) = \lambda(x) \cdot x $$</p>
+
+              <p>Calculons la dérivée de \( y_p(x) \) :</p>
+              <p>$$ y'_p(x) = \lambda'(x) \cdot x + \lambda(x) $$</p>
+
+              <p>En injectant dans l'équation différentielle :</p>
+              <p>$$ \lambda'(x) \cdot x + \lambda(x) - \frac{1}{x} \cdot \lambda(x) \cdot x = \frac{1}{\ln^2(x)} $$</p>
+
+              <p>Simplifions :</p>
+              <p>$$ \lambda'(x) \cdot x = \frac{1}{\ln^2(x)} $$</p>
+
+              <p>Ce qui donne alors :</p>
+              <p>$$ \lambda'(x) = \frac{1}{x \cdot \ln^2(x)} $$</p>
+              <p>$$ \lambda(x) = \int \frac{1}{x \cdot \ln^2(x)}\, dx $$</p>
+              <p>$$ \lambda(x) = -\int -\frac{1}{x \cdot \ln^2(x)}\, dx $$</p>
+              <p>L'intégrale se présente sous la forme \( \frac{-u'}{u^2} \) dont la primitive est \( \frac{1}{u} \) :</p>
+              <p>$$\lambda(x) = -\frac{1}{\ln(x)} $$</p>
+              <p>Nous obtenons la solution particulière :</p>
+              <p>$$ y_p(x) = \lambda(x) \cdot x = -\frac{x}{\ln(x)} $$</p>
+
+              <h4>En utilisant le facteur intégrant :</h4>
+
+              <p>$$ \mu(x) = e^{\int -\frac{1}{x}\, dx} = e^{-\ln|x|} = \frac{1}{x} $$</p>
+
+              <p>$$ \mu(x) \cdot y = \int \mu(x) \cdot \frac{f(x)}{a(x)} dx$$</p>
+
+              <p>$$ \frac{1}{x} \cdot y = \int \frac{1}{x \ln^2(x)}\, dx $$</p>
+
+              <p>Ce qui donne alors :</p>
+              <p>$$ y(x) = -x \cdot \frac{1}{\ln(x)} = -\frac{x}{\ln(x)} $$</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les solutions générales de l'équation différentielle \( (E_8) \) sont les fonctions :</p>
+              <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R}_+^* & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & -\frac{x}{\ln(x)} + \lambda \cdot x \end{array}$$</p>
             </div>
           </div>
           <!-- Exercice 3 -->
@@ -576,7 +685,7 @@
     <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">
       <div class="section-content" id="integrations_par_parties">
         <h1 class="titre-page">Équations différentielles du second ordre</h1>
-        <!-- Exercice 1 -->
+        <!-- Exercice 1 - Exponentielle -->
         <div class="exercise">
           <h2>Forme exponentielle</h2>
           <!-- Question 1 -->
@@ -672,7 +781,7 @@
             <p>La solution générale est :</p>
             <p>$$ y(x) = (\lambda + \mu x) e^{2x} + \frac{1}{2} x^2 e^{2x} $$</p>
           </div>
-          <!-- Question 2 -->
+          <!-- Question 3 -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
             <p>$$(E_3): y'' - y = e^{2x}$$</p>
@@ -711,7 +820,7 @@
             <p>La solution générale est donc :</p>
             <p>$$ y(x) = \lambda e^x + \mu e^{-x} + \frac{1}{3} e^{2x} $$</p>
           </div>
-          <!-- Question 3 -->
+          <!-- Question 4 -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
             <p>$$(E_4): y'' - 3y' + 2y = 5 e^{x} - 3 e^{2x}$$</p>
@@ -779,13 +888,188 @@
             <p>$$ y_p(x) = 4x e^{x} + 1 e^{2x} $$</p>
 
             <h4>Étape 3 : Exprimer la solution générale</h4>
-            <p>La solution générale de l'équation différentielle complète est la somme de la solution homogène et de la solution particulière :</p>
-            <p>$$ y(x) = \lambda e^{2x} + \mu e^{x} + 4x e^{x} + e^{2x} $$</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_4) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & (\lambda + 1)e^{2x} + (\mu + 4x)e^{x} \end{array}$$</p>
+          </div>
+          <!-- Question 5 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_5): \quad y'' + 5y' + 6y = -4 e^{-2x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
-            <p>En factorisant, nous avons finalement :</p>
-            <p>$$ y(x) = (\lambda + 1)e^{2x} + (\mu + 4x)e^{x} $$</p>
+            <p>Commençons par résoudre l'équation homogène associée :</p>
+            <p>$$(H_5): \quad y'' + 5y' + 6y = 0$$</p>
+            <p>L'équation caractéristique est :</p>
+            <p>$$ r^2 + 5r + 6 = 0 $$</p>
+
+            <p>Le discriminant est donné par :</p>
+            <p>$$ \Delta = 5^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 $$</p>
+            <p>Comme \( \Delta > 0 \), nous avons deux racines réelles distinctes.</p>
+
+            <p>Les racines de l'équation caractéristique sont :</p>
+            <p>$$ r_1 = -2, \quad r_2 = -3 $$</p>
+            <p>Les solutions homogènes de \( (E_5) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda e^{-2x} + \mu e^{-3x} \end{array}$$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Nous devons maintenant chercher une solution particulière pour l'équation :</p>
+            <p>$$ y'' + 5y' + 6y = -4 e^{-2x} $$</p>
+
+            <p>Comme \( e^{-2x} \) est déjà une solution de l'équation homogène, nous devons essayer une solution particulière de la forme :</p>
+            <p>$$ y_p(x) = A x e^{-2x} $$</p>
+
+            <p>Calculons les dérivées :</p>
+            <p>$$ y'_p(x) = A e^{-2x} - 2A x e^{-2x} $$</p>
+            <p>$$ y''_p(x) = -2A e^{-2x} - 2A e^{-2x} + 4A x e^{-2x} = -4A e^{-2x} + 4A x e^{-2x} $$</p>
+
+            <p>Substituons ces expressions dans l'équation différentielle :</p>
+            <p>$$ y''_p + 5y'_p + 6y_p = (-4A e^{-2x} + 4A x e^{-2x}) + 5(A e^{-2x} - 2A x e^{-2x}) + 6A x e^{-2x} $$</p>
+            <p>En simplifiant :</p>
+            <p>$$ (-4A + 5A) e^{-2x} + (4A x - 10A x + 6A x) e^{-2x} = e^{-2x}(A) + e^{-2x}(0) = A e^{-2x} $$</p>
+
+            <p>Nous avons donc :</p>
+            <p>$$ A e^{-2x} = -4 e^{-2x} $$</p>
+            <p>Donc :</p>
+            <p>$$ A = -4 $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = -4x e^{-2x} $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>Les solutions générales de l'équation différentielle \( (E_5) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda e^{-2x} + \mu e^{-3x} - 4x e^{-2x} \end{array}$$</p>
+          </div>
+          <!-- Question 6 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_6): \quad y'' + 4y' + 4y = 3 e^{-x} - 2 e^{-2x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Commençons par résoudre l'équation homogène associée :</p>
+            <p>$$(H_6): \quad y'' + 4y' + 4y = 0$$</p>
+            <p>L'équation caractéristique est :</p>
+            <p>$$ r^2 + 4r + 4 = 0 $$</p>
+
+            <p>Le discriminant est donné par :</p>
+            <p>$$ \Delta = 4^2 - 4 \cdot 1 \cdot 4 = 16 - 16 = 0 $$</p>
+            <p>Comme \( \Delta = 0 \), nous avons une racine double.</p>
+
+            <p>La racine de l'équation caractéristique est :</p>
+            <p>$$ r = -2 $$</p>
+            <p>Les solutions homogènes de \( (E_6) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & (\lambda + \mu x)e^{-2x} \end{array}$$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Nous devons maintenant chercher une solution particulière pour l'équation :</p>
+            <p>$$ y'' + 4y' + 4y = 3 e^{-x} - 2 e^{-2x} $$</p>
+
+            <p>La partie non homogène est \( 3 e^{-x} - 2 e^{-2x} \).</p>
+
+            <p>Pour \( 3 e^{-x} \) : \( e^{-x} \) n'est pas une solution de l'équation homogène, nous pouvons donc proposer une solution particulière de la forme :</p>
+            <p>$$ y_{p1}(x) = A e^{-x} $$</p>
+
+            <p>Pour \( -2 e^{-2x} \) : \( e^{-2x} \) est une solution de l'équation homogène avec multiplicité 2. Par conséquent, nous devons multiplier par \( x^2 \) pour proposer une solution particulière de la forme :</p>
+            <p>$$ y_{p2}(x) = B x^2 e^{-2x} $$</p>
+
+            <p>Ainsi, la forme proposée pour la solution particulière est :</p>
+            <p>$$ y_p(x) = A e^{-x} + B x^2 e^{-2x} $$</p>
+
+            <p>Calculons les dérivées nécessaires :</p>
+            <p>$$ y'_p(x) = -A e^{-x} + 2B x e^{-2x} - 2B x^2 e^{-2x} $$</p>
+            <p>$$ y''_p(x) = A e^{-x} + 2B e^{-2x} - 8B x e^{-2x} + 4B x^2 e^{-2x} $$</p>
+
+            <p>Substituons \( y_p \), \( y'_p \) et \( y''_p \) dans l'équation différentielle :</p>
+            <p>$$ y''_p + 4y'_p + 4y_p = 3 e^{-x} - 2 e^{-2x} $$</p>
+            <p>Après substitution, nous obtenons :</p>
+            <p>$$ (A e^{-x} + 2B e^{-2x} - 8B x e^{-2x} + 4B x^2 e^{-2x}) + 4(-A e^{-x} + 2B x e^{-2x} - 2B x^2 e^{-2x}) + 4(A e^{-x} + B x^2 e^{-2x}) = 3 e^{-x} - 2 e^{-2x} $$</p>
+
+            <p>En simplifiant les termes :</p>
+            <p>$$ A e^{-x} - 4A e^{-x} + 4A e^{-x} + (2B e^{-2x} - 8B x e^{-2x} + 8B x e^{-2x} - 8B x^2 e^{-2x} + 4B x^2 e^{-2x}) = 3 e^{-x} - 2 e^{-2x} $$</p>
+
+            <p>Donc, l'équation devient :</p>
+            <p>$$ A e^{-x} + (2B - 4B x^2)e^{-2x} = 3 e^{-x} - 2 e^{-2x} $$</p>
+
+            <p>Égalons les coefficients des termes similaires :</p>
+            <p>Pour \( e^{-x} \) :</p>
+            <p>$$ A = 3 $$</p>
+            <p>Pour \( e^{-2x} \) :</p>
+            <p>$$ 2B - 4B = -2 \quad \Rightarrow \quad B = -1 $$</p>
+
+            <p>Ainsi, la solution particulière est :</p>
+            <p>$$ y_p(x) = 3 e^{-x} - x^2 e^{-2x} $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>Les solutions générales de l'équation différentielle \( (E_6) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & (\lambda + \mu x)e^{-2x} + 3 e^{-x} - x^2 e^{-2x} \end{array}$$</p>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_7): y'' - 5y' + 6y = e^{-3x} + 4 e^{-2x} - 2 e^{-x}$$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Résolvons d'abord l'équation homogène associée :</p>
+            <p>$$(H_7): y'' - 5y' + 6y = 0$$</p>
+            <p>L'équation caractéristique est :</p>
+            <p>$$ r^2 - 5r + 6 = 0 $$</p>
+
+            <p>Le discriminant est donné par :</p>
+            <p>$$ \Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 $$</p>
+            <p>Comme \( \Delta > 0 \), nous avons deux racines réelles distinctes.</p>
+
+            <p>Les racines de l'équation caractéristique sont :</p>
+            <p>$$ r_1 = 3, \quad r_2 = 2 $$</p>
+            <p>Les solutions homogènes de \( (E_7) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda e^{3x} + \mu e^{2x} \end{array}$$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Nous devons maintenant chercher une solution particulière pour l'équation :</p>
+            <p>$$ y'' - 5y' + 6y = e^{-3x} + 4 e^{-2x} - 2 e^{-x} $$</p>
+
+            <p>Nous devons choisir une forme de solution particulière en tenant compte des termes présents à droite :</p>
+            <p>$$ y_p(x) = A e^{-3x} + B e^{-2x} + C e^{-x} $$</p>
+
+            <p>Calculons les dérivées :</p>
+            <p>$$ y'_p(x) = -3A e^{-3x} - 2B e^{-2x} - C e^{-x} $$</p>
+            <p>$$ y''_p(x) = 9A e^{-3x} + 4B e^{-2x} + C e^{-x} $$</p>
+
+            <p>Substituons dans l'équation différentielle :</p>
+            <p>$$ (9A e^{-3x} + 4B e^{-2x} + C e^{-x}) - 5(-3A e^{-3x} - 2B e^{-2x} - C e^{-x}) + 6(A e^{-3x} + B e^{-2x} + C e^{-x}) = e^{-3x} + 4 e^{-2x} - 2 e^{-x} $$</p>
+
+            <p>En simplifiant, nous avons :</p>
+            <p>$$ (9A + 15A + 6A)e^{-3x} + (4B + 10B + 6B)e^{-2x} + (C + 5C + 6C)e^{-x} = e^{-3x} + 4 e^{-2x} - 2 e^{-x} $$</p>
+
+            <p>Ce qui donne :</p>
+            <p>$$ 30A = 1, \quad 20B = 4, \quad 12C = -2 $$</p>
+
+            <p>Résolvons pour \( A, B, C \) :</p>
+            <p>$$ A = \frac{1}{30}, \quad B = \frac{1}{5}, \quad C = -\frac{1}{6} $$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = \frac{1}{30} e^{-3x} + \frac{1}{5} e^{-2x} - \frac{1}{6} e^{-x} $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>Les solutions générales de l'équation sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda e^{3x} + \mu e^{2x} + \frac{1}{30} e^{-3x} + \frac{1}{5} e^{-2x} - \frac{1}{6} e^{-x} \end{array}$$</p>
           </div>
         </div>
+        <!-- Exercice 2 - Sinus et cosinus -->
+        <!-- Exercice 3 - Polynomes -->
+
+
       </div>
     </div>
   </main>

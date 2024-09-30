@@ -215,7 +215,7 @@
               <p>$$\sinh(x) = x + \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
             </div>
 
-            <!-- Question 8 -->
+            <!-- Question 9 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
               <p>$$dl_4(0) : \sqrt{x + 1}$$</p>
@@ -283,14 +283,217 @@
           <h1 class="titre-page">Les produits de fonctions</h1>
           <!-- Exercise 1 -->
           <div class="exercise">
-            <h2></h2>
+            <h2>Pour comprendre</h2>
             <!-- Question 1 -->
             <div class="question">
-              <p class="consigne"></p>
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \sin(x) \cdot \cos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p></p>
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\sin(x) \cdot \cos(x) = \left(x - \frac{x^3}{6}\right) \left(1 - \frac{x^2}{2}\right)$$</p>
+              <p>Effectuons la multiplication terme à terme :</p>
+              <p>$$= x \cdot 1 + x \left(-\frac{x^2}{2}\right) - \frac{x^3}{6} \cdot 1 - \frac{x^3}{6} \left(-\frac{x^2}{2}\right) + o(x^3)$$</p>
+              <p>$$= x - \frac{x^3}{2} - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>Maintenant, on additionne les termes en \(x^3\) :</p>
+              <p>$$= x - \left(\frac{3x^3}{6} + \frac{x^3}{6}\right) + o(x^3) = x - \frac{2x^3}{3} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : e^x \cdot \ln(1 + x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+              <p>$$\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$e^x \cdot \ln(1 + x) = \left(1 + x + \frac{x^2}{2}\right) \left(x - \frac{x^2}{2}\right)$$</p>
+              <p>Effectuons la multiplication :</p>
+              <p>$$= 1 \cdot x + 1 \left(-\frac{x^2}{2}\right) + x \cdot x + x \left(-\frac{x^2}{2}\right) + \frac{x^2}{2} \cdot x + \frac{x^2}{2} \left(-\frac{x^2}{2}\right) + o(x^2)$$</p>
+              <p>$$= x - \frac{x^2}{2} + x^2 - \frac{x^3}{2} + \frac{x^3}{2} + o(x^2)$$</p>
+              <p>En simplifiant les termes :</p>
+              <p>$$= x + \frac{x^2}{2} + o(x^2)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \sqrt{1 + x} \cdot \sin(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\sqrt{1 + x} \cdot \sin(x) = \left(1 + \frac{x}{2} - \frac{x^2}{8}\right) \left(x - \frac{x^3}{6}\right)$$</p>
+              <p>Effectuons la multiplication :</p>
+              <p>$$= 1 \cdot x + 1 \left(-\frac{x^3}{6}\right) + \frac{x}{2} \cdot x + \frac{x}{2} \left(-\frac{x^3}{6}\right) - \frac{x^2}{8} \cdot x + o(x^3)$$</p>
+              <p>$$= x - \frac{x^3}{6} + \frac{x^2}{2} - \frac{x^4}{12} - \frac{x^3}{8} + o(x^3)$$</p>
+              <p>En simplifiant les termes :</p>
+              <p>$$= x + \frac{x^2}{2} - \left(\frac{4x^3}{24} + \frac{3x^3}{24}\right) + o(x^3)$$</p>
+              <p>$$= x + \frac{x^2}{2} - \left(\frac{7x^3}{24}\right) + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \tan(x) \cdot e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\tan(x) \cdot e^x = \left(x + \frac{x^3}{3}\right)\left(1 + x + \frac{x^2}{2}\right)$$</p>
+              <p>Effectuons la multiplication :</p>
+              <p>$$= x \cdot 1 + x \cdot x + x \cdot \frac{x^2}{2} + \frac{x^3}{3} \cdot 1 + \frac{x^3}{3} \cdot x + \frac{x^3}{3} \cdot \frac{x^2}{2} + o(x^3)$$</p>
+              <p>$$= x + x^2 + \frac{x^3}{2} + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>En combinant les termes en \(x^3\) :</p>
+              <p>$$= x + x^2 + \left(\frac{3x^3}{6} + \frac{2x^3}{6}\right) + o(x^3)$$</p>
+              <p>$$= x + x^2 + \frac{5x^3}{6} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \sin(x) \cdot \sqrt{1 + x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\sin(x) \cdot \sqrt{1 + x} = \left(x - \frac{x^3}{6}\right) \left(1 + \frac{x}{2} - \frac{x^2}{8}\right)$$</p>
+              <p>Effectuons la multiplication :</p>
+              <p>$$= x \cdot 1 + x \cdot \frac{x}{2} - x \cdot \frac{x^2}{8} - \frac{x^3}{6} \cdot 1 - \frac{x^3}{6} \cdot \frac{x}{2} + o(x^3)$$</p>
+              <p>$$= x + \frac{x^2}{2} - \frac{x^3}{8} - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>En combinant les termes en \(x^3\) :</p>
+              <p>$$= x + \frac{x^2}{2} - \left(\frac{3x^3}{24} + \frac{4x^3}{24}\right) + o(x^3)$$</p>
+              <p>$$= x + \frac{x^2}{2} - \frac{7x^3}{24} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \cos(x) \cdot e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\cos(x) \cdot e^x = \left(1 - \frac{x^2}{2}\right) \left(1 + x + \frac{x^2}{2}\right)$$</p>
+              <p>Effectuons la multiplication :</p>
+              <p>$$= 1 \cdot 1 + 1 \cdot x + 1 \cdot \frac{x^2}{2} - \frac{x^2}{2} \cdot 1 - \frac{x^2}{2} \cdot x + o(x^2)$$</p>
+              <p>$$= 1 + x + \frac{x^2}{2} - \frac{x^2}{2} - \frac{x^3}{2} + o(x^2)$$</p>
+              <p>Les termes \( \frac{x^2}{2} \) se simplifient :</p>
+              <p>$$= 1 + x + o(x^2)$$</p>
+            </div>
+          </div>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2>Pour approfondir</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \sin(2x) \cdot \cos(3x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(2x) = 2x - \frac{(2x)^3}{6} + o(x^3) = 2x - \frac{4x^3}{3} + o(x^3)$$</p>
+              <p>$$\cos(3x) = 1 - \frac{(3x)^2}{2} + o(x^2) = 1 - \frac{9x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\sin(2x) \cdot \cos(3x) = \left(2x - \frac{4x^3}{3}\right)\left(1 - \frac{9x^2}{2}\right)$$</p>
+              <p>$$= 2x - \frac{18x^3}{2} - \frac{4x^3}{3} + o(x^3)$$</p>
+              <p>$$= 2x - 9x^3 - \frac{4x^3}{3} + o(x^3)$$</p>
+              <p>$$= 2x - \left(9 + \frac{4}{3}\right)x^3 + o(x^3) = 2x - \frac{31x^3}{3} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \ln(1 + 3x) \cdot \sqrt{1 - x^2}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\ln(1 + 3x) = 3x - \frac{(3x)^2}{2} + \frac{(3x)^3}{3} + o(x^3) = 3x - \frac{9x^2}{2} + 9x^3 + o(x^3)$$</p>
+              <p>$$\sqrt{1 - x^2} = 1 - \frac{x^2}{2} + \frac{x^4}{8} + o(x^4)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$\ln(1 + 3x) \cdot \sqrt{1 - x^2} = \left(3x - \frac{9x^2}{2} + 9x^3\right)\left(1 - \frac{x^2}{2} + \frac{x^4}{8}\right)$$</p>
+              <p>$$= 3x - \frac{3x^3}{2} - \frac{9x^2}{2} + \frac{9x^4}{8} + o(x^3)$$</p>
+              <p>$$= 3x - \frac{9x^2}{2} + \left(9 - \frac{3}{2}\right)x^3 + o(x^3)$$</p>
+              <p>$$= 3x - \frac{9x^2}{2} + \frac{69x^4}{8} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : e^{2x} \cdot \tan(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$e^{2x} = 1 + 2x + \frac{(2x)^2}{2} + \frac{(2x)^3}{6} + o(x^3) = 1 + 2x + 2x^2 + \frac{4x^3}{3} + o(x^3)$$</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>On multiplie les deux développements :</p>
+              <p>$$e^{2x} \cdot \tan(x) = \left(1 + 2x + 2x^2 + \frac{4x^3}{3}\right)\left(x + \frac{x^3}{3}\right)$$</p>
+              <p>$$= x + 2x^2 + 2x^3 + \frac{4x^4}{3} + \frac{x^4}{3} + o(x^4)$$</p>
+              <p>$$= x + 2x^2 + \left(2 + \frac{5}{3}\right)x^3 + o(x^4) = x + 2x^2 + \frac{11x^3}{3} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \cos(2x) \cdot \sin(3x) \cdot \ln(1 + x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4) = 1 - 2x^2 + \frac{2x^4}{3} + o(x^4)$$</p>
+              <p>$$\sin(3x) = 3x - \frac{(3x)^3}{6} + o(x^3) = 3x - \frac{27x^3}{6} + o(x^3) = 3x - \frac{9x^3}{2} + o(x^3)$$</p>
+              <p>$$\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>On multiplie les trois développements :</p>
+              <p>$$= \left(1 - 2x^2 + \frac{2x^4}{3}\right)\left(3x - \frac{9x^3}{2}\right)\left(x - \frac{x^2}{2}\right)$$</p>
+              <p>Effectuons d'abord les deux premiers produits :</p>
+              <p>$$= (3x - 9x^3)\left(1 - 2x^2 + \frac{2x^4}{3}\right)$$</p>
+              <p>$$= 3x - 6x^3 + 9x^3 + o(x^3) = 3x + 3x^3 + o(x^3)$$</p>
+              <p>Ensuite, ajoutons le terme de \(\ln(1 + x)\) :</p>
+              <p>$$= (3x + 3x^3)\left(x - \frac{x^2}{2}\right)$$</p>
+              <p>$$= 3x^2 + \frac{3x^3}{2} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : e^{3x} \cdot \cos(4x) \cdot \sin(5x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$e^{3x} = 1 + 3x + \frac{(3x)^2}{2} + \frac{(3x)^3}{6} + o(x^3) = 1 + 3x + \frac{9x^2}{2} + \frac{27x^3}{6} + o(x^3)$$</p>
+              <p>$$\cos(4x) = 1 - \frac{(4x)^2}{2} + \frac{(4x)^4}{24} + o(x^4) = 1 - 8x^2 + \frac{8x^4}{3} + o(x^4)$$</p>
+              <p>$$\sin(5x) = 5x - \frac{(5x)^3}{6} + o(x^3) = 5x - \frac{125x^3}{6} + o(x^3)$$</p>
+              <p>On multiplie les trois développements :</p>
+              <p>$$e^{3x} \cdot \cos(4x) \cdot \sin(5x) = \left(1 + 3x + \frac{9x^2}{2} + \frac{27x^3}{6}\right)\left(1 - 8x^2 + \frac{8x^4}{3}\right)\left(5x - \frac{125x^3}{6}\right)$$</p>
+              <p>Calculons d'abord \(e^{3x} \cdot \cos(4x)\) :</p>
+              <p>$$= (1 - 8x^2 + \frac{8x^4}{3})(1 + 3x + \frac{9x^2}{2})$$</p>
+              <p>$$= 1 + 3x - 8x^2 - 24x^3 + o(x^3)$$</p>
+              <p>Maintenant, multiplions avec \(\sin(5x)\) :</p>
+              <p>$$= \left(1 + 3x - 8x^2\right)\left(5x - \frac{125x^3}{6}\right)$$</p>
+              <p>$$= 5x + 15x^2 - 40x^3 + o(x^3)$$</p>
             </div>
           </div>
         </div>
@@ -324,12 +527,124 @@
             <h2></h2>
             <!-- Question 1 -->
             <div class="question">
-              <p class="consigne"></p>
+              <p class="consigne">Calculer :</p>
+              <p>$$T_3\left(\frac{\pi}{4}\right) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p></p>
+              <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{4}\) :</p>
+              <p>$$\sin(x) = \sin\left(\frac{\pi}{4}\right) + \cos\left(\frac{\pi}{4}\right)\left(x - \frac{\pi}{4}\right) - \frac{\sin\left(\frac{\pi}{4}\right)}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{\cos\left(\frac{\pi}{4}\right)}{6}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{1}{2}\cdot\frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{1}{6}\cdot\frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
             </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_4(1) : e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
+              <p>$$e^x = e^1 + e^1(x - 1) + \frac{e^1}{2!}(x - 1)^2 + \frac{e^1}{3!}(x - 1)^3 + \frac{e^1}{4!}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= e + e(x - 1) + \frac{e}{2}(x - 1)^2 + \frac{e}{6}(x - 1)^3 + \frac{e}{24}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_3(0) : \ln(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
+              <p>$$\ln(x) = \ln(1) + \frac{1}{1}(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + o\left((x - 1)^3\right)$$</p>
+              <p>$$= 0 + (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} + o\left((x - 1)^3\right)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_3\left(\frac{\pi}{3}\right) : \cos(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{3}\) :</p>
+              <p>$$\cos(x) = \cos\left(\frac{\pi}{3}\right) - \sin\left(\frac{\pi}{3}\right)\left(x - \frac{\pi}{3}\right) - \frac{\cos\left(\frac{\pi}{3}\right)}{2}\left(x - \frac{\pi}{3}\right)^2 + o\left((x - \frac{\pi}{3})^2\right)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= \frac{1}{2} - \frac{\sqrt{3}}{2}\left(x - \frac{\pi}{3}\right) - \frac{1}{4}\left(x - \frac{\pi}{3}\right)^2 + o\left((x - \frac{\pi}{3})^2\right)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_4(2) : \sqrt{x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 2\) :</p>
+              <p>$$\sqrt{x} = \sqrt{2} + \frac{1}{2\sqrt{2}}(x - 2) - \frac{1}{8\sqrt{2}}(x - 2)^2 + \frac{1}{16\sqrt{2}}(x - 2)^3 + o\left((x - 2)^3\right)$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_4\left(-1\right) : \tan(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = -1\) :</p>
+              <p>$$\tan(x) = \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}\left(x + 1\right)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_5(0) : \cos(2x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
+              <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4)$$</p>
+              <p>$$= 1 - 2x^2 + \frac{4x^4}{3} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_3\left(0\right) : \frac{1}{1 + x}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
+              <p>$$\frac{1}{1 + x} = 1 - x + x^2 - x^3 + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_5\left(1\right) : \ln(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
+              <p>$$\ln(x) = 0 + 1(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + \frac{1}{4}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$T_4\left(-\frac{\pi}{2}\right) : \sin(x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise la formule de Taylor centrée en \(a = -\frac{\pi}{2}\) :</p>
+              <p>$$\sin(x) = -1 + \cos\left(-\frac{\pi}{2}\right)\left(x + \frac{\pi}{2}\right) - \frac{\sin\left(-\frac{\pi}{2}\right)}{2}\left(x + \frac{\pi}{2}\right)^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= -1 + 0(x + \frac{\pi}{2}) + \frac{1}{2}(x + \frac{\pi}{2})^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
+            </div>
+
           </div>
         </div>
       </div>

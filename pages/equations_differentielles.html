@@ -1513,7 +1513,7 @@
             <p>$$ \alpha = \frac{-b}{2a} = 1 \quad \text{et} \quad \beta = \frac{\sqrt{-\Delta}}{2a} = 3 $$</p>
 
             <p>Ce qui nous permet d'écrire les solutions homogènes sous la forme :</p>
-            <p>$$e^{\alpha x}(\lambda \cos(\beta x) + \mu e^{\alpha x} \sin(\beta x))$$</p>
+            <p>$$e^{\alpha x}(\lambda \cos(\beta x) + \mu \sin(\beta x))$$</p>
 
             <p>Les solutions homogènes de \( (H_1) \) sont donc les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & e^{x} (\lambda \cos(3x) + \mu \sin(3x)) \end{array}$$</p>
@@ -1552,30 +1552,77 @@
             <p>Les solutions générales de l'équation différentielle \( (E_1) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & e^{x} (\lambda \cos(3x) + \mu \sin(3x)) + \frac{9}{85} \cos(x) + \frac{2}{85} \sin(x) \end{array}$$</p>
           </div>
-
-          <!-- Question 2 - CORRECTE - MOYEN -->
+          <!-- Question 2 -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$ (E_2): \quad y'' + 9y = 4 \cos(5x) $$</p>
+            <p>$$ (E_2): \quad y'' + 16y = \cos(4x) + \sin(4x) $$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
 
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
-            <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$ (H_2): \quad y'' + 9y = 0 $$</p>
+            <p>L'équation homogène \( (H_2) \) associée à \( (E_2) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
+            <p>En effet, lorsque l'on rencontre cette forme d'équation différentielle, \( y_h(x) \) s'écrit \( \lambda \cos(\omega x) + \mu \sin(\omega x) \).</p>
+            <p>Les solutions homogènes de \( (H_2) \) sont donc les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl}
+              y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
+              & x & \longmapsto & \lambda \cos(4x) + \mu \sin(4x)
+              \end{array}$$</p>
 
-            <p>L'équation caractéristique associée est :</p>
-            <p>$$ r^2 + 9 = 0 $$</p>
+            <h4>Étape 2 : Trouver une solution particulière</h4>
 
-            <p>$$ \Delta = (0)^2 - 4 \cdot 1 \cdot 9 = -36 $$</p>
+            <p>L'équation différentielle \( (E_2) \) est sous la forme \( y'' + (\omega_1)^2 y = A \cos(\omega_2 x) \). Étant donné que \( \omega_1 = \omega_2 \), nous cherchons alors une solution particulière de la forme :</p>
 
-            <p>Calculons \( \alpha \) et \( \beta \) : </p>
+            <p>$$ y_p(x) = Ax \cos(4x) + Bx \sin(4x) $$</p>
+            <p>où \( A \) et \( B \) sont des constantes à déterminer.</p>
 
-            <p>$$ \alpha = \frac{-b}{2a} = 0 \quad \text{et} \quad \beta = \frac{\sqrt{-\Delta}}{2a} = 3 $$</p>
+            <h4>Étape 3 : Calcul des dérivées</h4>
 
-            <p>Les solutions homogènes de \( (H_2) \) sont les fonctions :</p>
+            <p>Calculons les dérivées de \( y_p(x) \) :</p>
+            <p>$$ y'_p(x) = A \cos(4x) + B \sin(4x) + -4Ax \sin(4x) + 4Bx \cos(4x) $$</p>
+            <p>$$ y''_p(x) = -4A \sin(4x) + 4B \cos(4x) + -16Ax \cos(4x) - 16Bx \sin(4x)) $$</p>
+
+            <h4>Étape 4 : Substitution dans l'équation différentielle</h4>
+
+            <p>Substituons \( y_p(x) \) et \( y''_p(x) \) dans l'équation différentielle :</p>
+            <p>$$ -4A \sin(4x) + 4B \cos(4x) - 16A x \cos(4x) - 16B x \sin(4x) + 16 \left(Ax \cos(4x) + Bx \sin(4x)\right) $$</p>
+
+            <p>En simplifiant, les termes en \( x \) s'annulent :</p>
+            <p>$$ -4A \sin(4x) + 4B \cos(4x) = \cos(4x) + \sin(4x) $$</p>
+
+
+            <p>Ce qui donne alors :</p>
+            <p>$$ A = -\frac{1}{4} $$</p>
+            <p>$$ B = \frac{1}{4} $$</p>
+
+            <p>Ainsi, la solution particulière est :</p>
+            <p>$$ y_p(x) = -\frac{1}{4}x \cos(4x) + \frac{1}{4}x \sin(4x) $$</p>
+
+            <h4>Étape 5 : Exprimer les solutions générales</h4>
+
+            <p>Les solutions générales de l'équation différentielle \( (E_2) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl}
+              y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
+              & x & \longmapsto & \lambda \cos(4x) + \mu \sin(4x) -\frac{1}{4}x \cos(4x) + \frac{1}{4}x \sin(4x)
+              \end{array}$$</p>
+          </div>
+
+
+          <!-- Question 3 - CORRECTE - MOYEN -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$ (E_3): \quad y'' + 9y = 4 \cos(5x) $$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>L'équation homogène \( (H_3) \) associée à \( (E_3) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
+            <p>En effet, lorsque l'on rencontre cette forme d'équation différentielle, \( y_h(x) \) s'écrit \( \lambda \cos(\omega x) + \mu \sin(\omega x) \).</p>
+            <p>Les solutions homogènes de \( (H_3) \) sont donc les fonctions :</p>
+
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(3x) + \mu \sin(3x) \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
@@ -1583,7 +1630,7 @@
             <p>Nous cherchons une solution particulière pour l'équation :</p>
             <p>$$ y'' + 9y = 4 \cos(5x) $$</p>
 
-            <p>L'équation différentielle \( (E_2) \) est sous la forme \( y'' + (\omega_1)^2 y = A \cos(\omega_2 x) \), où \( \omega_1 = 3 \) et \( \omega_2 = 5 \). Étant donné que \( \omega_1 \neq \omega_2 \), nous cherchons alors une solution particulière de la forme :</p>
+            <p>L'équation différentielle \( (E_3) \) est sous la forme \( y'' + (\omega_1)^2 y = A \cos(\omega_2 x) \), où \( \omega_1 = 3 \) et \( \omega_2 = 5 \). Étant donné que \( \omega_1 \neq \omega_2 \), nous cherchons alors une solution particulière de la forme :</p>
             <p>$$ y_p(x) = A \cos(5x) + B \sin(5x) $$</p>
 
             <h4>Étape 3 : Calcul des dérivées</h4>
@@ -1612,39 +1659,33 @@
 
             <h4>Étape 5 : Exprimer les solutions générales</h4>
 
-            <p>Les solutions générales de l'équation différentielle \( (E_2) \) sont les fonctions :</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_3) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(3x) + \mu \sin(3x) - \frac{1}{4} \cos(5x) \end{array}$$</p>
           </div>
 
 
-          <!-- Question 3 - CORRECTE - MOYEN+ -->
+          <!-- Question 4 - CORRECTE - MOYEN+ -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$(E_3): \quad y'' + 9y = 2 \cos(3x)$$</p>
+            <p>$$(E_4): \quad y'' + 9y = 2 \cos(3x)$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
 
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
-            <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_3): \quad y'' + 9y = 0$$</p>
+            <p>L'équation homogène \( (H_4) \) associée à \( (E_4) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
+            <p>En effet, lorsque l'on rencontre cette forme d'équation différentielle, \( y_h(x) \) s'écrit \( \lambda \cos(\omega x) + \mu \sin(\omega x) \).</p>
+            <p>Les solutions homogènes de \( (H_4) \) sont donc les fonctions :</p>
 
-            <p>L'équation caractéristique associée est :</p>
-            <p>$$ r^2 + 9 = 0 $$</p>
-
-            <p>Nous avons :</p>
-            <p>$$ r^2 = -9 \quad \Rightarrow \quad r = \pm 3i $$</p>
-
-            <p>Les solutions homogènes de \( (H_3) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(3x) + \mu \sin(3x) \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
 
-            <p>Maintenant, cherchons une solution particulière de l'équation différentielle \( (E_3) \) :</p>
+            <p>Maintenant, cherchons une solution particulière de l'équation différentielle \( (E_4) \) :</p>
             <p>$$ y'' + 9y = 2 \cos(3x) $$</p>
 
-            <p>L'équation différentielle \( (E_3) \) est sous la forme \( y'' + (\omega_1)^2 y = A \cos(\omega_2 x) \). Étant donné que \( \omega_1 = \omega_2 \), nous cherchons alors une solution particulière de la forme :</p>
+            <p>L'équation différentielle \( (E_4) \) est sous la forme \( y'' + (\omega_1)^2 y = A \cos(\omega_2 x) \). Étant donné que \( \omega_1 = \omega_2 \), nous cherchons alors une solution particulière de la forme :</p>
             <p>$$ y_p(x) = kx \sin(3x) $$</p>
 
             <h4>Étape 3 : Calcul des dérivées</h4>
@@ -1670,33 +1711,26 @@
 
             <h4>Étape 5 : Exprimer les solutions générales</h4>
 
-            <p>Les solutions générales de l'équation différentielle \( (E_3) \) sont les fonctions :</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_4) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl}
               y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
               & x & \longmapsto & \lambda \cos(3x) + \mu \sin(3x) + \frac{1}{3} x \sin(3x)
               \end{array}$$</p>
           </div>
 
-
-
-          <!-- Question 3 - CORRECTE - MOYEN -->
+          <!-- Question 5 - CORRECTE - MOYEN -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$(E_3): \quad y'' + y = \sin(2x) + \cos(2x)$$</p>
+            <p>$$(E_5): \quad y'' + y = \sin(2x) + \cos(2x)$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
-            <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_3): \quad y'' + y = 0$$</p>
-            <p>L'équation caractéristique est :</p>
-            <p>$$ r^2 + 1 = 0 $$</p>
+            <p>L'équation homogène \( (H_5) \) associée à \( (E_5) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
+            <p>En effet, lorsque l'on rencontre cette forme d'équation différentielle, \( y_h(x) \) s'écrit \( \lambda \cos(\omega x) + \mu \sin(\omega x) \).</p>
+            <p>Les solutions homogènes de \( (H_5) \) sont donc les fonctions :</p>
 
-            <p>Les racines sont :</p>
-            <p>$$ r = i \quad \text{et} \quad r = -i $$</p>
-
-            <p>Les solutions homogènes de \( (E_3) \) sont donc :</p>
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(x) + \mu \sin(x) \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
@@ -1731,17 +1765,17 @@
             <p>Les solutions générales de l'équation différentielle \( (E_3) \) sont donc :</p>
             <p>$$\begin{array}[t]{lrcl} y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(x) + \mu \sin(x) - \frac{1}{3} \cos(2x) - \frac{1}{3} \sin(2x) \end{array}$$</p>
           </div>
-          <!-- Question 4 - CORRECTE - MOYEN -->
+          <!-- Question 6 - CORRECTE - MOYEN -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$(E_4): \quad y'' + 2y' + 5y = 3 \sin(2x)$$</p>
+            <p>$$(E_6): \quad y'' + 2y' + 5y = 3 \sin(2x)$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
             <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_4): \quad y'' + 2y' + 5y = 0$$</p>
+            <p>$$(H_6): \quad y'' + 2y' + 5y = 0$$</p>
             <p>L'équation caractéristique est :</p>
             <p>$$ r^2 + 2r + 5 = 0 $$</p>
 
@@ -1750,7 +1784,7 @@
             <p>Comme \( \Delta &lt; 0 \), les racines sont complexes :</p>
             <p>$$ r = \frac{-2 \pm \sqrt{-16}}{2} = -1 \pm 2i $$</p>
 
-            <p>Les solutions homogènes de \( (H_4) \) sont donc :</p>
+            <p>Les solutions homogènes de \( (H_6) \) sont donc :</p>
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & e^{-x} \left( \lambda \cos(2x) + \mu \sin(2x) \right) \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
@@ -1794,39 +1828,182 @@
             <p>$$ y_p(x) = -\frac{12}{17} \cos(2x) + \frac{3}{17} \sin(2x) $$</p>
 
             <h4>Étape 3 : Exprimer la solution générale</h4>
-            <p>Les solutions générales de l'équation différentielle \( (E_4) \) sont les fonctions :</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_6) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl}
               y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
               & x & \longmapsto & e^{-x} \left( \lambda \cos(2x) + \mu \sin(2x) \right) - \frac{12}{17} \cos(2x) + \frac{3}{17} \sin(2x)
               \end{array}$$</p>
           </div>
 
-          <!-- Question 5 - FAUSSE -->
+          <!-- Question 7 - CORRECTE -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$(E_5): \quad y'' - 3y' + 2y = 4 \cos(3x)$$</p>
+            <p>$$ (E_7): \quad y'' - 3y' + 2y = 4 \cos(3x) $$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Commençons par résoudre l'équation homogène associée :</p>
+            <p>$$ (H_7): \quad y'' - 3y' + 2y = 0 $$</p>
+
+            <p>L'équation caractéristique associée est :</p>
+            <p>$$ r^2 - 3r + 2 = 0 $$</p>
+
+            <p>Nous résolvons cette équation pour \( r \) :</p>
+            <p>$$ r = \frac{3 \pm \sqrt{9 - 8}}{2} = \frac{3 \pm 1}{2} $$</p>
+            <p>Donc, les racines sont :</p>
+            <p>$$ r_1 = 2 \quad \text{et} \quad r_2 = 1 $$</p>
+
+            <p>Les solutions homogènes de \( (H_7) \) sont donc les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl}
+              y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
+              & x & \longmapsto & \lambda e^{x} + \mu e^{2x}
+              \end{array}$$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+
+            <p>Notre solution particulière est sous la forme :</p>
+            <p>$$ y_p(x) = A \cos(3x) + B \sin(3x) $$</p>
+            <p>où \( A \) et \( B \) sont des constantes à déterminer.</p>
+
+            <h4>Étape 3 : Calcul des dérivées</h4>
+
+            <p>Calculons les dérivées de \( y_p(x) \) :</p>
+            <p>$$ y'_p(x) = -3A \sin(3x) + 3B \cos(3x) $$</p>
+            <p>$$ y''_p(x) = -9A \cos(3x) - 9B \sin(3x) $$</p>
+
+            <h4>Étape 4 : Substitution dans l'équation différentielle</h4>
+
+            <p>Substituons \( y_p(x) \), \( y'_p(x) \), et \( y''_p(x) \) dans l'équation différentielle :</p>
+            <p>$$ y''_p(x) - 3y'_p(x) + 2y_p(x) = 4 \cos(3x) $$</p>
+
+            <p>En substituant les expressions, nous obtenons :</p>
+            <p>$$ (-9A \cos(3x) - 9B \sin(3x)) - 3(-3A \sin(3x) + 3B \cos(3x)) + 2(A \cos(3x) + B \sin(3x)) = 4 \cos(3x) $$</p>
+
+            <p>Développons et simplifions :</p>
+            <p>$$ -9A \cos(3x) - 9B \sin(3x) + 9A \sin(3x) - 9B \cos(3x) + 2A \cos(3x) + 2B \sin(3x) = 4 \cos(3x) $$</p>
+            <p>$$ (-9A - 9B + 2A) \cos(3x) + (-9B + 9A + 2B) \sin(3x) = 4 \cos(3x) $$</p>
+            <p>$$ (-7A - 9B) \cos(3x) + (9A - 7B) \sin(3x) = 4 \cos(3x) $$</p>
+
+            <p>Ce qui nous donne le système d'équations suivant :</p>
+            <p>$$\begin{cases}
+              -7A - 9B = 4 \quad L_1 \leftarrow 9L_1 + 7L_2 \\
+              9A - 7B = 0 \quad L_2 \leftarrow 7L_2 + 9L_1
+              \end{cases}$$</p>
+
+            <p>$$\begin{cases}
+              85A = -56 \quad L_1 \leftarrow \frac{1}{85}L_1 \\
+              36B = -18 \quad L_2 \leftarrow \frac{1}{36}L_2
+              \end{cases}$$</p>
+
+            <p>$$\begin{cases}
+              A = -\frac{14}{65} \\
+              B = -\frac{18}{65}
+              \end{cases}$$</p>
+
+            <p>La solution particulière est donc :</p>
+            <p>$$ y_p(x) = -\frac{14}{65} \cos(3x) - \frac{18}{65} \sin(3x) $$</p>
+
+            <h4>Étape 5 : Exprimer les solutions générales</h4>
+
+            <p>Les solutions générales de l'équation différentielle \( (E_7) \) sont les fonctions :</p>
+            <p>$$ y_g(x) = $$</p>
+            <p>$$\begin{array}[t]{lrcl}
+              y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
+              & x & \longmapsto & \lambda e^{x} + \mu e^{2x} - \frac{14}{65} \cos(3x) - \frac{18}{65} \sin(3x)
+              \end{array}$$</p>
+          </div>
+
+
+
+          <!-- Question 8 - CORRECTE - MOYEN -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$(E_8): \quad y'' - 4y' + 4y = 2 \sin(2x) + 3 \cos(2x)$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
             <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_5): \quad y'' - 3y' + 2y = 0$$</p>
+            <p>$$(H_8): \quad y'' - 4y' + 4y = 0$$</p>
+
             <p>L'équation caractéristique est :</p>
-            <p>$$ r^2 - 3r + 2 = 0 $$</p>
+            <p>$$ r^2 - 4r + 4 = 0 $$</p>
 
-            <p>Calculons les racines de l'équation caractéristique :</p>
-            <p>$$ \Delta = (-3)^2 - 4 \cdot 1 \cdot 2 = 9 - 8 = 1 $$</p>
+            <p>$$ \Delta = (-4)^2 - 4 \cdot 1 \cdot 4 = 16 - 16 = 0 $$</p>
+            <p>Comme \( \Delta = 0 \), nous avons une racine double :</p>
+            <p>$$ r = \frac{-b}{2a} = \frac{4}{2} = 2 $$</p>
 
-            <p>$$ r_1 = \frac{3+1}{2} = 2, \quad r_2 = \frac{3-1}{2} = 1 $$</p>
-
-            <p>Les solutions homogènes de \( (H_5) \) sont les fonctions :</p>
-            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda e^{2x} + \mu e^{x} \end{array}$$</p>
+            <p>Les solutions homogènes de \( (H_8) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & (\lambda + \mu x)e^{2x} \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
 
             <p>Pour l'équation :</p>
-            <p>$$ y'' - 3y' + 2y = 4 \cos(3x) $$</p>
+            <p>$$ y'' - 4y' + 4y = 2 \sin(2x) + 3 \cos(2x) $$</p>
+
+            <p>Nous cherchons une solution particulière de la forme :</p>
+            <p>$$ y_p(x) = A \cos(2x) + B \sin(2x) $$</p>
+
+            <p>Calculons les dérivées :</p>
+            <p>$$ y'_p(x) = -2A \sin(2x) + 2B \cos(2x) $$</p>
+            <p>$$ y''_p(x) = -4A \cos(2x) - 4B \sin(2x) $$</p>
+
+            <p>Substituons \( y_p \), \( y'_p \), et \( y''_p \) dans l'équation différentielle \( (E_8) \) :</p>
+            <p>$$ (-4A \cos(2x) - 4B \sin(2x)) - 4(-2A \sin(2x) + 2B \cos(2x)) + 4(A \cos(2x) + B \sin(2x)) = 2 \sin(2x) + 3 \cos(2x) $$</p>
+
+            <p>Simplifions :</p>
+            <p>$$ (-4A \cos(2x) - 4B \sin(2x)) + (8A \sin(2x) - 8B \cos(2x)) + 4A \cos(2x) + 4B \sin(2x) = 2 \sin(2x) + 3 \cos(2x) $$</p>
+
+            <p>Après simplification, il reste :</p>
+            <p>$$ 8A \sin(2x) - 8B \cos(2x) = 2 \sin(2x) + 3 \cos(2x) $$</p>
+
+            <p>Ce qui nous donne :</p>
+            <p>Pour \( \sin(2x) \) :</p>
+            <p>$$ 8A = 2 \quad \Rightarrow \quad A = \frac{1}{4} $$</p>
+            <p>Pour \( \cos(2x) \) :</p>
+            <p>$$ -8B = 3 \quad \Rightarrow \quad B = -\frac{3}{8} $$</p>
+
+            <p>Ainsi, la solution particulière est :</p>
+            <p>$$ y_p(x) = \frac{1}{4} \cos(2x) - \frac{3}{8} \sin(2x) $$</p>
+
+            <h4>Étape 3 : Exprimer la solution générale</h4>
+            <p>Les solutions générales de l'équation différentielle \( (E_8) \) sont les fonctions :</p>
+            <p>$$\begin{array}[t]{lrcl}
+              y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
+              & x & \longmapsto & (\lambda + \mu x)e^{2x} + \frac{1}{4} \cos(2x) - \frac{3}{8} \sin(2x)
+              \end{array}$$</p>
+          </div>
+          <!-- Question 9 - CORRECTE - MOYEN-DIFFICILE -->
+          <div class="question">
+            <p class="consigne">Résoudre :</p>
+            <p>$$ (E_9): \quad y'' + 2y' + 5y = 4 \sin(3x) + 3 \cos(3x) $$</p>
+            <button class="toggle-correction"><b>&#10003;</b></button>
+          </div>
+          <div class="exercise-correction hidden">
+            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
+
+            <p>Commençons par résoudre l'équation homogène associée :</p>
+            <p>$$ (H_9): \quad y'' + 2y' + 5y = 0 $$</p>
+
+            <p>L'équation caractéristique est :</p>
+            <p>$$ r^2 + 2r + 5 = 0 $$</p>
+
+            <p>$$ \Delta = 2^2 - 4 \cdot 1 \cdot 5 = 4 - 20 = -16 $$</p>
+            <p>Nous devons trouver \( \alpha \text{ et } \beta \) afin de déterminer la solution homogène :</p>
+            <p>$$ \alpha = -\frac{2}{2} = -1 \text{ et } \beta = \frac{\sqrt{16}}{2} = 2 $$</p>
+
+            <p>Les solutions homogènes de \( (H_9) \) sont donc :</p>
+            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & e^{-x} \left( \lambda \cos(2x) + \mu \sin(2x) \right) \end{array}$$</p>
+
+            <h4>Étape 2 : Trouver une solution particulière</h4>
+
+            <p>Pour l'équation :</p>
+            <p>$$ y'' + 2y' + 5y = 4 \sin(3x) + 3 \cos(3x) $$</p>
 
             <p>Nous cherchons une solution particulière de la forme :</p>
             <p>$$ y_p(x) = A \cos(3x) + B \sin(3x) $$</p>
@@ -1835,54 +2012,45 @@
             <p>$$ y'_p(x) = -3A \sin(3x) + 3B \cos(3x) $$</p>
             <p>$$ y''_p(x) = -9A \cos(3x) - 9B \sin(3x) $$</p>
 
-            <p>Substituons ces dérivées dans l'équation différentielle :</p>
-            <p>$$ (-9A \cos(3x) - 9B \sin(3x)) - 3(-3A \sin(3x) + 3B \cos(3x)) + 2(A \cos(3x) + B \sin(3x)) = 4 \cos(3x) $$</p>
+            <p>Substituons \( y_p \), \( y'_p \), et \( y''_p \) dans l'équation différentielle \( (E_9) \) :</p>
+            <p>$$ (-9A \cos(3x) - 9B \sin(3x)) + 2(-3A \sin(3x) + 3B \cos(3x)) + 5(A \cos(3x) + B \sin(3x)) = 4 \sin(3x) + 3 \cos(3x) $$</p>
 
             <p>En simplifiant :</p>
-            <p>$$ (-9A + 9B + 2A) \cos(3x) + (-9B + 9A + 2B) \sin(3x) = 4 \cos(3x) $$</p>
+            <p>$$ (-9A + 6B + 5A) \cos(3x) + (-9B - 6A + 5B) \sin(3x) = 3 \cos(3x) + 4 \sin(3x) $$</p>
 
             <p>Ce qui donne :</p>
-            <p>$$ (-7A + 9B) \cos(3x) + (9A - 7B) \sin(3x) = 4 \cos(3x) $$</p>
+            <p>$$ (-4A + 6B) \cos(3x) + (-6A - 4B) \sin(3x) = 3 \cos(3x) + 4 \sin(3x) $$</p>
 
-            <p>Nous obtenons alors :</p>
-            <p>Pour \( \cos(3x) \) :</p>
-            <p>$$ -7A + 9B = 4 $$</p>
-            <p>Pour \( \sin(3x) \) :</p>
-            <p>$$ 9A - 7B = 0 $$</p>
+            <p>Nous avons donc le système suivant :</p>
+            <p>$$\begin{cases} -4A + 6B = 3 \quad L_1 \leftarrow 2L_1 + 3L_2 \\ -6A - 4B = 4 \quad L_2 \leftarrow 2L_2 - 3L_1 \end{cases}$$</p>
 
-            <p>Résolvons ce système :</p>
-            <p>De la deuxième équation : \( 9A = 7B \Rightarrow A = \frac{7}{9}B \)</p>
-            <p>Substituons dans la première équation :</p>
-            <p>$$ -7\left(\frac{7}{9}B\right) + 9B = 4 $$</p>
-            <p>$$ -\frac{49}{9}B + 9B = 4 $$</p>
-            <p>$$ \left(-\frac{49}{9} + \frac{81}{9}\right)B = 4 $$</p>
-            <p>$$ \frac{32}{9}B = 4 $$</p>
-            <p>$$ B = \frac{4 \cdot 9}{32} = \frac{9}{8} $$</p>
-            <p>Alors :</p>
-            <p>$$ A = \frac{7}{9} \cdot \frac{9}{8} = \frac{7}{8} $$</p>
+            <p>$$\begin{cases} -26A = 18 \quad L_1 \leftarrow \frac{-1}{26}L_1 \\ -26B = -1 \quad L_2 \leftarrow \frac{-1}{26}L_2 \end{cases}$$</p>
+
+            <p>$$ A = -\frac{18}{26} = -\frac{9}{13} $$</p>
+            <p>$$ B = \frac{1}{26} $$</p>
 
             <p>Ainsi, la solution particulière est :</p>
-            <p>$$ y_p(x) = \frac{7}{8} \cos(3x) + \frac{9}{8} \sin(3x) $$</p>
+            <p>$$ y_p(x) = -\frac{9}{13} \cos(3x) + \frac{1}{26} \sin(3x) $$</p>
 
             <h4>Étape 3 : Exprimer la solution générale</h4>
-            <p>Les solutions générales de l'équation différentielle \( (E_5) \) sont les fonctions :</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_9) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl}
               y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
-              & x & \longmapsto & \lambda e^{2x} + \mu e^{x} + \frac{7}{8} \cos(3x) + \frac{9}{8} \sin(3x)
+              & x & \longmapsto & e^{-x} \left( \lambda \cos(2x) + \mu \sin(2x) \right) - \frac{9}{13} \cos(3x) + \frac{1}{26} \sin(3x)
               \end{array}$$</p>
           </div>
 
-          <!-- Question 6 - CORRECTE - DIFFICILE -->
+          <!-- Question 10 - CORRECTE - DIFFICILE -->
           <div class="question">
             <p class="consigne">Résoudre :</p>
-            <p>$$(E_6): \quad y'' + 4y' + 5y = 3 \sin(4x) + 2 \cos(4x)$$</p>
+            <p>$$(E_10): \quad y'' + 4y' + 5y = 3 \sin(4x) + 2 \cos(4x)$$</p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
           <div class="exercise-correction hidden">
             <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
             <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_6): \quad y'' + 4y' + 5y = 0$$</p>
+            <p>$$(H_10): \quad y'' + 4y' + 5y = 0$$</p>
             <p>L'équation caractéristique est :</p>
             <p>$$ r^2 + 4r + 5 = 0 $$</p>
 
@@ -1890,7 +2058,7 @@
             <p>Comme \( \Delta &lt; 0 \), nous devons trouver \( \alpha \text{ et } \beta \) afin de trouver la solution homogène :</p>
             <p>$$\alpha = -\frac{4}{2} = -2 \text{ et } \beta = \frac{\sqrt{4}}{2} = 1$$</p>
 
-            <p>Les solutions homogènes de \( (H_6) \) sont donc :</p>
+            <p>Les solutions homogènes de \( (H_10) \) sont donc :</p>
             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & e^{-2x} \left( \lambda \cos(x) + \mu \sin(x) \right) \end{array}$$</p>
 
             <h4>Étape 2 : Trouver une solution particulière</h4>
@@ -1938,70 +2106,10 @@
             <p>$$ y_p(x) = -\frac{70}{377} \cos(4x) - \frac{1}{377} \sin(4x) $$</p>
 
             <h4>Étape 3 : Exprimer la solution générale</h4>
-            <p>Les solutions générales de l'équation différentielle \( (E_6) \) sont les fonctions :</p>
+            <p>Les solutions générales de l'équation différentielle \( (E_10) \) sont les fonctions :</p>
             <p>$$\begin{array}[t]{lrcl}
               y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
               & x & \longmapsto & e^{-2x} \left( \lambda \cos(x) + \mu \sin(x) \right) - \frac{70}{377} \cos(4x) - \frac{1}{377} \sin(4x)
-              \end{array}$$</p>
-          </div>
-
-          <!-- Question 7 - CORRECTE - MOYEN -->
-          <div class="question">
-            <p class="consigne">Résoudre :</p>
-            <p>$$(E_7): \quad y'' - 4y' + 4y = 2 \sin(2x) + 3 \cos(2x)$$</p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercise-correction hidden">
-            <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
-
-            <p>Commençons par résoudre l'équation homogène associée :</p>
-            <p>$$(H_7): \quad y'' - 4y' + 4y = 0$$</p>
-
-            <p>L'équation caractéristique est :</p>
-            <p>$$ r^2 - 4r + 4 = 0 $$</p>
-
-            <p>$$ \Delta = (-4)^2 - 4 \cdot 1 \cdot 4 = 16 - 16 = 0 $$</p>
-            <p>Comme \( \Delta = 0 \), nous avons une racine double :</p>
-            <p>$$ r = \frac{-b}{2a} = \frac{4}{2} = 2 $$</p>
-
-            <p>Les solutions homogènes de \( (H_7) \) sont les fonctions :</p>
-            <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & (\lambda + \mu x)e^{2x} \end{array}$$</p>
-
-            <h4>Étape 2 : Trouver une solution particulière</h4>
-
-            <p>Pour l'équation :</p>
-            <p>$$ y'' - 4y' + 4y = 2 \sin(2x) + 3 \cos(2x) $$</p>
-
-            <p>Nous cherchons une solution particulière de la forme :</p>
-            <p>$$ y_p(x) = A \cos(2x) + B \sin(2x) $$</p>
-
-            <p>Calculons les dérivées :</p>
-            <p>$$ y'_p(x) = -2A \sin(2x) + 2B \cos(2x) $$</p>
-            <p>$$ y''_p(x) = -4A \cos(2x) - 4B \sin(2x) $$</p>
-
-            <p>Substituons \( y_p \), \( y'_p \), et \( y''_p \) dans l'équation différentielle \( (E_7) \) :</p>
-            <p>$$ (-4A \cos(2x) - 4B \sin(2x)) - 4(-2A \sin(2x) + 2B \cos(2x)) + 4(A \cos(2x) + B \sin(2x)) = 2 \sin(2x) + 3 \cos(2x) $$</p>
-
-            <p>Simplifions :</p>
-            <p>$$ (-4A \cos(2x) - 4B \sin(2x)) + (8A \sin(2x) - 8B \cos(2x)) + 4A \cos(2x) + 4B \sin(2x) = 2 \sin(2x) + 3 \cos(2x) $$</p>
-
-            <p>Après simplification, il reste :</p>
-            <p>$$ 8A \sin(2x) - 8B \cos(2x) = 2 \sin(2x) + 3 \cos(2x) $$</p>
-
-            <p>Ce qui nous donne :</p>
-            <p>Pour \( \sin(2x) \) :</p>
-            <p>$$ 8A = 2 \quad \Rightarrow \quad A = \frac{1}{4} $$</p>
-            <p>Pour \( \cos(2x) \) :</p>
-            <p>$$ -8B = 3 \quad \Rightarrow \quad B = -\frac{3}{8} $$</p>
-
-            <p>Ainsi, la solution particulière est :</p>
-            <p>$$ y_p(x) = \frac{1}{4} \cos(2x) - \frac{3}{8} \sin(2x) $$</p>
-
-            <h4>Étape 3 : Exprimer la solution générale</h4>
-            <p>Les solutions générales de l'équation différentielle \( (E_7) \) sont les fonctions :</p>
-            <p>$$\begin{array}[t]{lrcl}
-              y_g(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\
-              & x & \longmapsto & (\lambda + \mu x)e^{2x} + \frac{1}{4} \cos(2x) - \frac{3}{8} \sin(2x)
               \end{array}$$</p>
           </div>
         </div>

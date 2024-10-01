@@ -505,14 +505,278 @@
           <h1 class="titre-page">Les compositions de fonctions</h1>
           <!-- Exercice 1 -->
           <div class="exercise">
-            <h2></h2>
+            <h2>Les compositions simples</h2>
+
             <!-- Question 1 -->
             <div class="question">
-              <p class="consigne"></p>
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : e^{\sin(x)}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
-              <p></p>
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$e^{u} = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \sin(x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$e^{\sin(x)} = 1 + \left(x - \frac{x^3}{6}\right) + \frac{1}{2}\left(x - \frac{x^3}{6}\right)^2 + o(x^3)$$</p>
+              <p>Calculons le terme au carré :</p>
+              <p>$$= 1 + x - \frac{x^3}{6} + \frac{1}{2}\left(x^2 - \frac{x^4}{3} + o(x^2)\right) + o(x^3)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= 1 + x + \frac{x^2}{2} - \frac{x^3}{6} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_3(0) : \ln(1 + \tan(x))$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\ln(1 + \tan(x)) = \left(x + \frac{x^3}{3}\right) - \frac{1}{2}\left(x + \frac{x^3}{3}\right)^2 + o(x^3)$$</p>
+              <p>Calculons le terme au carré :</p>
+              <p>$$= x + \frac{x^3}{3} - \frac{1}{2}\left(x^2 + \frac{2x^4}{3} + o(x^2)\right) + o(x^3)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= x - \frac{x^2}{2} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_3(0) : \sqrt{1 + \sin(x)}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = \sin(x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\sqrt{1 + \sin(x)} = 1 + \frac{x - \frac{x^3}{6}}{2} - \frac{1}{8}\left(x - \frac{x^3}{6}\right)^2 + o(x^3)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= 1 + \frac{x}{2} - \frac{x^3}{12} - \frac{1}{8}(x^2 + o(x^2)) + o(x^3)$$</p>
+              <p>$$= 1 + \frac{x}{2} - \frac{x^2}{8} - \frac{x^3}{12} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \cos(\ln(1+x))$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\ln(1+x) = x - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>$$\cos(u) = 1 - \frac{u^2}{2} + o(u^2)$$ avec \(u = \ln(1+x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\cos(\ln(1+x)) = 1 - \frac{(x - \frac{x^2}{2})^2}{2} + o(x^2)$$</p>
+              <p>Calculons le terme au carré :</p>
+              <p>$$= 1 - \frac{x^2 - x^3 + \frac{x^4}{4}}{2} + o(x^2)$$</p>
+              <p>$$= 1 - \frac{x^2}{2} + \frac{x^3}{2} + o(x^2)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \tan(e^x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\tan(u) = u + \frac{u^3}{3} + o(u^3)$$ avec \(u = e^x\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\tan(e^x) = \left(1 + x + \frac{x^2}{2} + \frac{x^3}{6}\right) + \frac{1}{3}\left(1 + x + \frac{x^2}{2}\right)^3 + o(x^3)$$</p>
+              <p>Calculons le cube :</p>
+              <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{1}{3}\left(1 + 3x + 3\frac{x^2}{2} + o(x^2)\right) + o(x^3)$$</p>
+              <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{1}{3} + x + \frac{1}{2}x^2 + o(x^3)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= \frac{4}{3} + 2x + \left(\frac{5}{6} + \frac{1}{2}\right)x^2 + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(1) : \sqrt{1 + x^2}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = x^2\)</p>
+              <p>Nous évaluons autour de \(x = 1\):</p>
+              <p>$$\sqrt{1 + x^2} = \sqrt{1 + (1 + h)^2} = \sqrt{1 + 1 + 2h + h^2} = \sqrt{2 + 2h + h^2}$$</p>
+              <p>En utilisant un développement limité :</p>
+              <p>$$= 1 + \frac{h}{\sqrt{2}} - \frac{(2 + 2h + h^2 - 2)}{8} + o(h)$$</p>
+              <p>$$= 1 + \frac{h}{\sqrt{2}} - \frac{h^2}{8} + o(h)$$</p>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \frac{1}{\sqrt{1 + x}}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\frac{1}{\sqrt{1 + u}} = 1 - \frac{u}{2} + \frac{3u^2}{8} + o(u^2)$$ avec \(u = x\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\frac{1}{\sqrt{1 + x}} = 1 - \frac{x}{2} + \frac{3x^2}{8} + o(x^2)$$</p>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_3(0) : \frac{\sin(x)}{x^2 + 1}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\frac{1}{x^2 + 1} = 1 - x^2 + o(x^2)$$</p>
+              <p>Substituons : $$\frac{\sin(x)}{x^2 + 1} = \left(x - \frac{x^3}{6}\right)\left(1 - x^2 + o(x^2)\right)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= x - \frac{x^3}{6} - x^3 + o(x^3)$$</p>
+              <p>$$= x - \frac{7x^3}{6} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : \tan(\sin(x))$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>$$\tan(u) = u + \frac{u^3}{3} + o(u^3)$$ avec \(u = \sin(x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$\tan(\sin(x)) = \left(x - \frac{x^3}{6}\right) + \frac{1}{3}\left(x - \frac{x^3}{6}\right)^3 + o(x^3)$$</p>
+              <p>Calculons le cube :</p>
+              <p>$$= x - \frac{x^3}{6} + \frac{1}{3}\left(x^3 - \frac{3x^5}{6} + o(x^2)\right) + o(x^3)$$</p>
+              <p>$$= x - \frac{x^3}{6} + \frac{1}{3}x^3 + o(x^3)$$</p>
+              <p>$$= x + \frac{x^3}{6} + o(x^3)$$</p>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : e^{\tan(x)}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>$$e^{u} = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x)\)</p>
+              <p>Substituons \(u\) dans l'expression :</p>
+              <p>$$e^{\tan(x)} = 1 + \left(x + \frac{x^3}{3}\right) + \frac{1}{2}\left(x + \frac{x^3}{3}\right)^2 + o(x^3)$$</p>
+              <p>Calculons le terme au carré :</p>
+              <p>$$= 1 + x + \frac{x^3}{3} + \frac{1}{2}\left(x^2 + \frac{2x^4}{3} + o(x^2)\right) + o(x^3)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$</p>
+            </div>
+          </div>
+          <div class="exercise">
+            <h2>Compositions doubles</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_3(0) : \sin(\ln(1 + \cos(x)))$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
+
+              <p>Substituons \( \cos(x) \) dans \( \ln(1 + \cos(x)) \) :</p>
+              <p>$$\ln(1 + \cos(x)) = \ln\left(1 + \left(1 - \frac{x^2}{2} + o(x^2)\right)\right) = \ln\left(2 - \frac{x^2}{2} + o(x^2)\right)$$</p>
+
+              <p>Pour un \( x \) proche de \( 0 \), nous appliquons le développement limité de \( \ln(1 + u) \) :</p>
+              <p>$$\ln(2 - \frac{x^2}{2}) \approx \ln(2) + \frac{1}{2}\left(-\frac{x^2}{2}\right) = \ln(2) - \frac{x^2}{4} + o(x^2)$$</p>
+
+              <p>En utilisant le développement limité de \( \sin(u) \) autour de \( 0 \) :</p>
+              <p>$$\sin(u) = u - \frac{u^3}{6} + o(u^3) \text{avec} u = \ln(1 + \cos(x)) \approx \ln(2) - \frac{x^2}{4}$$</p>
+
+              <p>En substituant dans l'expression de \( \sin(u) \) :</p>
+              <p>$$\sin\left(\ln(2) - \frac{x^2}{4}\right) = \sin(\ln(2)) - \cos(\ln(2))\frac{x^2}{4} + o(x^2)$$</p>
+
+              <p>Le développement limité de \( \sin(\ln(1 + \cos(x))) \) est :</p>
+              <p>$$dl_3(0) : \sin(\ln(1 + \cos(x))) = \sin(\ln(2)) - \cos(\ln(2))\frac{x^2}{4} + o(x^2)$$</p>
+            </div>
+
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_3(0) : \ln(\cos(x^2))$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
+              <p>Donc : $$\cos(x^2) = 1 - \frac{x^4}{2} + o(x^4)$$</p>
+              <p>Ensuite, on applique :</p>
+              <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \cos(x^2) - 1 = -\frac{x^4}{2} + o(x^4)$$</p>
+              <p>Substituons : </p>
+              <p>$$\ln(\cos(x^2)) = -\frac{x^4}{2} - \frac{1}{2}\left(-\frac{x^4}{2}\right)^2 + o(x^4)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= -\frac{x^4}{2} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(0) : e^{\tan(x^3)}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+              <p>Donc : $$\tan(x^3) = x^3 + \frac{x^9}{3} + o(x^9)$$</p>
+              <p>Ensuite, on applique :</p>
+              <p>$$e^u = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x^3)\)</p>
+              <p>Substituons : </p>
+              <p>$$e^{\tan(x^3)} = 1 + \left(x^3 + \frac{x^9}{3}\right) + \frac{1}{2}\left(x^3 + \frac{x^9}{3}\right)^2 + o(x^9)$$</p>
+              <p>Calculons le terme au carré :</p>
+              <p>$$= 1 + x^3 + \frac{x^9}{3} + \frac{1}{2}(x^6 + o(x^6)) + o(x^9)$$</p>
+              <p>Ce qui donne :</p>
+              <p>$$= 1 + x^3 + \frac{x^6}{2} + o(x^6)$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_5(0) : \frac{1}{\sqrt{1 + \sin(x^2)}}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+              <p>Donc : $$\sin(x^2) = x^2 - \frac{x^6}{6} + o(x^6)$$</p>
+              <p>Ensuite, on applique :</p>
+              <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = \sin(x^2)\)</p>
+              <p>Substituons : </p>
+              <p>$$\frac{1}{\sqrt{1 + \sin(x^2)}} = 1 - \frac{x^2}{4} + \frac{x^4}{48} + o(x^4)$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Calculer :</p>
+              <p>$$dl_4(1) : \ln(\sqrt{1 + x^2} + x)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>On utilise les développements limités :</p>
+              <p>Pour \(x\) proche de \(1\), on a : $$\sqrt{1 + x^2} = \sqrt{2 + 2h} = \sqrt{2}\sqrt{1 + h} \approx \sqrt{2} + \frac{h}{\sqrt{2}}$$</p>
+              <p>Nous voulons donc : </p>
+              <p>$$\sqrt{1 + x^2} + x = \sqrt{2} + \frac{h}{\sqrt{2}} + 1 + h$$</p>
+              <p>$$\approx \sqrt{2} + 1 + \left(\frac{1}{\sqrt{2}} + 1\right)h$$</p>
+              <p>Ensuite, on applique :</p>
+              <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \sqrt{1 + x^2} + x - (\sqrt{2} + 1)\)</p>
+              <p>Calculons : </p>
+              <p>$$= \ln\left(\sqrt{2} + 1 + \left(\frac{1}{\sqrt{2}} + 1\right)h\right)$$</p>
+              <p>$$= \ln(\sqrt{2} + 1) + \frac{1}{\sqrt{2} + 1}\left(\frac{1}{\sqrt{2}} + 1\right)h + o(h)$$</p>
             </div>
           </div>
         </div>
@@ -528,20 +792,22 @@
             <!-- Question 1 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_3\left(\frac{\pi}{4}\right) : \sin(x)$$</p>
+              <p>$$dl_3\left(\frac{\pi}{4}\right) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{4}\) :</p>
               <p>$$\sin(x) = \sin\left(\frac{\pi}{4}\right) + \cos\left(\frac{\pi}{4}\right)\left(x - \frac{\pi}{4}\right) - \frac{\sin\left(\frac{\pi}{4}\right)}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{\cos\left(\frac{\pi}{4}\right)}{6}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
               <p>Calculons les termes :</p>
-              <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{1}{2}\cdot\frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{1}{6}\cdot\frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
+              <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{1}{2} \cdot \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{1}{6} \cdot \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
+              <p>En simplifiant :</p>
+              <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{\sqrt{2}}{4}\left(x - \frac{\pi}{4}\right)^2 - \frac{\sqrt{2}}{12}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
             </div>
 
             <!-- Question 2 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_4(1) : e^x$$</p>
+              <p>$$dl_4(1) : e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
@@ -549,24 +815,29 @@
               <p>$$e^x = e^1 + e^1(x - 1) + \frac{e^1}{2!}(x - 1)^2 + \frac{e^1}{3!}(x - 1)^3 + \frac{e^1}{4!}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
               <p>Calculons les termes :</p>
               <p>$$= e + e(x - 1) + \frac{e}{2}(x - 1)^2 + \frac{e}{6}(x - 1)^3 + \frac{e}{24}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+              <p>En regroupant, nous obtenons :</p>
+              <p>$$= e + e(x - 1) + \frac{e}{2}(x - 1)^2 + \frac{e}{6}(x - 1)^3 + \frac{e}{24}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
             </div>
 
             <!-- Question 3 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_3(0) : \ln(x)$$</p>
+              <p>$$dl_3(1) : \ln(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
               <p>$$\ln(x) = \ln(1) + \frac{1}{1}(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + o\left((x - 1)^3\right)$$</p>
+              <p>En substituant \( \ln(1) = 0 \) :</p>
               <p>$$= 0 + (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} + o\left((x - 1)^3\right)$$</p>
+              <p>Ce qui se simplifie à :</p>
+              <p>$$= (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} + o\left((x - 1)^3\right)$$</p>
             </div>
 
             <!-- Question 4 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_3\left(\frac{\pi}{3}\right) : \cos(x)$$</p>
+              <p>$$dl_3\left(\frac{\pi}{3}\right) : \cos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
@@ -579,70 +850,81 @@
             <!-- Question 5 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_4(2) : \sqrt{x}$$</p>
+              <p>$$dl_4(2) : \sqrt{x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 2\) :</p>
               <p>$$\sqrt{x} = \sqrt{2} + \frac{1}{2\sqrt{2}}(x - 2) - \frac{1}{8\sqrt{2}}(x - 2)^2 + \frac{1}{16\sqrt{2}}(x - 2)^3 + o\left((x - 2)^3\right)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= \sqrt{2} + \frac{1}{2\sqrt{2}}(x - 2) - \frac{1}{8\sqrt{2}}(x - 2)^2 + \frac{1}{16\sqrt{2}}(x - 2)^3 + o\left((x - 2)^3\right)$$</p>
             </div>
 
             <!-- Question 6 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_4\left(-1\right) : \tan(x)$$</p>
+              <p>$$dl_4\left(-1\right) : \tan(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = -1\) :</p>
-              <p>$$\tan(x) = \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}\left(x + 1\right)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
+              <p>$$\tan(x) = \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}(x + 1)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
+              <p>En calculant les termes, nous obtenons :</p>
+              <p>$$= \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}(x + 1)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
             </div>
 
             <!-- Question 7 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_5(0) : \cos(2x)$$</p>
+              <p>$$dl_5(0) : \cos(2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
               <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4)$$</p>
-              <p>$$= 1 - 2x^2 + \frac{4x^4}{3} + o(x^4)$$</p>
+              <p>Calculons les termes :</p>
+              <p>$$= 1 - 2x^2 + \frac{4x^4}{12} + o(x^4)$$</p>
+              <p>Ce qui se simplifie à :</p>
+              <p>$$= 1 - 2x^2 + \frac{x^4}{3} + o(x^4)$$</p>
             </div>
 
             <!-- Question 8 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_3\left(0\right) : \frac{1}{1 + x}$$</p>
+              <p>$$dl_3\left(0\right) : \frac{1}{1 + x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
               <p>$$\frac{1}{1 + x} = 1 - x + x^2 - x^3 + o(x^3)$$</p>
+              <p>En réorganisant, cela donne :</p>
+              <p>$$= 1 - x + x^2 - x^3 + o(x^3)$$</p>
             </div>
 
             <!-- Question 9 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_5\left(1\right) : \ln(x)$$</p>
+              <p>$$dl_5\left(1\right) : \ln(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
               <p>$$\ln(x) = 0 + 1(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + \frac{1}{4}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+              <p>En réorganisant les termes :</p>
+              <p>$$= (x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + \frac{1}{4}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
             </div>
 
             <!-- Question 10 -->
             <div class="question">
               <p class="consigne">Calculer :</p>
-              <p>$$T_4\left(-\frac{\pi}{2}\right) : \sin(x)$$</p>
+              <p>$$dl_4\left(-\frac{\pi}{2}\right) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
             <div class="exercise-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = -\frac{\pi}{2}\) :</p>
               <p>$$\sin(x) = -1 + \cos\left(-\frac{\pi}{2}\right)\left(x + \frac{\pi}{2}\right) - \frac{\sin\left(-\frac{\pi}{2}\right)}{2}\left(x + \frac{\pi}{2}\right)^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
               <p>Calculons les termes :</p>
-              <p>$$= -1 + 0(x + \frac{\pi}{2}) + \frac{1}{2}(x + \frac{\pi}{2})^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
+              <p>$$= -1 + 0 \cdot (x + \frac{\pi}{2}) + \frac{1}{2}(x + \frac{\pi}{2})^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
             </div>
 
           </div>

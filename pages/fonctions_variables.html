@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fonctions de plusieurs variables</title>
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li class="menu-item"><a href="../index.html">Accueil</a></li>
+        <!-- Exercices -->
+        <li class="menu-item dropdown">
+          <a href="#">Exercices</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Analyse</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Ressources -->
+        <li class="menu-item"><a href="ressources.html">Resources</a></li>
+        <li class="menu-item"><a href="#">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Thèmes du chapitre</h2>
+      <ul>
+        <li><a href="#page1">Limites et continuité</a></li>
+        <li><a href="#page2">Dérivées partielles</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <!-- Limites et continuité -->
+      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Étude de la Continuité des Fonctions</h1>
+
+          <div class="exercise">
+            <h2>Ensembles de Définition</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Déterminez l'ensemble de définition de la fonction :</p>
+              <p>$$ f_1(x, y) = \frac{\sqrt{x}}{y - 1} $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_1(x, y) = \frac{\sqrt{x}}{y - 1} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+
+              <h5>Étape 1 : Analyser le dénominateur</h5>
+              <p>Le dénominateur \( y - 1 \) ne doit pas être égal à zéro :</p>
+              <p>$$ y - 1 \neq 0 \quad \Rightarrow \quad y \neq 1 $$</p>
+
+              <h5>Étape 2 : Analyser le numérateur</h5>
+              <p>Le numérateur \( \sqrt{x} \) est défini si et seulement si :</p>
+              <p>$$ x \geq 0 $$</p>
+
+              <h5>Étape 3 : Combiner les conditions</h5>
+              <p>L'ensemble de définition \(D_{f_1} \) de la fonction \( f(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$D_{f_1} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x \geq 0 \ \text{et} \ y \neq 1 \right\} $$</p>
+
+              <h5>Étape 4 : Représentation graphique</h5>
+              <p>À venir...</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Déterminez l'ensemble de définition de la fonction :</p>
+              <p>$$ f_2(x, y) = \ln(x^2 + y^2) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_2(x, y) = \ln(x^2 + y^2) \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+
+              <h5>Étape 1 : Domaine de définition de la fonction logarithme</h5>
+              <p>La fonction logarithme \( \ln(u) \) est définie si et seulement si :</p>
+              <p>$$ u > 0 $$</p>
+
+              <h5>Étape 2 : Appliquer la condition à la fonction \( g \)</h5>
+              <p>Dans notre cas :</p>
+              <p>$$ x^2 + y^2 > 0 $$</p>
+
+              <h5>Étape 3 : Analyser la condition</h5>
+              <p>La somme des carrés \( x^2 + y^2 \) est strictement positive sauf en un seul point :</p>
+              <p>$$ x = 0 \quad \text{et} \quad y = 0 $$</p>
+
+              <h5>Étape 4 : Définir l'ensemble de définition</h5>
+              <p>L'ensemble de définition \( D_{f_2} \) de la fonction \( g(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_2} = \mathbb{R}^2 \setminus \{(0, 0)\} $$</p>
+
+              <h5>Étape 5 : Représentation graphique</h5>
+              <p>À venir...</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Déterminez l'ensemble de définition de la fonction :</p>
+              <p>$$ f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}} $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+
+              <h5>Étape 1 : Analyser le dénominateur</h5>
+              <p>Le dénominateur \( \sqrt{1 - x^2 - y^2} \) doit être différent de zéro et défini. Donc :</p>
+              <ul>
+                <li>L'expression sous la racine carrée doit être positive :</li>
+                <p>$$ 1 - x^2 - y^2 > 0 $$</p>
+                <li>Le dénominateur ne doit pas être nul :</li>
+                <p>$$ \sqrt{1 - x^2 - y^2} \neq 0 \quad \Rightarrow \quad 1 - x^2 - y^2 \neq 0 $$</p>
+              </ul>
+
+              <h5>Étape 2 : Simplifier les conditions</h5>
+              <p>La condition \( 1 - x^2 - y^2 > 0 \) définit l'intérieur d'un cercle de rayon 1 centré à l'origine :</p>
+              <p>$$ x^2 + y^2 &lt; 1 $$</p>
+
+              <h5>Étape 3 : Définir l'ensemble de définition</h5>
+              <p>L'ensemble de définition \( D_{f_3} \) de la fonction \( h(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_3} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x^2 + y^2 &lt; 1 \right\} $$</p>
+
+              <h5>Étape 4 : Représentation graphique</h5>
+              <p>À venir...</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Déterminez l'ensemble de définition de la fonction :</p>
+              <p>$$ f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}} $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+
+              <h5>Étape 1 : Analyser le numérateur</h5>
+              <p>Le logarithme \( \ln(u) \) est défini si et seulement si :</p>
+              <p>$$ u > 0 $$</p>
+              <p>Dans notre cas :</p>
+              <p>$$ x + y > 0 $$</p>
+
+              <h5>Étape 2 : Analyser le dénominateur</h5>
+              <p>Le dénominateur \( y - \sqrt{x} \) ne doit pas être égal à zéro :</p>
+              <p>$$ y - \sqrt{x} \neq 0 \quad \Rightarrow \quad y \neq \sqrt{x} $$</p>
+
+              <h5>Étape 3 : Conditions supplémentaires</h5>
+              <p>La racine carrée \( \sqrt{x} \) est définie si et seulement si :</p>
+              <p>$$ x \geq 0 $$</p>
+
+              <h5>Étape 4 : Combiner les conditions</h5>
+              <p>L'ensemble de définition \( D_{f_4} \) de la fonction \( f_4(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_4} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x \geq 0, \ x + y > 0 \ \text{et} \ y \neq \sqrt{x} \right\} $$</p>
+
+              <h5>Étape 5 : Représentation graphique</h5>
+              <p>À venir...</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Déterminez l'ensemble de définition de la fonction :</p>
+              <p>$$ f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2} $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+
+              <h5>Étape 1 : Analyser le numérateur</h5>
+              <p>La fonction exponentielle \( e^{x - y} \) est définie pour tous les réels \( x \) et \( y \). Aucune restriction n'est imposée par le numérateur.</p>
+
+              <h5>Étape 2 : Analyser le dénominateur</h5>
+              <p>Le dénominateur \( 1 - x^2 - y^2 \) ne doit pas être égal à zéro :</p>
+              <p>$$ 1 - x^2 - y^2 \neq 0 $$</p>
+
+              <h5>Étape 3 : Conditions supplémentaires</h5>
+              <p>En plus de ne pas être égal à zéro, le dénominateur doit permettre l'expression d'une fraction définie. Dans ce cas, il n'y a pas de condition supplémentaire puisque le dénominateur est déjà un polynôme défini partout sauf aux points où il est nul.</p>
+
+              <h5>Étape 4 : Définir l'ensemble de définition</h5>
+              <p>L'ensemble de définition \( D_{f_5} \) de la fonction \( m(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$D_{f_5} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ 1 - x^2 - y^2 \neq 0 \right\} $$</p>
+
+              <h5>Étape 5 : Représentation graphique</h5>
+              <p>À venir...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dérivées partielles -->
+      <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+        <div class="section-content" id="changements_de_variable">
+          <div class="exercise">
+            <h2>Pour comprendre</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_1(x, y) = 3x^3y$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Pour calculer \( \frac{\partial f}{\partial x} \), nous considérons \( y \) comme une constante. La dérivée de \( x^3 \) est \( 3x^2 \), donc :</p>
+              <p>$$\frac{\partial f}{\partial x} = 3 \cdot (3x^2) \cdot y = 9x^2y$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Ici, nous considérons \( x \) comme une constante. La fonction est alors linéaire en \( y \), donc la dérivée est simplement :</p>
+              <p>$$\frac{\partial f}{\partial y} = 3x^3$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_2(x, y) = e^{xy}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La fonction est une exponentielle avec un argument \( xy \). La dérivée de \( e^{xy} \) est elle-même multipliée par la dérivée de \( xy \), soit \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = y e^{xy}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>De la même manière, en dérivant par rapport à \( y \), la dérivée de \( xy \) est \( x \), donc :</p>
+              <p>$$\frac{\partial f}{\partial y} = x e^{xy}$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_3(x, y) = \ln(x^2 + y^2)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \ln(u) \) est \( \frac{1}{u} \) multipliée par la dérivée de \( u \) par rapport à \( x \), soit \( 2x \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{1}{x^2 + y^2} \cdot 2x = \frac{2x}{x^2 + y^2}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>De manière analogue, la dérivée par rapport à \( y \) est :</p>
+              <p>$$\frac{\partial f}{\partial y} = \frac{1}{x^2 + y^2} \cdot 2y = \frac{2y}{x^2 + y^2}$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_4(x, y, z) = x^2yz + xz^3$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Nous devons dériver chaque terme séparément. Pour le premier terme \( x^2yz \), la dérivée par rapport à \( x \) est \( 2xyz \) (car \( y \) et \( z \) sont constants). Pour le second terme \( xz^3 \), la dérivée par rapport à \( x \) est \( z^3 \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = 2xyz + z^3$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Seul le premier terme dépend de \( y \), et sa dérivée par rapport à \( y \) est \( x^2z \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = x^2z$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>La dérivée du premier terme \( x^2yz \) par rapport à \( z \) est \( x^2y \), et celle de \( xz^3 \) est \( 3xz^2 \) :</p>
+              <p>$$\frac{\partial f}{\partial z} = x^2y + 3xz^2$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_5(x, y, z) = \sin(xy) + z^2e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \sin(xy) \) par rapport à \( x \) est \( y \cos(xy) \), et celle de \( z^2e^x \) est \( z^2e^x \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = y \cos(xy) + z^2 e^x$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>La dérivée de \( \sin(xy) \) par rapport à \( y \) est \( x \cos(xy) \), et \( z^2e^x \) ne dépend pas de \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = x \cos(xy)$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>Le premier terme ne dépend pas de \( z \), donc la dérivée partielle est nulle pour \( \sin(xy) \), tandis que la dérivée de \( z^2e^x \) est \( 2ze^x \) :</p>
+              <p>$$\frac{\partial f}{\partial z} = 2ze^x$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_6(x, y, z) = \frac{x^2 + z^3}{y}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Seul \( x^2 \) dépend de \( x \), et la dérivée est :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{2x}{y}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Ici, on utilise la règle de dérivation d'une fonction rationnelle. La dérivée de \( f \) par rapport à \( y \) est donnée par :</p>
+              <p>$$\frac{\partial f}{\partial y} = -\frac{x^2 + z^3}{y^2}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>Seul \( z^3 \) dépend de \( z \), et la dérivée est :</p>
+              <p>$$\frac{\partial f}{\partial z} = \frac{3z^2}{y}$$</p>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p>$$f_7(x, y, z) = \frac{xz}{y^2} + \ln(xz)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( x \) est \( \frac{z}{y^2} \), et celle de \( \ln(xz) \) par rapport à \( x \) est \( \frac{1}{x} \), donc :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{z}{y^2} + \frac{1}{x}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( y \) est \( -\frac{2xz}{y^3} \), et \( \ln(xz) \) ne dépend pas de \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = -\frac{2xz}{y^3}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( z \) est \( \frac{x}{y^2} \), et celle de \( \ln(xz) \) par rapport à \( z \) est \( \frac{1}{z} \), donc :</p>
+              <p>$$\frac{\partial f}{\partial z} = \frac{x}{y^2} + \frac{1}{z}$$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

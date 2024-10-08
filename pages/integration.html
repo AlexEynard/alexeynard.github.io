@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intégration</title>
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li class="menu-item"><a href="../index.html">Accueil</a></li>
+        <!-- Exercices -->
+        <li class="menu-item dropdown">
+          <a href="#">Exercices</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Analyse</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Ressources -->
+        <li class="menu-item"><a href="ressources.html">Resources</a></li>
+        <li class="menu-item"><a href="#">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Thèmes du chapitre</h2>
+      <ul>
+        <li><a href="#page1">Les bases de l'intégration</a></li>
+        <li><a href="#page2">Changements de variables</a></li>
+        <li><a href="#page3">Intégrations par parties</a></li>
+        <li><a href="#page4">Fractions rationnelles</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <!-- Section 1 -->
+      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content" id="bases">
+          <h1 class="titre-page">Les bases de l'intégration</h1>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2>Formes polynomiales</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{-1}^{2}(5x^{3}-3x+4) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \left[\frac{5x^4}{4} - \frac{3x^2}{2} + 4x\right]_{-1}^{2}$$
+              </p>
+              <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} - \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
+              <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \frac{105}{4}$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{3}(4x^{2} - 2x + 1) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\int_{0}^{3} (4x^2 - 2x + 1) \, dx = \left[\frac{4x^3}{3} - \frac{x^2}{1} + x\right]_0^3$$</p>
+              <p>$$ = \left(\frac{4(3)^3}{3} - (3)^2 + 3\right) - (0)$$</p>
+              <p>$$ = \frac{108}{3} - 9 + 3 = 36 - 9 + 3 = 30$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{5}(8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\int_{0}^{5} (8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
+              <p>$$ = \left[\frac{8x^5}{5} - \frac{7x^4}{4} + \frac{2x^3}{3} - \frac{x^2}{2}\right]_0^5$$</p>
+              <p>$$ = \left(\frac{8(5)^5}{5} - \frac{7(5)^4}{4} + \frac{2(5)^3}{3} - \frac{(5)^2}{2}\right) - 0$$</p>
+              <p>$$\int_{0}^{5} (8x^4 - 7x^3 + 2x^2 - x) \, dx = 1870$$</p>
+            </div>
+            <!-- Question 4 -->
+            <!-- Question 5 -->
+
+          </div>
+          <!-- Exercise 2 -->
+          <div class="exercise">
+            <h2>Formes trigonométriques simples</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>
+                $$\int_{-\pi}^{\frac{\pi}{2}} \cos(2\theta-\pi) -
+                \sin\left(\theta-\frac{\pi}{4}\right) d\theta$$
+              </p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                $$\int_{-\pi}^{\frac{\pi}{2}} \cos(2\theta-\pi) -
+                \sin\left(\theta-\frac{\pi}{4}\right) \, d\theta$$
+              </p>
+              <p>
+                $$= \left[\frac{\sin(2\theta - \pi)}{2} + \cos\left(\theta -
+                \frac{\pi}{4}\right)\right]_{-\pi}^{\frac{\pi}{2}}$$
+              </p>
+              <p>
+                $$= \left(\frac{\sin\left(2\left(\frac{\pi}{2}\right) -
+                \pi\right)}{2} + \cos\left(\frac{\pi}{2} -
+                \frac{\pi}{4}\right)\right) - \left(\frac{\sin\left(2(-\pi) -
+                \pi\right)}{2} + \cos\left(-\pi -
+                \frac{\pi}{4}\right)\right)$$
+              </p>
+              <p>$$= \left(\frac{\sin(0)}{2} + \cos\left(\frac{\pi}{4}\right)\right) - \left(\frac{\sin(-3\pi)}{2} +
+                \cos\left(-\frac{5\pi}{4}\right)\right)$$</p>
+              <p>$$= \left(0 + \frac{\sqrt{2}}{2}\right) - \left(0 - \frac{\sqrt{2}}{2}\right)$$</p>
+              <p>$$= \frac{2\sqrt{2}}{2}= \sqrt{2}$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx $$</p>
+              <p>$$= 3 \int (\sin(20x) \cos(23x))dx + 20 \int \sin(43x)dx $$</p>
+              <p>Nous rappelons l'indentité suivante :</p>
+              <p>$$\sin(\theta) \cos(\varphi) = \frac{1}{2} [\sin(\theta + \varphi) + \sin(\theta - \varphi)]$$</p>
+              <p>Ainsi nous pouvons désormais écrire :</p>
+              <p>$$ 3 \int \frac{1}{2}(\sin(43x) + \sin(-3x))dx + 20 \int \sin(43x)dx $$</p>
+              <p>$$= \frac{3}{2}(-\frac{1}{43} \cos(43x) -\frac{1}{-3} \cos(-3x)) - 20 \frac{1}{43}cos(43x) + C $$</p>
+              <p>$$= -\frac{3}{86} \cos(43x) + \frac{3}{6} \cos(-3x) - \frac{20}{43}cos(43x) + C $$</p>
+              <p>$$= \frac{-3 - 40}{86}\cos(43x) + \frac{1}{2} \cos(-3x) + C $$</p>
+              <p>$$= -\frac{1}{2}cos(43x) + \frac{1}{2} \cos(-3x) + C $$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \frac{\tan(x)}{\tan^2(x) + 1} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour commencer, nous allons exprimer les fonctions tangentes sous forme de sinus et de cosinus :</p>
+              <p>Rappelons que \( \tan(x) = \frac{\sin(x)}{\cos(x)} \), et que \( \tan^2(x) + 1 = \frac{1}{\cos^2(x)} \)
+                :</p>
+              <p>Ainsi, l'intégrale devient :</p>
+              <p>$$\int \frac{\tan(x)}{\tan^2(x) + 1} \, dx = \int \frac{\frac{\sin(x)}{\cos(x)}}{\frac{1}{\cos^2(x)}}
+                \, dx$$</p>
+              <p>$$= \int \frac{\sin(x)}{\cos(x)} \cdot \cos^2(x) \, dx$$</p>
+              <p>$$= \int \sin(x) \cos(x) \, dx$$</p>
+              <p>Nous appliquons ensuite l'identité trigonométrique \( 2 \sin(x) \cos(x) = \sin(2x) \) :</p>
+              <p>$$ \int \sin(x) \cos(x) \, dx = \frac{1}{2} \int \sin(2x) \, dx $$</p>
+              <p>Nous pouvons désormais intégrer facilement cette fonction :</p>
+              <p>$$ \frac{1}{2} \int \sin(2x) \, dx = \frac{1}{2} \left[ -\frac{1}{2} \cos(2x) \right] + C $$</p>
+              <p>$$= -\frac{1}{4} \cos(2x) + C$$</p>
+            </div>
+
+            <!-- Question 4 -->
+          </div>
+          <!-- Exercise 3 -->
+          <div class="exercise">
+            <h2>Fractions rationnelles simples</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{-1}^{1}\frac{-14}{(5x+9)^{2}} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Dans un premier lieu, nous pouvons identifier la forme \( -\frac{u'}{u^2} \) donc la primitive est \(
+                \frac{1}{u} \).</p>
+              <p>$$\int_{-1}^{1} \frac{-14}{(5x+9)^{2}} \, dx$$</p>
+              <p>Ainsi \( u = 5x + 9 \) et \( u' = 5 \). Il faut désormais adapter les coefficients dans l'intégrales
+              </p>
+              <p>$$\int_{-1}^{1} \frac{-14}{(5x+9)^{2}} \, dx = \frac{14}{5} \cdot \int_{-1}^{1} \frac{-5}{(5x+9)^{2}}
+                \, dx $$</p>
+              <p>$$= \frac{14}{5} \left[ \frac{1}{5x+9} \right]_{-1}^{1}$$</p>
+              <p>$$= \left[ \frac{14}{5(5x+9)} \right]_{-1}^{1}$$</p>
+              <p>$$= \frac{14}{5} \cdot ( \frac{1}{5+9} - \frac{1}{-5+9})$$</p>
+              <p>$$= \frac{14}{5} \cdot ( \frac{1}{14} - \frac{1}{4})$$</p>
+              <p>$$= \frac{14}{5} \cdot \frac{2-7}{28}$$</p>
+              <p>$$= \frac{14}{5} \cdot \frac{-5}{28} = \frac{-14}{28}$$</p>
+              <p>Le résultat de l'intégrale est donc :</p>
+              <p>$$\int_{-1}^{1} \frac{-14}{(5x+9)^{2}} \, dx = \frac{-1}{2}$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1}dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1} \, dx $$</p>
+              <p>$$= \left[\ln(x^2+1) + 2\arctan(x)\right]_{0}^{1} $$</p>
+              <p>$$= \ln(2) + 2\arctan(1) - \ln(1) - 2\arctan(0) $$</p>
+              <p>$$= \ln(2) + \frac{\pi}{2}$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{-1}^{1}\frac{2x-\pi}{\sqrt{1-x^{2}}}dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                $$\int_{-1}^{1} \frac{2x-\pi}{\sqrt{1-x^{2}}} \, dx =
+                \int_{-1}^{1} \frac{2x}{1-x^{2}}+\pi \frac{-1}{\sqrt{1-x^{2}}}
+                \, dx$$
+              </p>
+              <p>
+                $$= \int_{-1}^{1} \frac{2x}{\sqrt{1-x^{2}}}+ \pi \int_{-1}^{1}
+                \frac{-1}{\sqrt{1-x^{2}}} \, dx = [-2\sqrt{1-x^2}]_{-1}^{1} +
+                \pi [\arccos(x)]_{-1}^{1}$$
+              </p>
+              <p>
+                $$= -2[\sqrt{1-x^2}]_{-1}^{1} + \pi (\arccos(1) - \arccos(-1))
+                = 0 + \pi \cdot (- \pi )= - \pi^{2}$$
+              </p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Commençons par décomposer l'intégrale en deux parties :</p>
+              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx + 5\int_{0}^{1}
+                \frac{1}{x^2 + 3} \, dx$$</p>
+              <p><b>1. Première partie :</b></p>
+              <p>Pour l'intégrale de la première partie, utilisons la forme \( \frac{u'}{u} \) :</p>
+              <p>$$6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx = 6 \cdot \frac{1}{2} \left[\ln(x^2 + 3)\right]_{0}^{1} =
+                3\left[\ln(4) - \ln(3)\right] = 3\ln\left(\frac{4}{3}\right)$$</p>
+              <p><b>2. Seconde partie :</b></p>
+              <p>Pour la seconde partie, utilisons la primitive de \( \frac{1}{x^2 + a^2} \), qui est liée à
+                l'arctangente :</p>
+              <p>$$5\int_{0}^{1} \frac{1}{x^2 + 3} \, dx = \frac{5}{\sqrt{3}}
+                \left[\arctan\left(\frac{x}{\sqrt{3}}\right)\right]_{0}^{1}$$</p>
+              <p>En calculant cette intégrale, nous obtenons :</p>
+              <p>$$\frac{5}{\sqrt{3}} \left[\arctan\left(\frac{1}{\sqrt{3}}\right) - \arctan\left(0\right)\right] =
+                \frac{5}{\sqrt{3}} \cdot \frac{\pi}{6} = \frac{5\pi}{6\sqrt{3}}$$</p>
+              <p><b>3. Résultat final :</b></p>
+              <p>En combinant les deux parties, nous obtenons le résultat final :</p>
+              <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 3\ln\left(\frac{4}{3}\right) + \frac{5\pi}{6\sqrt{3}}$$
+              </p>
+            </div>
+          </div>
+          <!-- Exercise 5 -->
+          <div class="exercise">
+            <h2>Formes trigonométriques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{2\pi} \sin^2(x) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Utilisons l'identité trigonométrique \( \sin^2(x) = \frac{1 - \cos(2x)}{2} \) :</p>
+              <p>$$\int_{0}^{2\pi} \sin^2(x) \, dx = \int_{0}^{2\pi} \frac{1 - \cos(2x)}{2} \, dx$$</p>
+              <p>$$ = \frac{1}{2} \int_{0}^{2\pi} (1 - \cos(2x)) \, dx = \frac{1}{2} \left[ x - \frac{\sin(2x)}{2}
+                \right]_0^{2\pi}$$</p>
+              <p>$$ = \frac{1}{2} \left[ 2\pi - 0 \right] = \pi$$</p>
+            </div>
+            <!-- Question 2 -->
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) - 2\sin^2(x) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Commençons par séparer l'intégrale en deux intégrales plus simples :</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx - 2\int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx$$</p>
+              <h3>1. Première intégrale : $$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx$$</h3>
+              <p>Nous pouvons décomposer \( \cos^3(3x) \) de la manière suivante :</p>
+              <p>$$\cos^3(3x) = \cos(3x) \cdot (1 - \sin^2(3x))$$</p>
+              <p>Ainsi, l'intégrale devient :</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx = \int_{0}^{\frac{\pi}{2}} \cos(3x) - \cos(3x) \sin^2(3x)
+                \, dx$$</p>
+              <p>La première partie est une intégrale simple à résoudre :</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos(3x) \, dx = \left[ \frac{\sin(3x)}{3} \right]_0^{\frac{\pi}{2}} =
+                \left( \frac{\sin(3 \cdot \frac{\pi}{2})}{3} - 0 \right) = -\frac{1}{3}$$</p>
+              <p>Quant à la seconde partie nous pouvons voir que \( \int_{0}^{\frac{\pi}{2}} \cos(3x) \sin^2(3x) \, dx
+                \) est sous la forme \( n \cdot u' \cdot u^{n-1} \) au coefficient près.</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos(3x) \sin^2(3x) \, dx = \frac{1}{9} \int_{0}^{\frac{\pi}{2}} 3 \cdot 3
+                \cos(3x) \cdot \sin^2(3x) \, dx $$</p>
+              <p>Nous savons que \( n \cdot u' \cdot u^{n-1} \, dx = u^n + C \), ainsi nous obtenons : </p>
+              <p>$$= \frac{1}{9} \left[ \sin^3(3x) \right]_0^{\frac{\pi}{2}} $$</p>
+              <p>$$= \frac{1}{9} \left[ (-1)^3 - 0 \right] = -\frac{1}{9} $$</p>
+              <p>Le résultat de la première intégrale est donc : </p>
+              <h3>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx = -\frac{1}{3} - (-\frac{1}{9}) = -\frac{2}{9}$$</h3>
+              <h3>2. Seconde intégrale : $$ -2 \int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx$$</h3>
+              <p>
+                Utilisons l'identité trigonométrique \( \sin^2(x) = \frac{1 - \cos(2x)}{2} \) :
+              </p>
+              <p>$$ -2 \int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx = -2 \cdot \frac{1}{2} \int_{0}^{\frac{\pi}{2}} (1 -
+                \cos(2x)) \, dx = - \int_{0}^{\frac{\pi}{2}} (1 - \cos(2x)) \, dx$$</p>
+              <p>Résolvons les intégrales séparément :</p>
+              <p>$$ -\int_{0}^{\frac{\pi}{2}} 1 \, dx = -\frac{\pi}{2}$$</p>
+              <p>$$\int_{0}^{\frac{\pi}{2}} \cos(2x) \, dx = \left[ \frac{\sin(2x)}{2} \right]_0^{\frac{\pi}{2}} = 0$$
+              </p>
+              <p>Le résultat de la seconde intégrale vaut donc : </p>
+              <h3>$$ -2 \int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx = -\frac{\pi}{2} + 0 = -\frac{\pi}{2}$$</h3>
+
+              <h3>Résultat final :</h3>
+              <h3>$$ \int_{0}^{\frac{\pi}{2}} \cos^3(3x) - 2\sin^2(x) \, dx = -\frac{2}{9} - \frac{\pi}{2} = -\frac{9\pi
+                + 4}{18} $$</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Changements de variables -->
+      <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+        <div class="section-content" id="changements_de_variable">
+          <h1 class="titre-page">Changements de variables</h1>
+          <!-- Exercise 1 -->
+          <div class="exercise">
+            <h2>Fraction polynomiale basique</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int\frac{x^{3}}{1+x^{4}}dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                Nous aurions pu traiter cet exercice avec la forme usuelle :
+                \(\int\frac{u'}{u} = ln(u)\). Mais nous allons voir la méthode
+                de la substitution :
+              </p>
+              <p>
+                Soit \(u = (1 + x^{4})\) et donc la dérivé de u s'écrit \(du =
+                4x^{3}dx\) ainsi nous avons : \(dx = \frac{du}{x^{3}}\), nous
+                pouvons alors écrire :
+              </p>
+              <p>
+                $$\int\frac{x^{3}}{1+x^{4}}dx = \int\frac{x^{3}}{u} \times
+                \frac{du}{4x^{3}} = \frac{1}{4}\int \frac{1}{u}du =
+                \frac{1}{4}ln(u) + C = \frac{1}{4}ln(1 + x^{4}) + C$$
+              </p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int\frac{x}{1+x^{4}}dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                À travers cette intégrale, nous allons découvrir le réel intérêt de la substitution,
+                car sans cette méthode, il n'est pas possible d'utiliser une forme usuelle de primitive,
+                contrairement à l'intégrale précédente.
+              </p>
+              <p>
+                Soit \(u = x^{2}\) et donc \(du = 2x dx\) ainsi nous avons :
+                \(dx = \frac{du}{2x}\), nous pouvons alors écrire :
+              </p>
+              <p>$$\int\frac{x}{1+x^{4}}dx = \int\frac{x}{1+u^{2}} \times \frac{du}{2x} = \frac{1}{2}\int
+                \frac{1}{1+u^{2}}du = \frac{1}{2}\arctan(u) + C $$</p>
+              <p>En remplaçant \(u\) par \(x^{2}\) nous obtenons :</p>
+              <p>$$\int\frac{x}{1+x^{4}}dx= \frac{1}{2}\arctan(x^{2}) + C$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int_{-2}^{1} \frac{4x}{(x^2 + 2)^3} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                Soit \( u = x^2 + 2 \), donc \( du = 2x \, dx \). Ainsi, nous avons :
+                \( dx = \frac{du}{2x} \). Néanmoins il ne faut pas oublier qu'il est nécessaire de changer les bornes de
+                l'intégrale lorsque nous faisons un changement de variable.
+              </p>
+              <p>Ainsi, les nouvelles bornes sont :</p>
+              <p>• Pour \( x = -2 \), \( u = (-2)^2 + 2 = 4 + 2 = 6 \)</p>
+              <p>• Pour \( x = 1 \), \( u = 1^2 + 2 = 1 + 2 = 3 \)</p>
+              <p>Nous obtenons désormais :</p>
+              <p>$$\int_{-2}^{1} \frac{4x}{(x^2 + 2)^3} \, dx = 2 \int_{6}^{3} \frac{1}{u^3} \, du = 2 \left[
+                -\frac{1}{2u^2} \right]_{6}^{3}$$</p>
+
+              <p>$$= 2 \left( -\frac{1}{2 \cdot 3^2} + \frac{1}{2 \cdot 6^2} \right) = 2 \left( -\frac{1}{18} +
+                \frac{1}{72} \right)$$</p>
+              <p>$$ = 2 \left( -\frac{4 - 1}{72} \right) = 2 \times -\frac{3}{72} = -\frac{1}{12}$$</p>
+            </div>
+            <!-- Question 4 -->
+
+          </div>
+          <!-- Exercise 2 -->
+          <div class="exercise">
+            <h2>Formes trigonométriques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \tan(x) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre cette intégrale, nous devons utiliser la définition de la tangente :</p>
+              <p>$$\tan(x) = \frac{\sin(x)}{\cos(x)}$$</p>
+              <p>Nous réécrivons l'intégrale comme suit :</p>
+              <p>$$\int \frac{\sin(x)}{\cos(x)} \, dx$$</p>
+              <p>En effectuant un changement de variable \( u = \cos(x) \), nous avons \( du = -\sin(x) \, dx \), donc\(
+                \sin(x) \, dx = -du \). L'intégrale devient :</p>
+              <p>$$\int \frac{-du}{u} = -\int \frac{1}{u} \, du$$</p>
+              <p>Ce qui simplifie à :</p>
+              <p>$$-\ln|u| + C$$</p>
+              <p>En revenant à la variable \( x \), nous obtenons :</p>
+              <p>$$-\ln|\cos(x)| + C$$</p>
+              <p>Le résultat de l'intégrale est donc :</p>
+              <p>$$-\ln\left|\cos(x)\right| + C$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \cot(3x + 1) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                Pour résoudre cette intégrale, nous devons utiliser l'identité trigonométrique de la cotangente :
+              </p>
+              <p>$$\cot(u) = \frac{\cos(u)}{\sin(u)}$$</p>
+              <p>
+                Nous réécrivons l'intégrale comme suit :
+              </p>
+              <p>
+                $$\int \frac{\cos(3x + 1)}{\sin(3x + 1)} \, dx$$
+              </p>
+              <p>
+                En effectuant un changement de variable \(u = \sin(3x + 1)\), nous avons \(du = 3\cos(3x + 1) \, dx\),
+                donc
+                l'intégrale devient :
+              </p>
+              <p>$$\frac{1}{3} \int \frac{1}{u} \, du = \frac{1}{3} \ln|u| + C$$</p>
+              <p>
+                En revenant à la variable \(x\), nous obtenons :
+              </p>
+              <p>$$\frac{1}{3} \ln|\sin(3x + 1)| + C$$</p>
+              <p>
+                Le résultat de l'intégrale est donc :
+              </p>
+              <p>$$\frac{1}{3} \ln\left(\left|\sin(3x + 1)\right|\right) + C$$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \cos^{-6}(x) \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>$$ \cos^{-6}(x) = \frac{1}{\cos^6(x)} = \frac{1}{\cos^2(x)} \times \frac{1}{\cos^4(x)} $$</p>
+              <p>
+                Nous savons que \( \frac{1}{\cos^2(x)} = \tan^2(x) + 1 \) et donc que \( \frac{1}{\cos^4(x)} =
+                (\tan^2(x) + 1)^2 \).
+              </p>
+              <p>Pour résoudre cette intégrale, nous allons utiliser la substitution \( u = \tan(x) \), donc \( du =
+                \frac{1}{\cos^2(x)} dx \) :</p>
+              <p>$$ \int \frac{1}{\cos^6(x)} \, dx = \int (1 + \tan^2(x))^2 \frac{1}{\cos^2(x)} \, dx $$</p>
+              <p>En utilisant la substitution \( u = \tan(x) \), donc \( du = \frac{1}{\cos^2(x)} dx \), l'intégrale
+                devient :</p>
+              <p>$$ \int (1 + u^2)^2 \, du $$</p>
+              <p>Développons le carré :</p>
+              <p>$$ \int (1 + 2u^2 + u^4) \, du $$</p>
+              <p>En intégrant, nous avons :</p>
+              <p>$$ u + \frac{2}{3}u^3 + \frac{1}{5}u^5 + C $$</p>
+              <p>Enfin, en remplaçant \( u = \tan(x) \), nous obtenons la solution finale :</p>
+              <p>$$\int \cos^{-6}(x) \, dx = \tan(x) + \frac{2}{3}\tan^3(x) + \frac{1}{5}\tan^5(x) + C $$</p>
+            </div>
+            <!-- Question 4 -->
+          </div>
+
+          <div class="exercise">
+            <h2>Fonctions avec racines</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \frac{\sqrt{x}}{x + 1} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>
+                Soit \( u = \sqrt{x} \), alors \( u^2 = x \) et en
+                différentiant, nous obtenons \( du = \frac{1}{2\sqrt{x}} \, dx
+                \), donc \( dx = 2u \, du \).
+              </p>
+              <p>Substituons dans l'intégrale :</p>
+              <p>
+                $$ \int \frac{\sqrt{x}}{x + 1} \, dx = \int \frac{u}{u^2 + 1}
+                \times 2u \, du $$
+              </p>
+              <p>Ce qui simplifie à :</p>
+              <p>$$ 2 \int \frac{u^2}{u^2 + 1} \, du $$</p>
+              <p>Nous pouvons maintenant simplifier l'intégrande :</p>
+              <p>$$ \frac{u^2}{u^2 + 1} = 1 - \frac{1}{u^2 + 1} $$</p>
+              <p>L'intégrale devient donc :</p>
+              <p>
+                $$ 2 \int \left(1 - \frac{1}{u^2 + 1}\right) \, du = 2 \left(
+                \int 1 \, du - \int \frac{1}{u^2 + 1} \, du \right) $$
+              </p>
+              <p>Résolvons les intégrales séparément :</p>
+              <p>$$ 2 \left( u - \arctan(u) \right) + C $$</p>
+              <p>
+                En remplaçant \( u = \sqrt{x} \), nous obtenons finalement :
+              </p>
+              <p>$$ 2 \left( \sqrt{x} - \arctan(\sqrt{x}) \right) + C $$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour commencer, nous pouvons réécrire l'intégrale de la manière suivante afin de faciliter le futur
+                changement de variable :</p>
+              <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx = \int \frac{\sqrt{x+1}}{(x+1)-1} \, dx $$</p>
+
+              <p>Effectuons un changement de variable en posant :</p>
+              <p>$$ u = \sqrt{x+1}, \quad \text{donc} \quad du = \frac{1}{2\sqrt{x+1}} \, dx = \frac{1}{2u} \, dx $$</p>
+              <p>Cela implique que \( dx = 2u \, du \).</p>
+              <p>Nous pouvons aussi noter que \( u^2 = x + 1 \).</p>
+
+              <p>En remplaçant dans l'intégrale, nous obtenons :</p>
+              <p>$$ \int \frac{\sqrt{x+1}}{(x+1)-1} \, dx = \int \frac{u}{u^2 - 1} \cdot 2u \, du $$</p>
+              <p>$$= 2 \int \frac{u^2}{u^2 - 1} \, du $$</p>
+              <p>$$= 2 \int \frac{u^2 - 1 + 1}{u^2 - 1} \, du $$</p>
+              <p>$$= 2 \int \left(1 + \frac{1}{u^2 - 1}\right) \, du $$</p>
+              <p>$$= 2 u + 2 \int \frac{1}{u^2 - 1} \, du$$</p>
+
+              <p>L' intégrande ressemble à la dérivée de l'arctangente hyperbolique au signe près.</p>
+              <p>Afin de faire ressortir la forme recherchée, nous multiplions par -1 :</p>
+              <p>$$ 2 \int \frac{1}{u^2 - 1} \, du = -2 \int \frac{1}{1 - u^2} \, du $$</p>
+
+              <p>Nous pouvons désormais intégrer pour obtenir :</p>
+              <p>$$ -2 \int \frac{1}{1 - u^2} \, du = -2 \cdot \operatorname{artanh}\left(u\right) $$</p>
+              <p>L' intégrale complète devient alors :</p>
+              <p>$$2u - 2\operatorname{artanh}\left(u\right) + C$$</p>
+
+              <p>En replaçant \( u = \sqrt{x+1} \), nous avons :</p>
+              <p>$$ 2\sqrt{x+1} -2\operatorname{artanh}\left(\sqrt{x+1}\right) + C$$</p>
+
+              <p>Ainsi, après simplifications, nous obtenons finalement :</p>
+              <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx = 2 \left( \sqrt{x+1} -
+                \operatorname{artanh}\left(\sqrt{x+1}\right)\right) + C$$</p>
+            </div>
+          </div>
+
+          <!-- Exercice 4 -->
+          <div class="exercise">
+            <h2>Fonctions trigonométriques réciproques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \frac{\arctan\left(\sqrt{x}\right)}{\sqrt{x} (x + 1)} \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Effectuons un changement de variable en posant \( u = \sqrt{x} \). Ainsi, nous avons :</p>
+              <p>$$ du = \frac{1}{2\sqrt{x}} \, dx = \frac{1}{2u} \, dx $$</p>
+              <p>et donc \( dx = 2u \, du \).</p>
+              <p>L'intégrale devient alors :</p>
+              <p>$$ \int \frac{\arctan(u)}{u(u^2 + 1)} 2u \, du $$</p>
+
+              <p>Nous simplifions l'expression :</p>
+              <p>$$ \int 2 \frac{\arctan(u)}{u^2 + 1} \, du $$</p>
+
+              <p>Nous identifions la forme \( 2 \cdot u' \cdot u \), ce qui est la forme dérivée de \( u^2 \).</p>
+              <p>$$ \int 2 \cdot \frac{1}{u^2 + 1} \cdot \arctan(u) \, du = \arctan^2(u) + C$$</p>
+
+              <p>En replaçant \( u \) par \( \sqrt{x} \), nous obtenons finalement :</p>
+              <p>$$ \int \frac{\arctan\left(\sqrt{x}\right)}{\sqrt{x} (x + 1)} \, dx = \arctan^2(\sqrt{x}) + C $$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intégrations par parties -->
+      <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">
+        <div class="section-content" id="integrations_par_parties">
+          <h1 class="titre-page">Intégrations par parties</h1>
+          <!-- Exercice 1 -->
+          <div class="exercise">
+            <h2>Comprendre la méthode</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int x e^x \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre cette intégrale, nous allons utiliser la méthode d'intégration par parties. Cette méthode
+                est utile lorsque nous avons une intégrale du produit de deux fonctions.</p>
+              <p>La formule d'intégration par parties est :</p>
+              <p>$$ \int u \, v' = u\cdot v - \int v \, u' $$</p>
+              <p>Appliquons cette formule à l'intégrale \( \int x e^x \, dx \). Nous devons choisir \( u \) et \( v' \)
+                comme suit :</p>
+              <p>Choisissons \( u = x \) et \( v' = e^x \, dx \). En dérivant \( u \), nous obtenons \( u' = dx \). En
+                intégrant \( v' \), nous obtenons \( v = e^x \).</p>
+              <p>En utilisant la formule d'intégration par parties, nous avons :</p>
+              <p>$$ \int x e^x \, dx = x e^x - \int e^x \, dx $$</p>
+              <p>Nous devons maintenant résoudre l'intégrale restante \( \int e^x \, dx \). L'intégrale de \( e^x \) est
+                simplement \( e^x \) :</p>
+              <p>$$ \int e^x \, dx = e^x $$</p>
+              <p>En substituant cette intégrale dans la formule initiale, nous obtenons :</p>
+              <p>$$ \int x e^x \, dx = x e^x - e^x + C $$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int_0^2 x^2 e^{2x+1} \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Nous choisissons \( u = x^2 \) et \( v' = e^{2x+1} \, dx \), ce qui donne :</p>
+              <p>$$ u' = 2x \, dx \, \quad \text{et} \quad v = \frac{1}{2} e^{2x+1} $$</p>
+              <p>Appliquons la formule de l'intégration par parties :</p>
+              <p>
+                $$ \int x^2 e^{2x+1} \, dx = x^2 \cdot \frac{1}{2} e^{2x+1} \Bigg|_0^2 - \int_0^2 2x \cdot \frac{1}{2}
+                e^{2x+1} \, dx $$
+              </p>
+              <p>Simplifions l'expression :</p>
+              <p>$$ \int_0^2 x^2 e^{2x+1} \, dx = \frac{x^2}{2} e^{2x+1} \Bigg|_0^2 - \int_0^2 x e^{2x+1} \, dx $$</p>
+              <p>Nous devons maintenant résoudre la seconde intégrale \( \int_0^2 x e^{2x+1} \, dx \) par parties une
+                nouvelle fois, en choisissant \( u = x \) et \( v' = e^{2x+1} \, dx \), ce qui donne :</p>
+              <p>$$ u' = dx \, \quad \text{et} \quad v = \frac{1}{2} e^{2x+1} $$</p>
+              <p>En appliquant l'intégration par parties à cette seconde intégrale :</p>
+              <p>
+                $$ \int_0^2 x e^{2x+1} \, dx = x \cdot \frac{1}{2} e^{2x+1} \Bigg|_0^2 - \int_0^2 \frac{1}{2} e^{2x+1}
+                \, dx $$
+              </p>
+              <p>Nous pouvons maintenant résoudre l'intégrale simple qui reste :</p>
+              <p>$$ \int_0^2 e^{2x+1} \, dx = \frac{1}{2} e^{2x+1} \Bigg|_0^2 $$</p>
+              <p>En remplaçant les bornes :</p>
+              <p>$$ \int_0^2 e^{2x+1} \, dx = \frac{1}{2} \left( e^5 - e^1 \right) $$</p>
+              <p>En réassemblant le tout, nous obtenons finalement :</p>
+              <p>$$ \int_0^2 x^2 e^{2x+1} \, dx = \left( 2 e^5 - 0 \right) - \left( \left( e^5 - e \right) + \frac{1}{2}
+                \left( e^5 - e \right) \right) $$</p>
+              <p>Ce qui donne le résultat final :</p>
+              <p>$$ \int_0^2 x^2 e^{2x+1} \, dx = \frac{3}{2} e^5 - \frac{3}{2} e $$</p>
+            </div>
+          </div>
+          <!-- Exercice 2 -->
+          <div class="exercise">
+            <h2>Fonctions trigonométriques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \frac{x}{\tan^2(x)} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre cette intégrale, utilisons l'identité suivante :</p>
+              <p>$$\frac{1}{\tan^2(x)} = \frac{\cos^2(x)}{\sin^2(x)} = \cot^2(x)$$</p>
+              <p>L'intégrale devient alors :</p>
+              <p>$$\int x \cot^2(x) \, dx$$</p>
+              <p>Nous allons utiliser l'intégration par parties :</p>
+              <p>$$u = x \quad \text{et} \quad v' = \cot^2(x) \, dx$$</p>
+              <p>Nous devons maintenant trouver \( v \). Utilisons l'identité suivante :</p>
+              <p>$$-\cot^2(x) - 1 = (\cot(x))'$$</p>
+              <p>Donc :</p>
+              <p>$$-\cot^2(x) = (\cot(x))' + 1$$</p>
+              <p>Intégrons cette équation :</p>
+              <p>$$\int -\cot^2(x) \, dx = \int ((\cot(x))' + 1) \, dx$$</p>
+              <p>$$-\int \cot^2(x) \, dx = \int (\cot(x))' \, dx + \int 1 \, dx$$</p>
+              <p>$$\int \cot^2(x) \, dx = -\cot(x) - x$$</p>
+              <p>En appliquant l'intégration par parties :</p>
+              <p>$$\int x \cot^2(x) \, dx = x(-\cot(x) - x) - \int 1(-\cot(x) - x) \, dx$$</p>
+              <p>Développons et simplifions :</p>
+              <p>$$\int x \cot^2(x) \, dx = -x \cot(x) - x^2 + \int \cot(x) \, dx + \int x \, dx$$</p>
+              <p>Pour calculer \( \int \cot(x) \, dx \), nous faisons :</p>
+              <p>$$\int \cot(x) \, dx = \int \frac{\cos(x)}{\sin(x)} \, dx$$</p>
+              <p>Soit \( u = \sin(x) \) et \( du = \cos(x)dx \) alors :</p>
+              <p>$$\int \frac{\cos(x)}{\sin(x)} \, dx = \int \frac{1}{u} \, du $$</p>
+              <p>$$= \ln(u) + C = \ln|\sin(x)| + C $$</p>
+              <p>Donc, la solution finale est :</p>
+              <p>$$\int x \cot^2(x) \, dx = -x \cot(x) - \frac{x^2}{2} + \ln|\sin(x)| + C$$</p>
+            </div>
+          </div>
+
+          <!-- Exercice 3-->
+          <div class="exercise">
+            <h2>Fonctions logarithmiques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \ln(x) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Prenons \( u = \ln(x) \) et \( v' = 1 \). Ainsi :</p>
+              <p>$$ u' = \frac{1}{x} \, dx \quad \text{et} \quad v = x $$</p>
+              <p>Appliquons la formule de l'intégration par parties :</p>
+              <p>$$ \int \ln(x) \, dx = x \ln(x) - \int x \frac{1}{x} \, dx $$</p>
+              <p>$$ = x \ln(x) - \int dx = x \ln(x) - x + C$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int_{1}^{e} x \ln(x) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Soient \( u = \ln(x) \) et \( v' = x \, dx \). Ainsi :</p>
+              <p>$$ du = \frac{1}{x} \, dx \quad \text{et} \quad v = \frac{x^2}{2} $$</p>
+              <p>Appliquons la formule de l'intégration par parties :</p>
+              <p>$$ \int x \ln(x) \, dx = \left[ \frac{x^2}{2} \ln(x) \right]_{1}^{e} - \int \frac{x^2}{2} \cdot
+                \frac{1}{x} \, dx $$</p>
+              <p>$$ = \left[ \frac{x^2}{2} \ln(x) \right]_{1}^{e} - \int \frac{x}{2} \, dx $$</p>
+              <p>$$ = \left[ \frac{x^2}{2} \ln(x) \right]_{1}^{e} - \frac{1}{2} \int x \, dx $$</p>
+              <p>$$ = \left[ \frac{x^2}{2} \ln(x) \right]_{1}^{e} - \left[ \frac{x^2}{4} \right]_{1}^{e} $$</p>
+              <p>$$ = \left(\frac{e^2}{2} - \frac{1^2}{2}\right) - \left(\frac{e^2}{4} - \frac{1^2}{4}\right) $$</p>
+              <p>$$ = \frac{e^2}{4} + \frac{1}{4} $$</p>
+              <p>Le résultat de l'intégrale est donc :</p>
+              <p>$$\int_{1}^{e} x \ln(x) \, dx = \frac{1}{4}(e^2 + 1) $$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \ln(x+1) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>En choisissant \( u = \ln(x+1) \) et \( v' = dx \), nous avons :</p>
+              <p>$$ u' = \frac{1}{x+1} \, dx \quad \text{et} \quad v = x $$</p>
+              <p>Appliquons la formule d'intégration par parties :</p>
+              <p>$$ \int \ln(x+1) \, dx = x \ln(x+1) - \int x \cdot \frac{1}{x+1} \, dx $$</p>
+              <p>Simplifions l'intégrande restante en décomposant la fraction :</p>
+              <p>$$ \frac{x}{x+1} = \frac{x+1-1}{x+1} = 1 - \frac{1}{x+1} $$</p>
+              <p>Cela donne :</p>
+              <p>$$ \int \frac{x}{x+1} \, dx = \int \left(1 - \frac{1}{x+1}\right) \, dx $$</p>
+              <p>Ce qui se décompose en deux intégrales simples :</p>
+              <p>$$ \int 1 \, dx - \int \frac{1}{x+1} \, dx $$</p>
+              <p>En résolvant, nous obtenons :</p>
+              <p>$$ = x - \ln(x+1) + C $$</p>
+              <p>Ainsi, l'intégrale complète est :</p>
+              <p>$$ \int \ln(x+1) \, dx = x \ln(x+1) - \left(x - \ln(x+1)\right) + C $$</p>
+              <p>Enfin, en simplifiant l'expression, nous trouvons :</p>
+              <p>$$ \int \ln(x+1) \, dx = (x+1) \ln(x+1) - x + C $$</p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Commençons par réécrire l'intégrale sous une forme plus simple :</p>
+              <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx = \int \ln(3x) \cdot x^{-\frac{1}{3}} \, dx $$</p>
+              <p><b>Intégration par parties :</b></p>
+              <p>Choisissons \( u = \ln(3x) \) et \( v' = x^{-\frac{1}{3}} \, dx \).</p>
+              <p>Alors, \( u' = \frac{3}{3x} = \frac{1}{x} \, dx \) et \( v = \frac{3x^{\frac{2}{3}}}{2} \).</p>
+              <p>Appliquons la formule d'intégration par parties :</p>
+              <p>$$ \int \ln(3x) \cdot x^{-\frac{1}{3}} \, dx = \frac{3x^{\frac{2}{3}}}{2} \ln(3x) - \int
+                \frac{3x^{\frac{2}{3}}}{2} \cdot \frac{1}{x} \, dx $$</p>
+              <p>Simplifions l'intégrale restante :</p>
+              <p>$$ \int \frac{3x^{\frac{2}{3}}}{2x} \, dx = \frac{3}{2} \int x^{-\frac{1}{3}} \, dx $$</p>
+              <p>En intégrant directement :</p>
+              <p>$$ \frac{3}{2} \int x^{-\frac{1}{3}} \, dx = \frac{3}{2} \cdot \frac{3x^{\frac{2}{3}}}{2} =
+                \frac{9x^{\frac{2}{3}}}{4} $$</p>
+              <p>En combinant ces résultats, nous obtenons :</p>
+              <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx = \frac{3x^{\frac{2}{3}} \left(2 \ln(3x) - 3\right)}{4} + C
+                $$</p>
+            </div>
+          </div>
+          <!-- Exercice 3 -->
+          <div class="exercise">
+            <h2>Intégrations par parties successives</h2>
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int e^x \cos(x) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre cette intégrale, nous utilisons la méthode de l'intégration par parties.</p>
+              <p>En choisissant \( u = \cos(x) \) et \( v' = e^x \), nous avons :</p>
+              <p>$$ u' = -\sin(x) \, dx \quad \text{et} \quad v = e^x $$</p>
+              <p>Appliquons la formule de l'intégration par parties :</p>
+              <p>$$ \int e^x \cos(x) \, dx = e^x \cos(x) + \int e^x \sin(x) \, dx $$</p>
+              <p>Effectuons une deuxième intégration par parties en choisissant \( u = \sin(x) \) et \( v' = e^x \) :
+              </p>
+              <p>$$ u' = \cos(x) \, dx \quad \text{et} \quad v = e^x $$</p>
+              <p>$$ \int e^x \sin(x) \, dx = e^x \sin(x) - \int e^x \cos(x) \, dx $$</p>
+              <p>En substituant cette intégrale dans la première, nous obtenons :</p>
+              <p>$$ \int e^x \cos(x) \, dx = e^x \cos(x) + e^x \sin(x) - \int e^x \cos(x) \, dx $$</p>
+              <p>En isolant l'intégrale restante, nous obtenons :</p>
+              <p>$$ 2 \int e^x \cos(x) \, dx = e^x (\cos(x) + \sin(x)) \Rightarrow \int e^x \cos(x) \, dx = \frac{1}{2}
+                e^x (\cos(x) + \sin(x)) + C $$</p>
+            </div>
+          </div>
+          <!-- Exercice 4 -->
+          <div class="exercise">
+            <h2>Fonctions trigonométriques réciproques</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int \arccos(x) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour calculer cette intégrale, nous utilisons la méthode del'intégration par parties.</p>
+              <p>En choisissant \( u = \arccos(x) \) et \( v' = 1 \), nousavons :</p>
+              <p>$$ u' = \frac{-1}{\sqrt{1 - x^2}} \, dx \quad \text{et} \quad v = x $$</p>
+              <p>Appliquons la formule :</p>
+              <p>$$ \int \arccos(x) \, dx = x \arccos(x) - \int\frac{-x}{\sqrt{1 - x^2}} \, dx $$</p>
+              <p>$$ = x \arccos(x) - \int -x(1 - x^2)^{-\frac{1}{2}} \, dx $$</p>
+              <p>$$ = x \arccos(x) - \int -2 \times \frac{1}{2}x(1 -x^2)^{-\frac{1}{2}} \, dx $$</p>
+              <p>$$ = x \arccos(x) - (1 - x^2)^{\frac{1}{2}} \ + C $$</p>
+              <p>$$ = x \arccos(x) - \sqrt{1 - x^2} \ + C $$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$ \int 8x \arctan(2x) \, dx $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Effectuons une intégration par parties en choisissant \( u = \arctan(2x) \) et \( v' = x \, dx \).
+                Alors :</p>
+              <p>$$ u' = \frac{2}{1 + 4x^2} \, dx \quad \text{et} \quad v = \frac{x^2}{2} $$</p>
+              <p>$$ \int 8x \arctan(2x) \, dx = \frac{8x^2}{2} \arctan(2x) - 8\int \frac{x^2}{2} \cdot \frac{2}{1 +
+                4x^2} \, dx $$</p>
+              <p>$$ = 4x^2 \arctan(2x) - 8 \int \frac{x^2}{1 + 4x^2} \, dx $$</p>
+              <p>$$ = 4x^2 \arctan(2x) - 2 \int \frac{4x^2}{1 + 4x^2} \, dx $$</p>
+              <p>$$ = 4x^2 \arctan(2x) - 2 \int \frac{4x^2 +1}{1 + 4x^2} - \frac{1}{1 + 4x^2} \, dx $$</p>
+              <p>Nous reconnaissons la forme \frac{1}{1 + u^2} qui a pour primitive la fonction u' \cdot \arctan(u),
+                ainsi
+                nous obtenons :</p>
+              <p>$$ = 4x^2 \arctan(2x) - 2 (x - 2 \arctan(2x)) + C$$</p>
+              <p>$$ \int 8x \arctan(2x) \, dx = 4x^2 \arctan(2x) - 2x + 4 \arctan(2x) + C$$</p>
+              <p>Nous obtenons, une fois l'expression simplifiée, que :</p>
+              <p>$$ \int 8x \arctan(2x) \, dx = (4x^2 + 1) \arctan(2x) - 2x + C$$</p>
+            </div>
+            <!-- Exercice 6 -->
+
+            <!-- Exercice 7 -->
+
+            <!-- Exercice 8 -->
+
+            <!-- Exercice 9 -->
+
+            <!-- Exercice 10 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Fraction rationnelle -->
+      <div class="page" id="page4" style="background-color: rgba(132, 188, 239, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Fractions rationnelles</h1>
+          <!-- Exercise 3 -->
+          <div class="exercise">
+            <h2>Pour comprendre la méthode</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \frac{1}{x^2 + 4x - 12} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Pour résoudre cette intégrale en utilisant la méthode des fractions partielles, nous devons d'abord
+                factoriser le dénominateur :</p>
+              <p>$$x^2 + 4x - 12 = (x - 2)(x + 6)$$</p>
+              <p>Nous décomposons l'intégrande en une somme de fractions partielles :</p>
+              <p>$$\frac{1}{(x - 2)(x + 6)} = \frac{A}{x - 2} + \frac{B}{x + 6}$$</p>
+              <p>En multipliant par le dénominateur, nous obtenons :</p>
+              <p>$$1 = A(x + 6) + B(x - 2)$$</p>
+              <p>Lorsque \(x = -6\), nous avons $$1 = -8B$$ donc \(B = -\frac{1}{8}\)</p>
+              <p>Lorsque \(x = 2\), nous avons $$1 = 8A$$ donc \(A = \frac{1}{8}\)</p>
+              <p>L'intégrale devient alors :</p>
+              <p>$$\int \frac{1}{(x - 2)(x + 6)} \, dx = \int \left(\frac{\frac{1}{8}}{x - 2} - \frac{\frac{1}{8}}{x +
+                6}\right) dx$$</p>
+              <p>En intégrant chaque terme séparément :</p>
+              <p>$$\frac{1}{8} \int \frac{1}{x - 2} \, dx - \frac{1}{8} \int \frac{1}{x + 6} \, dx$$</p>
+              <p>Nous obtenons :</p>
+              <p>$$\frac{1}{8} \ln |x - 2| - \frac{1}{8} \ln |x + 6| + C$$</p>
+              <p>Ce qui peut être combiné en une seule expression logarithmique :</p>
+              <p>$$\frac{1}{8} \ln \left|\frac{x - 2}{x + 6}\right| + C$$</p>
+              <p>Nous obtenons finalement :</p>
+              <p>$$\int \frac{1}{x^2 + 4x - 12} \, dx = \frac{1}{8} \ln \left|\frac{x - 2}{x + 6}\right| + C$$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer l'intégrale :</p>
+              <p>$$\int \frac{x}{x^2 - 10x + 21} \, dx$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <p>Nous commençons par factoriser le dénominateur :</p>
+              <p>$$x^2 - 10x + 21 = (x - 3)(x - 7)$$</p>
+              <p>Nous décomposons l'intégrale en fractions partielles :</p>
+              <p>$$\frac{x}{(x - 3)(x - 7)} = \frac{A}{x - 3} + \frac{B}{x - 7}$$</p>
+              <p>En multipliant par le dénominateur, nous obtenons :</p>
+              <p>$$x = A(x - 7) + B(x - 3)$$</p>
+              <p>Pour \(x = 7\), nous avons $$7 = 4B \Rightarrow B = \frac{7}{4}$$</p>
+              <p>Pour \(x = 3\), nous avons $$3 = -4A \Rightarrow A = -\frac{3}{4}$$</p>
+              <p>L'intégrale devient :</p>
+              <p>$$\int \frac{x}{x^2 - 10x + 21} \, dx = \int \left(\frac{-\frac{3}{4}}{x - 3} + \frac{\frac{7}{4}}{x -
+                7}\right) dx$$</p>
+              <p>En intégrant chaque terme :</p>
+              <p>$$-\frac{3}{4} \int \frac{1}{x - 3} \, dx + \frac{7}{4} \int \frac{1}{x - 7} \, dx$$</p>
+              <p>Nous obtenons :</p>
+              <p>$$-\frac{3}{4} \ln |x - 3| + \frac{7}{4} \ln |x - 7| + C$$</p>
+              <p>La solution finale est :</p>
+              <p>$$\int \frac{x}{x^2 - 10x + 21} \, dx = \frac{1}{4} \left( 7 \ln |x - 7| - 3 \ln |x - 3| \right) + C$$
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

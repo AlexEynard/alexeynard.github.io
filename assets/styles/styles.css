@@ -177,13 +177,12 @@ body {
   justify-content: space-around;
   align-items: center;
   box-shadow: var(--shadow);
-  transition: transform 0.5s;
+  transition: all 0.3s ease-in-out;
 }
 
 
 .question:hover {
   box-shadow: var(--dark-shadow);
-  transform: scale(1.01);
 }
 
 .énoncé {

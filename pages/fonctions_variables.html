@@ -48,10 +48,10 @@
       <!-- Limites et continuité -->
       <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
         <div class="section-content">
-          <h1 class="titre-page">Étude de la Continuité des Fonctions</h1>
+          <h1 class="titre-page">Étude de la continuité de fonctions</h1>
 
           <div class="exercise">
-            <h2>Ensembles de Définition</h2>
+            <h2>Ensembles de définition</h2>
 
             <!-- Question 1 -->
             <div class="question">
@@ -62,20 +62,17 @@
             <div class="exercise-correction hidden">
               <p>Pour déterminer l'ensemble de définition de la fonction \( f_1(x, y) = \frac{\sqrt{x}}{y - 1} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
-              <h5>Étape 1 : Analyser le dénominateur</h5>
+              <h3>Étape 1 : Analyser le dénominateur</h3>
               <p>Le dénominateur \( y - 1 \) ne doit pas être égal à zéro :</p>
               <p>$$ y - 1 \neq 0 \quad \Rightarrow \quad y \neq 1 $$</p>
 
-              <h5>Étape 2 : Analyser le numérateur</h5>
+              <h3>Étape 2 : Analyser le numérateur</h3>
               <p>Le numérateur \( \sqrt{x} \) est défini si et seulement si :</p>
               <p>$$ x \geq 0 $$</p>
 
-              <h5>Étape 3 : Combiner les conditions</h5>
-              <p>L'ensemble de définition \(D_{f_1} \) de la fonction \( f(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
-              <p>$$D_{f_1} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x \geq 0 \ \text{et} \ y \neq 1 \right\} $$</p>
-
-              <h5>Étape 4 : Représentation graphique</h5>
-              <p>À venir...</p>
+              <h3>Étape 3 : Combiner les conditions</h3>
+              <p>L'ensemble de définition \(D_{f_1} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_1} = \left\{ (x, y) \in \mathbb{R}^2 \mid x \geq 0 \text{ et } y \neq 1 \right\} $$</p>
             </div>
 
             <!-- Question 2 -->
@@ -87,24 +84,21 @@
             <div class="exercise-correction hidden">
               <p>Pour déterminer l'ensemble de définition de la fonction \( f_2(x, y) = \ln(x^2 + y^2) \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
-              <h5>Étape 1 : Domaine de définition de la fonction logarithme</h5>
+              <h3>Étape 1 : Domaine de définition de la fonction logarithme</h3>
               <p>La fonction logarithme \( \ln(u) \) est définie si et seulement si :</p>
               <p>$$ u > 0 $$</p>
 
-              <h5>Étape 2 : Appliquer la condition à la fonction \( g \)</h5>
+              <h3>Étape 2 : Appliquer la condition à la fonction</h3>
               <p>Dans notre cas :</p>
               <p>$$ x^2 + y^2 > 0 $$</p>
 
-              <h5>Étape 3 : Analyser la condition</h5>
+              <h3>Étape 3 : Analyser la condition</h3>
               <p>La somme des carrés \( x^2 + y^2 \) est strictement positive sauf en un seul point :</p>
               <p>$$ x = 0 \quad \text{et} \quad y = 0 $$</p>
 
-              <h5>Étape 4 : Définir l'ensemble de définition</h5>
-              <p>L'ensemble de définition \( D_{f_2} \) de la fonction \( g(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <h3>Étape 4 : Définir l'ensemble de définition</h3>
+              <p>L'ensemble de définition \( D_{f_2} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
               <p>$$ D_{f_2} = \mathbb{R}^2 \setminus \{(0, 0)\} $$</p>
-
-              <h5>Étape 5 : Représentation graphique</h5>
-              <p>À venir...</p>
             </div>
 
             <!-- Question 3 -->
@@ -116,25 +110,19 @@
             <div class="exercise-correction hidden">
               <p>Pour déterminer l'ensemble de définition de la fonction \( f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
-              <h5>Étape 1 : Analyser le dénominateur</h5>
-              <p>Le dénominateur \( \sqrt{1 - x^2 - y^2} \) doit être différent de zéro et défini. Donc :</p>
+              <h3>Étape 1 : Analyser le dénominateur</h3>
               <ul>
                 <li>L'expression sous la racine carrée doit être positive :</li>
                 <p>$$ 1 - x^2 - y^2 > 0 $$</p>
-                <li>Le dénominateur ne doit pas être nul :</li>
-                <p>$$ \sqrt{1 - x^2 - y^2} \neq 0 \quad \Rightarrow \quad 1 - x^2 - y^2 \neq 0 $$</p>
               </ul>
 
-              <h5>Étape 2 : Simplifier les conditions</h5>
+              <h3>Étape 2 : Simplifier les conditions</h3>
               <p>La condition \( 1 - x^2 - y^2 > 0 \) définit l'intérieur d'un cercle de rayon 1 centré à l'origine :</p>
               <p>$$ x^2 + y^2 &lt; 1 $$</p>
 
-              <h5>Étape 3 : Définir l'ensemble de définition</h5>
-              <p>L'ensemble de définition \( D_{f_3} \) de la fonction \( h(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
-              <p>$$ D_{f_3} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x^2 + y^2 &lt; 1 \right\} $$</p>
-
-              <h5>Étape 4 : Représentation graphique</h5>
-              <p>À venir...</p>
+              <h3>Étape 3 : Définir l'ensemble de définition</h3>
+              <p>L'ensemble de définition \( D_{f_3} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_3} = \left\{ (x, y) \in \mathbb{R}^2 \mid x^2 + y^2 < 1 \right\} $$</p>
             </div>
 
             <!-- Question 4 -->
@@ -146,26 +134,23 @@
             <div class="exercise-correction hidden">
               <p>Pour déterminer l'ensemble de définition de la fonction \( f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
-              <h5>Étape 1 : Analyser le numérateur</h5>
+              <h3>Étape 1 : Analyser le numérateur</h3>
               <p>Le logarithme \( \ln(u) \) est défini si et seulement si :</p>
               <p>$$ u > 0 $$</p>
               <p>Dans notre cas :</p>
               <p>$$ x + y > 0 $$</p>
 
-              <h5>Étape 2 : Analyser le dénominateur</h5>
+              <h3>Étape 2 : Analyser le dénominateur</h3>
               <p>Le dénominateur \( y - \sqrt{x} \) ne doit pas être égal à zéro :</p>
               <p>$$ y - \sqrt{x} \neq 0 \quad \Rightarrow \quad y \neq \sqrt{x} $$</p>
 
-              <h5>Étape 3 : Conditions supplémentaires</h5>
+              <h3>Étape 3 : Conditions supplémentaires</h3>
               <p>La racine carrée \( \sqrt{x} \) est définie si et seulement si :</p>
               <p>$$ x \geq 0 $$</p>
 
-              <h5>Étape 4 : Combiner les conditions</h5>
-              <p>L'ensemble de définition \( D_{f_4} \) de la fonction \( f_4(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
-              <p>$$ D_{f_4} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ x \geq 0, \ x + y > 0 \ \text{et} \ y \neq \sqrt{x} \right\} $$</p>
-
-              <h5>Étape 5 : Représentation graphique</h5>
-              <p>À venir...</p>
+              <h3>Étape 4 : Combiner les conditions</h3>
+              <p>L'ensemble de définition \( D_{f_4} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_4} = \left\{ (x, y) \in \mathbb{R}^2 \mid x \geq 0, x + y > 0 \text{ et } y \neq \sqrt{x} \right\} $$</p>
             </div>
 
             <!-- Question 5 -->
@@ -177,22 +162,16 @@
             <div class="exercise-correction hidden">
               <p>Pour déterminer l'ensemble de définition de la fonction \( f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
-              <h5>Étape 1 : Analyser le numérateur</h5>
+              <h3>Étape 1 : Analyser le numérateur</h3>
               <p>La fonction exponentielle \( e^{x - y} \) est définie pour tous les réels \( x \) et \( y \). Aucune restriction n'est imposée par le numérateur.</p>
 
-              <h5>Étape 2 : Analyser le dénominateur</h5>
+              <h3>Étape 2 : Analyser le dénominateur</h3>
               <p>Le dénominateur \( 1 - x^2 - y^2 \) ne doit pas être égal à zéro :</p>
               <p>$$ 1 - x^2 - y^2 \neq 0 $$</p>
 
-              <h5>Étape 3 : Conditions supplémentaires</h5>
-              <p>En plus de ne pas être égal à zéro, le dénominateur doit permettre l'expression d'une fraction définie. Dans ce cas, il n'y a pas de condition supplémentaire puisque le dénominateur est déjà un polynôme défini partout sauf aux points où il est nul.</p>
-
-              <h5>Étape 4 : Définir l'ensemble de définition</h5>
-              <p>L'ensemble de définition \( D_{f_5} \) de la fonction \( m(x, y) \) est l'ensemble des couples \( (x, y) \) tels que :</p>
-              <p>$$D_{f_5} = \left\{ (x, y) \in \mathbb{R}^2 \ \big| \ 1 - x^2 - y^2 \neq 0 \right\} $$</p>
-
-              <h5>Étape 5 : Représentation graphique</h5>
-              <p>À venir...</p>
+              <h3>Étape 3 : Définir l'ensemble de définition</h3>
+              <p>L'ensemble de définition \( D_{f_5} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>$$ D_{f_5} = \left\{ (x, y) \in \mathbb{R}^2 \mid 1 - x^2 - y^2 \neq 0 \right\} $$</p>
             </div>
           </div>
         </div>
@@ -200,12 +179,14 @@
       <!-- Dérivées partielles -->
       <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
         <div class="section-content" id="changements_de_variable">
+          <h1 class="titre-page">Dérivées partielles</h1>
+
           <div class="exercise">
-            <h2>Pour comprendre</h2>
+            <h2>Calcul de dérivées partielles première</h2>
 
             <!-- Question 1 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_1(x, y) = 3x^3y$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -221,7 +202,7 @@
 
             <!-- Question 2 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_2(x, y) = e^{xy}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -237,7 +218,7 @@
 
             <!-- Question 3 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_3(x, y) = \ln(x^2 + y^2)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -253,7 +234,7 @@
 
             <!-- Question 4 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_4(x, y, z) = x^2yz + xz^3$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -273,7 +254,7 @@
 
             <!-- Question 5 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_5(x, y, z) = \sin(xy) + z^2e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -293,7 +274,7 @@
 
             <!-- Question 6 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_6(x, y, z) = \frac{x^2 + z^3}{y}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -313,7 +294,7 @@
 
             <!-- Question 7 -->
             <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles au premier ordre de :</p>
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
               <p>$$f_7(x, y, z) = \frac{xz}{y^2} + \ln(xz)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
@@ -329,6 +310,195 @@
               <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
               <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( z \) est \( \frac{x}{y^2} \), et celle de \( \ln(xz) \) par rapport à \( z \) est \( \frac{1}{z} \), donc :</p>
               <p>$$\frac{\partial f}{\partial z} = \frac{x}{y^2} + \frac{1}{z}$$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Variation de fonctions -->
+      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Étude de la variation de fonctions</h1>
+          <div class="exercise">
+            <h2>Recherche d'extrema</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Rechercher les extrema de la fonction :</p>
+              <p>$$f(x, y) = 2x^2 - y^2 - 2xy - 2x + y$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul des dérivées partielles premières</h4>
+              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 4x - 2y - 2$$</p>
+              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = -2y - 2x + 1$$</p>
+
+              <h4>Calcul des dérivées partielles secondes</h4>
+              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 4$$</p>
+              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = -2$$</p>
+              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = -2$$</p>
+
+              <h4>Calcul des coordonnées des points critiques</h4>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>$$\begin{cases}4x - 2y - 2 = 0 \\ -2y - 2x + 1 = 0\end{cases}$$</p>
+
+              <p>Appliquons la méthode du pivot de Gauss pour simplifier le système :</p>
+              <p>$$\begin{cases}4x - 2y = 2 \qquad L_1 \rightarrow L_1 - L_2 \\ -2x - 2y = -1 \qquad L_2 \rightarrow 2L_2 + L_1 \end{cases}$$</p>
+              <p>$$\begin{cases}6x = 3 \\ -6y = 0\end{cases}$$</p>
+              <p>$$\begin{cases}x = \frac{1}{2} \\y = 0 \end{cases}$$</p>
+
+              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( \frac{1}{2} ; 0 \right) \).</p>
+
+              <h4>Détermination de la nature du point critique</h4>
+              <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 4 & -2 \\ -2 & -2 \end{bmatrix} = (4)(-2) - (-2)^2 = -8 - 4 = -12$$</p>
+              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( \left( \frac{1}{2} ; 0 \right) \).</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Rechercher les extrema de la fonction :</p>
+              <p>$$f(x, y) = 3x^2 + 2y^2 + 4x - y$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul des dérivées partielles premières</h4>
+              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 6x + 4$$</p>
+              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 4y - 1$$</p>
+
+              <h4>Calcul des dérivées partielles secondes</h4>
+              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 6$$</p>
+              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 4$$</p>
+
+              <h4>Calcul des coordonnées des points critiques</h4>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>$$\begin{cases}6x + 4 = 0 \\ 4y - 1 = 0\end{cases}$$</p>
+
+              <p>Appliquons la méthode du pivot de Gauss pour simplifier le système :</p>
+              <p>$$\begin{cases}6x = -4 \\ 4y = 1\end{cases}$$</p>
+
+              <p>On en déduit :</p>
+              <p>$$\begin{cases}x = -\frac{2}{3} \\ y = \frac{1}{4} \end{cases}$$</p>
+
+              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
+
+              <h4>Détermination de la nature du point critique</h4>
+              <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 6 & 0 \\ 0 & 4 \end{bmatrix} = (6)(4) - (0)^2 = 24$$</p>
+
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( \left( -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Rechercher les extrema de la fonction :</p>
+              <p>$$f(x, y) = x^2 + y^2 - 4x - 6y + 9$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul des dérivées partielles premières</h4>
+              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 2x - 4$$</p>
+              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 2y - 6$$</p>
+
+              <h4>Calcul des dérivées partielles secondes</h4>
+              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 2$$</p>
+              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
+
+              <h4>Calcul des coordonnées des points critiques</h4>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>$$\begin{cases} 2x - 4 = 0 \\ 2y - 6 = 0 \end{cases}$$</p>
+              <p>$$\begin{cases} x = 2 \\ y = 3 \end{cases}$$</p>
+              <p>Il y a donc un unique point critique dont les coordonnées sont \( (2, 3) \).</p>
+
+              <h4>Détermination de la nature du point critique</h4>
+              <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \cdot 2 - 0^2 = 4$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (2, 3) \).</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Rechercher les extrema de la fonction :</p>
+              <p>$$f(x, y) = x^3 - 3x + y^2 - 2y$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul des dérivées partielles premières</h4>
+              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 3x^2 - 3$$</p>
+              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 2y - 2$$</p>
+
+              <h4>Calcul des dérivées partielles secondes</h4>
+              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 6x$$</p>
+              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
+
+              <h4>Calcul des coordonnées des points critiques</h4>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>$$\begin{cases} 3x^2 - 3 = 0 \\ 2y - 2 = 0 \end{cases}$$</p>
+              <p>$$\begin{cases} x^2 = 1 \\ y = 1 \end{cases}$$</p>
+
+              <p>Pour \( y \), on obtient :</p>
+              <p>$$y = 1$$</p>
+              <p>Pour \( x \) nous avons :</p>
+              <p>$$x = \pm 1$$</p>
+              <p>Les corrdonnées des points critiques sont \( (1, 1) \) et \( (-1, 1) \).</p>
+
+              <h4>Détermination de la nature des points critiques</h4>
+              <p>En \( (1, 1) \), la matrice Hessienne est :</p>
+              <p>$$H = \begin{bmatrix} 6 \cdot 1 & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} 6 & 0 \\ 0 & 2 \end{bmatrix}$$</p>
+              <p>$$\Delta = 6 \cdot 2 - 0^2 = 12$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (1, 1) \).</p>
+              <p>En \( (-1, 1) \), la matrice Hessienne est :</p>
+              <p>$$H = \begin{bmatrix} 6 \cdot (-1) & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} -6 & 0 \\ 0 & 2 \end{bmatrix}$$</p>
+              <p>$$\Delta = -6 \cdot 2 - 0^2 = -12$$</p>
+              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (-1, 1) \).</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Rechercher les extrema de la fonction :</p>
+              <p>$$f(x, y) = x^4 - 4x^2 + y^4 - 4y^2 + 6$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercise-correction hidden">
+              <h4>Calcul des dérivées partielles premières</h4>
+              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 4x^3 - 8x$$</p>
+              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 4y^3 - 8y$$</p>
+
+              <h4>Calcul des dérivées partielles secondes</h4>
+              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 12x^2 - 8$$</p>
+              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 12y^2 - 8$$</p>
+
+              <h4>Calcul des coordonnées des points critiques</h4>
+              <p>On résout \( 4x^3 - 8x = 0 \) et \( 4y^3 - 8y = 0 \) :</p>
+              <p>$$x(4x^2 - 8) = 0 \quad \text{ssi} \quad x = 0, \: x = \pm \sqrt{2}$$</p>
+              <p>$$y(4y^2 - 8) = 0 \quad \text{ssi} \quad y = 0, \: y = \pm \sqrt{2}$$</p>
+              <p>Les coordonnées des points critiques sont \( (0, 0), (\pm \sqrt{2}, 0), (0, \pm \sqrt{2}), (\pm \sqrt{2}, \pm \sqrt{2}) \).</p>
+
+              <h4>Détermination de la nature des points critiques</h4>
+              <p>Pour déterminer la nature de chaque point critique, nous calculons le déterminant de la matrice Hessienne \( \Delta \) en chaque point. La matrice Hessienne est :</p>
+              <p>$$H = \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \begin{bmatrix} 12x^2 - 8 & 0 \\ 0 & 12y^2 - 8 \end{bmatrix}$$</p>
+              <p>Le déterminant de la matrice Hessienne est donné par :</p>
+              <p>$$\Delta = (12x^2 - 8)(12y^2 - 8) - (0)^2 = (12x^2 - 8)(12y^2 - 8)$$</p>
+
+              <h4>Analyse pour chaque point critique :</h4>
+              <h4>Étude en \( (0, 0) \)</h4>
+              <p>Substituons \( x = 0 \) et \( y = 0 \) dans \( \Delta \) :</p>
+              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (-8) \cdot (-8) = 64$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot 0^2 - 8 = -8 \, (\text{avec} \, r &#60; 0) \), \( f \) admet un <strong>maximum local</strong> en \( (0, 0) \).</p>
+
+              <h4>Étude en \( (\sqrt{2}, 0) \) et \( (-\sqrt{2}, 0) \)</h4>
+              <p>Substituons \( x = \pm \sqrt{2} \) et \( y = 0 \) dans \( \Delta \) :</p>
+              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (12 \cdot 2 - 8) \cdot (-8) = (24 - 8) \cdot (-8) = 16 \cdot (-8) = -128$$</p>
+              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (\pm \sqrt{2}, 0) \).</p>
+
+              <h4>Étude en \( (0, \sqrt{2}) \) et \( (0, -\sqrt{2}) \)</h4>
+              <p>Substituons \( x = 0 \) et \( y = \pm \sqrt{2} \) dans \( \Delta \) :</p>
+              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (-8) \cdot (12 \cdot 2 - 8) = (-8) \cdot (24 - 8) = (-8) \cdot 16 = -128$$</p>
+              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (0, \pm \sqrt{2}) \).</p>
+
+              <h4>Étude en \( (\sqrt{2}, \sqrt{2}) \), \( (\sqrt{2}, -\sqrt{2}) \), \( (-\sqrt{2}, \sqrt{2}) \), \( (-\sqrt{2}, -\sqrt{2}) \)</h4>
+              <p>Substituons \( x = \pm \sqrt{2} \) et \( y = \pm \sqrt{2} \) dans \( \Delta \) :</p>
+              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (12 \cdot 2 - 8) \cdot (12 \cdot 2 - 8) = (24 - 8) \cdot (24 - 8) = 16 \cdot 16 = 256$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot (\sqrt{2})^2 - 8 = 24 - 8 = 16 > 0 \), \( f \) admet un <strong>minimum local</strong> en ces quatre points critiques.</p>
             </div>
           </div>
         </div>

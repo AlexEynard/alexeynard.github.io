@@ -14,9 +14,9 @@
       <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices -->
+        <!-- Exercices de mathématiques -->
         <li class="menu-item dropdown">
-          <a href="#">Exercices</a>
+          <a href="#">Mathématiques</a>
           <ul class="submenu">
             <li class="submenu-item dropdown">
               <a href="#">Analyse</a>
@@ -25,6 +25,19 @@
                 <li class="submenu-item"><a href="integration.html">Intégration</a></li>
                 <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
                 <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
               </ul>
             </li>
           </ul>
@@ -39,18 +52,317 @@
     <div class="sidebar">
       <h2>Thèmes du chapitre</h2>
       <ul>
-        <li><a href="#page1">Limites et continuité</a></li>
-        <li><a href="#page2">Dérivées partielles</a></li>
+        <li><a href="#page1">Dérivation et intégration</a></li>
+        <li><a href="#page3">Étude de variation de fonctions</a></li>
+        <li><a href="#page3">Opérateurs</a></li>
+
       </ul>
     </div>
 
     <div class="content">
-      <!-- Limites et continuité -->
-      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+      <!-- Dérivées partielles -->
+      <div class="page" id="page1" style="background-color: rgba(132, 221, 212, 0.6)">
         <div class="section-content">
-          <h1 class="titre-page">Étude de la continuité de fonctions</h1>
+          <h1 class="titre-page">Dérivées partielles</h1>
 
-          <div class="exercise">
+          <div class="exercice">
+            <h2>Calcul de dérivées partielles premières</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_1(x, y) = 3x^3y$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Pour calculer \( \frac{\partial f}{\partial x} \), nous considérons \( y \) comme une constante. La
+                dérivée de \( x^3 \) est \( 3x^2 \), donc :</p>
+              <p>$$\frac{\partial f}{\partial x} = 3 \cdot (3x^2) \cdot y = 9x^2y$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Ici, nous considérons \( x \) comme une constante. La fonction est alors linéaire en \( y \), donc la
+                dérivée est simplement :</p>
+              <p>$$\frac{\partial f}{\partial y} = 3x^3$$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_2(x, y) = e^{xy}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La fonction est une exponentielle avec un argument \( xy \). La dérivée de \( e^{xy} \) est elle-même
+                multipliée par la dérivée de \( xy \), soit \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = y e^{xy}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>De la même manière, en dérivant par rapport à \( y \), la dérivée de \( xy \) est \( x \), donc :</p>
+              <p>$$\frac{\partial f}{\partial y} = x e^{xy}$$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_3(x, y) = \ln(x^2 + y^2)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \ln(u) \) est \( \frac{1}{u} \) multipliée par la dérivée de \( u \) par rapport à \(
+                x \), soit \( 2x \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{1}{x^2 + y^2} \cdot 2x = \frac{2x}{x^2 + y^2}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>De manière analogue, la dérivée par rapport à \( y \) est :</p>
+              <p>$$\frac{\partial f}{\partial y} = \frac{1}{x^2 + y^2} \cdot 2y = \frac{2y}{x^2 + y^2}$$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_4(x, y, z) = x^2yz + xz^3$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Nous devons dériver chaque terme séparément. Pour le premier terme \( x^2yz \), la dérivée par rapport
+                à \( x \) est \( 2xyz \) (car \( y \) et \( z \) sont constants). Pour le second terme \( xz^3 \), la
+                dérivée par rapport à \( x \) est \( z^3 \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = 2xyz + z^3$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Seul le premier terme dépend de \( y \), et sa dérivée par rapport à \( y \) est \( x^2z \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = x^2z$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>La dérivée du premier terme \( x^2yz \) par rapport à \( z \) est \( x^2y \), et celle de \( xz^3 \)
+                est \( 3xz^2 \) :</p>
+              <p>$$\frac{\partial f}{\partial z} = x^2y + 3xz^2$$</p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_5(x, y, z) = \sin(xy) + z^2e^x$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \sin(xy) \) par rapport à \( x \) est \( y \cos(xy) \), et celle de \( z^2e^x \) est
+                \( z^2e^x \) :</p>
+              <p>$$\frac{\partial f}{\partial x} = y \cos(xy) + z^2 e^x$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>La dérivée de \( \sin(xy) \) par rapport à \( y \) est \( x \cos(xy) \), et \( z^2e^x \) ne dépend pas
+                de \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = x \cos(xy)$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>Le premier terme ne dépend pas de \( z \), donc la dérivée partielle est nulle pour \( \sin(xy) \),
+                tandis que la dérivée de \( z^2e^x \) est \( 2ze^x \) :</p>
+              <p>$$\frac{\partial f}{\partial z} = 2ze^x$$</p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_6(x, y, z) = \frac{x^2 + z^3}{y}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>Seul \( x^2 \) dépend de \( x \), et la dérivée est :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{2x}{y}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>Ici, on utilise la règle de dérivation d'une fonction rationnelle. La dérivée de \( f \) par rapport à
+                \( y \) est donnée par :</p>
+              <p>$$\frac{\partial f}{\partial y} = -\frac{x^2 + z^3}{y^2}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>Seul \( z^3 \) dépend de \( z \), et la dérivée est :</p>
+              <p>$$\frac{\partial f}{\partial z} = \frac{3z^2}{y}$$</p>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
+              <p>$$f_7(x, y, z) = \frac{xz}{y^2} + \ln(xz)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( x \) est \( \frac{z}{y^2} \), et celle de \(
+                \ln(xz) \) par rapport à \( x \) est \( \frac{1}{x} \), donc :</p>
+              <p>$$\frac{\partial f}{\partial x} = \frac{z}{y^2} + \frac{1}{x}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( y \) est \( -\frac{2xz}{y^3} \), et \( \ln(xz) \)
+                ne dépend pas de \( y \) :</p>
+              <p>$$\frac{\partial f}{\partial y} = -\frac{2xz}{y^3}$$</p>
+
+              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
+              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( z \) est \( \frac{x}{y^2} \), et celle de \(
+                \ln(xz) \) par rapport à \( z \) est \( \frac{1}{z} \), donc :</p>
+              <p>$$\frac{\partial f}{\partial z} = \frac{x}{y^2} + \frac{1}{z}$$</p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Calcul de dérivées partielles secondes</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculez les dérivées partielles secondes de :</p>
+              <p>$$f_1(x, y) = \ln(x^2 + y^2) \cdot e^{xy}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>La dérivée partielle première par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial f_1}{\partial x} = \frac{2x}{x^2 + y^2} \cdot e^{xy} + \ln(x^2 + y^2) \cdot y e^{xy} $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( x \) est :</h4>
+              <h4>$$ \frac{\partial^2 f_1}{\partial x^2} = \left( \frac{2(x^2 + y^2) - 4x^2}{(x^2 + y^2)^2} \right) e^{xy} + 2y \ln(x^2 + y^2) e^{xy} + y^2 e^{xy} $$</p>
+
+                <h4>La dérivée partielle première par rapport à \( y \) est :</h4>
+                <p>$$ \frac{\partial f_1}{\partial y} = \frac{2y}{x^2 + y^2} \cdot e^{xy} + \ln(x^2 + y^2) \cdot x e^{xy} $$</p>
+
+                <h4>La dérivée partielle seconde par rapport à \( y \) est :</h4>
+                <p>$$ \frac{\partial^2 f_1}{\partial y^2} = \left( \frac{2(x^2 + y^2) - 4y^2}{(x^2 + y^2)^2} \right) e^{xy} + 2x \ln(x^2 + y^2) e^{xy} + x^2 e^{xy} $$</p>
+
+                <h4>La dérivée mixte est :</h4>
+                <p>$$ \frac{\partial^2 f_1}{\partial x \partial y} = \frac{2}{x^2 + y^2} e^{xy} - \frac{4xy}{(x^2 + y^2)^2} e^{xy} + e^{xy} \ln(x^2 + y^2) (1 + xy) $$</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculez les dérivées partielles secondes de :</p>
+              <p>$$f_2(x, y, z) = \frac{xy}{e^{xz}} + \cos(xy + z)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>La dérivée partielle première par rapport à \( x \) est :</p>
+              <p>$$ \frac{\partial f_2}{\partial x} = \frac{y e^{xz} - xyze^{xz}}{e^{2xz}} - y \sin(xy + z) $$</p>
+
+              <p>La dérivée partielle seconde par rapport à \( x \) est :</p>
+              <p>$$ \frac{\partial^2 f_2}{\partial x^2} = \frac{y(1 - yz^2)e^{xz} - 2xyze^{xz}}{e^{2xz}} - y^2 \cos(xy + z) $$</p>
+
+              <p>La dérivée partielle première par rapport à \( y \) est :</p>
+              <p>$$ \frac{\partial f_2}{\partial y} = \frac{x}{e^{xz}} - x \sin(xy + z) $$</p>
+
+              <p>La dérivée partielle seconde par rapport à \( y \) est :</p>
+              <p>$$ \frac{\partial^2 f_2}{\partial y^2} = -x^2 \cos(xy + z) $$</p>
+
+              <p>La dérivée mixte par rapport à \( x \) et \( y \) est :</p>
+              <p>$$ \frac{\partial^2 f_2}{\partial x \partial y} = \frac{1}{e^{xz}} - \sin(xy + z) - xy \cos(xy + z) $$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculez les dérivées partielles secondes de :</p>
+              <p>$$f_2(x, y, z) = \frac{xy}{e^{xz}} + \cos(xy + z)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>La dérivée partielle première par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial f_2}{\partial x} = \frac{y e^{xz} - xyze^{xz}}{e^{2xz}} - y \sin(xy + z) $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial^2 f_2}{\partial x^2} = \frac{y(1 - yz^2)e^{xz} - 2xyze^{xz}}{e^{2xz}} - y^2 \cos(xy + z) $$</p>
+
+              <h4>La dérivée partielle première par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial f_2}{\partial y} = \frac{x e^{xz}}{e^{xz}} - x \cos(xy + z) $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial^2 f_2}{\partial y^2} = - x \sin(xy + z) $$</p>
+
+              <h4>La dérivée partielle première par rapport à \( z \) est :</h4>
+              <p>$$ \frac{\partial f_2}{\partial z} = - xy e^{xz} + \cos(xy + z) $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( z \) est :</h4>
+              <p>$$ \frac{\partial^2 f_2}{\partial z^2} = - x^2 y e^{xz} - \sin(xy + z) $$</p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculez les dérivées partielles secondes de :</p>
+              <p>$$f_3(x, y, z) = \frac{\sin(x + y)}{x^2 + y^2 + z^2}$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>La dérivée partielle première par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial f_3}{\partial x} = \frac{(x^2 + y^2 + z^2) \cos(x + y) - \sin(x + y) \cdot 2x}{(x^2 + y^2 + z^2)^2} $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial^2 f_3}{\partial x^2} = \frac{2x^2 \cos(x + y) - 4x \sin(x + y)}{(x^2 + y^2 + z^2)^2} - \frac{2 \cos(x + y)}{(x^2 + y^2 + z^2)^3} $$</p>
+
+              <h4>La dérivée partielle première par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial f_3}{\partial y} = \frac{(x^2 + y^2 + z^2) \cos(x + y) - \sin(x + y) \cdot 2y}{(x^2 + y^2 + z^2)^2} $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial^2 f_3}{\partial y^2} = \frac{2y^2 \cos(x + y) - 4y \sin(x + y)}{(x^2 + y^2 + z^2)^2} - \frac{2 \cos(x + y)}{(x^2 + y^2 + z^2)^3} $$</p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculez les dérivées partielles secondes de :</p>
+              <p>$$f_4(x, y) = e^{x^2 + y^2} \cdot \ln(xy)$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <h4>La dérivée partielle première par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial f_4}{\partial x} = 2x e^{x^2 + y^2} \ln(xy) + e^{x^2 + y^2} \cdot \frac{y}{xy} $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( x \) est :</h4>
+              <p>$$ \frac{\partial^2 f_4}{\partial x^2} = 2e^{x^2 + y^2} \ln(xy) + 4x^2 e^{x^2 + y^2} \ln(xy) + e^{x^2 + y^2} \cdot \frac{2y}{xy^2} $$</p>
+
+              <h4>La dérivée partielle première par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial f_4}{\partial y} = 2y e^{x^2 + y^2} \ln(xy) + e^{x^2 + y^2} \cdot \frac{x}{xy} $$</p>
+
+              <h4>La dérivée partielle seconde par rapport à \( y \) est :</h4>
+              <p>$$ \frac{\partial^2 f_4}{\partial y^2} = 2e^{x^2 + y^2} \ln(xy) + 4y^2 e^{x^2 + y^2} \ln(xy) + e^{x^2 + y^2} \cdot \frac{2x}{xy^2} $$</p>
+            </div>
+
+
+
+          </div>
+          <div class="exercice">
+            <h2>Calcul d'intégrales curvilignes</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">$$\int_{C} (2x \, dx + y^2 \, dy), \quad C : y = \ln(x), \, x \in [1, 2]$$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour commencer, on cherche à savoir si la forme \(\omega\) est exacte. S'il elle l'est, il suffira juste d'intégrer la forme comme nous avons vu dans la série d'exercices précèdente.</p>
+              <h4>1. Paramétrisation de la courbe :</h4>
+              <p>La courbe est paramétrée par \(x(t) = t\) et \(y(t) = \ln(t)\), avec \(t \in [1, 2]\). Cela donne :</p>
+              <p>$$x'(t) = 1, \quad y'(t) = \frac{1}{t}$$</p>
+              <h4>2. Expression de \(\omega\) sur la courbe paramétrée :</h4>
+              <p>On remplace dans \(\omega\) :</p>
+              <p>$$\omega = 2x \, dx + y^2 \, dy = 2t \, dt + (\ln(t))^2 \cdot \frac{1}{t} \, dt$$</p>
+              <h4>3. Calcul de l'intégrale :</h4>
+              <p>$$\int_{C} \omega = \int_1^2 \left( 2t + \frac{(\ln(t))^2}{t} \right) dt$$</p>
+              <p>Celle-ci peut être séparée en deux intégrales :</p>
+              <p>$$\int_1^2 2t \, dt + \int_1^2 \frac{(\ln(t))^2}{t} \, dt$$</p>
+              <p>Ce qui nous donne :</p>
+              <p>$$\int_1^2 2t \, dt = 3, \quad \int_1^2 \frac{(\ln(t))^2}{t} \, dt$$</p>
+              <p>$$\int_{C} \omega = 3 + \int_1^2 \frac{(\ln(t))^2}{t} \, dt = 3 + \left[ \frac{1}{3}\ln(t)^3 \right]_1^2$$</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- Étude de variation de fonctions -->
+      <div class="page" id="page2" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Étude de variation de fonctions</h1>
+          <!-- Ensemble de définition -->
+          <div class="exercice">
             <h2>Ensembles de définition</h2>
 
             <!-- Question 1 -->
@@ -59,8 +371,9 @@
               <p>$$ f_1(x, y) = \frac{\sqrt{x}}{y - 1} $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
-              <p>Pour déterminer l'ensemble de définition de la fonction \( f_1(x, y) = \frac{\sqrt{x}}{y - 1} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_1(x, y) = \frac{\sqrt{x}}{y - 1} \), nous
+                devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
               <h3>Étape 1 : Analyser le dénominateur</h3>
               <p>Le dénominateur \( y - 1 \) ne doit pas être égal à zéro :</p>
@@ -71,7 +384,8 @@
               <p>$$ x \geq 0 $$</p>
 
               <h3>Étape 3 : Combiner les conditions</h3>
-              <p>L'ensemble de définition \(D_{f_1} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>L'ensemble de définition \(D_{f_1} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :
+              </p>
               <p>$$ D_{f_1} = \left\{ (x, y) \in \mathbb{R}^2 \mid x \geq 0 \text{ et } y \neq 1 \right\} $$</p>
             </div>
 
@@ -81,8 +395,9 @@
               <p>$$ f_2(x, y) = \ln(x^2 + y^2) $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
-              <p>Pour déterminer l'ensemble de définition de la fonction \( f_2(x, y) = \ln(x^2 + y^2) \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_2(x, y) = \ln(x^2 + y^2) \), nous devons
+                identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
 
               <h3>Étape 1 : Domaine de définition de la fonction logarithme</h3>
               <p>La fonction logarithme \( \ln(u) \) est définie si et seulement si :</p>
@@ -97,7 +412,8 @@
               <p>$$ x = 0 \quad \text{et} \quad y = 0 $$</p>
 
               <h3>Étape 4 : Définir l'ensemble de définition</h3>
-              <p>L'ensemble de définition \( D_{f_2} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>L'ensemble de définition \( D_{f_2} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que
+                :</p>
               <p>$$ D_{f_2} = \mathbb{R}^2 \setminus \{(0, 0)\} $$</p>
             </div>
 
@@ -107,8 +423,10 @@
               <p>$$ f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}} $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
-              <p>Pour déterminer l'ensemble de définition de la fonction \( f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_3(x, y) = \frac{1}{\sqrt{1 - x^2 - y^2}}
+                \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.
+              </p>
 
               <h3>Étape 1 : Analyser le dénominateur</h3>
               <ul>
@@ -117,11 +435,13 @@
               </ul>
 
               <h3>Étape 2 : Simplifier les conditions</h3>
-              <p>La condition \( 1 - x^2 - y^2 > 0 \) définit l'intérieur d'un cercle de rayon 1 centré à l'origine :</p>
+              <p>La condition \( 1 - x^2 - y^2 > 0 \) définit l'intérieur d'un cercle de rayon 1 centré à l'origine :
+              </p>
               <p>$$ x^2 + y^2 &lt; 1 $$</p>
 
               <h3>Étape 3 : Définir l'ensemble de définition</h3>
-              <p>L'ensemble de définition \( D_{f_3} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>L'ensemble de définition \( D_{f_3} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que
+                :</p>
               <p>$$ D_{f_3} = \left\{ (x, y) \in \mathbb{R}^2 \mid x^2 + y^2 < 1 \right\} $$</p>
             </div>
 
@@ -131,8 +451,10 @@
               <p>$$ f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}} $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
-              <p>Pour déterminer l'ensemble de définition de la fonction \( f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_4(x, y) = \frac{\ln(x + y)}{y - \sqrt{x}}
+                \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.
+              </p>
 
               <h3>Étape 1 : Analyser le numérateur</h3>
               <p>Le logarithme \( \ln(u) \) est défini si et seulement si :</p>
@@ -149,8 +471,10 @@
               <p>$$ x \geq 0 $$</p>
 
               <h3>Étape 4 : Combiner les conditions</h3>
-              <p>L'ensemble de définition \( D_{f_4} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
-              <p>$$ D_{f_4} = \left\{ (x, y) \in \mathbb{R}^2 \mid x \geq 0, x + y > 0 \text{ et } y \neq \sqrt{x} \right\} $$</p>
+              <p>L'ensemble de définition \( D_{f_4} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que
+                :</p>
+              <p>$$ D_{f_4} = \left\{ (x, y) \in \mathbb{R}^2 \mid x \geq 0, x + y > 0 \text{ et } y \neq \sqrt{x}
+                \right\} $$</p>
             </div>
 
             <!-- Question 5 -->
@@ -159,166 +483,27 @@
               <p>$$ f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2} $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
-              <p>Pour déterminer l'ensemble de définition de la fonction \( f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2} \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.</p>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer l'ensemble de définition de la fonction \( f_5(x, y) = \frac{e^{x - y}}{1 - x^2 - y^2}
+                \), nous devons identifier les valeurs de \( x \) et \( y \) pour lesquelles l'expression est définie.
+              </p>
 
               <h3>Étape 1 : Analyser le numérateur</h3>
-              <p>La fonction exponentielle \( e^{x - y} \) est définie pour tous les réels \( x \) et \( y \). Aucune restriction n'est imposée par le numérateur.</p>
+              <p>La fonction exponentielle \( e^{x - y} \) est définie pour tous les réels \( x \) et \( y \). Aucune
+                restriction n'est imposée par le numérateur.</p>
 
               <h3>Étape 2 : Analyser le dénominateur</h3>
               <p>Le dénominateur \( 1 - x^2 - y^2 \) ne doit pas être égal à zéro :</p>
               <p>$$ 1 - x^2 - y^2 \neq 0 $$</p>
 
               <h3>Étape 3 : Définir l'ensemble de définition</h3>
-              <p>L'ensemble de définition \( D_{f_5} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que :</p>
+              <p>L'ensemble de définition \( D_{f_5} \) de la fonction est l'ensemble des couples \( (x, y) \) tels que
+                :</p>
               <p>$$ D_{f_5} = \left\{ (x, y) \in \mathbb{R}^2 \mid 1 - x^2 - y^2 \neq 0 \right\} $$</p>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- Dérivées partielles -->
-      <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
-        <div class="section-content" id="changements_de_variable">
-          <h1 class="titre-page">Dérivées partielles</h1>
-
-          <div class="exercise">
-            <h2>Calcul de dérivées partielles première</h2>
-
-            <!-- Question 1 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_1(x, y) = 3x^3y$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>Pour calculer \( \frac{\partial f}{\partial x} \), nous considérons \( y \) comme une constante. La dérivée de \( x^3 \) est \( 3x^2 \), donc :</p>
-              <p>$$\frac{\partial f}{\partial x} = 3 \cdot (3x^2) \cdot y = 9x^2y$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>Ici, nous considérons \( x \) comme une constante. La fonction est alors linéaire en \( y \), donc la dérivée est simplement :</p>
-              <p>$$\frac{\partial f}{\partial y} = 3x^3$$</p>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_2(x, y) = e^{xy}$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>La fonction est une exponentielle avec un argument \( xy \). La dérivée de \( e^{xy} \) est elle-même multipliée par la dérivée de \( xy \), soit \( y \) :</p>
-              <p>$$\frac{\partial f}{\partial x} = y e^{xy}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>De la même manière, en dérivant par rapport à \( y \), la dérivée de \( xy \) est \( x \), donc :</p>
-              <p>$$\frac{\partial f}{\partial y} = x e^{xy}$$</p>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_3(x, y) = \ln(x^2 + y^2)$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>La dérivée de \( \ln(u) \) est \( \frac{1}{u} \) multipliée par la dérivée de \( u \) par rapport à \( x \), soit \( 2x \) :</p>
-              <p>$$\frac{\partial f}{\partial x} = \frac{1}{x^2 + y^2} \cdot 2x = \frac{2x}{x^2 + y^2}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>De manière analogue, la dérivée par rapport à \( y \) est :</p>
-              <p>$$\frac{\partial f}{\partial y} = \frac{1}{x^2 + y^2} \cdot 2y = \frac{2y}{x^2 + y^2}$$</p>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_4(x, y, z) = x^2yz + xz^3$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>Nous devons dériver chaque terme séparément. Pour le premier terme \( x^2yz \), la dérivée par rapport à \( x \) est \( 2xyz \) (car \( y \) et \( z \) sont constants). Pour le second terme \( xz^3 \), la dérivée par rapport à \( x \) est \( z^3 \) :</p>
-              <p>$$\frac{\partial f}{\partial x} = 2xyz + z^3$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>Seul le premier terme dépend de \( y \), et sa dérivée par rapport à \( y \) est \( x^2z \) :</p>
-              <p>$$\frac{\partial f}{\partial y} = x^2z$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
-              <p>La dérivée du premier terme \( x^2yz \) par rapport à \( z \) est \( x^2y \), et celle de \( xz^3 \) est \( 3xz^2 \) :</p>
-              <p>$$\frac{\partial f}{\partial z} = x^2y + 3xz^2$$</p>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_5(x, y, z) = \sin(xy) + z^2e^x$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>La dérivée de \( \sin(xy) \) par rapport à \( x \) est \( y \cos(xy) \), et celle de \( z^2e^x \) est \( z^2e^x \) :</p>
-              <p>$$\frac{\partial f}{\partial x} = y \cos(xy) + z^2 e^x$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>La dérivée de \( \sin(xy) \) par rapport à \( y \) est \( x \cos(xy) \), et \( z^2e^x \) ne dépend pas de \( y \) :</p>
-              <p>$$\frac{\partial f}{\partial y} = x \cos(xy)$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
-              <p>Le premier terme ne dépend pas de \( z \), donc la dérivée partielle est nulle pour \( \sin(xy) \), tandis que la dérivée de \( z^2e^x \) est \( 2ze^x \) :</p>
-              <p>$$\frac{\partial f}{\partial z} = 2ze^x$$</p>
-            </div>
-
-            <!-- Question 6 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_6(x, y, z) = \frac{x^2 + z^3}{y}$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>Seul \( x^2 \) dépend de \( x \), et la dérivée est :</p>
-              <p>$$\frac{\partial f}{\partial x} = \frac{2x}{y}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>Ici, on utilise la règle de dérivation d'une fonction rationnelle. La dérivée de \( f \) par rapport à \( y \) est donnée par :</p>
-              <p>$$\frac{\partial f}{\partial y} = -\frac{x^2 + z^3}{y^2}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
-              <p>Seul \( z^3 \) dépend de \( z \), et la dérivée est :</p>
-              <p>$$\frac{\partial f}{\partial z} = \frac{3z^2}{y}$$</p>
-            </div>
-
-            <!-- Question 7 -->
-            <div class="question">
-              <p class="consigne">Déterminez les dérivées partielles premières de :</p>
-              <p>$$f_7(x, y, z) = \frac{xz}{y^2} + \ln(xz)$$</p>
-              <button class="toggle-correction"><b>&#10003;</b></button>
-            </div>
-            <div class="exercise-correction hidden">
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( x \) :</h4>
-              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( x \) est \( \frac{z}{y^2} \), et celle de \( \ln(xz) \) par rapport à \( x \) est \( \frac{1}{x} \), donc :</p>
-              <p>$$\frac{\partial f}{\partial x} = \frac{z}{y^2} + \frac{1}{x}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( y \) :</h4>
-              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( y \) est \( -\frac{2xz}{y^3} \), et \( \ln(xz) \) ne dépend pas de \( y \) :</p>
-              <p>$$\frac{\partial f}{\partial y} = -\frac{2xz}{y^3}$$</p>
-
-              <h4>Calcul de la dérivée partielle de \( f \) par rapport à \( z \) :</h4>
-              <p>La dérivée de \( \frac{xz}{y^2} \) par rapport à \( z \) est \( \frac{x}{y^2} \), et celle de \( \ln(xz) \) par rapport à \( z \) est \( \frac{1}{z} \), donc :</p>
-              <p>$$\frac{\partial f}{\partial z} = \frac{x}{y^2} + \frac{1}{z}$$</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Variation de fonctions -->
-      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
-        <div class="section-content">
-          <h1 class="titre-page">Étude de la variation de fonctions</h1>
-          <div class="exercise">
+          <!-- Recherche d'extrema -->
+          <div class="exercice">
             <h2>Recherche d'extrema</h2>
 
             <!-- Question 1 -->
@@ -327,31 +512,36 @@
               <p>$$f(x, y) = 2x^2 - y^2 - 2xy - 2x + y$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Calcul des dérivées partielles premières</h4>
-              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 4x - 2y - 2$$</p>
-              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = -2y - 2x + 1$$</p>
+              <p>$$ \bullet \ p = \frac{\partial f}{\partial x} = 4x - 2y - 2$$</p>
+              <p>$$ \bullet \ q = \frac{\partial f}{\partial y} = -2y - 2x + 1$$</p>
 
               <h4>Calcul des dérivées partielles secondes</h4>
-              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 4$$</p>
-              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = -2$$</p>
-              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = -2$$</p>
+              <p>$$ \bullet \ r = \frac{\partial^2 f}{\partial x^2} = 4$$</p>
+              <p>$$ \bullet \ s = \frac{\partial^2 f}{\partial x \partial y} = -2$$</p>
+              <p>$$ \bullet \ t = \frac{\partial^2 f}{\partial y^2} = -2$$</p>
 
               <h4>Calcul des coordonnées des points critiques</h4>
-              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées
+                partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
               <p>$$\begin{cases}4x - 2y - 2 = 0 \\ -2y - 2x + 1 = 0\end{cases}$$</p>
 
               <p>Appliquons la méthode du pivot de Gauss pour simplifier le système :</p>
-              <p>$$\begin{cases}4x - 2y = 2 \qquad L_1 \rightarrow L_1 - L_2 \\ -2x - 2y = -1 \qquad L_2 \rightarrow 2L_2 + L_1 \end{cases}$$</p>
+              <p>$$\begin{cases}4x - 2y = 2 \qquad L_1 \rightarrow L_1 - L_2 \\ -2x - 2y = -1 \qquad L_2 \rightarrow
+                2L_2 + L_1 \end{cases}$$</p>
               <p>$$\begin{cases}6x = 3 \\ -6y = 0\end{cases}$$</p>
               <p>$$\begin{cases}x = \frac{1}{2} \\y = 0 \end{cases}$$</p>
 
-              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( \frac{1}{2} ; 0 \right) \).</p>
+              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( \frac{1}{2} ; 0 \right) \).
+              </p>
 
               <h4>Détermination de la nature du point critique</h4>
               <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
-              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 4 & -2 \\ -2 & -2 \end{bmatrix} = (4)(-2) - (-2)^2 = -8 - 4 = -12$$</p>
-              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( \left( \frac{1}{2} ; 0 \right) \).</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 4 & -2 \\ -2 & -2
+                \end{bmatrix} = (4)(-2) - (-2)^2 = -8 - 4 = -12$$</p>
+              <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( \left( \frac{1}{2} ; 0
+                \right) \).</p>
             </div>
             <!-- Question 2 -->
             <div class="question">
@@ -359,18 +549,19 @@
               <p>$$f(x, y) = 3x^2 + 2y^2 + 4x - y$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Calcul des dérivées partielles premières</h4>
-              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 6x + 4$$</p>
-              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 4y - 1$$</p>
+              <p>$$ \bullet \ p = \frac{\partial f}{\partial x} = 6x + 4$$</p>
+              <p>$$ \bullet \ q = \frac{\partial f}{\partial y} = 4y - 1$$</p>
 
               <h4>Calcul des dérivées partielles secondes</h4>
-              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 6$$</p>
-              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
-              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 4$$</p>
+              <p>$$ \bullet \ r = \frac{\partial^2 f}{\partial x^2} = 6$$</p>
+              <p>$$ \bullet \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$ \bullet \ t = \frac{\partial^2 f}{\partial y^2} = 4$$</p>
 
               <h4>Calcul des coordonnées des points critiques</h4>
-              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées
+                partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
               <p>$$\begin{cases}6x + 4 = 0 \\ 4y - 1 = 0\end{cases}$$</p>
 
               <p>Appliquons la méthode du pivot de Gauss pour simplifier le système :</p>
@@ -379,13 +570,16 @@
               <p>On en déduit :</p>
               <p>$$\begin{cases}x = -\frac{2}{3} \\ y = \frac{1}{4} \end{cases}$$</p>
 
-              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
+              <p>Il y a donc un unique point critique dont les coordonnées sont \( \left( -\frac{2}{3} ; \frac{1}{4}
+                \right) \).</p>
 
               <h4>Détermination de la nature du point critique</h4>
               <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
-              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 6 & 0 \\ 0 & 4 \end{bmatrix} = (6)(4) - (0)^2 = 24$$</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 6 & 0 \\ 0 & 4
+                \end{bmatrix} = (6)(4) - (0)^2 = 24$$</p>
 
-              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( \left( -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( \left(
+                -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
             </div>
             <!-- Question 3 -->
             <div class="question">
@@ -393,26 +587,29 @@
               <p>$$f(x, y) = x^2 + y^2 - 4x - 6y + 9$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Calcul des dérivées partielles premières</h4>
-              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 2x - 4$$</p>
-              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 2y - 6$$</p>
+              <p>$$ \bullet \ p = \frac{\partial f}{\partial x} = 2x - 4$$</p>
+              <p>$$ \bullet \ q = \frac{\partial f}{\partial y} = 2y - 6$$</p>
 
               <h4>Calcul des dérivées partielles secondes</h4>
-              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 2$$</p>
-              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
-              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
+              <p>$$ \bullet \ r = \frac{\partial^2 f}{\partial x^2} = 2$$</p>
+              <p>$$ \bullet \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$ \bullet \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
 
               <h4>Calcul des coordonnées des points critiques</h4>
-              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées
+                partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
               <p>$$\begin{cases} 2x - 4 = 0 \\ 2y - 6 = 0 \end{cases}$$</p>
               <p>$$\begin{cases} x = 2 \\ y = 3 \end{cases}$$</p>
               <p>Il y a donc un unique point critique dont les coordonnées sont \( (2, 3) \).</p>
 
               <h4>Détermination de la nature du point critique</h4>
               <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
-              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \cdot 2 - 0^2 = 4$$</p>
-              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (2, 3) \).</p>
+              <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 2 & 0 \\ 0 & 2
+                \end{bmatrix} = 2 \cdot 2 - 0^2 = 4$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (2, 3) \).
+              </p>
             </div>
 
             <!-- Question 4 -->
@@ -421,18 +618,19 @@
               <p>$$f(x, y) = x^3 - 3x + y^2 - 2y$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Calcul des dérivées partielles premières</h4>
-              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 3x^2 - 3$$</p>
-              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 2y - 2$$</p>
+              <p>$$ \bullet \ p = \frac{\partial f}{\partial x} = 3x^2 - 3$$</p>
+              <p>$$ \bullet \ q = \frac{\partial f}{\partial y} = 2y - 2$$</p>
 
               <h4>Calcul des dérivées partielles secondes</h4>
-              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 6x$$</p>
-              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
-              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
+              <p>$$ \bullet \ r = \frac{\partial^2 f}{\partial x^2} = 6x$$</p>
+              <p>$$ \bullet \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$ \bullet \ t = \frac{\partial^2 f}{\partial y^2} = 2$$</p>
 
               <h4>Calcul des coordonnées des points critiques</h4>
-              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
+              <p>On résout le système suivant pour trouver les valeurs de \( x \) et \( y \) qui annulent les dérivées
+                partielles premières (ie. lorsque \( p(x,y) = q(x,y) = 0 \)) :</p>
               <p>$$\begin{cases} 3x^2 - 3 = 0 \\ 2y - 2 = 0 \end{cases}$$</p>
               <p>$$\begin{cases} x^2 = 1 \\ y = 1 \end{cases}$$</p>
 
@@ -444,11 +642,14 @@
 
               <h4>Détermination de la nature des points critiques</h4>
               <p>En \( (1, 1) \), la matrice Hessienne est :</p>
-              <p>$$H = \begin{bmatrix} 6 \cdot 1 & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} 6 & 0 \\ 0 & 2 \end{bmatrix}$$</p>
+              <p>$$H = \begin{bmatrix} 6 \cdot 1 & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} 6 & 0 \\ 0 & 2
+                \end{bmatrix}$$</p>
               <p>$$\Delta = 6 \cdot 2 - 0^2 = 12$$</p>
-              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (1, 1) \).</p>
+              <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (1, 1) \).
+              </p>
               <p>En \( (-1, 1) \), la matrice Hessienne est :</p>
-              <p>$$H = \begin{bmatrix} 6 \cdot (-1) & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} -6 & 0 \\ 0 & 2 \end{bmatrix}$$</p>
+              <p>$$H = \begin{bmatrix} 6 \cdot (-1) & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} -6 & 0 \\ 0 & 2
+                \end{bmatrix}$$</p>
               <p>$$\Delta = -6 \cdot 2 - 0^2 = -12$$</p>
               <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (-1, 1) \).</p>
             </div>
@@ -457,52 +658,360 @@
               <p>$$f(x, y) = x^4 - 4x^2 + y^4 - 4y^2 + 6$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Calcul des dérivées partielles premières</h4>
-              <p>$$&#8226; \ p = \frac{\partial f}{\partial x} = 4x^3 - 8x$$</p>
-              <p>$$&#8226; \ q = \frac{\partial f}{\partial y} = 4y^3 - 8y$$</p>
+              <p>$$ \bullet \ p = \frac{\partial f}{\partial x} = 4x^3 - 8x$$</p>
+              <p>$$ \bullet \ q = \frac{\partial f}{\partial y} = 4y^3 - 8y$$</p>
 
               <h4>Calcul des dérivées partielles secondes</h4>
-              <p>$$&#8226; \ r = \frac{\partial^2 f}{\partial x^2} = 12x^2 - 8$$</p>
-              <p>$$&#8226; \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
-              <p>$$&#8226; \ t = \frac{\partial^2 f}{\partial y^2} = 12y^2 - 8$$</p>
+              <p>$$ \bullet \ r = \frac{\partial^2 f}{\partial x^2} = 12x^2 - 8$$</p>
+              <p>$$ \bullet \ s = \frac{\partial^2 f}{\partial x \partial y} = 0$$</p>
+              <p>$$ \bullet \ t = \frac{\partial^2 f}{\partial y^2} = 12y^2 - 8$$</p>
 
               <h4>Calcul des coordonnées des points critiques</h4>
               <p>On résout \( 4x^3 - 8x = 0 \) et \( 4y^3 - 8y = 0 \) :</p>
               <p>$$x(4x^2 - 8) = 0 \quad \text{ssi} \quad x = 0, \: x = \pm \sqrt{2}$$</p>
               <p>$$y(4y^2 - 8) = 0 \quad \text{ssi} \quad y = 0, \: y = \pm \sqrt{2}$$</p>
-              <p>Les coordonnées des points critiques sont \( (0, 0), (\pm \sqrt{2}, 0), (0, \pm \sqrt{2}), (\pm \sqrt{2}, \pm \sqrt{2}) \).</p>
+              <p>Les coordonnées des points critiques sont \( (0, 0), (\pm \sqrt{2}, 0), (0, \pm \sqrt{2}), (\pm
+                \sqrt{2}, \pm \sqrt{2}) \).</p>
 
               <h4>Détermination de la nature des points critiques</h4>
-              <p>Pour déterminer la nature de chaque point critique, nous calculons le déterminant de la matrice Hessienne \( \Delta \) en chaque point. La matrice Hessienne est :</p>
-              <p>$$H = \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \begin{bmatrix} 12x^2 - 8 & 0 \\ 0 & 12y^2 - 8 \end{bmatrix}$$</p>
+              <p>Pour déterminer la nature de chaque point critique, nous calculons le déterminant de la matrice
+                Hessienne \( \Delta \) en chaque point. La matrice Hessienne est :</p>
+              <p>$$H = \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \begin{bmatrix} 12x^2 - 8 & 0 \\ 0 & 12y^2 - 8
+                \end{bmatrix}$$</p>
               <p>Le déterminant de la matrice Hessienne est donné par :</p>
               <p>$$\Delta = (12x^2 - 8)(12y^2 - 8) - (0)^2 = (12x^2 - 8)(12y^2 - 8)$$</p>
 
               <h4>Analyse pour chaque point critique :</h4>
               <h4>Étude en \( (0, 0) \)</h4>
               <p>Substituons \( x = 0 \) et \( y = 0 \) dans \( \Delta \) :</p>
-              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (-8) \cdot (-8) = 64$$</p>
-              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot 0^2 - 8 = -8 \, (\text{avec} \, r &#60; 0) \), \( f \) admet un <strong>maximum local</strong> en \( (0, 0) \).</p>
+              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (-8) \cdot (-8) =
+                64$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot 0^2 - 8 = -8 \, (\text{avec} \, r &#60; 0) \), \( f \) admet
+                un <strong>maximum local</strong> en \( (0, 0) \).</p>
 
               <h4>Étude en \( (\sqrt{2}, 0) \) et \( (-\sqrt{2}, 0) \)</h4>
               <p>Substituons \( x = \pm \sqrt{2} \) et \( y = 0 \) dans \( \Delta \) :</p>
-              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (12 \cdot 2 - 8) \cdot (-8) = (24 - 8) \cdot (-8) = 16 \cdot (-8) = -128$$</p>
+              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (12 \cdot 2
+                - 8) \cdot (-8) = (24 - 8) \cdot (-8) = 16 \cdot (-8) = -128$$</p>
               <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (\pm \sqrt{2}, 0) \).</p>
 
               <h4>Étude en \( (0, \sqrt{2}) \) et \( (0, -\sqrt{2}) \)</h4>
               <p>Substituons \( x = 0 \) et \( y = \pm \sqrt{2} \) dans \( \Delta \) :</p>
-              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (-8) \cdot (12 \cdot 2 - 8) = (-8) \cdot (24 - 8) = (-8) \cdot 16 = -128$$</p>
+              <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (-8) \cdot
+                (12 \cdot 2 - 8) = (-8) \cdot (24 - 8) = (-8) \cdot 16 = -128$$</p>
               <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (0, \pm \sqrt{2}) \).</p>
 
-              <h4>Étude en \( (\sqrt{2}, \sqrt{2}) \), \( (\sqrt{2}, -\sqrt{2}) \), \( (-\sqrt{2}, \sqrt{2}) \), \( (-\sqrt{2}, -\sqrt{2}) \)</h4>
+              <h4>Étude en \( (\sqrt{2}, \sqrt{2}) \), \( (\sqrt{2}, -\sqrt{2}) \), \( (-\sqrt{2}, \sqrt{2}) \), \(
+                (-\sqrt{2}, -\sqrt{2}) \)</h4>
               <p>Substituons \( x = \pm \sqrt{2} \) et \( y = \pm \sqrt{2} \) dans \( \Delta \) :</p>
-              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (12 \cdot 2 - 8) \cdot (12 \cdot 2 - 8) = (24 - 8) \cdot (24 - 8) = 16 \cdot 16 = 256$$</p>
-              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot (\sqrt{2})^2 - 8 = 24 - 8 = 16 > 0 \), \( f \) admet un <strong>minimum local</strong> en ces quatre points critiques.</p>
+              <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) =
+                (12 \cdot 2 - 8) \cdot (12 \cdot 2 - 8) = (24 - 8) \cdot (24 - 8) = 16 \cdot 16 = 256$$</p>
+              <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot (\sqrt{2})^2 - 8 = 24 - 8 = 16 > 0 \), \( f \) admet un
+                <strong>minimum local</strong> en ces quatre points critiques.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <div class="page" id="page3" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Les opérateurs</h1>
+          <!-- Gradient -->
+          <div class="exercice">
+            <h2>Le gradient</h2>
+            <!-- Question 1 -->
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction :</p>
+              <p>$$ f(x, y, z) = x^2y + e^z \sin(y) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Nous rappelons que le gradient est défini comme :</p>
+              <p>$$ \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right) $$</p>
+              <p>Calculons chaque composante :</p>
+              <p>$$ \bullet \frac{\partial f}{\partial x} = 2xy $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial y} = x^2 + e^z \cos(y) $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial z} = e^z \sin(y) $$</p>
+              <p>Donc, le gradient est :</p>
+              <p>$$ \nabla f = \big( 2xy, x^2 + e^z \cos(y), e^z \sin(y) \big) $$</p>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction :</p>
+              <p>$$ f(x, y, z) = \ln(x^2 + y^2 + z^2) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Rappelons que le gradient d'une fonction \( f(x, y, z) \) est donné par :</p>
+              <p>$$ \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right) $$</p>
+              <p>Nous devons donc calculer les dérivées partielles suivantes :</p>
+              <p>$$ \bullet \frac{\partial f}{\partial x} = \frac{2x}{x^2 + y^2 + z^2} $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial y} = \frac{2y}{x^2 + y^2 + z^2} $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial z} = \frac{2z}{x^2 + y^2 + z^2} $$</p>
+              <p>Donc, le gradient est :</p>
+              <p>$$ \nabla f = \left( \frac{2x}{x^2 + y^2 + z^2}, \frac{2y}{x^2 + y^2 + z^2}, \frac{2z}{x^2 + y^2 + z^2} \right) $$</p>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction :</p>
+              <p>$$ f(x, y, z) = x^3 \ln(yz) + y e^z $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Le gradient de \( f(x, y, z) \) est donné par :</p>
+              <p>$$ \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right) $$</p>
+              <p>Calculons chaque dérivée partielle :</p>
+              <p>$$ \bullet \frac{\partial f}{\partial x} = 3x^2 \ln(yz) $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial y} = \frac{x^3 z}{yz} + e^z $$</p>
+              <p>$$ \bullet \frac{\partial f}{\partial z} = \frac{x^3 y}{yz} + y e^z $$</p>
+              <p>Donc, le gradient est :</p>
+              <p>$$ \nabla f = \left( 3x^2 \ln(yz), \frac{x^3 z}{yz} + e^z, \frac{x^3 y}{yz} + y e^z \right) $$</p>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction :</p>
+              <p>$$ f(x, y, z) = z \int_x^y \arctan(2t) \, dt $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Nous devons d'abord résoudre l'intégrale définie :</p>
+              <p>$$ \int_x^y \arctan(2t) \, dt $$</p>
+              <p>Nous allons utiliser la méthode d'intégration par parties. Rappelons que :</p>
+              <p>$$ \int u \, v' = uv - \int u' \, v $$</p>
+              <p>Dans notre cas, nous choisissons :</p>
+              <p>$$ u = \arctan(2t), \quad v' = dt $$</p>
+              <p>Nous calculons alors les dérivées et intégrales nécessaires :</p>
+              <p>$$ u' = \frac{2}{1 + (2t)^2} \, dt = \frac{2}{1 + 4t^2} \, dt $$</p>
+              <p>$$ v = t $$</p>
+              <p>En appliquant la formule d'intégration par parties, nous obtenons :</p>
+              <p>$$ \int_x^y \arctan(2t) \, dt = \left[ t \arctan(2t) \right]_x^y - \int_x^y \frac{2t}{1 + 4t^2} \, dt $$</p>
+              <p>La seconde intégrale est reconnaissable sous la forme dérivée de \( \ln(u) \), et en la résolvant, nous avons :</p>
+              <p>$$ \int_x^y \arctan(2t) \, dt = \left[ t \arctan(2t) - \frac{1}{8} \ln(1 + 4t^2) \right]_x^y $$</p>
+
+              <p>En appliquant les bornes \( x \) et \( y \) à l'intégrale, on obtient :</p>
+              <p>$$ \int_x^y \arctan(2t) \, dt = \left( y \arctan(2y) - \frac{1}{8} \ln(1 + 4y^2) \right) - \left( x \arctan(2x) - \frac{1}{8} \ln(1 + 4x^2) \right) $$</p>
+              <p>La fonction \( f(x, y, z) \) devient donc :</p>
+              <p>$$ f(x, y, z) = z \left[ y \arctan(2y) - \frac{1}{8} \ln(1 + 4y^2) - \left( x \arctan(2x) - \frac{1}{8} \ln(1 + 4x^2) \right) \right] $$</p>
+
+              <p><b>4. Calcul du gradient :</b></p>
+              <p>Nous devons maintenant calculer le gradient de la fonction \( f(x, y, z) \), c'est-à-dire \( \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right) \).</p>
+
+              <p><b>Calcul de \( \frac{\partial f}{\partial x} \) :</b></p>
+              <p>Nous appliquons la règle de différentiation pour chaque terme de la fonction \( f(x, y, z) \). La dérivée par rapport à \( x \) est :</p>
+              <p>$$ \frac{\partial}{\partial x} \left( y \arctan(2y) - \frac{1}{8} \ln(1 + 4y^2) - x \arctan(2x) + \frac{1}{8} \ln(1 + 4x^2) \right) $$</p>
+              <p>Seules les parties contenant \( x \) varient, donc :</p>
+              <p>$$ \frac{\partial f}{\partial x} = -z \left( \arctan(2x) + \frac{2x}{1 + 4x^2} \right) $$</p>
+
+              <p><b>Calcul de \( \frac{\partial f}{\partial y} \) :</b></p>
+              <p>De manière similaire, pour \( y \), seules les parties contenant \( y \) dans \( f(x, y, z) \) sont affectées par la dérivée :</p>
+              <p>$$ \frac{\partial}{\partial y} \left( y \arctan(2y) - \frac{1}{8} \ln(1 + 4y^2) - x \arctan(2x) + \frac{1}{8} \ln(1 + 4x^2) \right) $$</p>
+              <p>Ce qui donne :</p>
+              <p>$$ \frac{\partial f}{\partial y} = z \left( \arctan(2y) + \frac{2y}{1 + 4y^2} \right) $$</p>
+
+              <p><b>Calcul de \( \frac{\partial f}{\partial z} \) :</b></p>
+              <p>La dérivée par rapport à \( z \) est plus simple, car seul le terme multiplié par \( z \) dépend de \( z \). La dérivée est donc simplement l'intégrale de \( \arctan(2t) \) entre \( x \) et \( y \) :</p>
+              <p>$$ \frac{\partial f}{\partial z} = \int_x^y \arctan(2t) \, dt $$</p>
+
+              <p><b>5. Conclusion :</b></p>
+              <p>Le gradient de la fonction \( f(x, y, z) \) est donc :</p>
+              <p>$$ \nabla f = \left( -z \left( \arctan(2x) + \frac{2x}{1 + 4x^2} \right), z \left( \arctan(2y) + \frac{2y}{1 + 4y^2} \right), \int_x^y \arctan(2t) \, dt \right) $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Déterminer les points où le gradient de \(h(x,y) = x^3 + y^3 - 3xy\) est nul.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Le gradient de \(h(x,y) = x^3 + y^3 - 3xy\) est donné par :</p>
+              <p>\(\nabla h(x,y) = \left( \frac{\partial h}{\partial x}, \frac{\partial h}{\partial y} \right) = (3x^2 - 3y, 3y^2 - 3x)\)</p>
+              <p>Nous cherchons les points \((x,y)\) où le gradient est nul, c'est-à-dire :</p>
+              <p>\(3x^2 - 3y = 0 \Leftrightarrow y = x^2\)</p>
+              <p>\(3y^2 - 3x = 0 \Leftrightarrow x = y^2\)</p>
+              <p>En substituant la première équation dans la seconde, nous obtenons :</p>
+              <p>\(x = (x^2)^2 \Leftrightarrow x = x^4 \Leftrightarrow x^4 - x = 0 \Leftrightarrow x(x^3 - 1) = 0\)</p>
+              <p>Les solutions pour \(x\) sont donc \(x = 0\) ou \(x = 1\).</p>
+              <p>Si \(x = 0\), alors \(y = 0^2 = 0\).<br>
+                Si \(x = 1\), alors \(y = 1^2 = 1\).</p>
+              <p>Par conséquent, les points où le gradient de \(h\) est nul sont \((0,0)\) et \((1,1)\).</p>
+            </div>
+          </div>
+
+
+          <div class="exercice">
+            <h2>La divergence</h2>
+            <div class="question">
+              <p class="consigne">Calculer la divergence du champ vectoriel :</p>
+              <p>$$ \mathbf{F}(x, y, z) = (x^2y, xy^2, xyz) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Rappelons que la divergence d'un champ vectoriel \(\mathbf{F}(x, y, z) = (P, Q, R)\) est donnée par :</p>
+              <p>$$ \nabla \cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} $$</p>
+              <p>Dans notre cas :</p>
+              <p>$$ \bullet \frac{\partial P}{\partial x} = \frac{\partial (x^2y)}{\partial x} = 2xy $$</p>
+              <p>$$ \bullet \frac{\partial Q}{\partial y} = \frac{\partial (xy^2)}{\partial y} = 2xy $$</p>
+              <p>$$ \bullet \frac{\partial R}{\partial z} = \frac{\partial (xyz)}{\partial z} = xy $$</p>
+              <p>Donc, la divergence est :</p>
+              <p>$$ \nabla \cdot \mathbf{F} = 2xy + 2xy + xy = 5xy $$</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Calculer la divergence du champ vectoriel :</p>
+              <p>$$ \mathbf{G}(x, y, z) = (e^x \cos(y), e^x \sin(y), z^2) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Calculons les dérivées partielles :</p>
+              <p>$$ \bullet \frac{\partial}{\partial x}(e^x \cos(y)) = e^x \cos(y) $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial y}(e^x \sin(y)) = e^x \cos(y) $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial z}(z^2) = 2z $$</p>
+              <p>La divergence est donc :</p>
+              <p>$$ \nabla \cdot \mathbf{G} = e^x \cos(y) + e^x \cos(y) + 2z = 2e^x \cos(y) + 2z $$</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Calculer la divergence du champ vectoriel :</p>
+              <p>$$ \mathbf{H}(x, y, z) = \left(\frac{-y}{x^2 + y^2}, \frac{x}{x^2 + y^2}, 0\right) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Ce champ est intéressant car il représente une rotation autour de l'axe des z. Calculons les dérivées partielles :</p>
+              <p>$$ \bullet \frac{\partial}{\partial x}\left(\frac{-y}{x^2 + y^2}\right) = \frac{2xy}{(x^2 + y^2)^2} $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial y}\left(\frac{x}{x^2 + y^2}\right) = \frac{-2xy}{(x^2 + y^2)^2} $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial z}(0) = 0 $$</p>
+              <p>La divergence est donc :</p>
+              <p>$$ \nabla \cdot \mathbf{H} = \frac{2xy}{(x^2 + y^2)^2} - \frac{2xy}{(x^2 + y^2)^2} + 0 = 0 $$</p>
+              <p>Remarque importante : bien que ce champ "tourne", sa divergence est nulle. Cela signifie qu'il n'y a pas de sources ni de puits pour ce champ vectoriel.</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Calculer la divergence du champ vectoriel :</p>
+              <p>$$ \mathbf{J}(x, y, z) = (x^2 + y^2 + z^2)(x, y, z) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Développons le champ : \(\mathbf{J}(x, y, z) = (x^3 + xy^2 + xz^2, x^2y + y^3 + yz^2, x^2z + y^2z + z^3)\)</p>
+              <p>Calculons les dérivées partielles :</p>
+              <p>$$ \bullet \frac{\partial}{\partial x}(x^3 + xy^2 + xz^2) = 3x^2 + y^2 + z^2 $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial y}(x^2y + y^3 + yz^2) = x^2 + 3y^2 + z^2 $$</p>
+              <p>$$ \bullet \frac{\partial}{\partial z}(x^2z + y^2z + z^3) = x^2 + y^2 + 3z^2 $$</p>
+              <p>La divergence est donc :</p>
+              <p>$$ \nabla \cdot \mathbf{J} = 3x^2 + y^2 + z^2 + x^2 + 3y^2 + z^2 + x^2 + y^2 + 3z^2 = 5(x^2 + y^2 + z^2) $$</p>
+            </div>
+          </div>
+
+
+          <div class="exercice">
+            <h2>Le rotationnel</h2>
+            <div class="question">
+              <p class="consigne">Calculer le rotationnel du champ vectoriel :</p>
+              <p>$$ \mathbf{F}(x, y, z) = (x^2z, 2xy, yz^2) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Le rotationnel de \(\mathbf{F}(x, y, z) = (P, Q, R)\) est :</p>
+              <p>$$ \nabla \times \mathbf{F} = \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) $$</p>
+              <p>Ici, \(P = x^2z\), \(Q = 2xy\), et \(R = yz^2\).</p>
+              <p>$$ \frac{\partial R}{\partial y} = z^2, \quad \frac{\partial Q}{\partial z} = 0 $$</p>
+              <p>$$ \frac{\partial P}{\partial z} = x^2, \quad \frac{\partial R}{\partial x} = 0 $$</p>
+              <p>$$ \frac{\partial Q}{\partial x} = 2y, \quad \frac{\partial P}{\partial y} = 0 $$</p>
+              <p>Donc, \(\nabla \times \mathbf{F} = (z^2, x^2, 2y)\).</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Calculer le rotationnel du champ vectoriel :</p>
+              <p>$$ \mathbf{G}(x, y, z) = (y\sin(x), x\cos(y), xz) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>$$ \nabla \times \mathbf{G} = \left( \frac{\partial(xz)}{\partial y} - \frac{\partial(x\cos(y))}{\partial z}, \frac{\partial(y\sin(x))}{\partial z} - \frac{\partial(xz)}{\partial x}, \frac{\partial(x\cos(y))}{\partial x} - \frac{\partial(y\sin(x))}{\partial y} \right) $$</p>
+              <p>$$ \nabla \times \mathbf{G} = (0 - 0, 0 - z, \cos(y) - \sin(x)) = (0, -z, \cos(y) - \sin(x)) $$</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Soit le champ vectoriel :</p>
+              <p>$$ \mathbf{A}(x, y, z) = (2xz, x^2, x^2z) $$</p>
+              <p>1. Calculer le rotationnel de \(\mathbf{A}\).</p>
+              <p>2. Existe-t-il une fonction scalaire \(f\) telle que \(\mathbf{A} = \nabla f\) ? Justifier.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>1. Calcul du rotationnel :</p>
+              <p>$$ \nabla \times \mathbf{A} = \left( \frac{\partial(x^2z)}{\partial y} - \frac{\partial(x^2)}{\partial z}, \frac{\partial(2xz)}{\partial z} - \frac{\partial(x^2z)}{\partial x}, \frac{\partial(x^2)}{\partial x} - \frac{\partial(2xz)}{\partial y} \right) $$</p>
+              <p>$$ \nabla \times \mathbf{A} = (0 - 0, 2x - 2xz, 2x - 0) = (0, 2x(1-z), 2x) $$</p>
+              <p>2. Si un champ vectoriel dérive d'un potentiel scalaire (c'est-à-dire est un champ de gradient), alors son rotationnel est nul. Ici, \(\nabla \times \mathbf{A} \neq \mathbf{0}\) en général. Donc, il n'existe pas de fonction scalaire \(f\) telle que \(\mathbf{A} = \nabla f\).</p>
+            </div>
+            <div class="question">
+              <p class="consigne">On considère le champ vectoriel :</p>
+              <p>$$ \mathbf{V}(x, y, z) = (ayz, bxz, cxy) $$</p>
+              <p>où \(a\), \(b\) et \(c\) \( \in \mathbb{R}\)</p>
+              <p>1. Calculer le rotationnel de \(\mathbf{V}\).</p>
+              <p>2. Déterminer les valeurs de \(a\), \(b\) et \(c\) pour lesquelles \(\mathbf{V}\) est irrotationnel.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>1. Calcul du rotationnel :</p>
+              <p>$$ \nabla \times \mathbf{V} = (cx - bx, ay - cz, bz - ay) = ((c-b)x, (a-c)y, (b-a)z) $$</p>
+              <p>2. Pour que \(\mathbf{V}\) soit irrotationnel, son rotationnel doit être nul :</p>
+              <p>$$ \nabla \times \mathbf{V} = (0, 0, 0) $$</p>
+              <p>Cela implique :</p>
+              <p>$$ c - b = 0, \quad a - c = 0, \quad b - a = 0 $$</p>
+              <p>Donc, \(a = b = c\). Si les trois constantes sont égales, le champ est irrotationnel.</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Calculer le rotationnel du champ vectoriel en coordonnées cylindriques :</p>
+              <p>$$ \mathbf{F}(\rho, \phi, z) = (0, \rho z, \rho \cos(\phi)) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>En coordonnées cylindriques, le rotationnel est donné par :</p>
+              <p>$$ \nabla \times \mathbf{F} = \left( \frac{1}{\rho} \left( \frac{\partial F_z}{\partial \phi} - \frac{\partial (\rho F_\phi)}{\partial z} \right), \frac{\partial F_\rho}{\partial z} - \frac{\partial F_z}{\partial \rho}, \frac{1}{\rho} \left( \frac{\partial (\rho F_\phi)}{\partial \rho} - \frac{\partial F_\rho}{\partial \phi} \right) \right) $$</p>
+              <p>Avec \(F_\rho = 0\), \(F_\phi = \rho z\), et \(F_z = \rho \cos(\phi)\), on a :</p>
+              <p>$$ \nabla \times \mathbf{F} = \left( \frac{1}{\rho} (\rho (-\sin(\phi)) - \rho(1)), 0 - \cos(\phi), \frac{1}{\rho} (\rho z + \rho z - 0) \right) $$</p>
+              <p>$$ \nabla \times \mathbf{F} = \left( -\sin(\phi) - 1, -\cos(\phi), 2z \right) $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Montrer que si \(\mathbf{F}\) est un champ de gradient (i.e., \(\mathbf{F} = \nabla f\) pour une certaine fonction scalaire \(f\)), alors son rotationnel est nul : \(\nabla \times \mathbf{F} = \mathbf{0}\).</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Soit \(\mathbf{F} = \nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)\). Calculons le rotationnel :</p>
+              <p>$$ \nabla \times \mathbf{F} = \left( \frac{\partial^2 f}{\partial y \partial z} - \frac{\partial^2 f}{\partial z \partial y}, \frac{\partial^2 f}{\partial z \partial x} - \frac{\partial^2 f}{\partial x \partial z}, \frac{\partial^2 f}{\partial x \partial y} - \frac{\partial^2 f}{\partial y \partial x} \right) $$</p>
+              <p>Si \(f\) est de classe \(C^2\) (c'est-à-dire que ses dérivées partielles secondes sont continues), le théorème de Schwarz nous assure que l'ordre de dérivation n'a pas d'importance. Par conséquent :</p>
+              <p>$$ \frac{\partial^2 f}{\partial y \partial z} = \frac{\partial^2 f}{\partial z \partial y}, \quad \frac{\partial^2 f}{\partial z \partial x} = \frac{\partial^2 f}{\partial x \partial z}, \quad \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} $$</p>
+              <p>Donc, \(\nabla \times \mathbf{F} = (0, 0, 0) = \mathbf{0}\).</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Déterminer si le champ vectoriel suivant est irrotationnel. Si c'est le cas, trouver un potentiel scalaire \(f\) tel que \(\mathbf{F} = \nabla f\) :</p>
+              <p>$$ \mathbf{F}(x, y, z) = (2xy^3z^2, 3x^2y^2z^2, 2x^2y^3z) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Calculons le rotationnel :</p>
+              <p>$$ \nabla \times \mathbf{F} = (6x^2y^2z - 6x^2y^2z, 4xy^3z - 4xy^3z, 6xy^2z^2 - 6xy^2z^2) = (0, 0, 0) $$</p>
+              <p>Le champ est irrotationnel. Cherchons un potentiel scalaire \(f\) tel que \(\nabla f = \mathbf{F}\) :</p>
+              <p>$$ \frac{\partial f}{\partial x} = 2xy^3z^2 \implies f(x, y, z) = x^2y^3z^2 + g(y, z) $$</p>
+              <p>$$ \frac{\partial f}{\partial y} = 3x^2y^2z^2 + \frac{\partial g}{\partial y} = 3x^2y^2z^2 \implies \frac{\partial g}{\partial y} = 0 \implies g(y, z) = h(z) $$</p>
+              <p>$$ \frac{\partial f}{\partial z} = 2x^2y^3z + h'(z) = 2x^2y^3z \implies h'(z) = 0 \implies h(z) = C $$</p>
+              <p>Donc, \(f(x, y, z) = x^2y^3z^2 + C\), où \(C\) est une constante.</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Soit le champ vectoriel \(\mathbf{A}(x, y, z) = (y, -x, 0)\). Calculer son rotationnel et interpréter le résultat géométriquement.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Calcul du rotationnel :</p>
+              <p>\(\nabla \times \mathbf{A} = \left(\frac{\partial(0)}{\partial y} - \frac{\partial(-x)}{\partial z}, \frac{\partial(y)}{\partial z} - \frac{\partial(0)}{\partial x}, \frac{\partial(-x)}{\partial x} - \frac{\partial(y)}{\partial y}\right) = (0, 0, -1 - 1) = (0, 0, -2)\).</p>
+              <p>Interprétation géométrique :</p>
+              <p>Le champ \(\mathbf{A}\) représente une rotation dans le plan \(xy\), dans le sens horaire. Le rotationnel \((0, 0, -2)\) pointe dans la direction \(-z\), ce qui est conforme à la règle de la main droite pour le sens de rotation. La magnitude du rotationnel (2) indique l'intensité de cette rotation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
   </main>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="../assets/scripts/script.js"></script>

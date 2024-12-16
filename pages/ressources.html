@@ -14,9 +14,9 @@
       <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices -->
+        <!-- Exercices de mathématiques -->
         <li class="menu-item dropdown">
-          <a href="#">Exercices</a>
+          <a href="#">Mathématiques</a>
           <ul class="submenu">
             <li class="submenu-item dropdown">
               <a href="#">Analyse</a>
@@ -29,6 +29,19 @@
             </li>
           </ul>
         </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <!-- Ressources -->
         <li class="menu-item"><a href="ressources.html">Resources</a></li>
         <li class="menu-item"><a href="#">À propos</a></li>
@@ -37,7 +50,7 @@
   </header>
   <main>
     <div class="sidebar">
-      <div class="exercise-menu">
+      <div class="exercice-menu">
         <h2>Menu des ressources</h2>
         <ul>
           <li><a href="#concours">Sujets de concours</a></li>
@@ -50,14 +63,14 @@
       <div class="page" id="page1" style="background-color: rgba(118, 205, 205, 0.6);">
         <div class="section-content" id="concours">
           <h1 class="titre-page">Les sujets de concours</h1>
-          <div class="exercise">
+          <div class="exercice">
             <div class="question">
               <!-- Concours 1 -->
               <p><b>Concours Tescia</b></p>
               <img src="../assets/images/tescia.png" style="width: 10em; height: auto;">
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden" style="background-color: #0051606e;">
+            <div class="exercice-correction hidden" style="background-color: #0051606e;">
               <p> <a class="hyperlink" href="https://www.aores-sci.fr/static/base/pdf/annales/2024/MG2024Enonce.pdf">Sujet
                   2024</a>
                 <a class="hyperlink" href="https://www.aores-sci.fr/static/base/pdf/annales/2024/MG2024CorrigeM.pdf">Corrigé
@@ -101,7 +114,7 @@
               <img src="https://students4students.ch/assets/icons/intbee-logo.png" style="width: 5em; height: auto;">
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden" style="background-color: #0051606e;">
+            <div class="exercice-correction hidden" style="background-color: #0051606e;">
               <p><a class="hyperlink" href="https://math.mit.edu/~yyao1/pdf/qualifying_round_2024_test.pdf">Sujet de la
                   qualification 2024</a> <a class="hyperlink" href="https://math.mit.edu/~yyao1/pdf/qualifying_round_2024_answers.pdf">Corrigé de
                   la
@@ -169,21 +182,21 @@
     <div class="page" id="page2" style="background-color: rgba(100, 180, 205, 0.6);">
       <div class="section-content" id="exercices">
         <h1 class="titre-page">Les fiches utiles</h1>
-        <div class="exercise">
+        <div class="exercice">
           <!-- Fiches exercices -->
-          <div class="exercise-container">
+          <div class="exercice-container">
             <div class="question">
               <p><b>Fiches d'exercices</b></p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden" style="background-color: #0051606e;">
+            <div class="exercice-correction hidden" style="background-color: #0051606e;">
               <p><a class="hyperlink" href="https://people.math.sc.edu/girardi/m142/integration/100problems.pdf">100
                   integrals</a></p>
               <p><a class="hyperlink" href="https://www.louislegrand.fr/wp-content/uploads/2022/01/EXOS-TERMINALE3-3-AVECDESSIN.pdf">Du
                   lycée aux CPGE (LLG et Henri-IV)</a></p>
             </div>
 
-            <div class="exercise-correction hidden" style="background-color: #0051606e;">
+            <div class="exercice-correction hidden" style="background-color: #0051606e;">
               <a class="hyperlink" href="REMPLACER">Sujet</a>
             </div>
           </div>
@@ -192,7 +205,7 @@
             <p><b>Fiches méthodes</b></p>
             <button class="toggle-correction"><b>&#10003;</b></button>
           </div>
-          <div class="exercise-correction hidden" style="background-color: #0051606e;">
+          <div class="exercice-correction hidden" style="background-color: #0051606e;">
             <p><a class="hyperlink" href="https://wou.edu/mathcenter/files/2015/09/Trig-Identities.pdf">Fiche
                 identités trigonométriques</a></p>
           </div>

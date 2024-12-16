@@ -14,9 +14,9 @@
       <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices -->
+        <!-- Exercices de mathématiques -->
         <li class="menu-item dropdown">
-          <a href="#">Exercices</a>
+          <a href="#">Mathématiques</a>
           <ul class="submenu">
             <li class="submenu-item dropdown">
               <a href="#">Analyse</a>
@@ -25,6 +25,19 @@
                 <li class="submenu-item"><a href="integration.html">Intégration</a></li>
                 <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
                 <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
               </ul>
             </li>
           </ul>
@@ -51,8 +64,8 @@
       <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
         <div class="section-content" id="bases">
           <h1 class="titre-page">Les formes usuelles</h1>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Les fonctions indispensables</h2>
 
             <!-- Question 1 -->
@@ -61,7 +74,7 @@
               <p>$$dl_5(0) : e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(e^x\) à l'ordre 5 en 0 est :</p>
               <p>$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + o(x^5)$$</p>
               <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} + o(x^5)$$</p>
@@ -73,7 +86,7 @@
               <p>$$dl_6(0) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\sin(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)$$</p>
@@ -85,7 +98,7 @@
               <p>$$dl_4(0) : \cos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\cos(x)\) à l'ordre 4 en 0 est :</p>
               <p>$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4)$$</p>
               <p>$$\cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4)$$</p>
@@ -96,14 +109,14 @@
               <p>$$dl_4(0) : (x+1)^\alpha$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \((x+1)^\alpha\) à l'ordre 4 en 0 est :</p>
               <p>$$ (x+1)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2}x^2 + \frac{\alpha(\alpha-1)(\alpha-2)}{6}x^3 + \frac{\alpha(\alpha-1)(\alpha-2)(\alpha-3)}{24}x^4 + o(x^4) $$</p>
             </div>
           </div>
 
-          <!-- Exercise 2 -->
-          <div class="exercise">
+          <!-- exercice 2 -->
+          <div class="exercice">
             <h2>Les formes usuelles importantes</h2>
 
             <!-- Question 1 -->
@@ -112,7 +125,7 @@
               <p>$$dl_6(0) : \tan(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\tan(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
             </div>
@@ -123,7 +136,7 @@
               <p>$$dl_5(0) : \ln(1 + x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\ln(1 + x)\) à l'ordre 5 en 0 est :</p>
               <p>$$\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} + o(x^5)$$</p>
             </div>
@@ -134,7 +147,7 @@
               <p>$$dl_6(0) : \frac{1}{1 - x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\frac{1}{1 - x}\) à l'ordre 6 en 0 est :</p>
               <p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + x^5 + o(x^6)$$</p>
             </div>
@@ -145,7 +158,7 @@
               <p>$$dl_4(0) : \arctan(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\arctan(x)\) à l'ordre 4 en 0 est :</p>
               <p>$$\arctan(x) = x - \frac{x^3}{3} + o(x^4)$$</p>
             </div>
@@ -156,7 +169,7 @@
               <p>$$dl_6(0) : \arcsin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\arcsin(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\arcsin(x) = x + \frac{x^3}{6} + \frac{3x^5}{40} + o(x^6)$$</p>
             </div>
@@ -167,7 +180,7 @@
               <p>$$dl_6(0) : \arccos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\arccos(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + o(x^6)$$</p>
             </div>
@@ -178,7 +191,7 @@
               <p>$$dl_6(0) : \cosh(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\cosh(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^6)$$</p>
             </div>
@@ -189,7 +202,7 @@
               <p>$$dl_6(0) : \sinh(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \(\sinh(x)\) à l'ordre 6 en 0 est :</p>
               <p>$$\sinh(x) = x + \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
             </div>
@@ -200,7 +213,7 @@
               <p>$$dl_4(0) : \sqrt{x + 1}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On commence par réécrire la fonction :</p>
               <p>$$\sqrt{1 + x} = (1 + x)^{\frac{1}{2}}$$</p>
               <p>Nous utilisons ensuite le développement limité de \( (1 + x)^\alpha \) à l'ordre 4 en 0 pour \( \alpha = \frac{1}{2} \) :</p>
@@ -210,8 +223,8 @@
             </div>
           </div>
 
-          <!-- Exercise 3 -->
-          <div class="exercise">
+          <!-- exercice 3 -->
+          <div class="exercice">
             <h2>Cas simples</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -219,7 +232,7 @@
               <p>$$dl_4(0) : \frac{1}{2 + 2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\frac{1}{2 + 2x} = \frac{1}{2(1 + x)} = \frac{1}{2} \times \frac{1}{1 + x}$$</p>
               <p>En utilisant le développement de \( \frac{1}{1+x}\), nous avons :</p>
               <p>$$f(x) = \frac{1}{2}\left(1 - x + x^2 - x^3 + x^4 + o(x^4)\right)$$</p>
@@ -231,7 +244,7 @@
               <p>$$dl_4(0) : \frac{1}{(1-x)^2}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Utilisons le fait que :</p>
               <p>$$\frac{1}{(1-x)^2} = (1-x)^{-2}$$</p>
               <p>Le développement limité de \( (1-x)^\alpha \) est donné par :</p>
@@ -247,7 +260,7 @@
               <p>$$dl_5(0) : \ln(1 + 2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Le développement limité de \( \ln(1+u) \) est :</p>
               <p>$$\ln(1+u) = u - \frac{u^2}{2} + \frac{u^3}{3} - \frac{u^4}{4} + \frac{u^5}{5} + o(u^5)$$</p>
               <p>En posant \( u = 2x \), nous obtenons :</p>
@@ -260,8 +273,8 @@
       <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
         <div class="section-content" id="changements_de_variable">
           <h1 class="titre-page">Les produits de fonctions</h1>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Pour comprendre</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -269,7 +282,7 @@
               <p>$$dl_4(0) : \sin(x) \cdot \cos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
@@ -288,7 +301,7 @@
               <p>$$dl_4(0) : e^x \cdot \ln(1 + x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
               <p>$$\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$$</p>
@@ -307,7 +320,7 @@
               <p>$$dl_4(0) : \sqrt{1 + x} \cdot \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
@@ -327,7 +340,7 @@
               <p>$$dl_4(0) : \tan(x) \cdot e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
               <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
@@ -347,7 +360,7 @@
               <p>$$dl_4(0) : \sin(x) \cdot \sqrt{1 + x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
@@ -367,7 +380,7 @@
               <p>$$dl_4(0) : \cos(x) \cdot e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
               <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
@@ -380,8 +393,8 @@
               <p>$$= 1 + x + o(x^2)$$</p>
             </div>
           </div>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Pour approfondir</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -389,7 +402,7 @@
               <p>$$dl_5(0) : \sin(2x) \cdot \cos(3x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(2x) = 2x - \frac{(2x)^3}{6} + o(x^3) = 2x - \frac{4x^3}{3} + o(x^3)$$</p>
               <p>$$\cos(3x) = 1 - \frac{(3x)^2}{2} + o(x^2) = 1 - \frac{9x^2}{2} + o(x^2)$$</p>
@@ -406,7 +419,7 @@
               <p>$$dl_5(0) : \ln(1 + 3x) \cdot \sqrt{1 - x^2}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\ln(1 + 3x) = 3x - \frac{(3x)^2}{2} + \frac{(3x)^3}{3} + o(x^3) = 3x - \frac{9x^2}{2} + 9x^3 + o(x^3)$$</p>
               <p>$$\sqrt{1 - x^2} = 1 - \frac{x^2}{2} + \frac{x^4}{8} + o(x^4)$$</p>
@@ -423,7 +436,7 @@
               <p>$$dl_5(0) : e^{2x} \cdot \tan(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$e^{2x} = 1 + 2x + \frac{(2x)^2}{2} + \frac{(2x)^3}{6} + o(x^3) = 1 + 2x + 2x^2 + \frac{4x^3}{3} + o(x^3)$$</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
@@ -439,7 +452,7 @@
               <p>$$dl_5(0) : \cos(2x) \cdot \sin(3x) \cdot \ln(1 + x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4) = 1 - 2x^2 + \frac{2x^4}{3} + o(x^4)$$</p>
               <p>$$\sin(3x) = 3x - \frac{(3x)^3}{6} + o(x^3) = 3x - \frac{27x^3}{6} + o(x^3) = 3x - \frac{9x^3}{2} + o(x^3)$$</p>
@@ -460,7 +473,7 @@
               <p>$$dl_5(0) : e^{3x} \cdot \cos(4x) \cdot \sin(5x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$e^{3x} = 1 + 3x + \frac{(3x)^2}{2} + \frac{(3x)^3}{6} + o(x^3) = 1 + 3x + \frac{9x^2}{2} + \frac{27x^3}{6} + o(x^3)$$</p>
               <p>$$\cos(4x) = 1 - \frac{(4x)^2}{2} + \frac{(4x)^4}{24} + o(x^4) = 1 - 8x^2 + \frac{8x^4}{3} + o(x^4)$$</p>
@@ -483,7 +496,7 @@
         <div class="section-content" id="integrations_par_parties">
           <h1 class="titre-page">Les compositions de fonctions</h1>
           <!-- Exercice 1 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Les compositions simples</h2>
 
             <!-- Question 1 -->
@@ -492,7 +505,7 @@
               <p>$$dl_4(0) : e^{\sin(x)}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$e^{u} = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \sin(x)\)</p>
@@ -510,7 +523,7 @@
               <p>$$dl_3(0) : \ln(1 + \tan(x))$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
               <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x)\)</p>
@@ -528,7 +541,7 @@
               <p>$$dl_3(0) : \sqrt{1 + \sin(x)}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = \sin(x)\)</p>
@@ -545,7 +558,7 @@
               <p>$$dl_4(0) : \cos(\ln(1+x))$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\ln(1+x) = x - \frac{x^2}{2} + o(x^2)$$</p>
               <p>$$\cos(u) = 1 - \frac{u^2}{2} + o(u^2)$$ avec \(u = \ln(1+x)\)</p>
@@ -562,7 +575,7 @@
               <p>$$dl_5(0) : \tan(e^x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\tan(u) = u + \frac{u^3}{3} + o(u^3)$$ avec \(u = e^x\)</p>
@@ -581,7 +594,7 @@
               <p>$$dl_4(1) : \sqrt{1 + x^2}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = x^2\)</p>
               <p>Nous évaluons autour de \(x = 1\):</p>
@@ -597,7 +610,7 @@
               <p>$$dl_4(0) : \frac{1}{\sqrt{1 + x}}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\frac{1}{\sqrt{1 + u}} = 1 - \frac{u}{2} + \frac{3u^2}{8} + o(u^2)$$ avec \(u = x\)</p>
               <p>Substituons \(u\) dans l'expression :</p>
@@ -610,7 +623,7 @@
               <p>$$dl_3(0) : \frac{\sin(x)}{x^2 + 1}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\frac{1}{x^2 + 1} = 1 - x^2 + o(x^2)$$</p>
@@ -626,7 +639,7 @@
               <p>$$dl_4(0) : \tan(\sin(x))$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>$$\tan(u) = u + \frac{u^3}{3} + o(u^3)$$ avec \(u = \sin(x)\)</p>
@@ -644,7 +657,7 @@
               <p>$$dl_4(0) : e^{\tan(x)}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
               <p>$$e^{u} = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x)\)</p>
@@ -656,7 +669,7 @@
               <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$</p>
             </div>
           </div>
-          <div class="exercise">
+          <div class="exercice">
             <h2>Compositions doubles</h2>
 
             <!-- Question 1 -->
@@ -665,7 +678,7 @@
               <p>$$dl_3(0) : \sin(\ln(1 + \cos(x)))$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
 
               <p>Substituons \( \cos(x) \) dans \( \ln(1 + \cos(x)) \) :</p>
@@ -691,7 +704,7 @@
               <p>$$dl_3(0) : \ln(\cos(x^2))$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
               <p>Donc : $$\cos(x^2) = 1 - \frac{x^4}{2} + o(x^4)$$</p>
@@ -709,7 +722,7 @@
               <p>$$dl_4(0) : e^{\tan(x^3)}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
               <p>Donc : $$\tan(x^3) = x^3 + \frac{x^9}{3} + o(x^9)$$</p>
@@ -729,7 +742,7 @@
               <p>$$dl_5(0) : \frac{1}{\sqrt{1 + \sin(x^2)}}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
               <p>Donc : $$\sin(x^2) = x^2 - \frac{x^6}{6} + o(x^6)$$</p>
@@ -745,7 +758,7 @@
               <p>$$dl_4(1) : \ln(\sqrt{1 + x^2} + x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise les développements limités :</p>
               <p>Pour \(x\) proche de \(1\), on a : $$\sqrt{1 + x^2} = \sqrt{2 + 2h} = \sqrt{2}\sqrt{1 + h} \approx \sqrt{2} + \frac{h}{\sqrt{2}}$$</p>
               <p>Nous voulons donc : </p>
@@ -766,7 +779,7 @@
         <div class="section-content" id="integrations_par_parties">
           <h1 class="titre-page">Pas en zéro</h1>
           <!-- Exercice 1 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2></h2>
             <!-- Question 1 -->
             <div class="question">
@@ -774,7 +787,7 @@
               <p>$$dl_3\left(\frac{\pi}{4}\right) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{4}\) :</p>
               <p>$$\sin(x) = \sin\left(\frac{\pi}{4}\right) + \cos\left(\frac{\pi}{4}\right)\left(x - \frac{\pi}{4}\right) - \frac{\sin\left(\frac{\pi}{4}\right)}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{\cos\left(\frac{\pi}{4}\right)}{6}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
               <p>Calculons les termes :</p>
@@ -789,7 +802,7 @@
               <p>$$dl_4(1) : e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
               <p>$$e^x = e^1 + e^1(x - 1) + \frac{e^1}{2!}(x - 1)^2 + \frac{e^1}{3!}(x - 1)^3 + \frac{e^1}{4!}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
               <p>Calculons les termes :</p>
@@ -804,7 +817,7 @@
               <p>$$dl_3(1) : \ln(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
               <p>$$\ln(x) = \ln(1) + \frac{1}{1}(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + o\left((x - 1)^3\right)$$</p>
               <p>En substituant \( \ln(1) = 0 \) :</p>
@@ -819,7 +832,7 @@
               <p>$$dl_3\left(\frac{\pi}{3}\right) : \cos(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{3}\) :</p>
               <p>$$\cos(x) = \cos\left(\frac{\pi}{3}\right) - \sin\left(\frac{\pi}{3}\right)\left(x - \frac{\pi}{3}\right) - \frac{\cos\left(\frac{\pi}{3}\right)}{2}\left(x - \frac{\pi}{3}\right)^2 + o\left((x - \frac{\pi}{3})^2\right)$$</p>
               <p>Calculons les termes :</p>
@@ -832,7 +845,7 @@
               <p>$$dl_4(2) : \sqrt{x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 2\) :</p>
               <p>$$\sqrt{x} = \sqrt{2} + \frac{1}{2\sqrt{2}}(x - 2) - \frac{1}{8\sqrt{2}}(x - 2)^2 + \frac{1}{16\sqrt{2}}(x - 2)^3 + o\left((x - 2)^3\right)$$</p>
               <p>Calculons les termes :</p>
@@ -845,7 +858,7 @@
               <p>$$dl_4\left(-1\right) : \tan(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = -1\) :</p>
               <p>$$\tan(x) = \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}(x + 1)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
               <p>En calculant les termes, nous obtenons :</p>
@@ -858,7 +871,7 @@
               <p>$$dl_5(0) : \cos(2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
               <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4)$$</p>
               <p>Calculons les termes :</p>
@@ -873,7 +886,7 @@
               <p>$$dl_3\left(0\right) : \frac{1}{1 + x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
               <p>$$\frac{1}{1 + x} = 1 - x + x^2 - x^3 + o(x^3)$$</p>
               <p>En réorganisant, cela donne :</p>
@@ -886,7 +899,7 @@
               <p>$$dl_5\left(1\right) : \ln(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
               <p>$$\ln(x) = 0 + 1(x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3 + \frac{1}{4}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
               <p>En réorganisant les termes :</p>
@@ -899,7 +912,7 @@
               <p>$$dl_4\left(-\frac{\pi}{2}\right) : \sin(x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>On utilise la formule de Taylor centrée en \(a = -\frac{\pi}{2}\) :</p>
               <p>$$\sin(x) = -1 + \cos\left(-\frac{\pi}{2}\right)\left(x + \frac{\pi}{2}\right) - \frac{\sin\left(-\frac{\pi}{2}\right)}{2}\left(x + \frac{\pi}{2}\right)^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
               <p>Calculons les termes :</p>
@@ -915,14 +928,14 @@
         <div class="section-content" id="integrations_par_parties">
           <h1 class="titre-page">Calculs de limites</h1>
           <!-- Exercice 1 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2></h2>
             <!-- Question 1 -->
             <div class="question">
               <p class="consigne"></p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p></p>
             </div>
           </div>

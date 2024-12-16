@@ -14,9 +14,9 @@
       <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices -->
+        <!-- Exercices de mathématiques -->
         <li class="menu-item dropdown">
-          <a href="#">Exercices</a>
+          <a href="#">Mathématiques</a>
           <ul class="submenu">
             <li class="submenu-item dropdown">
               <a href="#">Analyse</a>
@@ -25,6 +25,19 @@
                 <li class="submenu-item"><a href="integration.html">Intégration</a></li>
                 <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
                 <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
               </ul>
             </li>
           </ul>
@@ -49,8 +62,8 @@
       <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
         <div class="section-content">
           <h1 class="titre-page">Les équations homogènes</h1>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Équations homogènes linéaires du premier ordre</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -58,7 +71,7 @@
               <p>$$(E_1): y'+2xy=0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>L'équation \( (E_1) \) est une équation différentielle linéaire homogène du premier ordre.</p>
               <p>En effet, elle est de la forme : \( y' + a(x) \cdot y = 0 \)</p>
               <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( \lambda \in \mathbb{R} \):</p>
@@ -71,7 +84,7 @@
               <p>$$(E_2): y' + e^x y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int e^x \, dx} = \lambda e^{-e^x} $$</p>
               <img src="../assets/gif/equations_differentielles/ed_1.1.2.gif" class="gif">
             </div>
@@ -81,7 +94,7 @@
               <p>$$(E_3): y' + \frac{y}{x} = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int \frac{1}{x} \, dx} = \lambda e^{-\ln|x|} = \frac{\lambda}{x} $$</p>
               <img src="../assets/gif/equations_differentielles/ed_1.1.3.gif" class="gif">
             </div>
@@ -91,7 +104,7 @@
               <p>$$(E_4): x(1 + \ln^2(x))y' + 2y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par normaliser l'équation différentielle :</p>
               <p>$$y' + \frac{2}{x(1 + \ln^2(x))} y = 0$$</p>
 
@@ -111,7 +124,7 @@
               <p>$$(E_5): \arctan(x) y' + \frac{y}{1 + x^2} = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par normaliser l'équation différentielle :</p>
               <p>$$y' - \frac{1}{\arctan(x)(1 + x^2)} y = 0$$</p>
 
@@ -131,7 +144,7 @@
               <p>$$(E_6): \arcsin\left(\frac{x}{\sqrt{2}}\right) y' + \frac{y}{\sqrt{2 - x^2}} = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par normaliser l'équation différentielle :</p>
 
               <p>$$y' + \frac{1}{\arcsin\left(\frac{x}{\sqrt{2}}\right)\sqrt{2 - x^2}} y = 0$$</p>
@@ -161,7 +174,7 @@
               <p>$$(E_7): x \ln(x) y' + \frac{y}{\ln^2(x)} = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par normaliser l'équation différentielle :</p>
               <p>$$y' + \frac{1}{x \ln^3(x)} y = 0$$</p>
 
@@ -179,8 +192,8 @@
 
 
           </div>
-          <!-- Exercise 2 -->
-          <div class="exercise">
+          <!-- exercice 2 -->
+          <div class="exercice">
             <h2>Équations homogènes linéaires du second ordre</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -188,7 +201,7 @@
               <p>$$(E_1): y'' - 5y' + 6y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_1) \).</p>
               <p>$$r^2 - 5r + 6 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -204,7 +217,7 @@
               <p>$$(E_2): y'' - 4y' + 4y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_2) \).</p>
               <p>$$r^2 - 4r + 4 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -220,7 +233,7 @@
               <p>$$(E_3): y'' - y' - 12y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_3) \).</p>
               <p>$$r^2 - r - 12 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -236,7 +249,7 @@
               <p>$$(E_4): 2y'' + 4y' + 10y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_4) \).</p>
               <p>$$2r^2 + 4r + 10 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -252,7 +265,7 @@
               <p>$$(E_5): y'' + 6y' + 10y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_5) \).</p>
               <p>$$r^2 + 6r + 10 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -268,7 +281,7 @@
               <p>$$(E_6): y'' - 6y' + 9y = 0$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous devons résoudre l'équation caractéristique associée à l'équation différentielle \( (E_6) \).</p>
               <p>$$r^2 - 6r + 9 = 0$$</p>
               <p>Le discriminant de cette équation caractéristique est :</p>
@@ -286,8 +299,8 @@
       <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
         <div class="section-content">
           <h1 class="titre-page">Équations différentielles linéaires du premier ordre</h1>
-          <!-- Exercise 1 - Coefficients constants -->
-          <div class="exercise">
+          <!-- exercice 1 - Coefficients constants -->
+          <div class="exercice">
             <h2>Avec solutions particulières évidentes</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -295,7 +308,7 @@
               <p>$$(E_1): y' + y = x + 1$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous allons résoudre l'équation homogène associée, c'est-à-dire \( y' + y = 0 \):</p>
               <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 1 \, dx} = \lambda e^{-x}$$</p>
               <p>Les solutions homogènes sont \(y_{h}(x) = \lambda e^{-x}\) avec \( \lambda \in \mathbb{R} \)</p>
@@ -312,7 +325,7 @@
               <p>$$(E_2): y'+2xy = x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par résoudre l'équation homogène associée, c'est à dire \( y'+ 2xy = 0 \):</p>
               <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
               <p>Les solutions homogènes de l'équation homogène s'expriment alors \(y_{h}(x) = \lambda e^{-x^2}\) avec \( \lambda \in \mathbb{R} \) </p>
@@ -330,7 +343,7 @@
               <p>$$(E_3): y' + y = 2e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par résoudre l'équation homogène associée, soit \( y' + y = 0 \):</p>
               <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 1 \, dx} = \lambda e^{-x}$$</p>
 
@@ -347,7 +360,7 @@
               <p>$$(E_4): 2y' - y = 3e^{2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre l'équation différentielle \( (E_4) \), nous commençons par la mettre sous forme normalisée, de manière à rendre le coefficient du terme de plus haut ordre, ici \( y' \), égal à 1. Cela revient à diviser l'ensemble des termes de l'équation par le coefficient de \( y' \). Ainsi, l'équation devient :</p>
 
               <p>$$2y' - y = 3e^{2x}$$</p>
@@ -365,7 +378,7 @@
             </div>
           </div>
           <!-- Exercice 2 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Comprendre la méthode</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -373,7 +386,7 @@
               <p>$$(E_1): (x+1)y' + y = x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier temps, nous allons normaliser l'équation :</p>
               <p>$$y' + \frac{1}{x+1} y = \frac{x}{x+1}$$</p>
 
@@ -432,7 +445,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par déterminer les solutions de l'équation homogène associée :</p>
               <p>$$y_h(x) = \lambda e^{-\int 2\tan(x) dx} = \lambda e^{2\ln|\cos(x)|} = \lambda \cos^2(x)$$</p>
 
@@ -484,7 +497,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par réécrire l'équation sous forme normalisée :</p>
               <p>$$ y' - \frac{y}{x} = 1$$</p>
 
@@ -535,7 +548,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Réécrivons l'équation sous forme normalisée :</p>
               <p>$$ y' - \frac{y}{x} = \ln(x)$$</p>
 
@@ -586,7 +599,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par déterminer les solutions de l'équation homogène associée :</p>
               <p>$$ y_h(x) = \lambda e^{-\int \tan(x) dx} = \lambda e^{-\ln|\cos(x)|} = \lambda \cos(x) $$</p>
               <p>Les solutions homogènes de \( (E_5) \) sont les fonctions :</p>
@@ -638,7 +651,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par réécrire l'équation sous forme normalisée :</p>
               <p>$$ y' + \frac{\cos(x)+(x)\sin(x)}{x \cos(x)}\, y = \frac{1}{x \cos(x)} $$</p>
               <p>En simplifiant nous obtenons :</p>
@@ -695,7 +708,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par réécrire l'équation sous forme normalisée :</p>
               <p>$$ y' - \frac{1}{x} \cdot y = \frac{1}{\ln^2(x)} $$</p>
 
@@ -755,7 +768,7 @@
         <div class="section-content">
           <h1 class="titre-page">Équations différentielles linéaires du second ordre</h1>
           <!-- Exercice 1 - Exponentielle -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Forme exponentielle</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -763,7 +776,7 @@
               <p>$$(E_1): y'' + 3y' + 2y = e^x$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
@@ -807,7 +820,7 @@
               <p>$$(E_2): y'' - 4y' + 4y = e^{2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
@@ -856,7 +869,7 @@
               <p>$$(E_3): y'' - y = e^{2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Résolvons d'abord l'équation homogène associée :</p>
@@ -895,7 +908,7 @@
               <p>$$(E_4): y'' - 3y' + 2y = 5 e^{x} - 3 e^{2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Dans un premier temps, nous devons résoudre l'équation homogène associée :</p>
@@ -966,7 +979,7 @@
               <p>$$(E_5): \quad y'' + 5y' + 6y = -4 e^{-2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1018,7 +1031,7 @@
               <p>$$(E_6): \quad y'' + 4y' + 4y = 3 e^{-x} - 2 e^{-2x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1086,7 +1099,7 @@
               <p>$$(E_7): y'' - 5y' + 6y = e^{-3x} + 4 e^{-2x} - 2 e^{-x}$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Résolvons d'abord l'équation homogène associée :</p>
@@ -1136,14 +1149,14 @@
             </div>
           </div>
           <!-- Exercice 2 - Polynomes -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Forme polynomiale</h2>
             <div class="question">
               <p class="consigne">Résoudre :</p>
               <p>$$(E_1): \quad y'' + y' - 2y = 3x + 4$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1208,7 +1221,7 @@
               <p>$$(E_2): \quad y'' - y' - 6y = 2x^2 + 5x + 3$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1286,7 +1299,7 @@
               <p>$$(E_3): \quad y'' + 4y' + 4y = x^3 - 2x^2 + x - 5$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1368,7 +1381,7 @@
               <p>$$(E_4): \quad y'' - 2y' - 8y = 3x^4 + x^3 - 4x + 7$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1466,7 +1479,7 @@
               <p>$$(E_5): \quad 3y'' + 2y' = 2x^2 + 1$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1539,7 +1552,7 @@
               <p>$$(E_6): \quad 2y'' - y' = x^3 - x - 2$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1616,7 +1629,7 @@
               <p>$$(E_7): \quad 3y'' = -3x + 6$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène associée est :</p>
@@ -1663,7 +1676,7 @@
               <p>$$(E_8): \quad 5y'' = 4x^3 - 8x + 12$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène associée est :</p>
@@ -1714,7 +1727,7 @@
 
           </div>
           <!-- Exercice 3 - Sinus et cosinus -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Forme sinusoïdale</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -1723,7 +1736,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -1785,7 +1798,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène \( (H_2) \) associée à \( (E_2) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
@@ -1842,7 +1855,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène \( (H_3) \) associée à \( (E_3) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
@@ -1897,7 +1910,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène \( (H_4) \) associée à \( (E_4) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
@@ -1950,7 +1963,7 @@
               <p>$$(E_5): \quad y'' + y = \sin(2x) + \cos(2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>L'équation homogène \( (H_5) \) associée à \( (E_5) \) est sous la forme \( y'' + \omega^2 y = 0 \). Cela nous permet de directement déterminer \( y_h(x) \).</p>
@@ -1997,7 +2010,7 @@
               <p>$$(E_6): \quad y'' + 2y' + 5y = 3 \sin(2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -2067,7 +2080,7 @@
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
 
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -2147,7 +2160,7 @@
               <p>$$(E_8): \quad y'' - 4y' + 4y = 2 \sin(2x) + 3 \cos(2x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -2204,7 +2217,7 @@
               <p>$$ (E_9): \quad y'' + 2y' + 5y = 4 \sin(3x) + 3 \cos(3x) $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>
@@ -2264,7 +2277,7 @@
               <p>$$(E_10): \quad y'' + 4y' + 5y = 3 \sin(4x) + 2 \cos(4x)$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <h4>Étape 1 : Résoudre l'équation homogène associée</h4>
 
               <p>Commençons par résoudre l'équation homogène associée :</p>

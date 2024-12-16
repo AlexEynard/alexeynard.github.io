@@ -14,9 +14,9 @@
       <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices -->
+        <!-- Exercices de mathématiques -->
         <li class="menu-item dropdown">
-          <a href="#">Exercices</a>
+          <a href="#">Mathématiques</a>
           <ul class="submenu">
             <li class="submenu-item dropdown">
               <a href="#">Analyse</a>
@@ -25,6 +25,19 @@
                 <li class="submenu-item"><a href="integration.html">Intégration</a></li>
                 <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
                 <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
               </ul>
             </li>
           </ul>
@@ -51,8 +64,8 @@
       <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
         <div class="section-content" id="bases">
           <h1 class="titre-page">Les bases de l'intégration</h1>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Formes polynomiales</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -60,7 +73,7 @@
               <p>$$\int_{-1}^{2}(5x^{3}-3x+4) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\int_{-1}^{2} (5x^3 - 3x + 4) \, dx = \left[\frac{5x^4}{4} - \frac{3x^2}{2} + 4x\right]_{-1}^{2}$$
               </p>
               <p>$$= \left(\frac{5(2)^4}{4} - \frac{3(2)^2}{2} + 4(2)\right) - \left(\frac{5(-1)^4}{4} - \frac{3(-1)^2}{2} + 4(-1)\right)$$</p>
@@ -72,7 +85,7 @@
               <p>$$\int_{0}^{3}(4x^{2} - 2x + 1) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\int_{0}^{3} (4x^2 - 2x + 1) \, dx = \left[\frac{4x^3}{3} - \frac{x^2}{1} + x\right]_0^3$$</p>
               <p>$$ = \left(\frac{4(3)^3}{3} - (3)^2 + 3\right) - (0)$$</p>
               <p>$$ = \frac{108}{3} - 9 + 3 = 36 - 9 + 3 = 30$$</p>
@@ -83,7 +96,7 @@
               <p>$$\int_{0}^{5}(8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\int_{0}^{5} (8x^4 - 7x^3 + 2x^2 - x) \, dx$$</p>
               <p>$$ = \left[\frac{8x^5}{5} - \frac{7x^4}{4} + \frac{2x^3}{3} - \frac{x^2}{2}\right]_0^5$$</p>
               <p>$$ = \left(\frac{8(5)^5}{5} - \frac{7(5)^4}{4} + \frac{2(5)^3}{3} - \frac{(5)^2}{2}\right) - 0$$</p>
@@ -93,8 +106,8 @@
             <!-- Question 5 -->
 
           </div>
-          <!-- Exercise 2 -->
-          <div class="exercise">
+          <!-- exercice 2 -->
+          <div class="exercice">
             <h2>Formes trigonométriques simples</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -105,7 +118,7 @@
               </p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 $$\int_{-\pi}^{\frac{\pi}{2}} \cos(2\theta-\pi) -
                 \sin\left(\theta-\frac{\pi}{4}\right) \, d\theta$$
@@ -132,7 +145,7 @@
               <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\int (3\sin(20x) \cos(23x) + 20 \sin(43x))dx $$</p>
               <p>$$= 3 \int (\sin(20x) \cos(23x))dx + 20 \int \sin(43x)dx $$</p>
               <p>Nous rappelons l'indentité suivante :</p>
@@ -150,7 +163,7 @@
               <p>$$\int \frac{\tan(x)}{\tan^2(x) + 1} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour commencer, nous allons exprimer les fonctions tangentes sous forme de sinus et de cosinus :</p>
               <p>Rappelons que \( \tan(x) = \frac{\sin(x)}{\cos(x)} \), et que \( \tan^2(x) + 1 = \frac{1}{\cos^2(x)} \)
                 :</p>
@@ -168,8 +181,8 @@
 
             <!-- Question 4 -->
           </div>
-          <!-- Exercise 3 -->
-          <div class="exercise">
+          <!-- exercice 3 -->
+          <div class="exercice">
             <h2>Fractions rationnelles simples</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -177,7 +190,7 @@
               <p>$$\int_{-1}^{1}\frac{-14}{(5x+9)^{2}} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Dans un premier lieu, nous pouvons identifier la forme \( -\frac{u'}{u^2} \) donc la primitive est \(
                 \frac{1}{u} \).</p>
               <p>$$\int_{-1}^{1} \frac{-14}{(5x+9)^{2}} \, dx$$</p>
@@ -201,7 +214,7 @@
               <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1}dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$\int_{0}^{1}\frac{2x+2}{x^{2}+1} \, dx $$</p>
               <p>$$= \left[\ln(x^2+1) + 2\arctan(x)\right]_{0}^{1} $$</p>
               <p>$$= \ln(2) + 2\arctan(1) - \ln(1) - 2\arctan(0) $$</p>
@@ -213,7 +226,7 @@
               <p>$$\int_{-1}^{1}\frac{2x-\pi}{\sqrt{1-x^{2}}}dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 $$\int_{-1}^{1} \frac{2x-\pi}{\sqrt{1-x^{2}}} \, dx =
                 \int_{-1}^{1} \frac{2x}{1-x^{2}}+\pi \frac{-1}{\sqrt{1-x^{2}}}
@@ -235,7 +248,7 @@
               <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par décomposer l'intégrale en deux parties :</p>
               <p>$$\int_{0}^{1} \frac{6x + 5}{x^2 + 3} \, dx = 6\int_{0}^{1} \frac{x}{x^2 + 3} \, dx + 5\int_{0}^{1}
                 \frac{1}{x^2 + 3} \, dx$$</p>
@@ -257,8 +270,8 @@
               </p>
             </div>
           </div>
-          <!-- Exercise 5 -->
-          <div class="exercise">
+          <!-- exercice 5 -->
+          <div class="exercice">
             <h2>Formes trigonométriques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -266,7 +279,7 @@
               <p>$$\int_{0}^{2\pi} \sin^2(x) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Utilisons l'identité trigonométrique \( \sin^2(x) = \frac{1 - \cos(2x)}{2} \) :</p>
               <p>$$\int_{0}^{2\pi} \sin^2(x) \, dx = \int_{0}^{2\pi} \frac{1 - \cos(2x)}{2} \, dx$$</p>
               <p>$$ = \frac{1}{2} \int_{0}^{2\pi} (1 - \cos(2x)) \, dx = \frac{1}{2} \left[ x - \frac{\sin(2x)}{2}
@@ -281,7 +294,7 @@
               <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) - 2\sin^2(x) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par séparer l'intégrale en deux intégrales plus simples :</p>
               <p>$$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx - 2\int_{0}^{\frac{\pi}{2}} \sin^2(x) \, dx$$</p>
               <h3>1. Première intégrale : $$\int_{0}^{\frac{\pi}{2}} \cos^3(3x) \, dx$$</h3>
@@ -327,8 +340,8 @@
       <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
         <div class="section-content" id="changements_de_variable">
           <h1 class="titre-page">Changements de variables</h1>
-          <!-- Exercise 1 -->
-          <div class="exercise">
+          <!-- exercice 1 -->
+          <div class="exercice">
             <h2>Fraction polynomiale basique</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -336,7 +349,7 @@
               <p>$$\int\frac{x^{3}}{1+x^{4}}dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 Nous aurions pu traiter cet exercice avec la forme usuelle :
                 \(\int\frac{u'}{u} = ln(u)\). Mais nous allons voir la méthode
@@ -359,7 +372,7 @@
               <p>$$\int\frac{x}{1+x^{4}}dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 À travers cette intégrale, nous allons découvrir le réel intérêt de la substitution,
                 car sans cette méthode, il n'est pas possible d'utiliser une forme usuelle de primitive,
@@ -380,7 +393,7 @@
               <p>$$\int_{-2}^{1} \frac{4x}{(x^2 + 2)^3} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 Soit \( u = x^2 + 2 \), donc \( du = 2x \, dx \). Ainsi, nous avons :
                 \( dx = \frac{du}{2x} \). Néanmoins il ne faut pas oublier qu'il est nécessaire de changer les bornes de
@@ -400,8 +413,8 @@
             <!-- Question 4 -->
 
           </div>
-          <!-- Exercise 2 -->
-          <div class="exercise">
+          <!-- exercice 2 -->
+          <div class="exercice">
             <h2>Formes trigonométriques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -409,7 +422,7 @@
               <p>$$\int \tan(x) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre cette intégrale, nous devons utiliser la définition de la tangente :</p>
               <p>$$\tan(x) = \frac{\sin(x)}{\cos(x)}$$</p>
               <p>Nous réécrivons l'intégrale comme suit :</p>
@@ -430,7 +443,7 @@
               <p>$$\int \cot(3x + 1) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 Pour résoudre cette intégrale, nous devons utiliser l'identité trigonométrique de la cotangente :
               </p>
@@ -462,7 +475,7 @@
               <p>$$\int \cos^{-6}(x) \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>$$ \cos^{-6}(x) = \frac{1}{\cos^6(x)} = \frac{1}{\cos^2(x)} \times \frac{1}{\cos^4(x)} $$</p>
               <p>
                 Nous savons que \( \frac{1}{\cos^2(x)} = \tan^2(x) + 1 \) et donc que \( \frac{1}{\cos^4(x)} =
@@ -484,7 +497,7 @@
             <!-- Question 4 -->
           </div>
 
-          <div class="exercise">
+          <div class="exercice">
             <h2>Fonctions avec racines</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -492,7 +505,7 @@
               <p>$$\int \frac{\sqrt{x}}{x + 1} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>
                 Soit \( u = \sqrt{x} \), alors \( u^2 = x \) et en
                 différentiant, nous obtenons \( du = \frac{1}{2\sqrt{x}} \, dx
@@ -525,7 +538,7 @@
               <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour commencer, nous pouvons réécrire l'intégrale de la manière suivante afin de faciliter le futur
                 changement de variable :</p>
               <p>$$ \int \frac{\sqrt{x+1}}{x} \, dx = \int \frac{\sqrt{x+1}}{(x+1)-1} \, dx $$</p>
@@ -561,7 +574,7 @@
           </div>
 
           <!-- Exercice 4 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Fonctions trigonométriques réciproques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -569,7 +582,7 @@
               <p>$$ \int \frac{\arctan\left(\sqrt{x}\right)}{\sqrt{x} (x + 1)} \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Effectuons un changement de variable en posant \( u = \sqrt{x} \). Ainsi, nous avons :</p>
               <p>$$ du = \frac{1}{2\sqrt{x}} \, dx = \frac{1}{2u} \, dx $$</p>
               <p>et donc \( dx = 2u \, du \).</p>
@@ -594,7 +607,7 @@
         <div class="section-content" id="integrations_par_parties">
           <h1 class="titre-page">Intégrations par parties</h1>
           <!-- Exercice 1 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Comprendre la méthode</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -602,7 +615,7 @@
               <p>$$ \int x e^x \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre cette intégrale, nous allons utiliser la méthode d'intégration par parties. Cette méthode
                 est utile lorsque nous avons une intégrale du produit de deux fonctions.</p>
               <p>La formule d'intégration par parties est :</p>
@@ -626,7 +639,7 @@
               <p>$$ \int_0^2 x^2 e^{2x+1} \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Nous choisissons \( u = x^2 \) et \( v' = e^{2x+1} \, dx \), ce qui donne :</p>
               <p>$$ u' = 2x \, dx \, \quad \text{et} \quad v = \frac{1}{2} e^{2x+1} $$</p>
               <p>Appliquons la formule de l'intégration par parties :</p>
@@ -656,7 +669,7 @@
             </div>
           </div>
           <!-- Exercice 2 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Fonctions trigonométriques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -664,7 +677,7 @@
               <p>$$\int \frac{x}{\tan^2(x)} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre cette intégrale, utilisons l'identité suivante :</p>
               <p>$$\frac{1}{\tan^2(x)} = \frac{\cos^2(x)}{\sin^2(x)} = \cot^2(x)$$</p>
               <p>L'intégrale devient alors :</p>
@@ -694,7 +707,7 @@
           </div>
 
           <!-- Exercice 3-->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Fonctions logarithmiques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -702,7 +715,7 @@
               <p>$$ \int \ln(x) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Prenons \( u = \ln(x) \) et \( v' = 1 \). Ainsi :</p>
               <p>$$ u' = \frac{1}{x} \, dx \quad \text{et} \quad v = x $$</p>
               <p>Appliquons la formule de l'intégration par parties :</p>
@@ -715,7 +728,7 @@
               <p>$$ \int_{1}^{e} x \ln(x) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Soient \( u = \ln(x) \) et \( v' = x \, dx \). Ainsi :</p>
               <p>$$ du = \frac{1}{x} \, dx \quad \text{et} \quad v = \frac{x^2}{2} $$</p>
               <p>Appliquons la formule de l'intégration par parties :</p>
@@ -735,7 +748,7 @@
               <p>$$ \int \ln(x+1) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>En choisissant \( u = \ln(x+1) \) et \( v' = dx \), nous avons :</p>
               <p>$$ u' = \frac{1}{x+1} \, dx \quad \text{et} \quad v = x $$</p>
               <p>Appliquons la formule d'intégration par parties :</p>
@@ -759,7 +772,7 @@
               <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Commençons par réécrire l'intégrale sous une forme plus simple :</p>
               <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx = \int \ln(3x) \cdot x^{-\frac{1}{3}} \, dx $$</p>
               <p><b>Intégration par parties :</b></p>
@@ -779,14 +792,14 @@
             </div>
           </div>
           <!-- Exercice 3 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Intégrations par parties successives</h2>
             <div class="question">
               <p class="consigne">Calculer l'intégrale :</p>
               <p>$$ \int e^x \cos(x) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre cette intégrale, nous utilisons la méthode de l'intégration par parties.</p>
               <p>En choisissant \( u = \cos(x) \) et \( v' = e^x \), nous avons :</p>
               <p>$$ u' = -\sin(x) \, dx \quad \text{et} \quad v = e^x $$</p>
@@ -804,7 +817,7 @@
             </div>
           </div>
           <!-- Exercice 4 -->
-          <div class="exercise">
+          <div class="exercice">
             <h2>Fonctions trigonométriques réciproques</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -812,7 +825,7 @@
               <p>$$ \int \arccos(x) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour calculer cette intégrale, nous utilisons la méthode del'intégration par parties.</p>
               <p>En choisissant \( u = \arccos(x) \) et \( v' = 1 \), nousavons :</p>
               <p>$$ u' = \frac{-1}{\sqrt{1 - x^2}} \, dx \quad \text{et} \quad v = x $$</p>
@@ -829,7 +842,7 @@
               <p>$$ \int 8x \arctan(2x) \, dx $$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Effectuons une intégration par parties en choisissant \( u = \arctan(2x) \) et \( v' = x \, dx \).
                 Alors :</p>
               <p>$$ u' = \frac{2}{1 + 4x^2} \, dx \quad \text{et} \quad v = \frac{x^2}{2} $$</p>
@@ -863,8 +876,8 @@
       <div class="page" id="page4" style="background-color: rgba(132, 188, 239, 0.6)">
         <div class="section-content">
           <h1 class="titre-page">Fractions rationnelles</h1>
-          <!-- Exercise 3 -->
-          <div class="exercise">
+          <!-- exercice 3 -->
+          <div class="exercice">
             <h2>Pour comprendre la méthode</h2>
             <!-- Question 1 -->
             <div class="question">
@@ -872,7 +885,7 @@
               <p>$$\int \frac{1}{x^2 + 4x - 12} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Pour résoudre cette intégrale en utilisant la méthode des fractions partielles, nous devons d'abord
                 factoriser le dénominateur :</p>
               <p>$$x^2 + 4x - 12 = (x - 2)(x + 6)$$</p>
@@ -900,7 +913,7 @@
               <p>$$\int \frac{x}{x^2 - 10x + 21} \, dx$$</p>
               <button class="toggle-correction"><b>&#10003;</b></button>
             </div>
-            <div class="exercise-correction hidden">
+            <div class="exercice-correction hidden">
               <p>Nous commençons par factoriser le dénominateur :</p>
               <p>$$x^2 - 10x + 21 = (x - 3)(x - 7)$$</p>
               <p>Nous décomposons l'intégrale en fractions partielles :</p>

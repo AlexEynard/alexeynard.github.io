@@ -143,7 +143,7 @@ body {
   font-weight: bold;
 }
 
-.exercise {
+.exercice {
   position: static;
   width: 75%;
   float: inline-end;
@@ -156,12 +156,12 @@ body {
   z-index: 1;
 }
 
-.exercise h2 {
+.exercice h2 {
   color: #000d14;
 }
 
 .question,
-.exercise-correction {
+.exercice-correction {
   width: 100%;
   margin-top: 1em;
 }
@@ -201,7 +201,7 @@ body {
 }
 
 /* Style de la partie correction */
-.exercise-correction {
+.exercice-correction {
   background-color: #7bc51b62;
   padding: 0.2em 0;
   justify-content: space-around;
@@ -356,34 +356,34 @@ body {
     margin: 2% auto;
   }
 
-  .exercise {
+  .exercice {
     width: 90%;
     float: none;
     margin: 2% auto;
   }
 
-  .exercise-menu {
+  .exercice-menu {
     width: auto;
     padding: 0.625em;
     margin: 1em auto;
     border-radius: 0.5em;
   }
 
-  .exercise-menu h2 {
+  .exercice-menu h2 {
     font-size: 1.1em;
     margin-bottom: 0.75em;
   }
 
-  .exercise-menu ul {
+  .exercice-menu ul {
     margin: 0;
     padding: 0;
   }
 
-  .exercise-menu li {
+  .exercice-menu li {
     margin-bottom: 0.5em;
   }
 
-  .exercise-menu a {
+  .exercice-menu a {
     padding: 0.5em 1em;
     border-radius: 0.3em;
   }
@@ -462,7 +462,7 @@ body {
   }
 
   .question p,
-  .exercise-correction p {
+  .exercice-correction p {
     font-size: 3vw;
   }
 

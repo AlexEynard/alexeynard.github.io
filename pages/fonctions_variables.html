@@ -429,10 +429,8 @@
               </p>
 
               <h3>Étape 1 : Analyser le dénominateur</h3>
-              <ul>
-                <li>L'expression sous la racine carrée doit être positive :</li>
-                <p>$$ 1 - x^2 - y^2 > 0 $$</p>
-              </ul>
+              <p>L'expression sous la racine carrée doit être positive :</p>
+              <p>$$ 1 - x^2 - y^2 > 0 $$</p>
 
               <h3>Étape 2 : Simplifier les conditions</h3>
               <p>La condition \( 1 - x^2 - y^2 > 0 \) définit l'intérieur d'un cercle de rayon 1 centré à l'origine :
@@ -715,7 +713,205 @@
           </div>
         </div>
       </div>
+
       <div class="page" id="page3" style="background-color: rgba(144, 238, 198, 0.6)">
+        <div class="section-content">
+          <h1 class="titre-page">Les systèmes de coordonnées</h1>
+          <div class="exercice">
+            <h2>Les coordonnées cylindriques</h2>
+            <div class="question">
+              <p class="consigne">Transformez les coordonnées cartésiennes du point \( P(3, 3, 4) \) en coordonnées cylindriques.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <h3>Correction</h3>
+              <p><b>Rappel :</b> Les relations entre les coordonnées cartésiennes \( (x, y, z) \) et les coordonnées cylindriques \( (\rho, \phi, z) \) sont :</p>
+              <p>$$ \rho = \sqrt{x^2 + y^2}, \quad \phi = \arctan\left(\frac{y}{x}\right), \quad z = z. $$</p>
+
+              <h4>Étape 1 : Calcul de \( \rho \)</h4>
+              <p>On a \( x = 3 \) et \( y = 3 \), donc :</p>
+              <p>$$ \rho = \sqrt{x^2 + y^2} = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2}. $$</p>
+
+              <h4>Étape 2 : Calcul de \( \phi \)</h4>
+              <p>On calcule \( \phi \) en utilisant :</p>
+              <p>$$ \phi = \arctan\left(\frac{y}{x}\right) = \arctan\left(\frac{3}{3}\right) = \arctan(1). $$</p>
+              <p>Comme \( x > 0 \) et \( y > 0 \), \( \phi = \frac{\pi}{4} \) (premier quadrant).</p>
+
+              <h4>Étape 3 : \( z \) reste inchangé</h4>
+              <p>Le point \( P \) a \( z = 4 \).</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les coordonnées cylindriques du point \( P \) sont :</p>
+              <p>$$ (\rho, \phi, z) = \left( 3\sqrt{2}, \frac{\pi}{4}, 4 \right). $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Calculez la norme du vecteur \( \mathbf{v} = (2, \pi/3, 4) \) exprimé en coordonnées cylindriques.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <h3>Correction</h3>
+              <p>En coordonnées cylindriques, la norme d'un vecteur est donnée par :</p>
+              <p>$$ ||\mathbf{v}|| = \sqrt{\rho^2 + z^2}, $$</p>
+              <p>où \( \rho \) et \( z \) sont les composantes du vecteur.</p>
+
+              <p>On a ici \( \rho = 2 \) et \( z = 4 \). Calculons la norme :</p>
+              <p>$$ ||\mathbf{v}|| = \sqrt{\rho^2 + z^2} = \sqrt{2^2 + 4^2} = \sqrt{4 + 16} = \sqrt{20} = 2\sqrt{5}. $$</p>
+
+              <p>La norme du vecteur est donc :</p>
+              <p>$$ ||\mathbf{v}|| = 2\sqrt{5}. $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Montrez que la sphère d'équation \( x^2 + y^2 + z^2 = R^2 \) peut s'écrire en coordonnées cylindriques sous la forme :</p>
+              <p>$$ \rho^2 + z^2 = R^2. $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <h3>Correction</h3>
+              <p>En cartésiennes, la sphère d'équation \( x^2 + y^2 + z^2 = R^2 \) décrit tous les points à une distance \( R \) de l'origine.</p>
+
+              <p>En passant aux coordonnées cylindriques, on utilise :</p>
+              <p>$$ x^2 + y^2 = \rho^2. $$</p>
+
+              <p>En remplaçant dans l'équation de la sphère :</p>
+              <p>$$ \rho^2 + z^2 = R^2. $$</p>
+
+              <p>Cela montre que l'équation de la sphère en cylindriques est bien :</p>
+              <p>$$ \rho^2 + z^2 = R^2. $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Transformez l'équation cartésienne suivante en coordonnées cylindriques :</p>
+              <p>$$ x^2 + y^2 - 4x = 0. $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <p><b>Rappel :</b> En coordonnées cylindriques, les relations entre \( x, y \) et \( \rho, \phi \) sont :</p>
+              <ul>
+                <p>$$ x = \rho \cos(\phi), \quad y = \rho \sin(\phi), \quad \text{et} \quad x^2 + y^2 = \rho^2. $$</p>
+              </ul>
+
+              <h4>Étape 1 : Remplacement de \( x^2 + y^2 \)</h4>
+              <p>Dans l'équation \( x^2 + y^2 - 4x = 0 \), on remplace \( x^2 + y^2 \) par \( \rho^2 \) :</p>
+              <p>$$ \rho^2 - 4x = 0. $$</p>
+
+              <h4>Étape 2 : Remplacement de \( x \)</h4>
+              <p>On remplace \( x \) par \( \rho \cos(\phi) \) :</p>
+              <p>$$ \rho^2 - 4\rho \cos(\phi) = 0. $$</p>
+
+              <h4>Étape 3 : Factorisation</h4>
+              <p>On factorise par \( \rho \) (en supposant \( \rho \neq 0 \)) :</p>
+              <p>$$ \rho (\rho - 4\cos(\phi)) = 0. $$</p>
+
+              <p>La solution est donc :</p>
+              <p>$$ \rho = 4\cos(\phi). $$</p>
+
+              <h4>Conclusion :</h4>
+              <p>L'équation \( x^2 + y^2 - 4x = 0 \) en coordonnées cylindriques devient :</p>
+              <p>$$ \rho = 4\cos(\phi). $$</p>
+              <p>Cela représente un cercle décalé dans le plan \( xy \).</p>
+            </div>
+          </div>
+          <div class="exercice">
+            <h2>Les coordonnées sphériques</h2>
+            <div class="question">
+              <p class="consigne">Convertir des coordonnées sphériques en cartésiennes et inversement.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <h4>Passage des coordonnées sphériques \( (r, \theta, \varphi) \) aux coordonnées cartésiennes \( (x, y, z) \)</h4>
+
+              <p><b>Visualisation :</b> Les coordonnées sphériques d'un point \( M \) sont définies par :</p>
+              <p>&squarf; \( r \) : La distance entre le point \( M \) et l'origine \( O \), appelée rayon.</p>
+              <p>&squarf; \( \theta \) : L'angle entre le segment \( OM \) et l'axe vertical \( Oz \). Il est compris entre \( 0 \) et \( \pi \).</p>
+              <p>&squarf; \( \varphi \) : L'angle entre la projection de \( OM \) sur le plan horizontal \( (xOy) \) et l'axe \( Ox \). Il est compris entre \( 0 \) et \( 2\pi \).</p>
+
+              <img src="https://www.methodephysique.fr/coordonnees_spheriques.png" alt="" scale="0">
+
+              <h4>Étapes de conversion</h4>
+
+              <p>Pour convertir un point \( M(r, \theta, \varphi) \) en coordonnées cartésiennes \( (x, y, z) \), suivez ces étapes :</p>
+
+              <p><b>Étape 1 :</b> Calculer la projection de \( M \) sur le plan horizontal \( (xOy) \), appelée \( H \).</p>
+              <p>&squarf; La distance entre l'origine \( O \) et le point \( H \) est donnée par :</p>
+              <p>\( OH = r \sin(\theta) \)</p>
+
+              <p><b>Étape 2 :</b> Calculer les coordonnées \( x \) et \( y \) du point \( H \) en utilisant les coordonnées polaires :</p>
+              <p>&squarf; La coordonnée \( x \) est donnée par :</p>
+              <p>\( x = OH \cos(\varphi) = r \sin(\theta) \cos(\varphi) \)</p>
+              <p>&squarf; La coordonnée \( y \) est donnée par :</p>
+              <p>\( y = OH \sin(\varphi) = r \sin(\theta) \sin(\varphi) \)</p>
+
+              <p><b>Étape 3 :</b> Déterminer la coordonnée \( z \), qui correspond à la hauteur du point \( M \) par rapport au plan horizontal \( (xOy) \) :</p>
+              <p>&squarf; La coordonnée \( z \) est donnée par :</p>
+              <p>\( z = r \cos(\theta) \)</p>
+
+              <h4>Résumé des formules :</h4>
+              <p>En combinant ces trois étapes, les formules finales pour passer des coordonnées sphériques aux coordonnées cartésiennes sont :</p>
+              <p>\( x = r \sin(\theta) \cos(\varphi) \)</p>
+              <p>\( y = r \sin(\theta) \sin(\varphi) \)</p>
+              <p>\( z = r \cos(\theta) \)</p>
+            </div>
+
+            <div class="question">
+              <p class="consigne">Transformez les coordonnées cartésiennes du point \( Q(2, -2, 2) \) en coordonnées sphériques.</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <p><b>Rappel :</b> Les relations entre les coordonnées cartésiennes \( (x, y, z) \) et sphériques \( (r, \theta, \varphi) \) sont :</p>
+              <p>$$ r = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \arccos\left(\frac{z}{r}\right), \quad \varphi = \arctan\left(\frac{y}{x}\right). $$</p>
+
+              <h4>Étape 1 : Calcul de \( r \)</h4>
+              <p>On a \( x = 2 \), \( y = -2 \), et \( z = 2 \), donc :</p>
+              <p>$$ r = \sqrt{x^2 + y^2 + z^2} = \sqrt{2^2 + (-2)^2 + 2^2} = \sqrt{12} = 2\sqrt{3}. $$</p>
+
+              <h4>Étape 2 : Calcul de \( \theta \) (angle polaire)</h4>
+              <p>On utilise :</p>
+              <p>$$ \theta = \arccos\left(\frac{z}{r}\right) = \arccos\left(\frac{2}{2\sqrt{3}}\right) = \arccos\left(\frac{1}{\sqrt{3}}\right). $$</p>
+              <p>Donc \( \theta = \frac{\pi}{4} \).</p>
+
+              <h4>Étape 3 : Calcul de \( \varphi \) (angle azimutal)</h4>
+              <p>On utilise :</p>
+              <p>$$ \varphi = \arctan\left(\frac{y}{x}\right) = \arctan\left(\frac{-2}{2}\right) = \arctan(-1). $$</p>
+              <p>Comme \( x > 0 \) et \( y \lt 0 \), on est dans le quatrième quadrant : \( \varphi=-\frac{\pi}{4}. \)</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les coordonnées sphériques du point \( Q \) sont :</p>
+              <p>$$ (r, \theta, \varphi) = \left( 2\sqrt{3}, \frac{\pi}{4}, -\frac{\pi}{4} \right). $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Convertir les coordonnées sphériques \( (r, \theta, \varphi) = \left(4, \frac{\pi}{3}, \frac{5\pi}{6}\right) \) en coordonnées cartésiennes \( (x, y, z) \).</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <h3>Correction</h3>
+              <p><b>Rappel :</b> Les relations entre les coordonnées sphériques \( (r, \theta, \varphi) \) et cartésiennes \( (x, y, z) \) sont :</p>
+              <p>$$ x = r \sin(\theta) \cos(\varphi), \quad y = r \sin(\theta) \sin(\varphi), \quad z = r \cos(\theta). $$</p>
+
+              <h4>Étape 1 : Calcul de \( x \)</h4>
+              <p>On a \( r = 4 \), \( \theta = \frac{\pi}{3} \), et \( \varphi = \frac{5\pi}{6} \), donc :</p>
+              <p>$$ x = 4 \sin\left(\frac{\pi}{3}\right) \cos\left(\frac{5\pi}{6}\right) = 4 \times \frac{\sqrt{3}}{2} \times \left(-\frac{\sqrt{3}}{2}\right) = -3. $$</p>
+
+              <h4>Étape 2 : Calcul de \( y \)</h4>
+              <p>$$ y = 4 \sin\left(\frac{\pi}{3}\right) \sin\left(\frac{5\pi}{6}\right) = 4 \times \frac{\sqrt{3}}{2} \times \frac{1}{2} = \sqrt{3}. $$</p>
+
+              <h4>Étape 3 : Calcul de \( z \)</h4>
+              <p>$$ z = 4 \cos\left(\frac{\pi}{3}\right) = 4 \times \frac{1}{2} = 2. $$</p>
+
+              <h4>Conclusion :</h4>
+              <p>Les coordonnées cartésiennes sont :</p>
+              <p>$$ (x, y, z) = (-3, \sqrt{3}, 2). $$</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page4" style="background-color: rgba(144, 238, 198, 0.6)">
         <div class="section-content">
           <h1 class="titre-page">Les opérateurs</h1>
           <!-- Gradient -->
@@ -768,6 +964,75 @@
               <p>$$ \bullet \frac{\partial f}{\partial z} = \frac{x^3 y}{yz} + y e^z $$</p>
               <p>Donc, le gradient est :</p>
               <p>$$ \nabla f = \left( 3x^2 \ln(yz), \frac{x^3 z}{yz} + e^z, \frac{x^3 y}{yz} + y e^z \right) $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction en coordonnées cylindriques :</p>
+              <p>$$ f(\rho, \phi, z) = \rho^2 \sin(\phi) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <p><b>Rappel sur le gradient en coordonnées cylindriques :</b></p>
+              <p>En coordonnées cylindriques, une fonction \( f(\rho, \phi, z) \) dépend des variables \( \rho \), \( \phi \), et \( z \). Le gradient s'écrit :</p>
+              <p>
+                $$ \nabla f = \frac{\partial f}{\partial \rho} \overrightarrow{e}_\rho + \frac{1}{\rho} \frac{\partial f}{\partial \phi} \overrightarrow{e}_\phi + \frac{\partial f}{\partial z} \overrightarrow{e}_z. $$
+              </p>
+              <p>Nous calculons successivement chaque dérivée partielle.</p>
+
+              <h3>Étape 1 : Calcul de \( \frac{\partial f}{\partial \rho} \)</h3>
+              <p>La fonction donnée est \( f(\rho, \phi, z) = \rho^2 \sin(\phi) \).</p>
+              <p>La dérivée partielle par rapport à \( \rho \) est :</p>
+              <p>$$ \frac{\partial f}{\partial \rho} = \frac{\partial}{\partial \rho} (\rho^2 \sin(\phi)) = 2\rho \sin(\phi). $$</p>
+
+              <h3>Étape 2 : Calcul de \( \frac{\partial f}{\partial \phi} \)</h3>
+              <p>La dérivée partielle par rapport à \( \phi \) est :</p>
+              <p>$$ \frac{\partial f}{\partial \phi} = \frac{\partial}{\partial \phi} (\rho^2 \sin(\phi)) = \rho^2 \cos(\phi). $$</p>
+
+              <h3>Étape 3 : Calcul de \( \frac{\partial f}{\partial z} \)</h3>
+              <p>La fonction \( f \) ne dépend pas de \( z \), donc :</p>
+              <p>$$ \frac{\partial f}{\partial z} = 0. $$</p>
+
+              <h3>Étape 4 : Expression finale du gradient</h3>
+              <p>En remplaçant les résultats obtenus dans l'expression générale du gradient :</p>
+              <p>$$ \nabla f = \frac{\partial f}{\partial \rho} \overrightarrow{e}_\rho + \frac{1}{\rho} \frac{\partial f}{\partial \phi} \overrightarrow{e}_\phi + \frac{\partial f}{\partial z} \overrightarrow{e}_z. $$</p>
+              <p>Nous avons :</p>
+              <p>$$ \nabla f = 2\rho \sin(\phi) \overrightarrow{e}_\rho + \frac{\rho^2 \cos(\phi)}{\rho} \overrightarrow{e}_\phi + 0 \overrightarrow{e}_z. $$</p>
+              <p>En simplifiant :</p>
+              <p>$$ \nabla f = 2\rho \sin(\phi) \overrightarrow{e}_\rho + \rho \cos(\phi) \overrightarrow{e}_\phi. $$</p>
+            </div>
+            <div class="question">
+              <p class="consigne">Calculer le gradient de la fonction en coordonnées sphériques :</p>
+              <p>$$ g(r, \theta, \varphi) = r^3 \cos(\theta) $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+
+            <div class="exercice-correction hidden">
+              <p><b>Rappel sur le gradient en coordonnées sphériques :</b></p>
+              <p>En coordonnées sphériques \( (r, \theta, \varphi) \), une fonction dépend des variables \( r \), \( \theta \) (l'angle polaire), et \( \varphi \) (l'angle azimutal). Le gradient s'écrit :</p>
+              <p>
+                $$ \nabla g = \frac{\partial g}{\partial r} \overrightarrow{e}_r + \frac{1}{r} \frac{\partial g}{\partial \theta} \overrightarrow{e}_\theta + \frac{1}{r \sin(\theta)} \frac{\partial g}{\partial \varphi} \overrightarrow{e}_\varphi. $$
+              </p>
+
+              <h3>Étape 1 : Calcul de \( \frac{\partial g}{\partial r} \)</h3>
+              <p>La fonction donnée est \( g(r, \theta, \varphi) = r^3 \cos(\theta) \).</p>
+              <p>La dérivée partielle par rapport à \( r \) est :</p>
+              <p>$$ \frac{\partial g}{\partial r} = \frac{\partial}{\partial r} (r^3 \cos(\theta)) = 3r^2 \cos(\theta). $$</p>
+
+              <h3>Étape 2 : Calcul de \( \frac{\partial g}{\partial \theta} \)</h3>
+              <p>La dérivée partielle par rapport à \( \theta \) est :</p>
+              <p>$$ \frac{\partial g}{\partial \theta} = \frac{\partial}{\partial \theta} (r^3 \cos(\theta)) = -r^3 \sin(\theta). $$</p>
+
+              <h3>Étape 3 : Calcul de \( \frac{\partial g}{\partial \varphi} \)</h3>
+              <p>La fonction \( g \) ne dépend pas de \( \varphi \), donc :</p>
+              <p>$$ \frac{\partial g}{\partial \varphi} = 0. $$</p>
+
+              <h3>Étape 4 : Expression finale du gradient</h3>
+              <p>En remplaçant dans l'expression générale du gradient :</p>
+              <p>$$ \nabla g = \frac{\partial g}{\partial r} \overrightarrow{e}_r + \frac{1}{r} \frac{\partial g}{\partial \theta} \overrightarrow{e}_\theta + \frac{1}{r \sin(\theta)} \frac{\partial g}{\partial \varphi} \overrightarrow{e}_\varphi. $$</p>
+              <p>Nous obtenons :</p>
+              <p>$$ \nabla g = 3r^2 \cos(\theta) \overrightarrow{e}_r + \frac{-r^3 \sin(\theta)}{r} \overrightarrow{e}_\theta + 0 \overrightarrow{e}_\varphi. $$</p>
+              <p>En simplifiant :</p>
+              <p>$$ \nabla g = 3r^2 \cos(\theta) \overrightarrow{e}_r - r^2 \sin(\theta) \overrightarrow{e}_\theta. $$</p>
             </div>
             <!-- Question 4 -->
             <div class="question">

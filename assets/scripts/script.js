@@ -1,3 +1,14 @@
+//Pour l'interface du menu dépliant pour écran de téléphone
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menus = document.querySelectorAll('.menu, .menu-right');
+  menuToggle.addEventListener('click', function () {
+    menus.forEach(menu => menu.classList.toggle('show'));
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   function waitForMathJax() {
     if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {

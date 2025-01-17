@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mécanique des fluides</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <!-- Exercices de mathématiques -->
+                <li class="menu-item dropdown">
+                    <a href="#">Mathématiques</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown"><a href="#">Analyse</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="calcul_matriciel.html">Calcul matriciel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Exercices de physique -->
+                <li class="menu-item dropdown">
+                    <a href="#">Physique</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown">
+                            <a href="#">Mécanique</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+                                <li class="submenu-item"><a href="mécanique_fluides.html">Mécanique des fluides</a></li>
+                                <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Ressources -->
+                <li class="menu-item"><a href="ressources.html">Resources</a></li>
+                <li class="menu-item"><a href="a_propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Thèmes du chapitre</h2>
+            <ul>
+                <li><a href="#page1">Statique des fluides</a></li>
+                <li><a href="#page2">Dynamique des fluides</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+                <div class="section-content">
+                    <h1 class="titre-page">Statique des fluides</h1>
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Un cube de \( 10 \) cm d'arête pèse \( 68 \) N quand il est immergé dans un bain d'eau. Trouver son poids dans de la glycérine dont la densité relative est égale à \( 1,26 \).
+                        </p>
+                        <div class="question">
+                            <p><b>Quel est le poids du cube dans la glycérine ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Le poids apparent du cube dans un liquide est donné par :</p>
+                            <p>$$ P_{\text{apparent}} = P_{\text{réel}} - F_{\text{Archimède}}. $$</p>
+                            <p>La poussée d'Archimède est donnée par :</p>
+                            <p>$$ F_{\text{Archimède}} = \rho_{\text{liquide}} \cdot g \cdot V, $$</p>
+                            <p>où \( \rho_{\text{liquide}} \) est la densité de la glycérine (relative = 1,26, donc \( \rho = 1260 \, \text{kg/m}^3 \)), \( g = 9,81 \, \text{m/s}^2 \), et \( V \) le volume immergé.</p>
+                            <p>Le volume du cube est :</p>
+                            <p>$$ V = (0,1)^3 = 0,001 \, \text{m}^3. $$</p>
+                            <p>La poussée d'Archimède dans la glycérine devient :</p>
+                            <p>$$ F_{\text{Archimède}} = 1260 \cdot 9,81 \cdot 0,001 \approx 12,35 \, \text{N}. $$</p>
+                            <p>Le poids apparent dans la glycérine est donc :</p>
+                            <p>$$ P_{\text{apparent}} = 68 - 12,35 \approx 65,5 \, \text{N}. $$</p>
+                            <p>Le poids dans la glycérine est \( 65,5 \, \text{N} \).</p>
+                        </div>
+                    </div>
+
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Un ballon contient \( 1000 \, \text{m}^3 \) d'hélium. Trouver la poussée qui fait monter le ballon, sachant que l'hélium et l'air ont respectivement des densités de \( 0,18 \, \text{kg/m}^3 \) et \( 1,29 \, \text{kg/m}^3 \).
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle est la poussée d'Archimède sur le ballon ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>La poussée d'Archimède est donnée par :</p>
+                            <p>$$ F_{\text{Archimède}} = \rho_{\text{air}} \cdot g \cdot V, $$</p>
+                            <p>où \( \rho_{\text{air}} = 1,29 \, \text{kg/m}^3 \), \( g = 9,81 \, \text{m/s}^2 \), et \( V = 1000 \, \text{m}^3 \).</p>
+                            <p>Substituons les valeurs :</p>
+                            <p>$$ F_{\text{Archimède}} = 1,29 \cdot 9,81 \cdot 1000 \approx 12664,9 \, \text{N}. $$</p>
+                            <p>La force gravitationnelle sur l’hélium est :</p>
+                            <p>$$ F_{\text{hélium}} = \rho_{\text{hélium}} \cdot g \cdot V, $$</p>
+                            <p>où \( \rho_{\text{hélium}} = 0,18 \, \text{kg/m}^3 \).</p>
+                            <p>Substituons les valeurs :</p>
+                            <p>$$ F_{\text{hélium}} = 0,18 \cdot 9,81 \cdot 1000 \approx 1765,8 \, \text{N}. $$</p>
+                            <p>La poussée nette est donc :</p>
+                            <p>$$ F_{\text{net}} = 12664,9 - 1765,8 \approx 10900 \, \text{N}. $$</p>
+                            <p>La poussée qui fait monter le ballon est \( 1,09 \times 10^4 \, \text{N} \).</p>
+                        </div>
+                    </div>
+
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Trouver la fraction du volume d'un morceau de quartz qui est submergée quand celui-ci flotte dans un bain de mercure. La densité relative du quartz est \( 2,65 \) et celle du mercure est \( 13,6 \).
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle fraction du volume du quartz est submergée ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>La fraction submergée d'un objet flottant est donnée par le rapport des densités :</p>
+                            <p>$$ \text{Fraction submergée} = \frac{\rho_{\text{objet}}}{\rho_{\text{liquide}}}. $$</p>
+                            <p>Substituons les densités relatives :</p>
+                            <p>$$ \text{Fraction submergée} = \frac{2,65}{13,6} \approx 0,195. $$</p>
+                            <p>La fraction submergée du quartz est \( 0,195 \) (ou 19,5%).</p>
+                        </div>
+                    </div>
+
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Un solide pèse \( 45 \, \text{N} \) dans l'air et \( 25 \, \text{N} \) dans un liquide dont la densité est \( 0,8 \). Trouver la densité relative du solide.
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle est la densité relative du solide ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour résoudre cet exercice, nous devons utiliser la relation qui lie la densité relative d'un solide à la différence entre son poids réel dans l'air et son poids apparent dans le liquide.</p>
+                            <p>La poussée d'Archimède subie par le solide dans le liquide est égale à la différence entre son poids dans l'air et son poids apparent dans le liquide :</p>
+                            <p>$$ F_{\text{Archimède}} = P_{\text{air}} - P_{\text{liquide}}. $$</p>
+                            <p>La poussée d'Archimède est également donnée par la formule :</p>
+                            <p>$$ F_{\text{Archimède}} = \rho_{\text{liquide}} \cdot g \cdot V, $$</p>
+                            <p>où \( \rho_{\text{liquide}} \) est la densité du liquide, \( g \) est l'accélération due à la gravité et \( V \) est le volume du solide.</p>
+                            <p>Nous pouvons en déduire que la densité relative du solide \( \rho_{\text{rel}} \) est le rapport entre son poids réel dans l'air et la poussée d'Archimède :</p>
+                            <p>$$ \rho_{\text{rel}} = \frac{P_{\text{air}}}{P_{\text{air}} - P_{\text{liquide}}} \cdot \rho_{\text{liquide}}. $$</p>
+                            <p>Substituons maintenant les valeurs numériques :</p>
+                            <p>$$ \rho_{\text{rel}} = \frac{45}{45 - 25} \cdot 0,8 = \frac{45}{20} \cdot 0,8 = 1,8. $$</p>
+                            <p>Ainsi, la densité relative du solide est \( 1,8 \).</p>
+                        </div>
+                    </div>
+
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Un cube de bois flotte dans un bassin d'eau avec une masse de \( 200 \, \text{g} \) placée dessus. Quand on le débarrasse de ce fardeau, le cube émerge de \( 2 \, \text{cm} \). Trouver ses dimensions.
+                        </p>
+                        <div class="question">
+                            <p><b>Quelles sont les dimensions du cube ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Lorsqu'un objet flotte dans un liquide, la poussée d'Archimède exercée sur cet objet compense exactement son poids apparent. Ici, nous devons d'abord déterminer le volume immergé du cube lorsque la masse est enlevée et que le cube émerge de \( 2 \, \text{cm} \) de l'eau.</p>
+
+                            <p>La poussée d'Archimède est égale au poids du liquide déplacé par l'objet. Elle est donnée par :</p>
+                            <p>$$ F_{\text{Archimède}} = \rho_{\text{eau}} \cdot g \cdot V_{\text{immergé}}, $$</p>
+                            <p>où \( \rho_{\text{eau}} = 1000 \, \text{kg/m}^3 \) est la densité de l'eau et \( g = 9,81 \, \text{m/s}^2 \) l'accélération due à la gravité.</p>
+
+                            <p>Lorsque le cube flotte sans la masse, le volume immergé est déterminé par la relation suivante :</p>
+                            <p>$$ V_{\text{immergé}} = \frac{P_{\text{cube}}}{\rho_{\text{eau}} \cdot g}, $$</p>
+                            <p>avec \( P_{\text{cube}} \) étant le poids du cube de bois. Cependant, nous n'avons pas directement \( P_{\text{cube}} \), donc nous devons commencer par l'effet de la masse placée sur le cube.</p>
+
+                            <p>Quand la masse de \( 200 \, \text{g} \) est placée sur le cube, elle exerce une force égale à :</p>
+                            <p>$$ P_{\text{masse}} = m_{\text{masse}} \cdot g = 0,2 \, \text{kg} \cdot 9,81 \, \text{m/s}^2 = 1,962 \, \text{N}. $$</p>
+
+                            <p>Cette masse supplémentaire fait que le cube est plus immergé, et c'est cette poussée d'Archimède qui compense le poids total du cube plus la masse. Une fois la masse enlevée, l'eau fait émerger le cube de \( 2 \, \text{cm} \). Cela nous permet de déterminer le volume total du cube.</p>
+
+                            <p>Le volume immergé initial lorsque la masse est enlevée correspond à une hauteur immergée de \( 2 \, \text{cm} \), soit \( 0,02 \, \text{m} \). Supposons que \( a \) soit l'arête du cube, la relation pour le volume immergé est donc :</p>
+                            <p>$$ V_{\text{immergé}} = a^2 \cdot h_{\text{immergé}}, $$</p>
+                            <p>avec \( h_{\text{immergé}} = 0,02 \, \text{m} \). Nous pouvons calculer le volume immergé par la masse et ensuite déterminer \( a \), l'arête du cube :</p>
+
+                            <p>Nous avons le volume immergé équivalent à \( 0,0002 \, \text{m}^3 \), ce qui nous donne la dimension du cube :</p>
+                            <p>$$ a = \sqrt[3]{V_{\text{immergé}}} = \sqrt[3]{0,0002} \approx 0,1 \, \text{m}. $$</p>
+                            <p>Ainsi, les dimensions du cube sont de \( 10 \, \text{cm} \) de côté.</p>
+                        </div>
+                    </div>
+
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Un homme et une pierre flottent sur un radeau dans un bassin de \( 9 \, \text{m} \) de long et \( 6 \, \text{m} \) de large. La pierre pèse \( 34 \, \text{kg} \) et sa densité relative est \( 2,5 \). Quel sera le changement du niveau de l'eau si l'homme jette la pierre dans le bassin ? On néglige les dimensions du radeau.
+                        </p>
+                        <div class="question">
+                            <p><b>Quel est le changement du niveau de l'eau ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Lorsqu'un objet flotte dans un liquide, il déplace un volume d'eau dont le poids est égal à son propre poids. Dans ce cas, la pierre, lorsqu'elle est sur le radeau, déplace un volume d'eau dont le poids est égal au poids de la pierre. Ce volume est donné par :</p>
+                            <p>$$ V_{\text{déplacé, initial}} = \frac{P_{\text{pierre}}}{\rho_{\text{eau}} \cdot g} = \frac{34 \, \text{kg} \cdot g}{\rho_{\text{eau}} \cdot g}, $$</p>
+                            <p>où \( \rho_{\text{eau}} = 1000 \, \text{kg/m}^3 \) est la densité de l'eau et \( g = 9,81 \, \text{m/s}^2 \) est l'accélération due à la gravité.</p>
+                            <p>Ce volume initial correspond à l'augmentation du niveau de l'eau causée par la pierre qui flotte sur le radeau.</p>
+                            <p>Lorsque la pierre est jetée dans le bassin, elle déplace un volume d'eau égal à son propre volume. Le volume de la pierre est donné par :</p>
+                            <p>$$ V_{\text{pierre}} = \frac{M_{\text{pierre}}}{\rho_{\text{pierre}}} = \frac{34 \, \text{kg}}{2,5 \times 1000 \, \text{kg/m}^3} = 0,0136 \, \text{m}^3, $$</p>
+                            <p>où \( \rho_{\text{pierre}} = 2,5 \times 1000 \, \text{kg/m}^3 \) est la densité de la pierre.</p>
+                            <p>Lorsque la pierre est jetée dans l'eau, elle déplace un volume d'eau dont le poids est égal à son propre poids. Ce volume est donné par :</p>
+                            <p>$$ V_{\text{déplacé, final}} = \frac{P_{\text{pierre}}}{\rho_{\text{eau}} \cdot g} = \frac{34 \, \text{kg}}{1000 \, \text{kg/m}^3} = 0,034 \, \text{m}^3. $$</p>
+                            <p>La différence entre le volume déplacé initialement par la pierre (lorsqu'elle est sur le radeau) et le volume déplacé quand la pierre est dans l'eau correspond au changement du niveau de l'eau. Le changement de niveau de l'eau dans le bassin est donné par :</p>
+                            <p>$$ \Delta h = \frac{V_{\text{déplacé, final}} - V_{\text{déplacé, initial}}}{A_{\text{bassin}}}, $$</p>
+                            <p>où \( A_{\text{bassin}} = 9 \, \text{m} \times 6 \, \text{m} = 54 \, \text{m}^2 \) est la surface du bassin.</p>
+                            <p>En substituant les valeurs, nous obtenons :</p>
+                            <p>$$ \Delta h = \frac{0,034 \, \text{m}^3 - 0,0136 \, \text{m}^3}{54 \, \text{m}^2} = \frac{0,0204 \, \text{m}^3}{54 \, \text{m}^2} \approx 0,00038 \, \text{m} = 0,38 \, \text{mm}. $$</p>
+                            <p>Le niveau de l'eau dans le bassin baisse donc d'environ \( 0,38 \, \text{mm} \) lorsque l'homme jette la pierre dans l'eau.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dynamique des fluides -->
+        <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+            <div class="section-content">
+                <h1 class="titre-page">Dynamique des fluides</h1>
+                <div class="test_qcm">
+                    <h2>Testez vos connaissances sur la dynamique des fluides</h2>
+
+                    <form id="qcm">
+
+                        <div class="q" data-correct="faux" data-explication="Le nombre de Mach est le rapport de la vitesse d'un fluide à la vitesse du son. Un écoulement est dit supersonique lorsque le nombre de Mach est supérieur à 1 et hypersonique lorsqu'il est supérieur à 5.">
+                            <p class="consigne">1. Un écoulement devient supersonique dès que le nombre de Mach atteint 5.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q01" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q01" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="La vitesse du son dans l'air est de \( 340 m/s \) soit \( 1224 km/h \).">
+                            <p class="consigne">2. Le son se propage à \( 340 \) km/h dans l'air.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q02" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q02" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="Le nombre de Reynolds est un nombre adimensionnel, ce qui signifie qu'il ne possède pas d'unité. Il est utilisé pour prédire le type d'écoulement (laminaire ou turbulent).">
+                            <p class="consigne">3. Le nombre de Reynolds est exprimé en unités de Pa⋅s.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q03" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q03" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="L'écoulement devient turbulent lorsque le nombre de Reynolds dépasse environ 4000. Entre 2000 et 4000 il y a une phase de transition.">
+                            <p class="consigne">4. L'écoulement devient turbulent lorsque le nombre de Reynolds dépasse 2000.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q04" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q04" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="Le fluide non-newtonien a une viscosité qui varie avec la contrainte de cisaillement, contrairement aux fluides newtoniens dont la viscosité est constante indépendamment du taux de déformation.">
+                            <p class="consigne">5. Un fluide non-newtonien a une viscosité constante, indépendamment de la contrainte de cisaillement.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q05" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q05" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="vrai" data-explication="Le principe de Bernoulli peut être appliqué uniquement dans les situations où l'écoulement est stationnaire, incompressible et sans frottement. Cela signifie que le fluide doit être idéal et que les effets visqueux sont négligés.">
+                            <p class="consigne">6. L'équation de Bernoulli est valide dans des écoulements incompressibles et sans frottement.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q06" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q06" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="La formule de Poiseuille est limitée aux écoulements laminaire et newtoniens dans des conduites cylindriques. Elle ne peut pas être utilisée pour les écoulements turbulents ou non-newtoniens.">
+                            <p class="consigne">7. La formule de Poiseuille s'applique pour calculer les pertes de charge dans des écoulements turbulents dans des conduites circulaires.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q07" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q07" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="vrai" data-explication="La règle de la conservation de la masse s'applique aux écoulements compressibles et incompressibles. Dans un écoulement stationnaire, la masse qui entre dans une section de conduite est égale à celle qui en sort, ce qui est une expression du principe de continuité.">
+                            <p class="consigne">8. Le principe de conservation de la masse s'applique aux écoulements incompressibles et compressibles.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q08" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q08" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <div class="q" data-correct="faux" data-explication="L'équation de Navier-Stokes décrit les mouvements d'un fluide en prenant en compte la viscosité et les forces externes. Elle est utilisée pour modéliser les écoulements turbulents, mais elle ne peut pas prédire les régimes laminaire ou turbulent d'un fluide.">
+                            <p class="consigne">9. L'équation de Navier-Stokes permet de prédire si un écoulement sera laminaire ou turbulent.</p>
+                            <div class="options">
+                                <label class="custom-radio"><input type="radio" name="q09" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                <label class="custom-radio"><input type="radio" name="q09" value="faux"><span class="radio-btn"></span> Faux</label>
+                            </div>
+                            <div class="explanation"></div>
+                        </div>
+
+                        <button type="button" class="button_qcm" id="valider">Valider</button>
+                    </form>
+
+                    <div id="resultat_qcm" class="resultat_qcm" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

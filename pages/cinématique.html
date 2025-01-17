@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinématique</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <!-- Exercices de mathématiques -->
+                <li class="menu-item dropdown">
+                    <a href="#">Mathématiques</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown"><a href="#">Analyse</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="calcul_matriciel.html">Calcul matriciel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Exercices de physique -->
+                <li class="menu-item dropdown">
+                    <a href="#">Physique</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown">
+                            <a href="#">Mécanique</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+                                <li class="submenu-item"><a href="mécanique_fluides.html">Mécanique des fluides</a></li>
+                                <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Ressources -->
+                <li class="menu-item"><a href="ressources.html">Resources</a></li>
+                <li class="menu-item"><a href="a_propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Thèmes du chapitre</h2>
+            <ul>
+                <li><a href="#page1">Mouvements de translation</a></li>
+                <li><a href="#page2">Mouvements de rotation</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- Mouvements de translation -->
+            <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+                <div class="section-content">
+                    <h1 class="titre-page">Mouvements de translation</h1>
+                    <div class="exercice">
+                        <h2>Exercice : Une course automobile</h2>
+                        <p class="énoncé">
+                            Deux pilotes amateurs prennent le départ d’une course sur une ligne droite.
+                            Le premier, \( A \), démarre avec une accélération constante de \( 4 \, \text{m/s}^2 \), tandis que le deuxième, \( B \), démarre
+                            avec une accélération de \( 5 \, \text{m/s}^2 \), mais avec un retard de \( 1 \, \text{s} \).
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle durée faudra-t-il à \( B \) pour rattraper \( A \) ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour déterminer à quel moment \( B \) rattrape \( A \), il est nécessaire d'égaliser leurs positions respectives.</p>
+                            <p>La position de \( A \) est donnée par la relation \( x_A(t) = 2t^2 \), car l'accélération de \( A \) est \( a_A = 4 \, \text{m/s}^2 \).</p>
+                            <p>La position de \( B \), qui démarre avec un retard de 1 seconde, est exprimée par \( x_B(t) = \frac{5}{2}(t - 1)^2 \), où \( a_B = 5 \, \text{m/s}^2 \).</p>
+                            <p>En égalisant les deux expressions :</p>
+                            <p>$$ x_A(t) = x_B(t), \quad 2t^2 = \frac{5}{2}(t - 1)^2. $$</p>
+                            <p>En développant et simplifiant cette équation, nous obtenons :</p>
+                            <p>$$ 4t^2 = 5t^2 - 10t + 5. $$</p>
+                            <p>En réarrangeant les termes :</p>
+                            <p>$$ t^2 - 10t + 5 = 0. $$</p>
+                            <p>Cette équation quadratique est résolue à l’aide du discriminant :</p>
+                            <p>$$ \Delta = (-10)^2 - 4(1)(5) = 100 - 20 = 80. $$</p>
+                            <p>Les solutions sont alors données par :</p>
+                            <p>$$ t = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{10 \pm \sqrt{80}}{2} = 5 \pm 2\sqrt{5}. $$</p>
+                            <p>La solution physique pertinente est \( t = 5 + 2\sqrt{5} \), soit environ \( t \approx 9.47 \, \text{s} \).</p>
+                        </div>
+
+                        <div class="question">
+                            <p><b>Quelle distance auront-ils parcourue quand \( B \) rattrapera \( A \) ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>À l'instant où \( B \) rattrape \( A \), leur position commune peut être calculée en substituant \( t = 9.47 \, \text{s} \) dans l'expression de la position de \( A \), soit :</p>
+                            <p>$$ x_A(t) = 2t^2. $$</p>
+                            <p>En remplaçant \( t \) par \( 9.47 \) :</p>
+                            <p>$$ x_A(9.47) = 2 \cdot (9.47)^2 = 2 \cdot 89.6 \approx 179.2 \, \text{m}. $$</p>
+                            <p>La distance parcourue par les deux pilotes est donc d’environ \( 179.2 \, \text{m} \).</p>
+                        </div>
+
+                        <div class="question">
+                            <p><b>Quelles seront les vitesses à cet instant ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour déterminer les vitesses des deux pilotes à l'instant \( t = 9.47 \, \text{s} \), nous utilisons les expressions de leurs vitesses respectives :</p>
+                            <p>La vitesse de \( A \) est donnée par \( v_A = a_A \cdot t \), où \( a_A = 4 \, \text{m/s}^2 \). En substituant \( t = 9.47 \) :</p>
+                            <p>$$ v_A = 4 \cdot 9.47 \approx 37.9 \, \text{m/s}. $$</p>
+                            <p>La vitesse de \( B \) est donnée par \( v_B = a_B \cdot (t - 1) \), où \( a_B = 5 \, \text{m/s}^2 \). En substituant \( t = 9.47 \) :</p>
+                            <p>$$ v_B = 5 \cdot (9.47 - 1) = 5 \cdot 8.47 \approx 42.35 \, \text{m/s}. $$</p>
+                            <p>À cet instant, la vitesse de \( A \) est donc d’environ \( 37.9 \, \text{m/s} \) et celle de \( B \) est d’environ \( 42.35 \, \text{m/s} \).</p>
+                        </div>
+                    </div>
+                    <div class="exercice">
+                        <h2>Exercice : Décélération d'un véhicule</h2>
+                        <p class="énoncé">
+                            Un véhicule se déplaçant initialement à une vitesse de \( v_0 = 108 \, \text{km/h} \) commence à freiner lorsqu’il atteint un feu rouge.
+                            Le véhicule parcourt une distance de \( d = 120 \, \text{m} \) avant de s’arrêter complètement.
+                            On suppose que la décélération est constante pendant le freinage.
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle est la décélération du véhicule ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour déterminer la décélération \( a \), on utilise la deuxième loi de la cinématique :</p>
+                            <p>$$ v^2 = v_0^2 + 2ad, $$</p>
+                            <p>où :</p>
+                            <p>- \( v \) est la vitesse finale, ici \( v = 0 \, \text{m/s} \) car le véhicule s’arrête,</p>
+                            <p>- \( v_0 \) est la vitesse initiale en m/s. Comme \( v_0 = 108 \, \text{km/h} \), on convertit :</p>
+                            <p>$$ v_0 = \frac{108}{3.6} = 30 \, \text{m/s}. $$</p>
+                            <p>- \( d = 120 \, \text{m} \) est la distance parcourue.</p>
+                            <p>Substituons les valeurs dans l’équation :</p>
+                            <p>$$ 0 = (30)^2 + 2 \cdot a \cdot 120. $$</p>
+                            <p>Simplifions :</p>
+                            <p>$$ 0 = 900 + 240a. $$</p>
+                            <p>En isolant \( a \) :</p>
+                            <p>$$ a = -\frac{900}{240} = -3.75 \, \text{m/s}^2. $$</p>
+                            <p>La décélération du véhicule est donc \( a = -3.75 \, \text{m/s}^2 \). Le signe négatif indique un ralentissement.</p>
+                        </div>
+
+                        <div class="question">
+                            <p><b>Combien de temps faut-il au véhicule pour s’arrêter ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour calculer le temps \( t \), on utilise l’équation suivante :</p>
+                            <p>$$ v = v_0 + at. $$</p>
+                            <p>En remplaçant \( v = 0 \), \( v_0 = 30 \, \text{m/s} \), et \( a = -3.75 \, \text{m/s}^2 \), on obtient :</p>
+                            <p>$$ 0 = 30 - 3.75t. $$</p>
+                            <p>En isolant \( t \) :</p>
+                            <p>$$ t = \frac{30}{3.75} = 8 \, \text{s}. $$</p>
+                            <p>Le temps nécessaire pour que le véhicule s’arrête est donc de \( t = 8 \, \text{s}. \)</p>
+                        </div>
+
+                        <div class="question">
+                            <p><b>Quelle est la distance parcourue par le véhicule au bout de \( t = 4 \, \text{s} \) ?</b></p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Pour calculer la distance parcourue après \( t = 4 \, \text{s} \), on utilise la formule de la position en fonction du temps :</p>
+                            <p>$$ x(t) = x_0 + v_0t + \frac{1}{2}at^2. $$</p>
+                            <p>En supposant \( x_0 = 0 \), \( v_0 = 30 \, \text{m/s} \), \( a = -3.75 \, \text{m/s}^2 \), et \( t = 4 \, \text{s} \), on obtient :</p>
+                            <p>$$ x(4) = 0 + 30 \cdot 4 + \frac{1}{2}(-3.75)(4)^2. $$</p>
+                            <p>Calculons terme par terme :</p>
+                            <p>$$ x(4) = 120 + \frac{1}{2}(-3.75)(16). $$</p>
+                            <p>$$ x(4) = 120 - 30 = 90 \, \text{m}. $$</p>
+                            <p>La distance parcourue par le véhicule au bout de \( t = 4 \, \text{s} \) est donc de \( 90 \, \text{m}. \)</p>
+                        </div>
+                    </div>
+                    <div class="exercice">
+                        <h2>Exercice</h2>
+                        <p class="énoncé">
+                            Un rameur effectue un aller-retour entre deux points \( A \) et \( B \), distants de \( l \, \text{m} \), à une vitesse \( v \) par rapport au courant.
+                            Le fleuve coule de \( A \) vers \( B \) à une vitesse \( u \). Pendant ce temps, son entraîneur marche à une vitesse constante \( v \) par rapport au sol,
+                            en effectuant le même aller-retour.
+                        </p>
+
+                        <div class="question">
+                            <p>Seront-ils de retour en même temps au point \( A \) ? Si non, lequel des deux arrive en premier, et pourquoi ?</p>
+                            <button class="toggle-correction">&#10003;</button>
+                        </div>
+
+                        <div class="exercice-correction hidden">
+                            <h3>Durée du trajet pour le rameur</h3>
+                            <p>
+                                Le rameur rame à une vitesse \( v \) par rapport au courant, mais sa vitesse effective par rapport au sol dépend de la direction du courant. À l’aller, le courant aide le rameur, sa vitesse effective est \( v + u \) et au retour, le courant s’oppose au rameur, sa vitesse effective est \( v - u \).
+                            </p>
+                            <p>On note \( l \) la distance entre les points \( A \) et \( B \) (en mètres).</p>
+                            <p>
+                                La durée du trajet aller est donc :
+                                $$ T_{\text{aller}} = \frac{l}{v + u}. $$
+                                La durée du trajet retour est :
+                                $$ T_{\text{retour}} = \frac{l}{v - u}. $$
+                                La durée totale du trajet aller-retour pour le rameur est alors la somme de ces deux durées :
+                                $$ T_r = \frac{l}{v + u} + \frac{l}{v - u}. $$
+                            </p>
+                            <p>
+                                Mettons cette expression au même dénominateur pour la simplifier :
+                                $$ T_r = l \left( \frac{1}{v + u} + \frac{1}{v - u} \right). $$
+                                En réduisant au même dénominateur, on obtient :
+                                $$ T_r = l \cdot \frac{(v - u) + (v + u)}{(v + u)(v - u)} = l \cdot \frac{2v}{v^2 - u^2}. $$
+                                Ainsi, la durée totale du trajet pour le rameur est donnée par :
+                                $$ T_r = l \cdot \frac{2v}{v^2 - u^2}. $$
+                            </p>
+
+                            <h3>Durée du trajet pour l'entraîneur</h3>
+                            <p>
+                                L’entraîneur marche à une vitesse constante \( v \) par rapport au sol, indépendamment du courant. La durée totale de son trajet aller-retour est simplement :
+                                $$ T_e = \frac{2e}{v}. $$
+                            </p>
+
+                            <h3>Comparaison des durées</h3>
+                            <p>
+                                Comparons les deux durées \( T_r \) et \( T_e \). Pour cela, calculons le rapport \( \frac{T_r}{T_e} \) :
+                                $$ \frac{T_r}{T_e} = \frac{l \cdot \frac{2v}{v^2 - u^2}}{\frac{2l}{v}}. $$
+                                Simplifions cette expression :
+                                $$ \frac{T_r}{T_e} = \frac{2v \cdot v}{2l \cdot (v^2 - u^2)} \cdot \frac{l}{1} = \frac{v^2}{v^2 - u^2}. $$
+                                Puisque \( v > u \), on a \( v^2 > v^2 - u^2 \), donc :
+                                $$ \frac{T_r}{T_e} > 1, \quad \text{ce qui implique } T_r > T_e. $$
+                            </p>
+
+                            <h3>Interprétation physique</h3>
+                            <p>
+                                Le rameur met plus de temps que l’entraîneur pour effectuer l’aller-retour. Bien que le courant l’aide à l’aller (où il gagne du temps grâce à \( v + u \)),
+                                il perd davantage de temps au retour lorsqu’il rame contre le courant (avec \( v - u \)).
+                                Si \( v \) est proche de \( u \), la durée du trajet retour pour le rameur devient très longue, ce qui aggrave l’écart entre \( T_r \) et \( T_e \).
+                            </p>
+
+                            <h3>Conclusion</h3>
+                            <p>
+                                L’entraîneur arrive avant le rameur au point \( A \), car sa vitesse est uniforme et indépendante du courant,
+                                tandis que le rameur est fortement pénalisé par le courant lorsqu’il revient contre celui-ci.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Mouvements de rotation -->
+        <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+            <div class="section-content">
+                <h1 class="titre-page">Mouvements de rotation</h1>
+            </div>
+        </div>
+    </main>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

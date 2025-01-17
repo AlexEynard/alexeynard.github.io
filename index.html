@@ -2,85 +2,91 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil</title>
-  <link rel="stylesheet" href="assets/styles/styles.css" />
-  <script src="assets/scripts/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="assets/scripts/script.js"></script>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="menu">
-        <li class="menu-item"><a href="index.html">Accueil</a></li>
-        <!-- Exercices de mathématiques -->
-        <li class="menu-item dropdown">
-          <a href="#">Mathématiques</a>
-          <ul class="submenu">
-            <li class="submenu-item dropdown">
-              <a href="#">Analyse</a>
-              <ul class="submenu">
-                <li class="submenu-item"><a href="pages/equations_differentielles.html">Équations différentielles</a></li>
-                <li class="submenu-item"><a href="pages/integration.html">Intégration</a></li>
-                <li class="submenu-item"><a href="pages/developpements_limites.html">Développements limités</a></li>
-                <li class="submenu-item"><a href="pages/fonctions_variables.html">Fonctions de plusieurs variables</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- Exercices de physique -->
-        <li class="menu-item dropdown">
-          <a href="#">Physique</a>
-          <ul class="submenu">
-            <li class="submenu-item dropdown">
-              <a href="#">Mécanique</a>
-              <ul class="submenu">
-                <li class="submenu-item"><a href="pages/cinématique.html">Cinématique</a></li>
-                <li class="submenu-item"><a href="pages/dynamique.html">Dynamique</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- Ressources -->
-        <li class="menu-item"><a href="pages/ressources.html">Resources</a></li>
-        <li class="menu-item"><a href="#">À propos</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="content">
-      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
-        <div class="section-content">
-          <h1 class="titre-page-center">Présentation du site</h1>
-          <div class="énoncé">
-            <p><strong>Bienvenue sur ce site dédié aux mathématiques et à la physique.</strong></p>
-            <p>Ce site propose des exercices variés avec une corrections détaillées, destinés à aider les étudiants à progresser. Le code source du site (HTML, CSS et JavaScript) est disponible sur GitHub, qui sert également à son hébergement. Pour l’instant, le site couvre un nombre limité de chapitres, principalement ceux étudiés dans le cadre de mes cours, mais il est en constante évolution.</p>
-          </div>
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Accueil</a></li>
+                <!-- Exercices de mathématiques -->
+                <li class="menu-item dropdown">
+                    <a href="#">Mathématiques</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown"><a href="#">Analyse</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="pages/equations_differentielles.html">Équations différentielles</a></li>
+                                <li class="submenu-item"><a href="pages/integration.html">Intégration</a></li>
+                                <li class="submenu-item"><a href="pages/developpements_limites.html">Développements limités</a></li>
+                                <li class="submenu-item"><a href="pages/fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="pages/calcul_matriciel.html">Calcul matriciel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Exercices de physique -->
+                <li class="menu-item dropdown">
+                    <a href="#">Physique</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown">
+                            <a href="#">Mécanique</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="pages/cinématique.html">Cinématique</a></li>
+                                <li class="submenu-item"><a href="pages/dynamique.html">Dynamique</a></li>
+                                <li class="submenu-item"><a href="pages/mécanique_fluides.html">Mécanique des fluides</a></li>
+                                <li class="submenu-item"><a href="pages/mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Ressources -->
+                <li class="menu-item"><a href="pages/ressources.html">Resources</a></li>
+                <li class="menu-item"><a href="pages/a_propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+                <div class="section-content">
+                    <h1 class="titre-page-center">Présentation du site</h1>
+                    <div class="énoncé">
+                        <p><strong>Bienvenue sur ce site dédié aux mathématiques et à la physique.</strong></p>
+                        <p>Ce site propose des exercices variés avec une corrections détaillées, destinés à aider les étudiants à progresser. Le code source du site (HTML, CSS et JavaScript) est disponible sur GitHub, qui sert également à son hébergement. Pour l’instant, le site couvre un nombre limité de chapitres, principalement ceux étudiés dans le cadre de mes cours, mais il est en constante évolution.</p>
+                    </div>
 
-          <div class="énoncé" style="margin-top: 2em;">
-            <p><b><u>Historique des modifications :</u></b></p>
-            <p><b>[14/12/2024]</b> Ajout d'exercices de mécanique.</p>
-            <p><b>[06/11/2024]</b> Ajout du chapitre sur les fonctions de plusieurs variables.</p>
-            <p><b>[18/09/2024]</b> Ajout du chapitre sur les équations différentielles.</p>
-            <p><b>[12/09/2024]</b> Mise en ligne du site.</p>
-          </div>
+                    <div class="énoncé" style="margin-top: 2em;">
+                        <p><b><u>Historique des modifications :</u></b></p>
+                        <p><b>[14/12/2024]</b> Ajout d'exercices de mécanique.</p>
+                        <p><b>[06/11/2024]</b> Ajout du chapitre sur les fonctions de plusieurs variables.</p>
+                        <p><b>[18/09/2024]</b> Ajout du chapitre sur les équations différentielles.</p>
+                        <p><b>[12/09/2024]</b> Mise en ligne du site.</p>
+                    </div>
 
-          <div class="énoncé" style="margin-top: 2em;">
-            <p><b><u>Prochains ajouts :</u></b></p>
-            <p>De nouveaux exercices dans le chapitre des équations différentielles.</p>
-            <p>Ajout d'une section sur les applications en physique pour les intégrales.</p>
-          </div>
+                    <div class="énoncé" style="margin-top: 2em;">
+                        <p><b><u>Prochains ajouts :</u></b></p>
+                        <p>De nouveaux exercices dans le chapitre des équations différentielles.</p>
+                        <p>Ajout d'une section sur les applications en physique pour les intégrales.</p>
+                    </div>
 
-          <div class="énoncé" style="margin-top: 2em;">
-            <p><b><u>Informations :</u></b></p>
-            <p>L'utilisation du site sur de petits écrans peut parfois poser des problèmes d'affichage. L'idéal reste d'utiliser un ordinateur pour accéder au site.</p>
-          </div>
-        </div>
+                    <div class="énoncé" style="margin-top: 2em;">
+                        <p><b><u>Informations :</u></b></p>
+                        <p>L'utilisation du site sur de petits écrans peut parfois poser des problèmes d'affichage. L'idéal reste d'utiliser un ordinateur pour accéder au site.</p>
+                    </div>
+                </div>
 
 
-  </main>
+    </main>
 
 </body>
 

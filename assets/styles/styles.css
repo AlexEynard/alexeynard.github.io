@@ -7,11 +7,17 @@ html {
   --contrast-color: #001c22;
   --blue-silk: #044f67;
   --light-color: #a2f1ff;
-  --white: #F9F7F3;
+  --white: #f4f4f9;
+  --qcm_box: #2b9884bf;
+  --qcm_q: #167671bf;
   --shadow: 0.15em 0.15em 0.25em rgba(0, 0, 0, 0.15);
   --dark-shadow: 0.15em 0.15em 0.3em rgba(0, 0, 0, 0.2);
   --shadow-footer: 0 -0.15em 0.3em rgba(0, 0, 0, 0.2);
   --border-radius: 0.5em;
+  --correct: #4CAF50;
+  --correct-light: #60af4c89;
+  --false: #d82c1f;
+  --flase-light: #bb221794;
 }
 
 /* Style de la page */
@@ -30,11 +36,30 @@ body {
   top: 0;
   width: 100%;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
   padding: 1rem 0;
   box-shadow: var(--shadow);
   border-radius: 0 0 0.5em 0.5em;
   z-index: 3;
+}
+
+.separator {
+  width: 15%;
+  margin: 20px auto;
+  border: none;
+  height: 2px;
+  background-color: var(--contrast-color);
+}
+
+.links {
+  display: grid;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+/* 3 colonnes par défaut sur les grands écrans */
+.links {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Menu de navigation du haut de la page */
@@ -51,7 +76,7 @@ body {
 }
 
 .menu-item a {
-  color: white;
+  color: var(--white);
   font-family: Helvetica, sans-serif;
   text-decoration: none;
   font-weight: bold;
@@ -116,6 +141,190 @@ body {
   cursor: pointer;
 }
 
+/* Style QCM */
+.test_qcm {
+  position: static;
+  width: 75%;
+  float: inline-end;
+  margin: 1em 4%;
+  background-color: var(--primary-color);
+  padding: 1.25em;
+  border-radius: 0.625em;
+  box-shadow: var(--shadow);
+  animation: fade-in 0.5s ease;
+  z-index: 1;
+  color: var(--white);
+}
+
+/* Style des questions */
+.q {
+  margin-bottom: 1.5em;
+  padding: 1.25em;
+  background-color: var(--qcm_q);
+  border: 1px solid var(--blue-silk);
+  border-radius: 0.625em;
+}
+
+/* Style du texte de la question */
+.consigne {
+  font-size: 1.2em;
+  color: var(--white);
+  margin: 0;
+  line-height: 1.5;
+  /* Espacement pour une lecture plus facile */
+  text-align: center;
+  /* Centrer le texte de la question */
+}
+
+/* Style des options (cases à cocher) */
+.options {
+  display: flex;
+  justify-content: center;
+  /* Centrer horizontalement les options */
+  gap: 2em;
+  /* Espacement entre les deux options */
+  margin-top: 1em;
+  /* Espacement entre le texte et les options */
+}
+
+/* Style des labels pour les cases à cocher */
+.options label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5em;
+  /* Espacement à gauche pour l'icône de la case */
+}
+
+/* Masquer l'input radio réel */
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+/* Style pour le texte de la source */
+.source {
+  font-size: 0.8em;
+  font-style: italic;
+  color: var(--light-color);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style des cases à cocher */
+.custom-radio .radio-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5em;
+  /* Taille de la case à cocher */
+  height: 1.5em;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-btn {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-50%) scale(1.2);
+  /* Effet d'agrandissement au clic */
+}
+
+.custom-radio input[type="radio"]:focus+.radio-btn {
+  box-shadow: 0 0 0.5em 0.2em rgba(0, 150, 255, 0.6);
+  /* Ombre au focus */
+}
+
+/* Rond intérieur (blanc) lorsque la case est sélectionnée */
+.custom-radio .radio-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* Centrer parfaitement le rond blanc */
+  width: 0.75em;
+  /* Taille du cercle intérieur (rond blanc) */
+  height: 0.75em;
+  background-color: var(--white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-btn:before {
+  opacity: 1;
+  /* Affichage du cercle intérieur blanc lorsqu'on coche la case */
+}
+
+/* Effet au survol du label */
+.options label:hover .radio-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Boîte d'explication */
+.explanation {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: var(--flase-light);
+  border: 1px solid var(--false);
+  border-radius: 4px;
+  color: var(--false);
+  font-size: 0.9em;
+  display: none;
+}
+
+.encadre {
+  border: 0.1rem solid #333;
+  padding: 1em;
+  margin: 1rem 0;
+  border-radius: 0.5em;
+  background-color: var(--correct);
+  box-sizing: border-box;
+}
+
+.encadre p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Style du bouton */
+.button_qcm {
+  background-color: #4CAF50;
+  color: var(--white);
+  border: none;
+  padding: 1em 2.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.button_qcm:hover {
+  background-color: var(--correct);
+}
+
+.button_qcm:active {
+  transform: scale(0.98);
+}
+
+/* Style du résultat */
+.resultat_qcm {
+  padding: 1.5em;
+  color: var(--white);
+  background-color: var(--contrast-color);
+  border-radius: 8px;
+  border: 1px solid var(--blue-silk);
+  font-size: 1.2em;
+  text-align: center;
+}
 
 
 /* Style du titre supérieur de chaque pages avec menu latéral */
@@ -141,6 +350,7 @@ body {
 
 .consigne {
   font-weight: bold;
+  font-family: Helvetica;
 }
 
 .exercice {
@@ -291,7 +501,7 @@ body {
 
 .sidebar a:hover {
   background-color: var(--primary-color-transparent);
-  color: white;
+  color: var(--white);
   transform: scale(1.05);
   box-shadow: var(--shadow);
 }
@@ -330,21 +540,19 @@ body {
   text-align: center;
 }
 
-
-
 .hyperlink {
-  color: var(--white);
+  display: block;
+  color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.5s ease, text-shadow 0.5s ease;
-  margin: auto 7%;
+  font-size: 1em;
+  margin: 0.5em 0;
+  text-align: center;
 }
 
 .hyperlink:hover {
   color: var(--contrast-color);
-  text-shadow: var(--shadow);
+  text-shadow: 0 0 5px var(--contrast-color);
 }
-
-
 
 
 /* Afin d'éviter que le menu latéral gêne */
@@ -354,6 +562,10 @@ body {
     font-size: 2.2em;
     float: none;
     margin: 2% auto;
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .exercice {
@@ -420,7 +632,7 @@ body {
     padding: 0.5em;
   }
 
-  .gif {
+  .img {
     width: 50vw;
   }
 
@@ -435,8 +647,20 @@ body {
     align-items: flex-start;
   }
 
+  .explanation {
+    font-size: 1.6vw;
+  }
+
+  .hyperlink {
+    font-size: 1.2em;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
+
   .consigne {
-    display: none;
+    font-size: 1.6vw;
   }
 
   .titre-page-center {

@@ -2,244 +2,293 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamique</title>
-  <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamique</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="menu">
-        <li class="menu-item"><a href="../index.html">Accueil</a></li>
-        <!-- Exercices de mathématiques -->
-        <li class="menu-item dropdown">
-          <a href="#">Mathématiques</a>
-          <ul class="submenu">
-            <li class="submenu-item dropdown">
-              <a href="#">Analyse</a>
-              <ul class="submenu">
-                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
-                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
-                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
-                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- Exercices de physique -->
-        <li class="menu-item dropdown">
-          <a href="#">Physique</a>
-          <ul class="submenu">
-            <li class="submenu-item dropdown">
-              <a href="#">Mécanique</a>
-              <ul class="submenu">
-                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
-                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- Ressources -->
-        <li class="menu-item"><a href="ressources.html">Resources</a></li>
-        <li class="menu-item"><a href="#">À propos</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="sidebar">
-      <h2>Thèmes du chapitre</h2>
-      <ul>
-        <li><a href="#page1">Mouvements de translation</a></li>
-        <li><a href="#page2">Mouvements de rotation</a></li>
-      </ul>
-    </div>
-
-    <div class="content">
-      <!-- Mouvements de translation -->
-      <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
-        <div class="section-content">
-          <h1 class="titre-page">Mouvements de translation</h1>
-        </div>
-      </div>
-    </div>
-    <!-- Mouvements de rotation -->
-    <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
-      <div class="section-content">
-        <h1 class="titre-page">Mouvements de rotation</h1>
-        <!-- Facile -->
-        <div class="exercice">
-          <h2>Exercice 1</h2>
-          <p class="énoncé"> Une roue, dont le moment d'inertie est de \( I = 0,03 \, \text{kg·m}^2 \), est accélérée à partir du repos jusqu'à \( \omega = 20 \, \text{rad/s} \) en \( t = 5 \, \text{s} \). Lorsqu'on supprime le moment de force extérieur, la roue s'arrête en \( t_{\text{arrêt}} = 1 \, \text{min} \).</p>
-          <div class="question">
-            <p><b>Trouvez le moment de force de frottement.</b></p> <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Le moment de force de frottement \( C_f \) provoque une décélération angulaire \( \alpha \) lorsque le moment extérieur est nul.</p>
-            <p>La décélération angulaire est donnée par :</p>
-            <p>$$ \alpha_f = \frac{-\omega}{t_{\text{arrêt}}} $$</p>
-            <p>En remplaçant les valeurs :</p>
-            <p>$$ \alpha_f = \frac{-20}{60} = \frac{-1}{3} = -0,333 \, \text{rad/s}^2 $$
-            <p>Le moment de force de frottement s'obtient par :</p> $$ C_f = I \cdot \alpha_f $$ <p>En remplaçant :</p> $$ C_f = 0,03 \cdot \frac{-1}{3} = -0,01 \, \text{N·m} $$</p>
-            <p>Le moment de force de frottement est \( C_f = 0,01 \, \text{N·m} \).</p>
-          </div>
-          <div class="question">
-            <p><b>Trouvez le moment de force extérieur.</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Lorsque la roue est accélérée, le moment de force extérieur \( C_{\text{ext}} \) produit une accélération angulaire \( \alpha \).</p>
-            <p>L'accélération angulaire est donnée par :</p> $$ \alpha = \frac{\omega}{t} $$
-            <p> $$ \alpha = \frac{20}{5} = 4 \, \text{rad/s}^2 $$ </p>
-            <p>Le moment de force extérieur s'obtient par :</p>
-            <p> $$ C_{\text{ext}} = I \cdot \alpha $$
-            <p>En remplaçant :</p> $$ C_{\text{ext}} = 0,03 \cdot 4 = 0,12 \, \text{N·m} $$ <p><b>Réponse :</b> Le moment de force extérieur est \( C_{\text{ext}} = 0,12 \, \text{N·m} \).</p>
-          </div>
-        </div>
-        <div class="exercice">
-          <h2>Exercice 2</h2>
-          <p class="énoncé">
-            Une automobile dont les pneus ont un rayon de \( R = 0,25 \, \text{m} \) accélère à partir du repos jusqu'à \( v = 30 \, \text{m/s} \) en \( t = 10 \, \text{s} \). Lorsque la vitesse de l'automobile est \( v = 2 \, \text{m/s} \).
-          </p>
-
-          <div class="question">
-            <p><b>Calculez l'accélération du sommet de la roue par rapport au centre.</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>La vitesse angulaire \( \omega \) est donnée par :</p>
-            <p>$$ \omega = \frac{v}{R} $$</p>
-            <p>En remplaçant les valeurs :</p>
-            <p>$$ \omega = \frac{2}{0,25} = 8 \, \text{rad/s} $$</p>
-            <p>L'accélération tangentielle du centre est :</p>
-            <p>$$ a_t = \frac{\Delta v}{\Delta t} = \frac{30}{10} = 3 \, \text{m/s}^2 $$</p>
-            <p>Au sommet de la roue, l'accélération est :</p>
-            <p>$$ a_{\text{sommet, centre}} = a_t + R \cdot \alpha $$</p>
-            <p>Or ici, \( \alpha = \frac{a_t}{R} = \frac{3}{0,25} = 12 \, \text{rad/s}^2 \). Donc :</p>
-            <p>$$ a_{\text{sommet, centre}} = 3 + 12 \cdot 0,25 = 6 \, \text{m/s}^2 $$</p>
-            <p>L'accélération linéaire est \( 6 \, \text{m/s}^2 \).</p>
-          </div>
-
-          <div class="question">
-            <p><b>Calculez l'accélération du sommet de la roue par rapport à la route.</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Par rapport à la route, l'accélération au sommet de la roue est donnée par :</p>
-            <p>$$ a_{\text{sommet, route}} = a_t + 2 a_t = 2 a_t $$</p>
-            <p>En remplaçant \( a_t = 3 \, \text{m/s}^2 \) :</p>
-            <p>$$ a_{\text{sommet, route}} = 2 \cdot 3 = 6 \, \text{m/s}^2 $$</p>
-            <p>L'accélération linéaire est \( 6 \, \text{m/s}^2 \).</p>
-          </div>
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <!-- Exercices de mathématiques -->
+                <li class="menu-item dropdown">
+                    <a href="#">Mathématiques</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown"><a href="#">Analyse</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="calcul_matriciel.html">Calcul matriciel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Exercices de physique -->
+                <li class="menu-item dropdown">
+                    <a href="#">Physique</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown">
+                            <a href="#">Mécanique</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+                                <li class="submenu-item"><a href="mécanique_fluides.html">Mécanique des fluides</a></li>
+                                <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Ressources -->
+                <li class="menu-item"><a href="ressources.html">Resources</a></li>
+                <li class="menu-item"><a href="a_propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Thèmes du chapitre</h2>
+            <ul>
+                <li><a href="#page1">Mouvements de translation</a></li>
+                <li><a href="#page2">Mouvements de rotation</a></li>
+            </ul>
         </div>
 
-        <div class="exercice">
-          <h2>Exercice 4</h2>
-          <p class="énoncé">
-            Une meule de rayon \( R = 0,1 \, \text{m} \) et de moment d'inertie \( I = 0,2 \, \text{kg.m}^2 \) tourne à \( 200 \, \text{tr/min} \). Un outil exerce une force de \( F = 50 \, \text{N} \) de direction radiale contre la meule. Le coefficient de frottement cinétique est \( \mu = 0,6 \).
-          </p>
+        <div class="content">
+            <!-- Mouvements de translation -->
+            <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+                <div class="section-content">
+                    <h1 class="titre-page">Mouvements de translation</h1>
+                    <div class="exercice">
+                        <p class="énoncé">
+                            Jacques (de masse \(75 \, \text{kg}\)) se trouve initialement à la position \(x = 0\), tandis que Jean (de masse \(60 \, \text{kg}\))
+                            est initialement à la position \(x = 5 \, \text{m}\). Les deux se trouvent sur un lac gelé sans frottement. Lorsqu’ils tirent sur les deux extrémités
+                            d’une corde, Jean se déplace de \(1,5 \, \text{m}\) vers Jacques.
+                        </p>
+                        <div class="question">
+                            <p><b>Quelle est la distance qui les sépare à cet instant ?</b></p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <h3>Position initiale du centre de masse</h3>
+                            <p>Le centre de masse (\(x_\text{CM}\)) du système est donné par :</p>
+                            <p>$$ x_\text{CM} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2} $$</p>
+                            <p>Avec \(m_1 = 75 \, \text{kg}, x_1 = 0\) et \(m_2 = 60 \, \text{kg}, x_2 = 5 \, \text{m}\), nous avons :</p>
+                            <p>$$ x_\text{CM} = \frac{75 \cdot 0 + 60 \cdot 5}{75 + 60} = \frac{300}{135} = 2,22 \, \text{m} $$</p>
+                            <p>Le centre de masse reste donc fixe à \(x_\text{CM} = 2,22 \, \text{m}\).</p>
+                            <h3>Nouvelle position de Jacques et Jean</h3>
+                            <p>La nouvelle position de Jean est :</p>
+                            <p>$$ x_2' = 5 - 1,5 = 3,5 \, \text{m} $$</p>
+                            <p>Pour que le centre de masse reste fixe, la position de Jacques (\(x_1'\)) est donnée par :</p>
+                            <p>$$ x_\text{CM} = \frac{m_1 x_1' + m_2 x_2'}{m_1 + m_2} $$</p>
+                            <p>En substituant \(x_\text{CM} = 2,22 \, \text{m}\) et \(x_2' = 3,5 \, \text{m}\) :</p>
+                            <p>$$ 2,22 = \frac{75 x_1' + 60 \cdot 3,5}{135} $$</p>
+                            <p>Simplifions :</p>
+                            <p>$$ 75 x_1' + 210 = 300 $$</p>
+                            <p>$$ 75 x_1' = 90 \quad \Rightarrow \quad x_1' = \frac{90}{75} = 1,2 \, \text{m} $$</p>
+                            <p>La distance qui les sépare est donc :</p>
+                            <p>$$ \text{Distance} = x_2' - x_1' = 3,5 - 1,2 = 2,3 \, \text{m} $$</p>
+                            <p><b>Réponse :</b> À cet instant, la distance qui les sépare est de \(2,3 \, \text{m}\).</p>
+                        </div>
 
-          <div class="question">
-            <p><b>Quelle est la puissance nécessaire pour maintenir la vitesse de rotation constante ?</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <h3>Correction - Puissance nécessaire</h3>
-            <p>La force de frottement est donnée par :
-              $$ f = \mu F $$
-              En remplaçant les valeurs :
-              $$ f = 0,6 \times 50 = 30 \, \text{N} $$
-            </p>
-            <p>Le couple résistant dû au frottement est :
-              $$ C_f = f \cdot R $$
-              En remplaçant :
-              $$ C_f = 30 \times 0,1 = 3 \, \text{N.m} $$
-            </p>
-            <p>La puissance nécessaire pour maintenir la vitesse constante est donnée par :
-              $$ P = C_f \cdot \omega $$
-              La vitesse angulaire \( \omega \) en radians par seconde est obtenue par :
-              $$ \omega = \frac{2 \pi N}{60}, \quad N = 200 \, \text{tr/min} $$
-              $$ \omega = \frac{2 \pi \cdot 200}{60} = 20,94 \, \text{rad/s} $$
-            </p>
-            <p>En substituant dans la formule de puissance :
-              $$ P = 3 \cdot 20,94 = 62,82 \, \text{W} $$
-            </p>
-            <p>La puissance nécessaire est \( P \approx 62,8 \, \text{W} \).</p>
-          </div>
+                        <div class="question">
+                            <p><b>Où finissent-ils par se rencontrer ?</b></p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Lorsqu’ils se rencontrent, leurs positions coïncident avec celle du centre de masse.
+                                Puisque le centre de masse reste fixe à \(x_\text{CM} = 2,22 \, \text{m}\), ils se rencontrent à cette position.</p>
+                            <p><b>Réponse :</b> Ils se rencontrent à \(x = 2,22 \, \text{m}\).</p>
+                        </div>
+                    </div>
 
-          <div class="question">
-            <p><b>Combien met de la meule pour s'arrêter si on supprime la force motrice ?</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Lorsque la force motrice est supprimée, seul le couple résistant \( C_f \) agit sur la meule. L'équation différentielle du mouvement est :
-              $$ C_f = I \alpha $$
-              où \( \alpha \) est l'accélération angulaire. En remplaçant \( C_f \) :
-              $$ \alpha = \frac{C_f}{I} = \frac{3}{0,2} = 15 \, \text{rad/s}^2 $$
-            </p>
-            <p>Le temps nécessaire pour s'arrêter à partir de \( \omega_0 = 20,94 \, \text{rad/s} \) est donné par :
-              $$ t = \frac{\omega_0}{\alpha} $$
-              En remplaçant les valeurs :
-              $$ t = \frac{20,94}{15} \approx 1,4 \, \text{s} $$
-            </p>
-            <p><b>Réponse :</b> Le temps d'arrêt est \( t \approx 1,4 \, \text{s} \).</p>
-          </div>
+                </div>
+            </div>
         </div>
+        <!-- Mouvements de rotation -->
+        <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+            <div class="section-content">
+                <h1 class="titre-page">Mouvements de rotation</h1>
+                <!-- Facile -->
+                <div class="exercice">
+                    <h2>Exercice 1</h2>
+                    <p class="énoncé"> Une roue, dont le moment d'inertie est de \( I = 0,03 \, \text{kg·m}^2 \), est accélérée à partir du repos jusqu'à \( \omega = 20 \, \text{rad/s} \) en \( t = 5 \, \text{s} \). Lorsqu'on supprime le moment de force extérieur, la roue s'arrête en \( t_{\text{arrêt}} = 1 \, \text{min} \).</p>
+                    <div class="question">
+                        <p><b>Trouvez le moment de force de frottement.</b></p> <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Le moment de force de frottement \( C_f \) provoque une décélération angulaire \( \alpha \) lorsque le moment extérieur est nul.</p>
+                        <p>La décélération angulaire est donnée par :</p>
+                        <p>$$ \alpha_f = \frac{-\omega}{t_{\text{arrêt}}} $$</p>
+                        <p>En remplaçant les valeurs :</p>
+                        <p>$$ \alpha_f = \frac{-20}{60} = \frac{-1}{3} = -0,333 \, \text{rad/s}^2 $$
+                        <p>Le moment de force de frottement s'obtient par :</p> $$ C_f = I \cdot \alpha_f $$ <p>En remplaçant :</p> $$ C_f = 0,03 \cdot \frac{-1}{3} = -0,01 \, \text{N·m} $$</p>
+                        <p>Le moment de force de frottement est \( C_f = 0,01 \, \text{N·m} \).</p>
+                    </div>
+                    <div class="question">
+                        <p><b>Trouvez le moment de force extérieur.</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Lorsque la roue est accélérée, le moment de force extérieur \( C_{\text{ext}} \) produit une accélération angulaire \( \alpha \).</p>
+                        <p>L'accélération angulaire est donnée par :</p> $$ \alpha = \frac{\omega}{t} $$
+                        <p> $$ \alpha = \frac{20}{5} = 4 \, \text{rad/s}^2 $$ </p>
+                        <p>Le moment de force extérieur s'obtient par :</p>
+                        <p> $$ C_{\text{ext}} = I \cdot \alpha $$
+                        <p>En remplaçant :</p> $$ C_{\text{ext}} = 0,03 \cdot 4 = 0,12 \, \text{N·m} $$ <p><b>Réponse :</b> Le moment de force extérieur est \( C_{\text{ext}} = 0,12 \, \text{N·m} \).</p>
+                    </div>
+                </div>
+                <div class="exercice">
+                    <h2>Exercice 2</h2>
+                    <p class="énoncé">
+                        Une automobile dont les pneus ont un rayon de \( R = 0,25 \, \text{m} \) accélère à partir du repos jusqu'à \( v = 30 \, \text{m/s} \) en \( t = 10 \, \text{s} \). Lorsque la vitesse de l'automobile est \( v = 2 \, \text{m/s} \).
+                    </p>
 
-        <div class="exercice">
-          <h2>Exercice 5</h2>
-          <p class="énoncé">
-            Une roue qui tourne initialement à \( 1200 \, \text{tr/min} \) s'arrête en \( 4 \, \text{min} \) sous l'action du frottement. Si un moment de \( 300 \, \text{N.m} \) est appliqué, elle s'arrête en \( 1 \, \text{min} \).
-          </p>
-          <div class="question">
-            <p><b>Déterminer le moment d'inertie de la roue.</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Le couple de frottement \( C_f \) est constant, et l'accélération angulaire \( \alpha \) est donnée par :
-              $$ \alpha = \frac{\Delta \omega}{\Delta t} $$
-              La vitesse angulaire initiale en radians par seconde est :
-              $$ \omega_0 = \frac{2 \pi N}{60}, \quad N = 1200 \, \text{tr/min} $$
-              $$ \omega_0 = \frac{2 \pi \cdot 1200}{60} = 125,66 \, \text{rad/s} $$
-            </p>
-            <p>Pour le premier cas (\( t_1 = 4 \, \text{min} \)) :
-              $$ \alpha_1 = \frac{-\omega_0}{t_1} = \frac{-125,66}{240} \approx -0,523 \, \text{rad/s}^2 $$
-            </p>
-            <p>Pour le second cas (\( t_2 = 1 \, \text{min} \)), où \( C_f + C_{\text{ext}} = 300 \, \text{N.m} \) :
-              $$ \alpha_2 = \frac{-\omega_0}{t_2} = \frac{-125,66}{60} \approx -2,094 \, \text{rad/s}^2 $$
-            </p>
-            <p>La différence d'accélération est due au couple appliqué \( C_{\text{ext}} \). Ainsi :
-              $$ C_{\text{ext}} = I (\alpha_2 - \alpha_1) $$
-              En remplaçant :
-              $$ 300 = I (2,094 - 0,523) $$
-              $$ 300 = I \cdot 1,571 $$
-              $$ I = \frac{300}{1,571} \approx 191 \, \text{kg.m}^2 $$
-            </p>
-            <p>Le moment d'inertie de la roue est \( I \approx 191 \, \text{kg.m}^2 \).</p>
-          </div>
+                    <div class="question">
+                        <p><b>Calculez l'accélération du sommet de la roue par rapport au centre.</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>La vitesse angulaire \( \omega \) est donnée par :</p>
+                        <p>$$ \omega = \frac{v}{R} $$</p>
+                        <p>En remplaçant les valeurs :</p>
+                        <p>$$ \omega = \frac{2}{0,25} = 8 \, \text{rad/s} $$</p>
+                        <p>L'accélération tangentielle du centre est :</p>
+                        <p>$$ a_t = \frac{\Delta v}{\Delta t} = \frac{30}{10} = 3 \, \text{m/s}^2 $$</p>
+                        <p>Au sommet de la roue, l'accélération est :</p>
+                        <p>$$ a_{\text{sommet, centre}} = a_t + R \cdot \alpha $$</p>
+                        <p>Or ici, \( \alpha = \frac{a_t}{R} = \frac{3}{0,25} = 12 \, \text{rad/s}^2 \). Donc :</p>
+                        <p>$$ a_{\text{sommet, centre}} = 3 + 12 \cdot 0,25 = 6 \, \text{m/s}^2 $$</p>
+                        <p>L'accélération linéaire est \( 6 \, \text{m/s}^2 \).</p>
+                    </div>
 
-          <div class="question">
-            <p><b>Déterminer le moment de force de frottement.</b></p>
-            <button class="toggle-correction"><b>&#10003;</b></button>
-          </div>
-          <div class="exercice-correction hidden">
-            <p>Le moment de frottement \( C_f \) est déterminé à partir de l'accélération angulaire dans le premier cas :
-              $$ C_f = I \alpha_1 $$
-              En remplaçant \( I = 191 \, \text{kg.m}^2 \) et \( \alpha_1 = -0,523 \, \text{rad/s}^2 \) :
-              $$ C_f = 191 \cdot (-0,523) \approx -100 \, \text{N.m} $$
-            </p>
-            <p>Le moment de force de frottement est \( C_f \approx 100 \, \text{N.m} \).</p>
-          </div>
+                    <div class="question">
+                        <p><b>Calculez l'accélération du sommet de la roue par rapport à la route.</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Par rapport à la route, l'accélération au sommet de la roue est donnée par :</p>
+                        <p>$$ a_{\text{sommet, route}} = a_t + 2 a_t = 2 a_t $$</p>
+                        <p>En remplaçant \( a_t = 3 \, \text{m/s}^2 \) :</p>
+                        <p>$$ a_{\text{sommet, route}} = 2 \cdot 3 = 6 \, \text{m/s}^2 $$</p>
+                        <p>L'accélération linéaire est \( 6 \, \text{m/s}^2 \).</p>
+                    </div>
+                </div>
+
+                <div class="exercice">
+                    <h2>Exercice 4</h2>
+                    <p class="énoncé">
+                        Une meule de rayon \( R = 0,1 \, \text{m} \) et de moment d'inertie \( I = 0,2 \, \text{kg.m}^2 \) tourne à \( 200 \, \text{tr/min} \). Un outil exerce une force de \( F = 50 \, \text{N} \) de direction radiale contre la meule. Le coefficient de frottement cinétique est \( \mu = 0,6 \).
+                    </p>
+
+                    <div class="question">
+                        <p><b>Quelle est la puissance nécessaire pour maintenir la vitesse de rotation constante ?</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <h3>Correction - Puissance nécessaire</h3>
+                        <p>La force de frottement est donnée par :
+                            $$ f = \mu F $$
+                            En remplaçant les valeurs :
+                            $$ f = 0,6 \times 50 = 30 \, \text{N} $$
+                        </p>
+                        <p>Le couple résistant dû au frottement est :
+                            $$ C_f = f \cdot R $$
+                            En remplaçant :
+                            $$ C_f = 30 \times 0,1 = 3 \, \text{N.m} $$
+                        </p>
+                        <p>La puissance nécessaire pour maintenir la vitesse constante est donnée par :
+                            $$ P = C_f \cdot \omega $$
+                            La vitesse angulaire \( \omega \) en radians par seconde est obtenue par :
+                            $$ \omega = \frac{2 \pi N}{60}, \quad N = 200 \, \text{tr/min} $$
+                            $$ \omega = \frac{2 \pi \cdot 200}{60} = 20,94 \, \text{rad/s} $$
+                        </p>
+                        <p>En substituant dans la formule de puissance :
+                            $$ P = 3 \cdot 20,94 = 62,82 \, \text{W} $$
+                        </p>
+                        <p>La puissance nécessaire est \( P \approx 62,8 \, \text{W} \).</p>
+                    </div>
+
+                    <div class="question">
+                        <p><b>Combien met de la meule pour s'arrêter si on supprime la force motrice ?</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Lorsque la force motrice est supprimée, seul le couple résistant \( C_f \) agit sur la meule. L'équation différentielle du mouvement est :
+                            $$ C_f = I \alpha $$
+                            où \( \alpha \) est l'accélération angulaire. En remplaçant \( C_f \) :
+                            $$ \alpha = \frac{C_f}{I} = \frac{3}{0,2} = 15 \, \text{rad/s}^2 $$
+                        </p>
+                        <p>Le temps nécessaire pour s'arrêter à partir de \( \omega_0 = 20,94 \, \text{rad/s} \) est donné par :
+                            $$ t = \frac{\omega_0}{\alpha} $$
+                            En remplaçant les valeurs :
+                            $$ t = \frac{20,94}{15} \approx 1,4 \, \text{s} $$
+                        </p>
+                        <p><b>Réponse :</b> Le temps d'arrêt est \( t \approx 1,4 \, \text{s} \).</p>
+                    </div>
+                </div>
+
+                <div class="exercice">
+                    <h2>Exercice 5</h2>
+                    <p class="énoncé">
+                        Une roue qui tourne initialement à \( 1200 \, \text{tr/min} \) s'arrête en \( 4 \, \text{min} \) sous l'action du frottement. Si un moment de \( 300 \, \text{N.m} \) est appliqué, elle s'arrête en \( 1 \, \text{min} \).
+                    </p>
+                    <div class="question">
+                        <p><b>Déterminer le moment d'inertie de la roue.</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Le couple de frottement \( C_f \) est constant, et l'accélération angulaire \( \alpha \) est donnée par :
+                            $$ \alpha = \frac{\Delta \omega}{\Delta t} $$
+                            La vitesse angulaire initiale en radians par seconde est :
+                            $$ \omega_0 = \frac{2 \pi N}{60}, \quad N = 1200 \, \text{tr/min} $$
+                            $$ \omega_0 = \frac{2 \pi \cdot 1200}{60} = 125,66 \, \text{rad/s} $$
+                        </p>
+                        <p>Pour le premier cas (\( t_1 = 4 \, \text{min} \)) :
+                            $$ \alpha_1 = \frac{-\omega_0}{t_1} = \frac{-125,66}{240} \approx -0,523 \, \text{rad/s}^2 $$
+                        </p>
+                        <p>Pour le second cas (\( t_2 = 1 \, \text{min} \)), où \( C_f + C_{\text{ext}} = 300 \, \text{N.m} \) :
+                            $$ \alpha_2 = \frac{-\omega_0}{t_2} = \frac{-125,66}{60} \approx -2,094 \, \text{rad/s}^2 $$
+                        </p>
+                        <p>La différence d'accélération est due au couple appliqué \( C_{\text{ext}} \). Ainsi :
+                            $$ C_{\text{ext}} = I (\alpha_2 - \alpha_1) $$
+                            En remplaçant :
+                            $$ 300 = I (2,094 - 0,523) $$
+                            $$ 300 = I \cdot 1,571 $$
+                            $$ I = \frac{300}{1,571} \approx 191 \, \text{kg.m}^2 $$
+                        </p>
+                        <p>Le moment d'inertie de la roue est \( I \approx 191 \, \text{kg.m}^2 \).</p>
+                    </div>
+
+                    <div class="question">
+                        <p><b>Déterminer le moment de force de frottement.</b></p>
+                        <button class="toggle-correction"><b>&#10003;</b></button>
+                    </div>
+                    <div class="exercice-correction hidden">
+                        <p>Le moment de frottement \( C_f \) est déterminé à partir de l'accélération angulaire dans le premier cas :
+                            $$ C_f = I \alpha_1 $$
+                            En remplaçant \( I = 191 \, \text{kg.m}^2 \) et \( \alpha_1 = -0,523 \, \text{rad/s}^2 \) :
+                            $$ C_f = 191 \cdot (-0,523) \approx -100 \, \text{N.m} $$
+                        </p>
+                        <p>Le moment de force de frottement est \( C_f \approx 100 \, \text{N.m} \).</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </main>
 
-      </div>
-    </div>
-  </main>
-
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="../assets/scripts/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../assets/scripts/script.js"></script>
 </body>
 
 </html>

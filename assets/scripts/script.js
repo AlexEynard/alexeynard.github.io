@@ -111,3 +111,20 @@ document.getElementById("valider").addEventListener("click", function (event) {
   MathJax.typesetPromise([resultatDiv]).catch((err) => console.error(err));
 });
 
+MathJax = {
+  tex: {
+    displayMath: ['\\[', '\\]'],
+    inlineMath: ['\\(', '\\)'],
+    processEscapes: true
+  },
+  options: {
+    renderActions: {
+      addMenu: [0, '', '']
+    }
+  }
+};
+MathJax = {
+  tex: {
+    linebreaks: { automatic: true }
+  }
+};

@@ -159,14 +159,15 @@ body {
 /* Style des questions des QCM*/
 .q {
   margin-bottom: 1.5em;
-  padding: 1.25em;
+  padding: 1em;
   background-color: var(--qcm_q);
   border: 1px solid var(--blue-silk);
   border-radius: 0.625em;
 }
 
 .q p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* Style du texte de la question */
@@ -431,28 +432,6 @@ body {
   display: none;
 }
 
-.question:hover .toggle-correction {
-  animation: flash-green 0.8s ease-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes flash-green {
-  0% {
-    color: var(--white);
-    transform: scale(1);
-  }
-
-  50% {
-    color: var(--correct);
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-    color: var(--white);
-  }
-}
-
 .toggle-correction {
   background-color: transparent;
   color: var(--white);
@@ -464,7 +443,8 @@ body {
 }
 
 .toggle-correction:hover {
-  color: rgb(21, 179, 0);
+  color: var(--correct);
+  animation: enlarge-on-hover 0.3s ease-out;
 }
 
 .toggle-correction:active {

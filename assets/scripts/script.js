@@ -40,6 +40,7 @@ function configureMathJax() {
       processEscapes: true
     },
     options: {
+      responsive: true,
       renderActions: {
         addMenu: [0, '', '']
       }
@@ -156,5 +157,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Rendre LaTeX dans le score final
     renderLatexInCorrections();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const questions = document.querySelectorAll('.question');
+
+  questions.forEach(question => {
+    if (question.dataset.difficulte) {
+      const difficulte = parseInt(question.dataset.difficulte);
+      const etoiles = document.createElement('span');
+      etoiles.classList.add('etoiles');
+
+      for (let i = 1; i <= 5; i++) {
+        const etoile = document.createElement('span');
+        etoile.classList.add('etoile');
+        if (i > difficulte) {
+          etoile.classList.add('cachee');
+        }
+        etoiles.appendChild(etoile);
+      }
+
+      question.querySelector('.consigne').prepend(etoiles);
+    }
   });
 });

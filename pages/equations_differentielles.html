@@ -46,6 +46,7 @@
                                 <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
                             </ul>
                         </li>
+
                     </ul>
                 </li>
                 <!-- Ressources -->
@@ -82,7 +83,7 @@
                             <p>En effet, elle est de la forme : \( y' + a(x) \cdot y = 0 \)</p>
                             <p>Ainsi on peut résoudre une équation homogène comme ceci, avec \( \lambda \in \mathbb{R} \):</p>
                             <p>$$y_{h}(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int 2x \, dx} = \lambda e^{-x^2}$$</p>
-                            <img src="../assets/gif/equations_differentielles/ed_1.1.1.gif" class="img">
+                            <img src="../assets/gif/equations_differentielles/ed_1.1.1.gif" class="gif">
                         </div>
                         <!-- Question 2 -->
                         <div class="question">
@@ -92,7 +93,7 @@
                         </div>
                         <div class="exercice-correction hidden">
                             <p>$$ y_h(x) = \lambda e^{-\int a(x) \, dx} = \lambda e^{-\int e^x \, dx} = \lambda e^{-e^x} $$</p>
-                            <img src="../assets/gif/equations_differentielles/ed_1.1.2.gif" class="img">
+                            <img src="../assets/gif/equations_differentielles/ed_1.1.2.gif" class="gif">
                         </div>
                         <!-- Question 3 -->
                         <div class="question">
@@ -607,7 +608,7 @@
 
                         <div class="exercice-correction hidden">
                             <p>Commençons par déterminer les solutions de l'équation homogène associée :</p>
-                            <p>$$ y_h(x) = \lambda e^{-\int \tan(x) dx} = \lambda e^{-\ln|\cos(x)|} = \lambda \cos(x) $$</p>
+                            <p>$$ y_h(x) = \lambda e^{-\int \tan(x) dx} = \lambda e^{\ln|\cos(x)|} = \lambda \cos(x) $$</p>
                             <p>Les solutions homogènes de \( (E_5) \) sont les fonctions :</p>
                             <p>$$\begin{array}[t]{lrcl} y_h(x) : & \mathbb{R} & \longrightarrow & \mathbb{R} \\ & x & \longmapsto & \lambda \cos(x) \end{array}$$</p>
 

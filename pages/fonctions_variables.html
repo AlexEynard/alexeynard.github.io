@@ -331,13 +331,10 @@
                             <h4>La dérivée partielle seconde par rapport à \( y \) est :</h4>
                             <p>$$ \frac{\partial^2 f_4}{\partial y^2} = 2e^{x^2 + y^2} \ln(xy) + 4y^2 e^{x^2 + y^2} \ln(xy) + e^{x^2 + y^2} \cdot \frac{2x}{xy^2} $$</p>
                         </div>
-
-
-
                     </div>
+
                     <div class="exercice">
                         <h2>Calcul d'intégrales curvilignes</h2>
-
                         <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">$$\int_{C} (2x \, dx + y^2 \, dy), \quad C : y = \ln(x), \, x \in [1, 2]$$</p>
@@ -360,8 +357,6 @@
                             <p>$$\int_{C} \omega = 3 + \int_1^2 \frac{(\ln(t))^2}{t} \, dt = 3 + \left[ \frac{1}{3}\ln(t)^3 \right]_1^2$$</p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
             <!-- Étude de variation de fonctions -->
@@ -610,6 +605,169 @@
                         </div>
 
                     </div>
+                    <!-- Etude de continuité -->
+                    <div class="exercice">
+                        <h2>Étude de continuité</h2>
+                        <div class="question">
+                            <p class="consigne">
+                                Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) la fonction définie par :
+                                $$ f(x, y) = \begin{cases} \frac{xy}{x^2 + y^2} & \text{si } (x, y) \ne (0, 0) \\ 0 & \text{si } (x, y) = (0, 0) \end{cases} $$
+                                Montrer que \( \nabla f(0, 0) = \vec{0} \) mais que la fonction \( f \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+
+                        <div class="exercice-correction hidden">
+                            <p><b>1. Calcul des dérivées partielles en \( (0, 0) \) :</b></p>
+                            <p>
+                                Par définition,
+                                $$ \frac{\partial f}{\partial x}(0, 0) = \lim_{h \to 0} \frac{f(h, 0) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                                De même,
+                                $$ \frac{\partial f}{\partial y}(0, 0) = \lim_{h \to 0} \frac{f(0, h) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                                Donc \( \nabla f(0, 0) = \vec{0} \).
+                            </p>
+
+                            <p><b>2. Étude de la continuité de \( f \) en \( (0, 0) \) :</b></p>
+                            <p>
+                                Si \( f \) était continue en \( (0, 0) \), on aurait
+                                $$ \lim_{(x, y) \to (0, 0)} f(x, y) = f(0, 0) = 0 $$
+                                Or, en considérant le chemin d'approche \( y = x \), on a
+                                $$ \lim_{x \to 0} f(x, x) = \lim_{x \to 0} \frac{x^2}{2x^2} = \frac{1}{2} \ne 0 $$
+                                Par conséquent, \( f \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                        </div>
+                        <div class="question">
+                            <p class="consigne">
+                                Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) la fonction définie par :
+                                $$ f(x, y) = \begin{cases} \frac{x}{y^2} & \text{si } y \ne 0 \\ 0 & \text{si } y = 0 \end{cases} $$
+                                Montrer que \( \nabla f(0, 0) = \vec{0} \) mais que la fonction \( f \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+
+                        <div class="exercice-correction hidden">
+                            <p><b>1. Calcul des dérivées partielles en \( (0, 0) \) :</b></p>
+                            <p>
+                                Rappelons que le gradient d'une fonction en un point est un vecteur dont les composantes sont les dérivées partielles de la fonction par rapport à chaque variable en ce point.
+                            </p>
+                            <p>
+                                Dérivée partielle par rapport à \( x \) en \( (0, 0) \) :
+                                $$ \frac{\partial f}{\partial x}(0, 0) = \lim_{h \to 0} \frac{f(h, 0) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                            </p>
+                            <p>
+                                Dérivée partielle par rapport à \( y \) en \( (0, 0) \) :
+                                $$ \frac{\partial f}{\partial y}(0, 0) = \lim_{k \to 0} \frac{f(0, k) - f(0, 0)}{k} = \lim_{k \to 0} \frac{0 - 0}{k} = 0 $$
+                            </p>
+                            <p>
+                                Donc, \( \nabla f(0, 0) = \left( \frac{\partial f}{\partial x}(0, 0), \frac{\partial f}{\partial y}(0, 0) \right) = (0, 0) = \vec{0} \).
+                            </p>
+
+                            <p><b>2. Discontinuité de \( f \) en \( (0, 0) \) :</b></p>
+                            <p>
+                                Pour montrer que \( f \) n'est pas continue en \( (0, 0) \), nous allons trouver un chemin (une courbe d'équation \( y = g(x) \) ou \( x = h(y) \)) tel que la limite de \( f(x, y) \) lorsque \( (x, y) \) tend vers \( (0, 0) \) le long de ce chemin soit différente de \( f(0, 0) = 0 \).
+                            </p>
+
+                            <p>
+                                <b>Stratégie pour trouver un chemin adapté :</b>
+                                <br>
+                                L'idée principale est d'analyser l'expression de \( f(x, y) \) pour \( y \ne 0 \) et d'identifier les termes qui peuvent causer une discontinuité. Ici, le terme \( \frac{1}{y^2} \) est problématique lorsque \( y \) s'approche de 0.
+                                <br>
+                                Ensuite, nous cherchons un chemin tel que \( x \) et \( y \) tendent vers 0 à des vitesses différentes. Un choix classique est de considérer des chemins de la forme \( x = ay^n \) ou \( y = bx^m \), où \( a \) et \( b \) sont des constantes non nulles et \( n \) et \( m \) sont des entiers positifs.
+                            </p>
+
+                            <p>
+                                <b>Démonstration de la discontinuité :</b>
+                                <br>
+                                Considérons le chemin \( x = y^2 \). Alors, pour tout \( y \ne 0 \), on a \( f(x, y) = f(y^2, y) = \frac{y^2}{y^2} = 1 \).
+                                <br>
+                                Ainsi, \( \lim_{y \to 0} f(y^2, y) = \lim_{y \to 0} 1 = 1 \ne 0 = f(0, 0) \).
+                                <br>
+                                Par conséquent, la fonction \( f \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                        </div>
+                        <div class="question">
+                            <p class="consigne">
+                                Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) la fonction définie par :
+                                $$ f(x, y) = \begin{cases} \frac{x^2 y^2}{\sqrt{(x^2 + y^2)^3}} & \text{si } (x, y) \ne (0, 0) \\ 0 & \text{si } (x, y) = (0, 0) \end{cases} $$
+                                Montrer que \( \nabla f(0, 0) = \vec{0} \) mais que la fonction \( \frac{\partial f}{\partial x} : \mathbb{R}^2 \to \mathbb{R} \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+
+                        <div class="exercice-correction hidden">
+                            <p><b>1. Calcul des dérivées partielles en \( (0, 0) \) :</b></p>
+                            <p>
+                                Par définition,
+                                $$ \frac{\partial f}{\partial x}(0, 0) = \lim_{h \to 0} \frac{f(h, 0) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                                De même,
+                                $$ \frac{\partial f}{\partial y}(0, 0) = \lim_{h \to 0} \frac{f(0, h) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                                Donc \( \nabla f(0, 0) = \vec{0} \).
+                            </p>
+
+                            <p><b>2. Calcul de \( \frac{\partial f}{\partial x} \) en \( (x, y) \ne (0, 0) \) :</b></p>
+                            <p>
+                                En utilisant les règles de dérivation usuelles,
+                                $$ \frac{\partial f}{\partial x}(x, y) = \frac{2xy^2 \sqrt{(x^2 + y^2)^3} - x^2 y^2 \cdot \frac{3}{2} (x^2 + y^2)^{\frac{1}{2}} \cdot 2x}{(x^2 + y^2)^3} = \frac{2xy^2(x^2 + y^2) - 3x^3y^2}{(x^2 + y^2)^{\frac{5}{2}}} = \frac{2xy^4 - x^3y^2}{(x^2 + y^2)^{\frac{5}{2}}} $$
+                            </p>
+
+                            <p><b>3. Étude de la continuité de \( \frac{\partial f}{\partial x} \) en \( (0, 0) \) :</b></p>
+                            <p>
+                                Si \( \frac{\partial f}{\partial x} \) était continue en \( (0, 0) \), on aurait
+                                $$ \lim_{(x, y) \to (0, 0)} \frac{\partial f}{\partial x}(x, y) = \frac{\partial f}{\partial x}(0, 0) = 0 $$
+                                Or, en prenant \( y = x \), on a
+                                $$ \frac{\partial f}{\partial x}(x, x) = \frac{2x^5 - x^5}{(2x^2)^{\frac{5}{2}}} = \frac{x^5}{4\sqrt{2} |x|^5} = \frac{1}{4\sqrt{2}} \text{ si } x > 0 $$
+                                Donc la limite de \( \frac{\partial f}{\partial x}(x, x) \) lorsque \( x \to 0 \) est \( \frac{1}{4\sqrt{2}} \ne 0 \). Par conséquent, \( \frac{\partial f}{\partial x} \) n'est pas continue en \( (0, 0) \).
+                            </p>
+                        </div>
+
+
+                        <div class="question">
+                            <p class="consigne">
+                                Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) la fonction définie par :
+                                $$ f(x, y) = \begin{cases} xy \ln(|x| + |y|) & \text{si } (x, y) \ne (0, 0) \\ 0 & \text{si } (x, y) = (0, 0) \end{cases} $$
+                                Montrer que \( f \) est de classe \( C^1 \).
+                            </p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>1. Continuité de \( f \) :</b></p>
+                            <p>
+                                Si \( (x, y) \ne (0, 0) \), \( f \) est continue par composition de fonctions continues.
+                                En \( (0, 0) \), on a \( f(0, 0) = 0 \).
+                                Montrons que \( \lim_{(x, y) \to (0, 0)} f(x, y) = 0 \).
+                                En utilisant les coordonnées polaires \( x = r \cos \theta \) et \( y = r \sin \theta \), on a :
+                                $$ |f(x, y)| = |r^2 \cos \theta \sin \theta \ln(r(|\cos \theta| + |\sin \theta|))| \le r^2 |\ln r| $$
+                                car \( |\cos \theta| + |\sin \theta| \ge 1 \).
+                                Comme \( \lim_{r \to 0} r^2 |\ln r| = 0 \), par le théorème d'encadrement, \( \lim_{(x, y) \to (0, 0)} f(x, y) = 0 = f(0, 0) \).
+                                Donc \( f \) est continue en \( (0, 0) \), et par conséquent sur \( \mathbb{R}^2 \).
+                            </p>
+
+                            <p><b>2. Dérivées partielles de \( f \) :</b></p>
+                            <p>
+                                Si \( (x, y) \ne (0, 0) \), les dérivées partielles de \( f \) sont :
+                                $$ \frac{\partial f}{\partial x}(x, y) = y \ln(|x| + |y|) + \frac{xy}{|x| + |y|} $$
+                                $$ \frac{\partial f}{\partial y}(x, y) = x \ln(|x| + |y|) + \frac{xy}{|x| + |y|} $$
+                                En \( (0, 0) \), on a :
+                                $$ \frac{\partial f}{\partial x}(0, 0) = \lim_{h \to 0} \frac{f(h, 0) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                                $$ \frac{\partial f}{\partial y}(0, 0) = \lim_{h \to 0} \frac{f(0, h) - f(0, 0)}{h} = \lim_{h \to 0} \frac{0 - 0}{h} = 0 $$
+                            </p>
+
+                            <p><b>3. Continuité des dérivées partielles :</b></p>
+                            <p>
+                                Si \( (x, y) \ne (0, 0) \), les dérivées partielles sont continues par composition de fonctions continues.
+                                En \( (0, 0) \), on a :
+                                $$ \lim_{(x, y) \to (0, 0)} \frac{\partial f}{\partial x}(x, y) = \lim_{(x, y) \to (0, 0)} \left( y \ln(|x| + |y|) + \frac{xy}{|x| + |y|} \right) = 0 $$
+                                De même, \( \lim_{(x, y) \to (0, 0)} \frac{\partial f}{\partial y}(x, y) = 0 \).
+                                Donc les dérivées partielles sont continues en \( (0, 0) \), et par conséquent sur \( \mathbb{R}^2 \).
+                            </p>
+
+                            <p><b>Conclusion :</b></p>
+                            <p>
+                                \( f \) est continue sur \( \mathbb{R}^2 \) et ses dérivées partielles existent et sont continues sur \( \mathbb{R}^2 \).
+                                Donc \( f \) est de classe \( C^1 \) sur \( \mathbb{R}^2 \).
+                            </p>
+                        </div>
+                    </div>
                     <!-- Recherche d'extrema -->
                     <div class="exercice">
                         <h2>Recherche d'extrema</h2>
@@ -648,7 +806,7 @@
                             <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
                             <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 4 & -2 \\ -2 & -2
                                 \end{bmatrix} = (4)(-2) - (-2)^2 = -8 - 4 = -12$$</p>
-                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( \left( \frac{1}{2} ; 0
+                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <b>point col</b> en \( \left( \frac{1}{2} ; 0
                                 \right) \).</p>
                         </div>
                         <!-- Question 2 -->
@@ -686,7 +844,7 @@
                             <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 6 & 0 \\ 0 & 4
                                 \end{bmatrix} = (6)(4) - (0)^2 = 24$$</p>
 
-                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( \left(
+                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <b>minimum local</b> en \( \left(
                                 -\frac{2}{3} ; \frac{1}{4} \right) \).</p>
                         </div>
                         <!-- Question 3 -->
@@ -716,7 +874,7 @@
                             <p>Calculons le déterminant de la matrice Hessienne pour déterminer la nature du point critique.</p>
                             <p>$$\Delta = \det \begin{bmatrix} r & s \\ s & t \end{bmatrix} = \det \begin{bmatrix} 2 & 0 \\ 0 & 2
                                 \end{bmatrix} = 2 \cdot 2 - 0^2 = 4$$</p>
-                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (2, 3) \).
+                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <b>minimum local</b> en \( (2, 3) \).
                             </p>
                         </div>
 
@@ -753,13 +911,13 @@
                             <p>$$H = \begin{bmatrix} 6 \cdot 1 & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} 6 & 0 \\ 0 & 2
                                 \end{bmatrix}$$</p>
                             <p>$$\Delta = 6 \cdot 2 - 0^2 = 12$$</p>
-                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <strong>minimum local</strong> en \( (1, 1) \).
+                            <p>Comme \( \Delta > 0 \) et \( r > 0 \), \( f \) admet un <b>minimum local</b> en \( (1, 1) \).
                             </p>
                             <p>En \( (-1, 1) \), la matrice Hessienne est :</p>
                             <p>$$H = \begin{bmatrix} 6 \cdot (-1) & 0 \\ 0 & 2 \end{bmatrix} = \begin{bmatrix} -6 & 0 \\ 0 & 2
                                 \end{bmatrix}$$</p>
                             <p>$$\Delta = -6 \cdot 2 - 0^2 = -12$$</p>
-                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (-1, 1) \).</p>
+                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <b>point col</b> en \( (-1, 1) \).</p>
                         </div>
                         <div class="question">
                             <p class="consigne">Rechercher les extrema de la fonction :</p>
@@ -797,19 +955,19 @@
                             <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (-8) \cdot (-8) =
                                 64$$</p>
                             <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot 0^2 - 8 = -8 \, (\text{avec} \, r &#60; 0) \), \( f \) admet
-                                un <strong>maximum local</strong> en \( (0, 0) \).</p>
+                                un <b>maximum local</b> en \( (0, 0) \).</p>
 
                             <h4>Étude en \( (\sqrt{2}, 0) \) et \( (-\sqrt{2}, 0) \)</h4>
                             <p>Substituons \( x = \pm \sqrt{2} \) et \( y = 0 \) dans \( \Delta \) :</p>
                             <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot 0^2 - 8 \right) = (12 \cdot 2
                                 - 8) \cdot (-8) = (24 - 8) \cdot (-8) = 16 \cdot (-8) = -128$$</p>
-                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (\pm \sqrt{2}, 0) \).</p>
+                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <b>point col</b> en \( (\pm \sqrt{2}, 0) \).</p>
 
                             <h4>Étude en \( (0, \sqrt{2}) \) et \( (0, -\sqrt{2}) \)</h4>
                             <p>Substituons \( x = 0 \) et \( y = \pm \sqrt{2} \) dans \( \Delta \) :</p>
                             <p>$$\Delta = \left( 12 \cdot 0^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) = (-8) \cdot
                                 (12 \cdot 2 - 8) = (-8) \cdot (24 - 8) = (-8) \cdot 16 = -128$$</p>
-                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <strong>point col</strong> en \( (0, \pm \sqrt{2}) \).</p>
+                            <p>Comme \( \Delta &#60; 0 \), \( f \) admet un <b>point col</b> en \( (0, \pm \sqrt{2}) \).</p>
 
                             <h4>Étude en \( (\sqrt{2}, \sqrt{2}) \), \( (\sqrt{2}, -\sqrt{2}) \), \( (-\sqrt{2}, \sqrt{2}) \), \(
                                 (-\sqrt{2}, -\sqrt{2}) \)</h4>
@@ -817,7 +975,7 @@
                             <p>$$\Delta = \left( 12 \cdot (\sqrt{2})^2 - 8 \right) \cdot \left( 12 \cdot (\sqrt{2})^2 - 8 \right) =
                                 (12 \cdot 2 - 8) \cdot (12 \cdot 2 - 8) = (24 - 8) \cdot (24 - 8) = 16 \cdot 16 = 256$$</p>
                             <p>Comme \( \Delta > 0 \) et \( r = 12 \cdot (\sqrt{2})^2 - 8 = 24 - 8 = 16 > 0 \), \( f \) admet un
-                                <strong>minimum local</strong> en ces quatre points critiques.
+                                <b>minimum local</b> en ces quatre points critiques.
                             </p>
                         </div>
                     </div>

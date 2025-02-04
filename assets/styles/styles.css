@@ -170,17 +170,22 @@ body {
   text-align: center;
 }
 
+.rendu-3d {
+  width: 1em;
+  height: auto;
+}
+
+
 /* Style du texte de la question */
 .consigne {
   font-size: 1.2em;
-  display: inline-flex;
   color: var(--white);
   margin: 0;
   line-height: 1.5;
+  text-align: center;
   margin-left: 0.8vw;
   max-width: 100%;
   text-align: left;
-  align-items: center;
 }
 
 .etoiles {
@@ -468,9 +473,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centre le contenu horizontalement */
   justify-content: center;
-  /* Centre le contenu verticalement */
   max-width: 100%;
   overflow: auto;
   font-size: 1.1rem;
@@ -499,9 +502,9 @@ body {
 }
 
 .gif {
-  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  width: 30vw;
+  border-radius: 1em;
+  width: 80%;
 }
 
 .exercice-correction {
@@ -786,7 +789,7 @@ body {
     padding: 0.5em;
   }
 
-  .img {
+  .gif {
     width: 50vw;
   }
 

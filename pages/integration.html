@@ -63,6 +63,7 @@
                 <li><a href="#page3">Intégrations par parties</a></li>
                 <li><a href="#page4">Fractions rationnelles</a></li>
                 <li><a href="#page5">Intégrales impropres</a></li>
+                <li><a href="#page6">Intégrales multiples</a></li>
             </ul>
         </div>
 
@@ -797,6 +798,43 @@
                             <p>$$ \int \frac{\ln(3x)}{\sqrt[3]{x}} \, dx = \frac{3x^{\frac{2}{3}} \left(2 \ln(3x) - 3\right)}{4} + C
                                 $$</p>
                         </div>
+                        <div class="question">
+                            <p class="consigne">
+                                Calculer l'intégrale suivante :
+                                $$ \int t \ln(\sqrt{t}) \, dt $$
+                            </p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+
+                        <div class="exercice-correction hidden">
+                            <p><b>1. Simplification de l'intégrale :</b></p>
+                            <p>
+                                On peut simplifier l'intégrale en utilisant la propriété du logarithme :
+                                $$ \ln(\sqrt{t}) = \ln(t^{\frac{1}{2}}) = \frac{1}{2} \ln(t) $$
+                                Donc, l'intégrale devient :
+                                $$ \int t \ln(\sqrt{t}) \, dt = \int t \cdot \frac{1}{2} \ln(t) \, dt = \frac{1}{2} \int t \ln(t) \, dt $$
+                            </p>
+
+                            <p><b>2. Intégration par parties :</b></p>
+                            <p>
+                                On va utiliser l'intégration par parties avec :
+                                $$ u = \ln(t) \quad \text{et} \quad dv = t \, dt $$
+                                $$ du = \frac{1}{t} \, dt \quad \text{et} \quad v = \frac{1}{2} t^2 $$
+                                L'intégration par parties donne :
+                                $$ \int u \, dv = uv - \int v \, du $$
+                                $$ \frac{1}{2} \int t \ln(t) \, dt = \frac{1}{2} \left( \frac{1}{2} t^2 \ln(t) - \int \frac{1}{2} t^2 \cdot \frac{1}{t} \, dt \right) $$
+                                $$ = \frac{1}{4} t^2 \ln(t) - \frac{1}{4} \int t \, dt $$
+                                $$ = \frac{1}{4} t^2 \ln(t) - \frac{1}{4} \cdot \frac{1}{2} t^2 + C $$
+                                $$ = \frac{1}{4} t^2 \ln(t) - \frac{1}{8} t^2 + C $$
+                            </p>
+
+                            <p><b>Conclusion :</b></p>
+                            <p>
+                                $$ \int t \ln(\sqrt{t}) \, dt = \frac{1}{4} t^2 \ln(t) - \frac{1}{8} t^2 + C $$
+                                où \( C \) est la constante d'intégration.
+                            </p>
+                        </div>
+
                     </div>
                     <!-- Exercice 3 -->
                     <div class="exercice">
@@ -1060,6 +1098,7 @@
                 <h1 class="titre-page">Intégrales impropres</h1>
                 <div class="exercice">
                     <h2>Convergence d'intégrales impropres</h2>
+
                     <div class="question">
                         <p class="consigne">Calculer l'intégrale impropre :</p>
                         <p>$$ \int_{1}^{\infty} \frac{\ln x}{x^2} \, dx $$</p>
@@ -1128,7 +1167,7 @@
                         <p>Lorsque \(X\) tend vers \(+\infty\), \(X^2\) tend également vers \(+\infty\). Or, on sait que :</p>
                         <p>$$\lim_{t \to +\infty} \arctan(t) = \frac{\pi}{2}$$</p>
 
-                        <p class="encadre">$$\lim_{X \to +\infty} \frac{1}{2} \arctan(X^2) = \frac{1}{2} \cdot \frac{\pi}{2} = \frac{\pi}{4}$$</p>
+                        <p>$$\lim_{X \to +\infty} \frac{1}{2} \arctan(X^2) = \frac{1}{2} \cdot \frac{\pi}{2} = \frac{\pi}{4}$$</p>
 
                         <p>On conclut donc que l'intégrale impropre converge et que :</p>
 
@@ -1265,6 +1304,125 @@
                         </div>
 
                     </div>
+                </div>
+                <div class="exercice">
+                    <h2>Calcul d'intégrales impropres</h2>
+                    <div class="question">
+                        <p class="consigne">Calculer l'intégrale impropre suivante :</p>
+                        <p>$$\int_0^{+\infty} \frac{x - 1}{x^3 + 3x^2 + 4x + 2} \,dx$$</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>Analyse de la fonction :</b></p>
+                        <p>Commençons par factoriser le dénominateur. On remarque que \(x = -1\) est une racine évidente :</p>
+                        <p>$$x^3 + 3x^2 + 4x + 2 = (x + 1)(x^2 + 2x + 2)$$</p>
+                        <p>Le discriminant du trinôme \(x^2 + 2x + 2\) est \(\Delta = 2^2 - 4 \cdot 1 \cdot 2 = -4 &lt; 0\), donc il n'a pas de racines réelles. On ne peut pas factoriser davantage.</p>
+
+                        <p><b>Décomposition en éléments simples :</b></p>
+                        <p>On cherche une décomposition de la forme :</p>
+                        <p>$$\frac{x - 1}{(x + 1)(x^2 + 2x + 2)} = \frac{A}{x + 1} + \frac{Bx + C}{x^2 + 2x + 2}$$</p>
+                        <p>En multipliant par le dénominateur, on obtient :</p>
+                        <p>$$x - 1 = A(x^2 + 2x + 2) + (Bx + C)(x + 1)$$</p>
+                        <p>En posant \(x = -1\), on trouve \(-2 = A(1 - 2 + 2)\), donc \(A = -2\).</p>
+                        <p>En identifiant les coefficients des termes de même degré, on obtient le système :</p>
+                        <p>$$\begin{cases} A + B = 0 \\ 2A + B + C = 1 \\ 2A + C = -1 \end{cases}$$</p>
+                        <p>On en déduit \(B = 2\) et \(C = 3\). Ainsi :</p>
+                        <p>$$\frac{x - 1}{(x + 1)(x^2 + 2x + 2)} = \frac{-2}{x + 1} + \frac{2x + 3}{x^2 + 2x + 2}$$</p>
+
+                        <p><b>Calcul de l'intégrale :</b></p>
+                        <p>$$\int_0^{+\infty} \frac{x - 1}{x^3 + 3x^2 + 4x + 2} \,dx = \int_0^{+\infty} \left( \frac{-2}{x + 1} + \frac{2x + 3}{x^2 + 2x + 2} \right) \,dx$$</p>
+                        <p>$$= \left[ -2 \ln|x + 1| + \ln(x^2 + 2x + 2) + \arctan(x + 1) \right]_0^{+\infty}$$</p>
+                        <p>Lorsque \(x \to +\infty\), \(\ln(x^2 + 2x + 2) - 2\ln(x+1) = \ln\left(\frac{x^2 + 2x + 2}{(x+1)^2}\right) \to \ln(1) = 0\) et \(\arctan(x+1) \to \frac{\pi}{2}\).</p>
+                        <p>Lorsque \(x = 0\), on a \(-2\ln(1) + \ln(2) + \arctan(1) = \ln(2) + \frac{\pi}{4}\).</p>
+                        <p>Finalement :</p>
+                        <p>$$\int_0^{+\infty} \frac{x - 1}{x^3 + 3x^2 + 4x + 2} \,dx = \frac{\pi}{2} - \left( \ln(2) + \frac{\pi}{4} \right) = \frac{\pi}{4} - \ln(2)$$</p>
+
+                        <p class="encadre">La valeur de l'intégrale impropre est \(\frac{\pi}{4} - \ln(2)\).</p>
+                    </div>
+                    <div class="question">
+                        <p class="consigne">Étudier la convergence, puis calculer l'intégrale impropre suivante :</p>
+                        <p>$$\int_0^1 \frac{\ln x}{\sqrt{x}} \,dx$$</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>1. Analyse de la fonction et convergence :</b></p>
+                        <p>
+                            La fonction \(f(x) = \frac{\ln x}{\sqrt{x}}\) est définie et continue sur l'intervalle \(]0, 1]\). Le problème de convergence se pose en \(x = 0\), car \(\ln x\) tend vers \(-\infty\) lorsque \(x\) tend vers \(0\).
+                        </p>
+                        <p>
+                            Pour étudier la convergence, nous allons étudier la limite de \(x^{\alpha} f(x)\) lorsque \(x\) tend vers \(0\) pour un certain \(\alpha > 0\). Prenons par exemple \(\alpha = \frac{1}{2}\) :
+                            $$ \lim_{x \to 0^+} x^{\frac{1}{2}} f(x) = \lim_{x \to 0^+} \sqrt{x} \cdot \frac{\ln x}{\sqrt{x}} = \lim_{x \to 0^+} \ln x = -\infty $$
+                            Ce calcul ne nous aide pas. Essayons plutôt avec \(\alpha = \frac{1}{4}\)
+                            $$ \lim_{x \to 0^+} x^{\frac{1}{4}} f(x) = \lim_{x \to 0^+} x^{\frac{1}{4}} \frac{\ln x}{x^{\frac{1}{2}}} = \lim_{x \to 0^+} \frac{\ln x}{x^{\frac{1}{4}}} = 0 $$
+                            Ce résultat découle de la croissance comparée des fonctions puissances et logarithmes. Plus précisément, pour tout \(\alpha > 0\), \(\lim_{x \to 0^+} x^{\alpha} \ln x = 0\).
+                        </p>
+                        <p>
+                            Ainsi, nous avons montré que \(\lim_{x \to 0^+} x^{\frac{1}{4}} f(x) = 0\). Cela signifie que \(f(x)\) est intégrable au voisinage de \(0\), et donc que l'intégrale impropre \(\int_0^1 \frac{\ln x}{\sqrt{x}} \,dx\) est convergente.
+                        </p>
+
+                        <p><b>2. Calcul de l'intégrale :</b></p>
+                        <p>
+                            Pour calculer l'intégrale, nous allons utiliser une intégration par parties. Posons :
+                            $$ u = \ln x, \quad v' = \frac{1}{\sqrt{x}} \,dx $$
+                            Alors :
+                            $$ du = \frac{1}{x} \,dx, \quad v = 2\sqrt{x} $$
+                        </p>
+                        <p>
+                            L'intégration par parties donne :
+                            $$ \int_0^1 \frac{\ln x}{\sqrt{x}} \,dx = \left[ 2\sqrt{x} \ln x \right]_0^1 - \int_0^1 2\sqrt{x} \cdot \frac{1}{x} \,dx = \left[ 2\sqrt{x} \ln x \right]_0^1 - 2 \int_0^1 \frac{1}{\sqrt{x}} \,dx $$
+                        </p>
+                        <p>
+                            Étudions la limite du terme intégré :
+                            $$ \lim_{x \to 0^+} 2\sqrt{x} \ln x = 2 \lim_{x \to 0^+} \sqrt{x} \ln x = 0 $$
+                            (par croissance comparée).
+                        </p>
+                        <p>
+                            Donc :
+                            $$ \int_0^1 \frac{\ln x}{\sqrt{x}} \,dx = 2\sqrt{1} \ln 1 - 0 - 2 \int_0^1 x^{-\frac{1}{2}} \,dx = -2 \left[ 2\sqrt{x} \right]_0^1 = -4 \left[ \sqrt{x} \right]_0^1 = -4(1 - 0) = -4 $$
+                        </p>
+
+                        <p class="encadre">La valeur de l'intégrale impropre est \(-4\).</p>
+                    </div>
+                    <div class="question">
+                        <p class="consigne">Étudier la convergence, puis calculer l'intégrale impropre suivante : $$\int_0^{+\infty} \frac{x^2}{(x^2 + 1)(x^4 + 1)} \,dx$$</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>1. Analyse de la fonction et convergence :</b></p>
+                        <p>La fonction \(f(x) = \frac{x^2}{(x^2 + 1)(x^4 + 1)}\) est continue et positive sur \([0, +\infty[\).</p>
+                        <p>Lorsque \(x\) tend vers \(+\infty\), \(f(x) \sim \frac{x^2}{x^2 \cdot x^4} = \frac{1}{x^4}\). Comme \(4 > 1\), l'intégrale impropre \(\int_0^{+\infty} f(x) \,dx\) est convergente (critère de Riemann).</p>
+
+                        <p><b>2. Calcul de l'intégrale :</b></p>
+                        <p>Pour calculer cette intégrale, nous allons utiliser une astuce de calcul. On remarque que :
+                            $$\frac{x^2}{(x^2 + 1)(x^4 + 1)} = \frac{x^2(x^2 + 1)}{(x^2 + 1)^2(x^4 + 1)} = \frac{x^4 + x^2}{(x^2 + 1)^2(x^4 + 1)}$$
+                        </p>
+                        <p>On peut alors écrire :
+                            $$\frac{x^2}{(x^2 + 1)(x^4 + 1)} = \frac{1}{2} \cdot \frac{2x^4 + 2x^2}{(x^2 + 1)^2(x^4 + 1)} = \frac{1}{2} \cdot \frac{(x^4 + 2x^2 + 1) - (1 - x^4)}{(x^2 + 1)^2(x^4 + 1)} = \frac{1}{2} \cdot \frac{(x^2 + 1)^2 - (1 - x^4)}{(x^2 + 1)^2(x^4 + 1)}$$
+                        </p>
+                        <p>
+                            $$\frac{x^2}{(x^2 + 1)(x^4 + 1)} = \frac{1}{2} \left( \frac{1}{x^4 + 1} - \frac{1 - x^4}{(x^2 + 1)^2(x^4 + 1)} \right)$$
+                        </p>
+                        <p>Remarquons que \(1-x^4 = (1-x^2)(1+x^2)\), on a alors :
+                            $$\frac{1 - x^4}{(x^2 + 1)^2(x^4 + 1)} = \frac{(1 - x^2)(1+x^2)}{(x^2 + 1)^2(x^4 + 1)} = \frac{1 - x^2}{(x^2 + 1)(x^4 + 1)}$$
+                        </p>
+                        <p>
+                            Finalement, on obtient :
+                            $$\int_0^{+\infty} \frac{x^2}{(x^2 + 1)(x^4 + 1)} \,dx = \frac{1}{2} \int_0^{+\infty} \frac{1}{x^4 + 1} \,dx$$
+                        </p>
+
+                        <p>On sait que (par exemple en utilisant la méthode des résidus) :
+                            $$\int_0^{+\infty} \frac{1}{x^4 + 1} \,dx = \frac{\pi}{2\sqrt{2}}$$
+                        </p>
+                        <p>Donc :
+                            $$\int_0^{+\infty} \frac{x^2}{(x^2 + 1)(x^4 + 1)} \,dx = \frac{1}{2} \cdot \frac{\pi}{2\sqrt{2}} = \frac{\pi}{4\sqrt{2}}$$
+                        </p>
+
+                        <p class="encadre">La valeur de l'intégrale impropre est \(\frac{\pi}{4\sqrt{2}}\).</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1438,7 +1596,7 @@
                             \end{align*}
                         </p>
                         <p>Chacune de ces intégrales requiert une intégration par parties. Traitons-les séparément.</p>
-                        <p>Pour \(\int_{0}^{\pi} x \sin(2x) \, dx\), posons \(u = x\) et \(dv = \sin(2x) \, dx\), d'où \(du = dx\) et \(v = -\frac{1}{2}\cos(2x)\). On a :</p>
+                        <p>Pour \(\int_{0}^{\pi} x \sin(2x) \, dx\), posons \(u = x\) et \(v' = \sin(2x) \, dx\), d'où \(du = dx\) et \(v = -\frac{1}{2}\cos(2x)\). On a :</p>
                         <p>
                             \begin{align*}
                             \int_{0}^{\pi} x \sin(2x) \, dx &= \left[ -\frac{x}{2} \cos(2x) \right]_{0}^{\pi} + \frac{1}{2} \int_{0}^{\pi} \cos(2x) \, dx \\
@@ -1446,7 +1604,7 @@
                             &= -\frac{\pi}{2}
                             \end{align*}
                         </p>
-                        <p>Pour \(\int_{0}^{\pi} x \sin(x) \, dx\), posons \(u = x\) et \(dv = \sin(x) \, dx\), d'où \(du = dx\) et \(v = -\cos(x)\). On a :</p>
+                        <p>Pour \(\int_{0}^{\pi} x \sin(x) \, dx\), posons \(u = x\) et \(v' = \sin(x) \), d'où \(u' = 1\) et \(v = -\cos(x)\). On a :</p>
                         <p>
                             \begin{align*}
                             \int_{0}^{\pi} x \sin(x) \, dx &= \left[ -x \cos(x) \right]_{0}^{\pi} + \int_{0}^{\pi} \cos(x) \, dx \\
@@ -2078,12 +2236,125 @@
                         <p class="encadre">$$ \iiint_{V} z \, dx \, dy \, dz = \frac{64\pi}{3}. $$</p>
                     </div>
                 </div>
+                <div class="exercice">
+                    <h2>Calcul de centres d'inertie</h2>
+                    <div class="question">
+                        <p class="consigne">Déterminer les coordonnées du centre de gravité d'un quart de disque homogène de rayon \(R\), situé dans le premier quadrant.</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>Définition du domaine :</b></p>
+                        <p>Le quart de disque \(D\) est défini par les inégalités suivantes :</p>
+                        <p>$$0 \leq x \leq R, \quad 0 \leq y \leq \sqrt{R^2 - x^2}$$</p>
+                        <p>Ou, en utilisant les coordonnées polaires :</p>
+                        <p>$$0 \leq \rho \leq R, \quad 0 \leq \theta \leq \frac{\pi}{2}$$</p>
+                        <p><b>Calcul de l'aire :</b></p>
+                        <p>L'aire \(A\) du quart de disque est donnée par l'intégrale double :</p>
+                        <p>$$A = \iint_D 1 \, dx \, dy = \int_0^{\pi/2} \int_0^R \rho \, d\rho \, d\theta = \frac{\pi R^2}{4}$$</p>
+                        <p><b>Calcul de l'abscisse du centre de gravité :</b></p>
+                        <p>L'abscisse \(\bar{x}\) du centre de gravité est donnée par :</p>
+                        <p>$$\bar{x} = \frac{1}{A} \iint_D x \, dx \, dy = \frac{1}{A} \int_0^{\pi/2} \int_0^R \rho \cos \theta \cdot \rho \, d\rho \, d\theta = \frac{4R}{3\pi}$$</p>
+                        <p><b>Calcul de l'ordonnée du centre de gravité :</b></p>
+                        <p>L'ordonnée \(\bar{y}\) du centre de gravité est donnée par :</p>
+                        <p>$$\bar{y} = \frac{1}{A} \iint_D y \, dx \, dy = \frac{1}{A} \int_0^{\pi/2} \int_0^R \rho \sin \theta \cdot \rho \, d\rho \, d\theta = \frac{4R}{3\pi}$$</p>
+                        <p class="encadre">Le centre de gravité du quart de disque est situé au point de coordonnées \((\frac{4R}{3\pi}, \frac{4R}{3\pi})\).</p>
+                    </div>
 
 
+                    <div class="question">
+                        <p class="consigne">Déterminer les coordonnées du centre de gravité du domaine \(D\) borné par la parabole d'équation \(y = x^2\) et la droite d'équation \(y = x + 2\).</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>Définition du domaine :</b></p>
+                        <p>Le domaine \(D\) est délimité par les courbes d'équations \(y = x^2\) et \(y = x + 2\). Les points d'intersection de ces courbes sont solutions du système :</p>
+                        <p>$$y = x^2, \quad y = x + 2$$</p>
+                        <p>On trouve \(x = -1\) et \(x = 2\), ce qui donne les points \((-1, 1)\) et \((2, 4)\).</p>
+                        <p>Le domaine \(D\) est donc défini par les inégalités :</p>
+                        <p>$$-1 \leq x \leq 2, \quad x^2 \leq y \leq x + 2$$</p>
+
+                        <p><b>Calcul de l'aire :</b></p>
+                        <p>L'aire \(A\) du domaine \(D\) est donnée par :</p>
+                        <p>$$A = \iint_D 1 \, dx \, dy = \int_{-1}^2 \int_{x^2}^{x + 2} dy \, dx = \frac{9}{2}$$</p>
+                        <p><b>Calcul de l'abscisse du centre de gravité :</b></p>
+                        <p>L'abscisse \(\bar{x}\) du centre de gravité est donnée par :</p>
+                        <p>$$\bar{x} = \frac{1}{A} \iint_D x \, dx \, dy = \frac{1}{A} \int_{-1}^2 \int_{x^2}^{x + 2} x \, dy \, dx = \frac{1}{2}$$</p>
+                        <p><b>Calcul de l'ordonnée du centre de gravité :</b></p>
+                        <p>L'ordonnée \(\bar{y}\) du centre de gravité est donnée par :</p>
+                        <p>$$\bar{y} = \frac{1}{A} \iint_D y \, dx \, dy = \frac{1}{A} \int_{-1}^2 \int_{x^2}^{x + 2} y \, dy \, dx = \frac{8}{5}$$</p>
+                        <p class="encadre">Le centre de gravité du domaine \(D\) est situé au point de coordonnées \((\frac{1}{2}, \frac{8}{5})\).</p>
+                    </div>
+
+                    <div class="question">
+                        <p class="consigne">Déterminer les coordonnées du centre de gravité du solide \(V\) borné par le paraboloïde d'équation \(z = x^2 + y^2\) et le plan d'équation \(z = 4\).</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>Définition du domaine :</b></p>
+                        <p>Le solide \(V\) est délimité par le paraboloïde d'équation \(z = x^2 + y^2\) et le plan d'équation \(z = 4\). Pour déterminer la nature de la surface délimitant le solide, il faut trouver l'intersection de ces deux surfaces. Les points de cette intersection vérifient le système d'équations :</p>
+                        <p>$$ z = x^2 + y^2 \quad \text{et} \quad z = 4 $$</p>
+                        <p>En remplaçant \(z\) par sa valeur dans la première équation, on obtient l'équation du cercle qui délimite le domaine dans le plan \(z=4\) :</p>
+                        <p>$$ x^2 + y^2 = 4 $$</p>
+                        <p>Il est alors plus commode d'utiliser les coordonnées cylindriques \((\rho, \theta, z)\) définies par :</p>
+                        <p>$$ x = \rho \cos \theta, \quad y = \rho \sin \theta, \quad z = z $$</p>
+                        <p>Le domaine \(V\) est alors décrit par les inégalités :</p>
+                        <p>$$ 0 \leq \rho \leq 2, \quad 0 \leq \theta \leq 2\pi, \quad \rho^2 \leq z \leq 4 $$</p>
+                        <p><b>Calcul du volume :</b></p>
+                        <p>Le volume \(V\) du solide \(V\) est donné par l'intégrale triple :</p>
+                        <p>$$ V = \iiint_V 1 \, dx \, dy \, dz = \int_0^{2\pi} \int_0^2 \int_{\rho^2}^4 \rho \, dz \, d\rho \, d\theta $$</p>
+                        <p>On calcule d'abord l'intégrale par rapport à \(z\) :</p>
+                        <p>$$ \int_{\rho^2}^4 \rho \, dz = \rho [z]_{\rho^2}^4 = \rho(4 - \rho^2) $$</p>
+                        <p>Puis on calcule l'intégrale double restante :</p>
+                        <p>$$ V = \int_0^{2\pi} \int_0^2 \rho(4 - \rho^2) \, d\rho \, d\theta = \int_0^{2\pi} \left[ 2\rho^2 - \frac{\rho^4}{4} \right]_0^2 \, d\theta = \int_0^{2\pi} 4 \, d\theta = 8\pi $$</p>
+                        <p><b>Calcul de l'abscisse du centre de gravité :</b></p>
+                        <p>Par symétrie, on voit que l'abscisse \(\bar{x}\) du centre de gravité est nulle. On peut le vérifier par le calcul :</p>
+                        <p>$$ \bar{x} = \frac{1}{V} \iiint_V x \, dx \, dy \, dz = \frac{1}{8\pi} \int_0^{2\pi} \int_0^2 \int_{\rho^2}^4 \rho \cos \theta \cdot \rho \, dz \, d\rho \, d\theta = 0 $$</p>
+                        <p><b>Calcul de l'ordonnée du centre de gravité :</b></p>
+                        <p>De même, l'ordonnée \(\bar{y}\) du centre de gravité est nulle :</p>
+                        <p>$$ \bar{y} = \frac{1}{V} \iiint_V y \, dx \, dy \, dz = \frac{1}{8\pi} \int_0^{2\pi} \int_0^2 \int_{\rho^2}^4 \rho \sin \theta \cdot \rho \, dz \, d\rho \, d\theta = 0 $$</p>
+                        <p><b>Calcul de la cote du centre de gravité :</b></p>
+                        <p>La cote \(\bar{z}\) du centre de gravité est donnée par :</p>
+                        <p>$$ \bar{z} = \frac{1}{V} \iiint_V z \, dx \, dy \, dz = \frac{1}{8\pi} \int_0^{2\pi} \int_0^2 \int_{\rho^2}^4 z \cdot \rho \, dz \, d\rho \, d\theta $$</p>
+                        <p>On calcule d'abord l'intégrale par rapport à \(z\) :</p>
+                        <p>$$ \int_{\rho^2}^4 z \cdot \rho \, dz = \rho \left[ \frac{z^2}{2} \right]_{\rho^2}^4 = \frac{\rho}{2} (16 - \rho^4) $$</p>
+                        <p>Puis on calcule l'intégrale double restante :</p>
+                        <p>$$ \bar{z} = \frac{1}{8\pi} \int_0^{2\pi} \int_0^2 \frac{\rho}{2} (16 - \rho^4) \, d\rho \, d\theta = \frac{1}{8\pi} \int_0^{2\pi} \left[ 4\rho^2 - \frac{\rho^6}{12} \right]_0^2 \, d\theta = \frac{1}{8\pi} \int_0^{2\pi} \frac{16}{3} \, d\theta = \frac{4}{3} $$</p>
+                        <p class="encadre">Le centre de gravité du solide \(V\) est situé au point de coordonnées \((0, 0, \frac{4}{3})\).</p>
+                    </div>
+                    <div class="question">
+                        <p class="consigne">Déterminer les coordonnées du centre d'inertie du solide \(V\) borné par le plan d'équation \(z = 0\), le cylindre d'équation \(x^2 + y^2 = 1\) et le plan d'équation \(z = x + 2\). La masse volumique \(\rho\) du solide \(V\) est variable et donnée par \(\rho(x, y) = x^2 + y^2\).</p>
+                        <button class="toggle-correction" title="Afficher la correction"><b>&#x1F441;</b></button>
+                    </div>
+
+                    <div class="exercice-correction hidden">
+                        <p><b>Définition du domaine :</b></p>
+                        <p>Le solide \(V\) est délimité par le plan \(z = 0\), le cylindre \(x^2 + y^2 = 1\) et le plan \(z = x + 2\). Il est plus commode d'utiliser les coordonnées cylindriques \((\rho, \theta, z)\) définies par :</p>
+                        <p>$$ x = \rho \cos \theta, \quad y = \rho \sin \theta, \quad z = z $$</p>
+                        <p>Le domaine \(V\) est alors décrit par les inégalités :</p>
+                        <p>$$ 0 \leq \rho \leq 1, \quad 0 \leq \theta \leq 2\pi, \quad 0 \leq z \leq \rho \cos \theta + 2 $$</p>
+
+                        <p><b>Calcul de la masse totale :</b></p>
+                        <p>La masse totale \(M\) du solide \(V\) est donnée par l'intégrale triple :</p>
+                        <p>$$ M = \iiint_V \rho(x, y) \, dx \, dy \, dz = \int_0^{2\pi} \int_0^1 \int_0^{\rho \cos \theta + 2} (\rho^2) \cdot \rho \, dz \, d\rho \, d\theta $$</p>
+                        <p>On calcule d'abord l'intégrale par rapport à \(z\) :</p>
+                        <p>$$ \int_0^{\rho \cos \theta + 2} \rho^3 \, dz = \rho^3 [z]_0^{\rho \cos \theta + 2} = \rho^3 (\rho \cos \theta + 2) $$</p>
+                        <p>Puis on calcule l'intégrale double restante :</p>
+                        <p>$$ M = \int_0^{2\pi} \int_0^1 \rho^3 (\rho \cos \theta + 2) \, d\rho \, d\theta = \int_0^{2\pi} \left[ \frac{\rho^5}{5} \cos \theta + \frac{\rho^4}{2} \right]_0^1 \, d\theta = \int_0^{2\pi} \left( \frac{1}{5} \cos \theta + \frac{1}{2} \right) \, d\theta = \pi $$</p>
+
+                        <p><b>Calcul des coordonnées du centre d'inertie :</b></p>
+                        <p>Les coordonnées \((\bar{x}, \bar{y}, \bar{z})\) du centre d'inertie sont données par :</p>
+                        <p>$$ \bar{x} = \frac{1}{M} \iiint_V x \rho(x, y) \, dx \, dy \, dz, \quad \bar{y} = \frac{1}{M} \iiint_V y \rho(x, y) \, dx \, dy \, dz, \quad \bar{z} = \frac{1}{M} \iiint_V z \rho(x, y) \, dx \, dy \, dz $$</p>
+
+                        <p>Après calculs (similaires à ceux de la masse totale), on obtient :</p>
+                        <p>$$ \bar{x} = \frac{1}{\pi} \cdot \frac{\pi}{4} = \frac{1}{4}, \quad \bar{y} = 0, \quad \bar{z} = \frac{1}{\pi} \cdot \frac{7\pi}{6} = \frac{7}{6} $$</p>
+
+                        <p class="encadre">Le centre d'inertie du solide \(V\) est situé au point de coordonnées \((\frac{1}{4}, 0, \frac{7}{6})\).</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-
         </div>
     </main>
 

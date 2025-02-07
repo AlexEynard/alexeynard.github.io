@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = document.querySelector('.menu');
 
   if (!menuToggle || !menu) {
+    console.warn("Menu mobile désactivé : Bouton de bascule ('.menu-toggle') ou menu ('.menu') introuvable dans le DOM.");
     return;
   }
 
@@ -66,7 +67,7 @@ function configureMathJax() {
 function renderMathJax() {
   if (typeof MathJax !== 'undefined') {
     MathJax.typesetPromise()
-      .catch(err => console.error('Typeset failed: ' + err.message));
+      .catch(err => console.log('Typeset failed: ' + err.message));
   }
 }
 
@@ -83,8 +84,10 @@ function renderLatexInCorrections() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Attente du chargement de MathJax avant d'initialiser
   loadMathJaxAsync();
 
+  // Gestion des interactions avec les boutons de correction
   const toggleButtons = document.querySelectorAll('.toggle-correction');
   const allCorrections = document.querySelectorAll('.exercice-correction');
 
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener('click', function () {
       const correction = this.parentElement.nextElementSibling;
 
+      // Fermer toutes les autres corrections ouvertes
       allCorrections.forEach(otherCorrection => {
         if (otherCorrection !== correction && !otherCorrection.classList.contains('hidden')) {
           otherCorrection.classList.add('hidden');
@@ -100,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+      // Afficher ou cacher la correction
       correction.classList.toggle('hidden');
       if (correction.classList.contains('hidden')) {
         correction.style.display = 'none';
@@ -109,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         correction.style.animation = 'slideIn 0.3s ease-in-out forwards';
       }
 
+      // Rendre MathJax dans la correction
       renderLatexInCorrections();
     });
   });
@@ -120,56 +126,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const total = questions.length;
 
     questions.forEach((q) => {
-      const correctAnswers = q.getAttribute("data-correct-qcm").split('');
+      const correctAnswer = q.getAttribute("data-correct");
       const explication = q.getAttribute("data-explication");
-      const userAnswers = Array.from(q.querySelectorAll(`input[type='checkbox']:checked`)).map(checkbox => checkbox.value);
+      const userAnswer = q.querySelector("input[type='radio']:checked");
       const explanationDiv = q.querySelector(".explanation");
 
       explanationDiv.style.border = "1px solid var(--grey-ddd)";
 
-      let isCorrect = true;
-
-      if (userAnswers.length === 0 && correctAnswers.length > 0) {
-        isCorrect = false;
-      } else if (userAnswers.length > 0 && correctAnswers.length === 0) {
-        isCorrect = false;
-      } else {
-        if (userAnswers.length !== correctAnswers.length) {
-          isCorrect = false;
+      if (userAnswer) {
+        if (userAnswer.value === correctAnswer) {
+          score++;
+          explanationDiv.innerHTML = "Bonne réponse !";
+          explanationDiv.style.backgroundColor = "var(--correct-light)";
+          explanationDiv.style.color = "var(--correct)";
+          explanationDiv.style.border = "1px solid var(--correct)";
         } else {
-          for (let answer of userAnswers) {
-            if (!correctAnswers.includes(answer)) {
-              isCorrect = false;
-              break;
-            }
-          }
-          if (isCorrect) {
-            for (let correctAnswer of correctAnswers) {
-              if (!userAnswers.includes(correctAnswer)) {
-                isCorrect = false;
-                break;
-              }
-            }
-          }
+          explanationDiv.innerHTML = `<strong>Mauvaise réponse</strong>.<br> ${explication}`;
+          explanationDiv.style.backgroundColor = "var(--false-light)";
+          explanationDiv.style.color = "var(--false)";
+          explanationDiv.style.border = "1px solid var(--false)";
         }
-      }
-
-
-      if (isCorrect) {
-        score++;
-        explanationDiv.innerHTML = "<strong>Bonne réponse !</strong>";
-        explanationDiv.style.backgroundColor = "var(--correct-light)";
-        explanationDiv.style.color = "var(--correct)";
-        explanationDiv.style.border = "1px solid var(--correct)";
       } else {
-        explanationDiv.innerHTML = `<strong>Mauvaise réponse. Les bonnes réponses étaient : ${correctAnswers.join(',').toUpperCase()}.</strong><br> ${explication}`;
-        explanationDiv.style.backgroundColor = "var(--false-light)";
-        explanationDiv.style.color = "var(--false)";
-        explanationDiv.style.border = "1px solid var(--false)";
+        explanationDiv.innerHTML = "Vous n'avez pas répondu à cette question.";
+        explanationDiv.style.backgroundColor = "var(--warning-light)";
+        explanationDiv.style.color = "var(--warning)";
+        explanationDiv.style.border = "1px solid var(--warning)";
       }
 
       explanationDiv.style.fontSize = "1.1em";
       explanationDiv.style.display = "block";
+
+      renderLatexInCorrections();
     });
 
     const resultatDiv = document.getElementById("resultat_qcm");
@@ -251,11 +238,10 @@ const themeSwitcher = {
       '--primary-color': '#0098b3',
       '--primary-color-transparent': '#0098b3b9',
       '--primary-color-light': '#e1f5fe',
-      '--contrast-color': '#212121',
+      '--contrast-color': '#001c22',
       '--blue-silk': '#044f67',
       '--light-color': '#a2f1ff',
       '--white': '#f4f4f9',
-      '--texte': '#001114',
       '--qcm_box': '#2b9884bf',
       '--qcm_q': '#167671bf',
       '--shadow': '0.15em 0.15em 0.25em rgba(0, 0, 0, 0.15)',
@@ -264,6 +250,7 @@ const themeSwitcher = {
       '--correct': '#4CAF50',
       '--correct-light': '#e8f5e9',
       '--false': '#d82c1f',
+      '--texte': '#001114',
       '--false-light': '#ffebee',
       '--body-background-color': '#f8f9fa',
       '--hover-background-menu': '#005a80',
@@ -310,7 +297,7 @@ const themeSwitcher = {
       '--false': '#d82c1f',
       '--false-light': 'rgba(216, 44, 31, 0.05)',
       '--body-background-color': '#000',
-      '--hover-background-menu': '#0f0f0f',
+      '--hover-background-menu': '#141414',
       '--dropdown-background': '#101010',
       '--dropdown-submenu-background': '#141414',
       '--checkbox-background-hover': '#555',
@@ -343,70 +330,68 @@ document.addEventListener("DOMContentLoaded", function () {
   const questions = document.querySelectorAll(".q");
   const resultatDiv = document.getElementById("resultat_qcm");
 
-  if (validerButton) {
-    validerButton.addEventListener("click", function (event) {
-      event.preventDefault();
-      let score = 0;
-      const total = questions.length;
+  validerButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    let score = 0;
+    const total = questions.length;
 
-      questions.forEach((q) => {
-        const correctAnswers = q.getAttribute("data-correct-qcm").split('');
-        const explication = q.getAttribute("data-explication");
-        const userAnswers = Array.from(q.querySelectorAll(`input[type='checkbox']:checked`)).map(checkbox => checkbox.value);
-        const explanationDiv = q.querySelector(".explanation");
+    questions.forEach((q) => {
+      const correctAnswers = q.getAttribute("data-correct-qcm").split('');
+      const explication = q.getAttribute("data-explication");
+      const userAnswers = Array.from(q.querySelectorAll(`input[type='checkbox']:checked`)).map(checkbox => checkbox.value);
+      const explanationDiv = q.querySelector(".explanation");
 
-        explanationDiv.style.border = "1px solid var(--grey-ddd)";
+      explanationDiv.style.border = "1px solid var(--grey-ddd)";
 
-        let isCorrect = true;
+      let isCorrect = true;
 
-        if (userAnswers.length === 0 && correctAnswers.length > 0) {
-          isCorrect = false;
-        } else if (userAnswers.length > 0 && correctAnswers.length === 0) {
+      if (userAnswers.length === 0 && correctAnswers.length > 0) {
+        isCorrect = false;
+      } else if (userAnswers.length > 0 && correctAnswers.length === 0) {
+        isCorrect = false;
+      } else {
+        if (userAnswers.length !== correctAnswers.length) {
           isCorrect = false;
         } else {
-          if (userAnswers.length !== correctAnswers.length) {
-            isCorrect = false;
-          } else {
-            for (let answer of userAnswers) {
-              if (!correctAnswers.includes(answer)) {
+          for (let answer of userAnswers) {
+            if (!correctAnswers.includes(answer)) {
+              isCorrect = false;
+              break;
+            }
+          }
+          if (isCorrect) {
+            for (let correctAnswer of correctAnswers) {
+              if (!userAnswers.includes(correctAnswer)) {
                 isCorrect = false;
                 break;
               }
             }
-            if (isCorrect) {
-              for (let correctAnswer of correctAnswers) {
-                if (!userAnswers.includes(correctAnswer)) {
-                  isCorrect = false;
-                  break;
-                }
-              }
-            }
           }
         }
+      }
 
 
-        if (isCorrect) {
-          score++;
-          explanationDiv.innerHTML = "<strong>Bonne réponse !</strong>";
-          explanationDiv.style.backgroundColor = "var(--correct-light)";
-          explanationDiv.style.color = "var(--correct)";
-          explanationDiv.style.borderColor = "1px solid var(--correct)";
-        } else {
-          explanationDiv.innerHTML = `<strong>Mauvaise réponse. Les bonnes réponses étaient : ${correctAnswers.join(',').toUpperCase()}.</strong><br> ${explication}`;
-          explanationDiv.style.backgroundColor = "var(--false-light)";
-          explanationDiv.style.color = "var(--false)";
-          explanationDiv.style.borderColor = "1px solid var(--false)";
-        }
+      if (isCorrect) {
+        score++;
+        explanationDiv.innerHTML = "<strong>Bonne réponse !</strong>";
+        explanationDiv.style.backgroundColor = "var(--correct-light)";
+        explanationDiv.style.color = "var(--correct)";
+        explanationDiv.style.borderColor = "1px solid var(--correct)";
+      } else {
+        explanationDiv.innerHTML = `<strong>Mauvaise réponse. Les bonnes réponses étaient : ${correctAnswers.join(',').toUpperCase()}.</strong><br> ${explication}`;
+        explanationDiv.style.backgroundColor = "var(--false-light)";
+        explanationDiv.style.color = "var(--false)";
+        explanationDiv.style.borderColor = "1px solid var(--false)";
+      }
 
-        explanationDiv.style.fontSize = "1.1em";
-        explanationDiv.style.display = "block";
-      });
-
-      const noteFinale = ((score / total) * 20).toFixed(1);
-      resultatDiv.innerHTML = `<h3>Votre score : ${score}/${total} (${noteFinale}/20)</h3>`;
-      resultatDiv.style.display = "block";
+      explanationDiv.style.fontSize = "1.1em";
+      explanationDiv.style.display = "block";
     });
-  }
+
+    const noteFinale = ((score / total) * 20).toFixed(1);
+    resultatDiv.innerHTML = `<h3>Votre score : ${score}/${total} (${noteFinale}/20)</h3>`;
+    resultatDiv.style.display = "block";
+  });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -419,6 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageId = page.id;
     const pageNumber = parseInt(pageId.replace('page', ''), 10);
 
+    // Calculer le ratio basé sur le nombre de pages virtuel minimal
     const ratio = (pageNumber - 1) / (virtualNumPages - 1 <= 0 ? 1 : virtualNumPages - 1);
 
     page.style.setProperty('--page-ratio', ratio.toString());

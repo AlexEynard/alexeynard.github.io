@@ -9,21 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   menuToggle.addEventListener('click', function (event) {
     event.stopPropagation();
-
-    const menuEstVisible = menu.classList.contains('show');
-
-    if (menuEstVisible) {
-      menu.classList.remove('show');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    } else {
-      menu.classList.add('show');
-      menuToggle.setAttribute('aria-expanded', 'true');
-    }
+    const menuEstVisible = menu.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', menuEstVisible.toString());
   });
 
   document.addEventListener('click', function (event) {
     const estClicDehorsMenu = !event.target.closest('.menu') && !menuToggle.contains(event.target);
-
     if (estClicDehorsMenu) {
       menu.classList.remove('show');
       menuToggle.setAttribute('aria-expanded', 'false');
@@ -37,8 +28,12 @@ function loadMathJaxAsync() {
   script.async = true;
   document.head.appendChild(script);
 
-  script.onload = () => {
+  script.onload = function () {
     configureMathJax();
+  };
+
+  script.onerror = function () {
+    console.error("Erreur de chargement de MathJax. Veuillez vérifier votre connexion internet ou la CDN.");
   };
 }
 
@@ -67,151 +62,212 @@ function configureMathJax() {
 function renderMathJax() {
   if (typeof MathJax !== 'undefined') {
     MathJax.typesetPromise()
-      .catch(err => console.log('Typeset failed: ' + err.message));
+      .catch(function (err) {
+        console.error('Typeset failed: ' + err.message);
+      });
   }
 }
 
 function renderLatexInCorrections() {
   const explanationDivs = document.querySelectorAll('.explanation');
 
-  explanationDivs.forEach(div => {
-    requestIdleCallback(() => {
-      if (div.textContent.trim()) {
-        MathJax.typesetPromise([div]).catch((err) => console.error("MathJax typeset error:", err));
-      }
-    });
-  });
+  for (let i = 0; i < explanationDivs.length; i++) {
+    const div = explanationDivs[i];
+    if (div.textContent.trim()) {
+      MathJax.typesetPromise([div]).catch(function (err) {
+        console.error("MathJax typeset error:", err);
+      });
+    }
+  }
 }
 
+function applyNeutralExplanationStyle(explanationDiv) {
+  explanationDiv.style.border = "1px solid var(--grey-ddd)";
+  explanationDiv.style.backgroundColor = '';
+  explanationDiv.style.color = '';
+  explanationDiv.style.borderColor = '';
+}
+
+function applyCorrectExplanationStyle(explanationDiv) {
+  explanationDiv.innerHTML = "<strong>Bonne réponse !</strong>";
+  explanationDiv.style.backgroundColor = "var(--correct-light)";
+  explanationDiv.style.color = "var(--correct)";
+  explanationDiv.style.border = "1px solid var(--correct)";
+}
+
+function applyIncorrectExplanationStyle(explanationDiv, explication, correctAnswersText) {
+  explanationDiv.innerHTML = `<strong>Mauvaise réponse. La bonne réponse était : ${correctAnswersText}.</strong><br> ${explication}`;
+  explanationDiv.style.backgroundColor = "var(--false-light)";
+  explanationDiv.style.color = "var(--false)";
+  explanationDiv.style.border = "1px solid var(--false)";
+}
+
+function applyWarningExplanationStyle(explanationDiv) {
+  explanationDiv.innerHTML = "Vous n'avez pas répondu à cette question.";
+  explanationDiv.style.backgroundColor = "var(--warning-light)";
+  explanationDiv.style.color = "var(--warning)";
+  explanationDiv.style.border = "1px solid var(--warning)";
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Attente du chargement de MathJax avant d'initialiser
   loadMathJaxAsync();
 
-  // Gestion des interactions avec les boutons de correction
   const toggleButtons = document.querySelectorAll('.toggle-correction');
   const allCorrections = document.querySelectorAll('.exercice-correction');
 
-  toggleButtons.forEach(button => {
+  for (let i = 0; i < toggleButtons.length; i++) {
+    const button = toggleButtons[i];
     button.addEventListener('click', function () {
       const correction = this.parentElement.nextElementSibling;
 
-      // Fermer toutes les autres corrections ouvertes
-      allCorrections.forEach(otherCorrection => {
+      for (let j = 0; j < allCorrections.length; j++) {
+        const otherCorrection = allCorrections[j];
         if (otherCorrection !== correction && !otherCorrection.classList.contains('hidden')) {
           otherCorrection.classList.add('hidden');
           otherCorrection.style.display = 'none';
           otherCorrection.style.animation = '';
         }
-      });
-
-      // Afficher ou cacher la correction
-      correction.classList.toggle('hidden');
-      if (correction.classList.contains('hidden')) {
-        correction.style.display = 'none';
-        correction.style.animation = '';
-      } else {
-        correction.style.display = 'block';
-        correction.style.animation = 'slideIn 0.3s ease-in-out forwards';
       }
 
-      // Rendre MathJax dans la correction
+      const estCache = correction.classList.toggle('hidden');
+      correction.style.display = estCache ? 'none' : 'block';
+      correction.style.animation = estCache ? '' : 'slideIn 0.3s ease-in-out forwards';
+
       renderLatexInCorrections();
     });
-  });
+  }
 
-  document.getElementById("valider").addEventListener("click", function (event) {
-    event.preventDefault();
-    const questions = document.querySelectorAll(".q");
-    let score = 0;
-    const total = questions.length;
 
-    questions.forEach((q) => {
-      const correctAnswer = q.getAttribute("data-correct");
-      const explication = q.getAttribute("data-explication");
-      const userAnswer = q.querySelector("input[type='radio']:checked");
-      const explanationDiv = q.querySelector(".explanation");
+  const validerButton = document.getElementById("valider");
+  const questions = document.querySelectorAll(".q");
+  const resultatDiv = document.getElementById("resultat_qcm");
 
-      explanationDiv.style.border = "1px solid var(--grey-ddd)";
+  if (validerButton) {
+    validerButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      let score = 0;
+      const total = questions.length;
+      let resultatHTML = `<h3>Votre score : <span id="score-value">0</span>/${total} (<span id="note-value">0</span>/20)</h3>`;
+      resultatDiv.innerHTML = resultatHTML;
 
-      if (userAnswer) {
-        if (userAnswer.value === correctAnswer) {
-          score++;
-          explanationDiv.innerHTML = "Bonne réponse !";
-          explanationDiv.style.backgroundColor = "var(--correct-light)";
-          explanationDiv.style.color = "var(--correct)";
-          explanationDiv.style.border = "1px solid var(--correct)";
-        } else {
-          explanationDiv.innerHTML = `<strong>Mauvaise réponse</strong>.<br> ${explication}`;
-          explanationDiv.style.backgroundColor = "var(--false-light)";
-          explanationDiv.style.color = "var(--false)";
-          explanationDiv.style.border = "1px solid var(--false)";
+      for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
+        const explanationDiv = q.querySelector(".explanation");
+        applyNeutralExplanationStyle(explanationDiv);
+        let isCorrect = false;
+
+        const checkboxes = q.querySelectorAll(`input[type='checkbox']`);
+        const radios = q.querySelectorAll(`input[type='radio']`);
+
+        if (checkboxes.length > 0) {
+          const correctAnswers = q.getAttribute("data-correct-qcm").split('');
+          const userAnswers = [];
+          const checkedCheckboxes = q.querySelectorAll(`input[type='checkbox']:checked`);
+          for (let k = 0; k < checkedCheckboxes.length; k++) {
+            userAnswers.push(checkedCheckboxes[k].value);
+          }
+
+
+          if (userAnswers.length === correctAnswers.length) {
+            isCorrect = userAnswers.every(function (answer) {
+              return correctAnswers.includes(answer);
+            });
+          }
+          const correctAnswersText = correctAnswers.join(',').toUpperCase();
+          if (isCorrect) {
+            applyCorrectExplanationStyle(explanationDiv);
+          } else {
+            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), correctAnswersText);
+          }
+
+
+        } else if (radios.length > 0) {
+          const correctValue = q.getAttribute("data-correct");
+          const selectedRadio = q.querySelector(`input[type='radio']:checked`);
+
+          if (selectedRadio) {
+            if (selectedRadio.value === correctValue) {
+              isCorrect = true;
+            }
+          }
+          const correctAnswersText = q.getAttribute("data-correct").toUpperCase();
+          if (isCorrect) {
+            applyCorrectExplanationStyle(explanationDiv);
+          } else {
+            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), correctAnswersText);
+          }
         }
-      } else {
-        explanationDiv.innerHTML = "Vous n'avez pas répondu à cette question.";
-        explanationDiv.style.backgroundColor = "var(--warning-light)";
-        explanationDiv.style.color = "var(--warning)";
-        explanationDiv.style.border = "1px solid var(--warning)";
+
+
+        if (isCorrect) {
+          score++;
+        }
+        explanationDiv.style.fontSize = "1.1em";
+        explanationDiv.style.display = 'block';
+        renderLatexInCorrections();
+
       }
 
-      explanationDiv.style.fontSize = "1.1em";
-      explanationDiv.style.display = "block";
-
+      document.getElementById("score-value").textContent = score;
+      document.getElementById("note-value").textContent = ((score / total) * 20).toFixed(1);
+      resultatDiv.style.display = "block";
       renderLatexInCorrections();
     });
-
-    const resultatDiv = document.getElementById("resultat_qcm");
-    const noteFinale = ((score / total) * 20).toFixed(1);
-    resultatDiv.innerHTML = `<h3>Votre score : ${score}/${total} (${noteFinale}/20)</h3>`;
-    resultatDiv.style.display = "block";
-
-    renderLatexInCorrections();
-  });
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
   const questions = document.querySelectorAll('.question');
 
-  questions.forEach(question => {
+  for (let i = 0; i < questions.length; i++) {
+    const question = questions[i];
     if (question.dataset.difficulte) {
       const difficulte = parseInt(question.dataset.difficulte);
       const etoiles = document.createElement('span');
       etoiles.classList.add('etoiles');
+      etoiles.setAttribute('aria-label', `Difficulté : ${difficulte} sur 5`);
 
-      for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
         const etoile = document.createElement('span');
         etoile.classList.add('etoile');
-        if (i > difficulte) {
+        if (j > difficulte) {
           etoile.classList.add('cachee');
         }
         etoiles.appendChild(etoile);
       }
-
-      question.querySelector('.consigne').prepend(etoiles);
+      const consigne = question.querySelector('.consigne');
+      if (consigne) {
+        consigne.prepend(etoiles);
+      }
     }
-  });
+  }
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const initTheme = () => {
+document.addEventListener('DOMContentLoaded', function () {
+  const initTheme = function () {
     const savedTheme = localStorage.getItem('theme') || 'light';
     const isDark = savedTheme === 'dark';
     applyTheme(isDark);
     createThemeButton(isDark);
   };
 
-  const applyTheme = (isDark) => {
+  const applyTheme = function (isDark) {
     const theme = isDark ? 'dark' : 'light';
     const root = document.documentElement;
 
-    Object.entries(themeSwitcher.themes[theme]).forEach(([varName, value]) => {
+    const themeEntries = Object.entries(themeSwitcher.themes[theme]);
+    for (let i = 0; i < themeEntries.length; i++) {
+      const [varName, value] = themeEntries[i];
       root.style.setProperty(varName, value);
-    });
+    }
+
 
     localStorage.setItem('theme', theme);
   };
 
-  const createThemeButton = (initialDark) => {
+  const createThemeButton = function (initialDark) {
     const navbar = document.querySelector('.navbar');
     const toggleBtn = document.createElement('button');
 
@@ -219,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.className = 'theme-toggle';
     toggleBtn.innerHTML = initialDark ? '☀️' : '🌙';
 
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', function () {
       const currentTheme = localStorage.getItem('theme') || 'light';
       const newDarkMode = currentTheme === 'light';
       applyTheme(newDarkMode);
@@ -231,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initTheme();
 });
+
 
 const themeSwitcher = {
   themes: {
@@ -325,88 +382,17 @@ const themeSwitcher = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const validerButton = document.getElementById("valider");
-  const questions = document.querySelectorAll(".q");
-  const resultatDiv = document.getElementById("resultat_qcm");
-
-  validerButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    let score = 0;
-    const total = questions.length;
-
-    questions.forEach((q) => {
-      const correctAnswers = q.getAttribute("data-correct-qcm").split('');
-      const explication = q.getAttribute("data-explication");
-      const userAnswers = Array.from(q.querySelectorAll(`input[type='checkbox']:checked`)).map(checkbox => checkbox.value);
-      const explanationDiv = q.querySelector(".explanation");
-
-      explanationDiv.style.border = "1px solid var(--grey-ddd)";
-
-      let isCorrect = true;
-
-      if (userAnswers.length === 0 && correctAnswers.length > 0) {
-        isCorrect = false;
-      } else if (userAnswers.length > 0 && correctAnswers.length === 0) {
-        isCorrect = false;
-      } else {
-        if (userAnswers.length !== correctAnswers.length) {
-          isCorrect = false;
-        } else {
-          for (let answer of userAnswers) {
-            if (!correctAnswers.includes(answer)) {
-              isCorrect = false;
-              break;
-            }
-          }
-          if (isCorrect) {
-            for (let correctAnswer of correctAnswers) {
-              if (!userAnswers.includes(correctAnswer)) {
-                isCorrect = false;
-                break;
-              }
-            }
-          }
-        }
-      }
-
-
-      if (isCorrect) {
-        score++;
-        explanationDiv.innerHTML = "<strong>Bonne réponse !</strong>";
-        explanationDiv.style.backgroundColor = "var(--correct-light)";
-        explanationDiv.style.color = "var(--correct)";
-        explanationDiv.style.borderColor = "1px solid var(--correct)";
-      } else {
-        explanationDiv.innerHTML = `<strong>Mauvaise réponse. Les bonnes réponses étaient : ${correctAnswers.join(',').toUpperCase()}.</strong><br> ${explication}`;
-        explanationDiv.style.backgroundColor = "var(--false-light)";
-        explanationDiv.style.color = "var(--false)";
-        explanationDiv.style.borderColor = "1px solid var(--false)";
-      }
-
-      explanationDiv.style.fontSize = "1.1em";
-      explanationDiv.style.display = "block";
-    });
-
-    const noteFinale = ((score / total) * 20).toFixed(1);
-    resultatDiv.innerHTML = `<h3>Votre score : ${score}/${total} (${noteFinale}/20)</h3>`;
-    resultatDiv.style.display = "block";
-  });
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   const pages = document.querySelectorAll('.page');
   const numPages = pages.length;
-
   const virtualNumPages = Math.max(numPages, 10);
 
-  pages.forEach(page => {
+  for (let i = 0; i < pages.length; i++) {
+    const page = pages[i];
     const pageId = page.id;
     const pageNumber = parseInt(pageId.replace('page', ''), 10);
-
-    // Calculer le ratio basé sur le nombre de pages virtuel minimal
     const ratio = (pageNumber - 1) / (virtualNumPages - 1 <= 0 ? 1 : virtualNumPages - 1);
-
     page.style.setProperty('--page-ratio', ratio.toString());
-  });
+  }
 });

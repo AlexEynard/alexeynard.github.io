@@ -67,9 +67,143 @@
         </div>
 
         <div class="content">
-            <div class="page" id="page1" style="background-color: rgba(144, 238, 198, 0.6)">
+            <div class="page" id="page1">
                 <div class="section-content" id="bases">
                     <h1 class="titre-page">Les formes usuelles</h1>
+                    <div class="test_qcm">
+                        <h2>Testez votre compréhension des développements limités</h2>
+
+                        <form id="qcm">
+
+                            <div class="q" data-correct="vrai" data-explication="Le développement limité d'une fonction impaire comme \(\sin(x)\) ne contient que des puissances impaires. À l'ordre 5 : \(x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^5)\).">
+                                <p class="consigne">Le développement limité de \(\sin(x)\) à l'ordre \(5\) en \(0\) contient un terme en \(x^5\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q1" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="vrai" data-explication="Par unicité du développement limité, si deux développements coïncident jusqu'à l'ordre \(n\), ils sont identiques.">
+                                <p class="consigne">Il existe un unique développement limité à l'ordre \(n\) en \(0\) pour une fonction donnée.</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q2" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="Le développement limité de \(\ln(1+x)\) à l'ordre 3 est \(x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)\). En remplaçant \(x\) par \(-x\), on obtient \(-x - \frac{x^2}{2} - \frac{x^3}{3} + o(x^3)\).">
+                                <p class="consigne">Le développement limité de \(\ln(1-x)\) à l'ordre \(3\) en \(0\) est \(-x + \frac{x^2}{2} - \frac{x^3}{3} + o(x^3)\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q3" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="vrai" data-explication="La parité de la fonction se reflète dans son développement limité : une fonction paire n'a que des termes pairs.">
+                                <p class="consigne">Le développement limité de \(\cos(x)\) en \(0\) ne contient aucun terme de degré impair.</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q4" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="La limite vaut \(-\frac{1}{6}\). Avec \(\sin(x) = x - \frac{x^3}{6} + o(x^3)\), on a \(\frac{\sin(x) - x}{x^3} \to -\frac{1}{6}\) quand \(x \to 0\).">
+                                <p class="consigne">La limite de \(\frac{\sin(x) - x}{x^3}\) quand \(x\) tend vers \(0\) est \(\frac{1}{6}\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q5" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="vrai" data-explication="La dérivation terme à terme du développement limité de \(f\) donne le développement limité de \(f'\). Ici, \(\frac{d}{dx}(o(x^3)) = o(x^2)\).">
+                                <p class="consigne">Si \(f(x) = x^3 + o(x^3)\), alors \(f'(x) = 3x^2 + o(x^2)\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q6" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="Pour obtenir le développement limité à l'ordre \(n\) d'un produit, il suffit de multiplier les développement limité à l'ordre \(n\) et de tronquer au-delà de \(x^n\).">
+                                <p class="consigne">Le développement limité à l'ordre \(4\) de \(\sin(x)\cos(x)\) nécessite les développement limité de \(\sin\) et \(\cos\) à l'ordre \(8\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q7" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="vrai" data-explication="Le développement limité permet d'obtenir \(f'(0)\) comme coefficient de \(x\), \(\frac{f''(0)}{2}\) comme coefficient de \(x^2\), etc.">
+                                <p class="consigne">L'existence d'un développement limité à l'ordre \(2\) implique que la fonction est deux fois dérivable en \(0\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q8" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="La composition se fait en substituant le développement limité interne dans le développement limité externe en ajustant les ordres de troncature.">
+                                <p class="consigne">Pour composer deux développement limités à l'ordre \(3\), il suffit de substituer l'un dans l'autre sans ajuster les ordres.</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q9" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="vrai" data-explication="\(\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} + o(x^3)\) (pour \(\alpha = \frac{1}{2}\)). Les coefficients suivent la formule générale.">
+                                <p class="consigne">Le développement limité de \(\sqrt{1+x}\) à l'ordre \(3\) en \(0\) contient un terme en \(x^3\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q10" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+                            <div class="q" data-correct="faux" data-explication="Le terme constant du développement limité de \(f(x) = \frac{1}{x}\) en \(0\) serait \(f(0)\), mais \(f\) n'est pas définie en \(0\). Pour avoir un développement limité en \(0\), la fonction doit être au moins définie en \(0\).">
+                                <p class="consigne">La fonction \(f(x) = \frac{1}{x}\) admet un développement limité en \(0\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q11" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="Un développement limité est local. Le comportement en \(+\infty\) est indépendant du comportement en \(0\). Par exemple, \(e^x\) a un développement limité en \(0\) mais tend vers \(+\infty\) en \(+\infty\).">
+                                <p class="consigne">Si une fonction \(f\) admet un développement limité en \(0\), alors elle est bornée au voisinage de \(+\infty\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q12" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="Le développement limité de \(\cos(x)\) est \(1 - \frac{x^2}{2} + o(x^2)\). Donc \(1 - \cos(x) = \frac{x^2}{2} + o(x^2)\) et \(\frac{1 - \cos(x)}{x^2} \to \frac{1}{2}\) quand \(x \to 0\).">
+                                <p class="consigne">La limite de \(\frac{1 - \cos(x)}{x^2}\) quand \(x\) tend vers \(0\) est \(1\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q13" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct="faux" data-explication="Le développement limité de \(e^x\) est \(1 + x + \frac{x^2}{2} + o(x^2)\). En remplaçant \(x\) par \(x^2\), on obtient \(e^{x^2} = 1 + x^2 + \frac{(x^2)^2}{2} + o((x^2)^2) = 1 + x^2 + o(x^3)\). On s'arrête à l'ordre \(3\).">
+                                <p class="consigne">Le développement limité de \(e^{x^2}\) à l'ordre \(3\) en \(0\) est \(1 + x^2 + \frac{x^4}{2} + o(x^3)\).</p>
+                                <div class="options">
+                                    <label class="custom-radio"><input type="radio" name="q14" value="vrai"><span class="radio-btn"></span> Vrai</label>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="faux"><span class="radio-btn"></span> Faux</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+                            <button type="button" class="button_qcm" id="valider">Valider</button>
+                        </form>
+
+                        <div id="resultat_qcm" class="resultat_qcm" style="display: none;"></div>
+                    </div>
                     <!-- exercice 1 -->
                     <div class="exercice">
                         <h2>Les fonctions indispensables</h2>
@@ -125,18 +259,6 @@
                     <div class="exercice">
                         <h2>Les formes usuelles importantes</h2>
 
-                        <!-- Question 1 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_6(0) : \tan(x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>Le développement limité de \(\tan(x)\) à l'ordre 6 en 0 est :</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
-                        </div>
-
-                        <!-- Question 2 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_5(0) : \ln(1 + x)$$</p>
@@ -156,39 +278,6 @@
                         <div class="exercice-correction hidden">
                             <p>Le développement limité de \(\frac{1}{1 - x}\) à l'ordre 6 en 0 est :</p>
                             <p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + x^5 + o(x^6)$$</p>
-                        </div>
-
-                        <!-- Question 4 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \arctan(x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>Le développement limité de \(\arctan(x)\) à l'ordre 4 en 0 est :</p>
-                            <p>$$\arctan(x) = x - \frac{x^3}{3} + o(x^4)$$</p>
-                        </div>
-
-                        <!-- Question 5 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_6(0) : \arcsin(x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>Le développement limité de \(\arcsin(x)\) à l'ordre 6 en 0 est :</p>
-                            <p>$$\arcsin(x) = x + \frac{x^3}{6} + \frac{3x^5}{40} + o(x^6)$$</p>
-                        </div>
-
-                        <!-- Question 6 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_6(0) : \arccos(x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>Le développement limité de \(\arccos(x)\) à l'ordre 6 en 0 est :</p>
-                            <p>$$\arccos(x) = \frac{\pi}{2} - x - \frac{x^3}{6} - \frac{3x^5}{40} + o(x^6)$$</p>
                         </div>
 
                         <!-- Question 7 -->
@@ -270,13 +359,13 @@
                             <p>Le développement limité de \( \ln(1+u) \) est :</p>
                             <p>$$\ln(1+u) = u - \frac{u^2}{2} + \frac{u^3}{3} - \frac{u^4}{4} + \frac{u^5}{5} + o(u^5)$$</p>
                             <p>En posant \( u = 2x \), nous obtenons :</p>
-                            <p>$$\ln(1+2x) = 2x - 2x^2 + \frac{8x^3}{3} - 4x^4 + \frac{32x^5}{5} + o(x^5)$$</p>
+                            <p>$$\ln(1+2x) = 2x - 2x^2 + \frac{8x^3}{3} - 4x^4 + \frac{32x^5}{5} + o((2x)^5)$$</p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Les produits de fonctions -->
-            <div class="page" id="page2" style="background-color: rgba(132, 221, 212, 0.6)">
+            <div class="page" id="page2">
                 <div class="section-content" id="changements_de_variable">
                     <h1 class="titre-page">Les produits de fonctions</h1>
                     <!-- exercice 1 -->
@@ -299,6 +388,24 @@
                             <p>$$= x - \frac{x^3}{2} - \frac{x^3}{6} + o(x^3)$$</p>
                             <p>Maintenant, on additionne les termes en \(x^3\) :</p>
                             <p>$$= x - \left(\frac{3x^3}{6} + \frac{x^3}{6}\right) + o(x^3) = x - \frac{2x^3}{3} + o(x^3)$$</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Calculer :</p>
+                            <p>$$dl_6(0) : \tan(x)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Nous allons utiliser les développements limités de \(\sin(x)\) et \(\cos(x)\) pour trouver celui de \(\tan(x)\). L'idée est d'effectuer une division de polynômes, en s'arrêtant à l'ordre 6.</p>
+                            <p>$$\tan(x) = \frac{x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)}{1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^6)}$$</p>
+                            <p>Pour faciliter la division, on peut utiliser le développement limité de \(\frac{1}{1-u}\) :</p>
+                            <p>$$\frac{1}{1 - u} = 1 + u + u^2 + o(u^2)$$</p>
+                            <p>avec \(u = \frac{x^2}{2} - \frac{x^4}{24} + o(x^6)\). On obtient :</p>
+                            <p>$$\frac{1}{\cos(x)} = 1 + \left(\frac{x^2}{2} - \frac{x^4}{24}\right) + \left(\frac{x^2}{2} - \frac{x^4}{24}\right)^2 + o(x^6) = 1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)$$</p>
+                            <p>En multipliant le développement limité de \(\sin(x)\) par celui de \(\frac{1}{\cos(x)}\), on obtient :</p>
+                            <p>$$\tan(x) = \left(x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)\right) \left(1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)\right)$$</p>
+                            <p>Après développement et simplification (en ne gardant que les termes jusqu'à l'ordre 6), on trouve :</p>
+                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
                         </div>
 
                         <!-- Question 2 -->
@@ -498,7 +605,7 @@
             </div>
 
             <!-- Les compositions de fonctions -->
-            <div class="page" id="page3" style="background-color: rgba(121, 204, 225, 0.6)">
+            <div class="page" id="page3">
                 <div class="section-content" id="integrations_par_parties">
                     <h1 class="titre-page">Les compositions de fonctions</h1>
                     <!-- Exercice 1 -->
@@ -781,7 +888,7 @@
             </div>
 
             <!-- Pas en zéro -->
-            <div class="page" id="page4" style="background-color: rgba(121, 178, 225, 0.6)">
+            <div class="page" id="page4">
                 <div class="section-content" id="integrations_par_parties">
                     <h1 class="titre-page">Pas en zéro</h1>
                     <!-- Exercice 1 -->
@@ -871,33 +978,6 @@
                             <p>$$= \tan(-1) + \sec^2(-1)(x + 1) + \frac{\tan(-1)}{2}(x + 1)^2 + \frac{1}{3}\sec^2(-1)(x + 1)^3 + o\left((x + 1)^3\right)$$</p>
                         </div>
 
-                        <!-- Question 7 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_5(0) : \cos(2x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
-                            <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4)$$</p>
-                            <p>Calculons les termes :</p>
-                            <p>$$= 1 - 2x^2 + \frac{4x^4}{12} + o(x^4)$$</p>
-                            <p>Ce qui se simplifie à :</p>
-                            <p>$$= 1 - 2x^2 + \frac{x^4}{3} + o(x^4)$$</p>
-                        </div>
-
-                        <!-- Question 8 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_3\left(0\right) : \frac{1}{1 + x}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise la formule de Taylor centrée en \(a = 0\) :</p>
-                            <p>$$\frac{1}{1 + x} = 1 - x + x^2 - x^3 + o(x^3)$$</p>
-                            <p>En réorganisant, cela donne :</p>
-                            <p>$$= 1 - x + x^2 - x^3 + o(x^3)$$</p>
-                        </div>
 
                         <!-- Question 9 -->
                         <div class="question">
@@ -925,12 +1005,13 @@
                             <p>$$= -1 + 0 \cdot (x + \frac{\pi}{2}) + \frac{1}{2}(x + \frac{\pi}{2})^2 + o\left((x + \frac{\pi}{2})^2\right)$$</p>
                         </div>
 
+
                     </div>
                 </div>
             </div>
 
             <!-- Calculs de limites -->
-            <div class="page" id="page5" style="background-color: rgba(121, 149, 225, 0.6)">
+            <div class="page" id="page5">
                 <div class="section-content" id="integrations_par_parties">
                     <h1 class="titre-page">Calculs de limites</h1>
                     <!-- Exercice 1 -->
@@ -938,11 +1019,401 @@
                         <h2></h2>
                         <!-- Question 1 -->
                         <div class="question">
-                            <p class="consigne"></p>
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\sin(x) - x}{x^3}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p></p>
+                            <p><b>Analyse de la forme indéterminée :</b></p>
+                            <p>En substituant \(x = 0\) dans l'expression, nous constatons que le numérateur et le dénominateur tendent tous deux vers \(0\), ce qui nous donne une forme indéterminée du type \(\frac{0}{0}\). Pour lever cette indétermination, nous allons recourir à l'outil puissant des développements limités.</p>
+
+                            <p><b>Développement limité pertinent :</b></p>
+                            <p>Le développement limité de la fonction sinus au voisinage de \(0\), à l'ordre 3, est un résultat fondamental qu'il est impératif de connaître :</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{3!} + o(x^3) \quad \text{quand } x \to 0$$</p>
+                            <p>Rappelons que la notation \(o(x^3)\) désigne une fonction négligeable devant \(x^3\) au voisinage de \(0\), c'est-à-dire telle que \(\lim_{x \to 0} \frac{o(x^3)}{x^3} = 0\).</p>
+
+                            <p><b>Substitution et simplification :</b></p>
+                            <p>Substituons le développement limité de \(\sin(x)\) dans l'expression dont nous cherchons la limite :</p>
+                            <p>$$\frac{\sin(x) - x}{x^3} = \frac{\left(x - \frac{x^3}{6} + o(x^3)\right) - x}{x^3} = \frac{- \frac{x^3}{6} + o(x^3)}{x^3}$$</p>
+                            <p>Nous pouvons factoriser par \(x^3\) au numérateur, ce qui nous permet de simplifier l'expression :</p>
+                            <p>$$\frac{x^3 \left(-\frac{1}{6} + \frac{o(x^3)}{x^3}\right)}{x^3} = -\frac{1}{6} + \frac{o(x^3)}{x^3}$$</p>
+
+                            <p><b>Passage à la limite :</b></p>
+                            <p>Par définition de la notation petit o, nous savons que \(\lim_{x \to 0} \frac{o(x^3)}{x^3} = 0\). Par conséquent, lorsque \(x\) tend vers \(0\), l'expression se simplifie considérablement et nous obtenons :</p>
+                            <p>$$\lim_{x \to 0} \frac{\sin(x) - x}{x^3} = \lim_{x \to 0} \left(-\frac{1}{6} + \frac{o(x^3)}{x^3}\right) = -\frac{1}{6} + \lim_{x \to 0} \frac{o(x^3)}{x^3} = -\frac{1}{6} + 0 = -\frac{1}{6}$$</p>
+
+                            <p class="encadre"> La limite de \(\frac{\sin(x) - x}{x^3}\) quand \(x\) tend vers \(0\) est \(\boxed{-\frac{1}{6}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\ln(1 + x) - x}{x^2}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Identification de la forme indéterminée :</b></p>
+                            <p>En évaluant l'expression en \(x = 0\), nous rencontrons une forme indéterminée du type \(\frac{0}{0}\), car \(\ln(1 + 0) - 0 = 0\) et \(0^2 = 0\). L'utilisation d'un développement limité s'avère donc appropriée.</p>
+
+                            <p><b>Développement limité à utiliser :</b></p>
+                            <p>Le développement limité de la fonction logarithme népérien au voisinage de \(0\), à l'ordre 2, est un autre résultat fondamental :</p>
+                            <p>$$\ln(1 + x) = x - \frac{x^2}{2!} + o(x^2) = x - \frac{x^2}{2} + o(x^2) \quad \text{quand } x \to 0$$</p>
+                            <p>Rappelons que \(o(x^2)\) représente une fonction négligeable devant \(x^2\) au voisinage de \(0\), c'est-à-dire que \(\lim_{x \to 0} \frac{o(x^2)}{x^2} = 0\).</p>
+
+                            <p><b>Mise en œuvre du développement limité et simplification :</b></p>
+                            <p>Substituons le développement limité de \(\ln(1 + x)\) dans l'expression de la limite :</p>
+                            <p>$$\frac{\ln(1 + x) - x}{x^2} = \frac{\left(x - \frac{x^2}{2} + o(x^2)\right) - x}{x^2} = \frac{- \frac{x^2}{2} + o(x^2)}{x^2}$$</p>
+                            <p>Factorisons par \(x^2\) au numérateur afin de simplifier la fraction :</p>
+                            <p>$$\frac{x^2 \left(-\frac{1}{2} + \frac{o(x^2)}{x^2}\right)}{x^2} = -\frac{1}{2} + \frac{o(x^2)}{x^2}$$</p>
+
+                            <p><b>Conclusion par passage à la limite :</b></p>
+                            <p>En utilisant la définition de la notation petit o, nous savons que \(\lim_{x \to 0} \frac{o(x^2)}{x^2} = 0\). Dès lors, quand \(x \to 0\), l'expression tend vers :</p>
+                            <p>$$\lim_{x \to 0} \frac{\ln(1 + x) - x}{x^2} = \lim_{x \to 0} \left(-\frac{1}{2} + \frac{o(x^2)}{x^2}\right) = -\frac{1}{2} + \lim_{x \to 0} \frac{o(x^2)}{x^2} = -\frac{1}{2} + 0 = -\frac{1}{2}$$</p>
+
+                            <p class="encadre"> La limite de \(\frac{\ln(1 + x) - x}{x^2}\) quand \(x\) tend vers \(0\) est \(\boxed{-\frac{1}{2}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to +\infty} \left(\sqrt{x^2 + x + 1} - x\right)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la forme indéterminée et changement de variable :</b></p>
+                            <p>Lorsque \(x \to +\infty\), nous sommes confrontés à une forme indéterminée de type \(+\infty - \infty\). Pour lever cette indétermination en utilisant les développements limités, qui sont définis au voisinage de \(0\), nous effectuons un changement de variable. Posons \(h = \frac{1}{x}\). Lorsque \(x \to +\infty\), nous avons \(h \to 0^{+}\).</p>
+                            <p>Exprimons l'expression en fonction de la nouvelle variable \(h\):</p>
+                            <p>$$\sqrt{x^2 + x + 1} - x = \sqrt{\left(\frac{1}{h}\right)^2 + \frac{1}{h} + 1} - \frac{1}{h} = \sqrt{\frac{1 + h + h^2}{h^2}} - \frac{1}{h} = \frac{\sqrt{1 + h + h^2}}{|h|} - \frac{1}{h}$$</p>
+                            <p>Comme \(h \to 0^{+}\), \(h > 0\) et donc \(|h| = h\). On obtient :</p>
+                            <p>$$= \frac{\sqrt{1 + h + h^2}}{h} - \frac{1}{h} = \frac{\sqrt{1 + h + h^2} - 1}{h} = \frac{1}{h} \left(\sqrt{1 + h + h^2} - 1\right)$$</p>
+
+                            <p><b>Utilisation du développement limité :</b></p>
+                            <p>Nous allons maintenant utiliser le développement limité de la fonction racine carrée au voisinage de \(0\). Le développement limité de \(\sqrt{1 + u}\) à l'ordre 2 en \(0\) est :</p>
+                            <p>$$\sqrt{1 + u} = 1 + \frac{1}{2}u - \frac{1}{8}u^2 + o(u^2) \quad \text{quand } u \to 0$$</p>
+                            <p>Appliquons ce développement avec \(u = h + h^2\). Notons que lorsque \(h \to 0\), \(u = h + h^2 \to 0\), ce qui justifie l'utilisation du développement limité en \(0\). Nous obtenons :</p>
+                            <p>$$\sqrt{1 + h + h^2} = 1 + \frac{1}{2}(h + h^2) - \frac{1}{8}(h + h^2)^2 + o((h + h^2)^2)$$</p>
+                            <p>Développons et simplifions, en ne retenant que les termes jusqu'à l'ordre 2 en \(h\) car le terme en \(\frac{1}{h}\) en facteur va diminuer l'ordre :</p>
+                            <p>$$= 1 + \frac{h}{2} + \frac{h^2}{2} - \frac{1}{8}(h^2 + 2h^3 + h^4) + o(h^2) = 1 + \frac{h}{2} + \frac{h^2}{2} - \frac{h^2}{8} + o(h^2)$$</p>
+                            <p>$$= 1 + \frac{h}{2} + \frac{3h^2}{8} + o(h^2)$$</p>
+
+                            <p><b>Substitution et passage à la limite :</b></p>
+                            <p>Substituons ce développement dans l'expression de la limite :</p>
+                            <p>$$\frac{1}{h} \left(\sqrt{1 + h + h^2} - 1\right) = \frac{1}{h} \left(\left(1 + \frac{h}{2} + \frac{3h^2}{8} + o(h^2)\right) - 1\right) = \frac{1}{h} \left(\frac{h}{2} + \frac{3h^2}{8} + o(h^2)\right)$$</p>
+                            <p>Distribuons \(\frac{1}{h}\) et simplifions :</p>
+                            <p>$$= \frac{h}{2h} + \frac{3h^2}{8h} + \frac{o(h^2)}{h} = \frac{1}{2} + \frac{3h}{8} + \frac{o(h^2)}{h}$$</p>
+                            <p>Lorsque \(h \to 0^{+}\), nous avons \(\frac{3h}{8} \to 0\) et \(\frac{o(h^2)}{h} = o(h) \to 0\). Par conséquent :</p>
+                            <p>$$\lim_{h \to 0^+} \frac{1}{h} \left(\sqrt{1 + h + h^2} - 1\right) = \frac{1}{2} + 0 + 0 = \frac{1}{2}$$</p>
+
+                            <p class="encadre"> La limite de \(\sqrt{x^2 + x + 1} - x\) quand \(x\) tend vers \(+\infty\) est \(\boxed{\frac{1}{2}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\tan(x)}{x}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Forme indéterminée :</b></p>
+                            <p>En \(x = 0\), nous obtenons la forme indéterminée \(\frac{0}{0}\), car \(\tan(0) = 0\) et \(0 = 0\). Le développement limité est donc une méthode pertinente pour résoudre ce problème.</p>
+
+                            <p><b>Développement limité approprié :</b></p>
+                            <p>Le développement limité de la fonction tangente au voisinage de \(0\), à l'ordre 1, est donné par :</p>
+                            <p>$$\tan(x) = x + o(x) \quad \text{quand } x \to 0$$</p>
+                            <p>Ici, \(o(x)\) désigne une fonction négligeable devant \(x\) au voisinage de \(0\), de sorte que \(\lim_{x \to 0} \frac{o(x)}{x} = 0\).</p>
+
+                            <p><b>Utilisation du développement limité et simplification :</b></p>
+                            <p>Substituons le développement limité de \(\tan(x)\) dans l'expression de la limite :</p>
+                            <p>$$\frac{\tan(x)}{x} = \frac{x + o(x)}{x}$$</p>
+                            <p>Factorisons par \(x\) au numérateur pour simplifier la fraction :</p>
+                            <p>$$\frac{x \left(1 + \frac{o(x)}{x}\right)}{x} = 1 + \frac{o(x)}{x}$$</p>
+
+                            <p><b>Conclusion par passage à la limite :</b></p>
+                            <p>En appliquant la définition du petit o, nous savons que \(\lim_{x \to 0} \frac{o(x)}{x} = 0\). Par conséquent, lorsque \(x\) tend vers \(0\), l'expression devient :</p>
+                            <p>$$\lim_{x \to 0} \frac{\tan(x)}{x} = \lim_{x \to 0} \left(1 + \frac{o(x)}{x}\right) = 1 + \lim_{x \to 0} \frac{o(x)}{x} = 1 + 0 = 1$$</p>
+
+                            <p class="encadre"> La limite de \(\frac{\tan(x)}{x}\) quand \(x\) tend vers \(0\) est \(\boxed{1}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{1 - \cos(x)}{x^2}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Détection de la forme indéterminée :</b></p>
+                            <p>En substituant \(x = 0\), nous obtenons une forme indéterminée \(\frac{0}{0}\) car \(1 - \cos(0) = 1 - 1 = 0\) et \(0^2 = 0\). Le recours aux développements limités est donc justifié.</p>
+
+                            <p><b>Développement limité pertinent :</b></p>
+                            <p>Le développement limité de la fonction cosinus au voisinage de \(0\), à l'ordre 2, est un développement fondamental :</p>
+                            <p>$$\cos(x) = 1 - \frac{x^2}{2!} + o(x^2) = 1 - \frac{x^2}{2} + o(x^2) \quad \text{quand } x \to 0$$</p>
+                            <p>Où \(o(x^2)\) désigne une fonction négligeable devant \(x^2\) au voisinage de \(0\), vérifiant \(\lim_{x \to 0} \frac{o(x^2)}{x^2} = 0\).</p>
+
+                            <p><b>Substitution et simplification de l'expression :</b></p>
+                            <p>Substituons le développement limité de \(\cos(x)\) dans l'expression de la limite :</p>
+                            <p>$$\frac{1 - \cos(x)}{x^2} = \frac{1 - \left(1 - \frac{x^2}{2} + o(x^2)\right)}{x^2} = \frac{1 - 1 + \frac{x^2}{2} - o(x^2)}{x^2} = \frac{\frac{x^2}{2} - o(x^2)}{x^2}$$</p>
+                            <p>Factorisons par \(x^2\) au numérateur pour simplifier :</p>
+                            <p>$$\frac{x^2 \left(\frac{1}{2} - \frac{o(x^2)}{x^2}\right)}{x^2} = \frac{1}{2} - \frac{o(x^2)}{x^2}$$</p>
+
+                            <p><b>Passage à la limite et conclusion :</b></p>
+                            <p>En utilisant la propriété de la notation petit o, à savoir \(\lim_{x \to 0} \frac{o(x^2)}{x^2} = 0\), nous obtenons, lorsque \(x\) tend vers \(0\) :</p>
+                            <p>$$\lim_{x \to 0} \frac{1 - \cos(x)}{x^2} = \lim_{x \to 0} \left(\frac{1}{2} - \frac{o(x^2)}{x^2}\right) = \frac{1}{2} - \lim_{x \to 0} \frac{o(x^2)}{x^2} = \frac{1}{2} - 0 = \frac{1}{2}$$</p>
+
+                            <p class="encadre"> La limite de \(\frac{1 - \cos(x)}{x^2}\) quand \(x\) tend vers \(0\) est \(\boxed{\frac{1}{2}}\).</p>
+                        </div>
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{e^{\sin(x)} - 1 - x}{x^2}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la forme indéterminée :</b></p>
+                            <p>En substituant \(x = 0\), nous observons que le numérateur et le dénominateur tendent vers \(0\), ce qui nous confronte à une forme indéterminée \(\frac{0}{0}\). L'emploi des développements limités est indiqué pour lever cette indétermination.</p>
+
+                            <p><b>Développements limités nécessaires :</b></p>
+                            <p>Pour résoudre ce problème, nous aurons besoin des développements limités de \(\sin(x)\) et de \(e^u\) au voisinage de \(0\). Rappelons ces développements à un ordre suffisant :</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3) \quad \text{quand } x \to 0$$</p>
+                            <p>$$e^u = 1 + u + \frac{u^2}{2} + o(u^2) \quad \text{quand } u \to 0$$</p>
+
+                            <p><b>Composition et substitution des développements limités :</b></p>
+                            <p>Nous allons effectuer une composition de développements limités en substituant \(u = \sin(x)\) dans le développement de \(e^u\). Il est crucial de travailler à un ordre suffisant pour obtenir le terme dominant au numérateur. Ici, un développement à l'ordre 2 pour l'exponentielle et à l'ordre 3 pour le sinus sera adéquat. On a :</p>
+                            <p>$$e^{\sin(x)} = 1 + \sin(x) + \frac{(\sin(x))^2}{2} + o((\sin(x))^2)$$</p>
+                            <p>Substituons maintenant le développement limité de \(\sin(x)\) dans cette expression, en ne conservant que les termes jusqu'à l'ordre 2 au final (car nous divisons par \(x^2\)) :</p>
+                            <p>$$e^{\sin(x)} = 1 + \left(x - \frac{x^3}{6} + o(x^3)\right) + \frac{\left(x - \frac{x^3}{6} + o(x^3)\right)^2}{2} + o\left(\left(x - \frac{x^3}{6} + o(x^3)\right)^2\right)$$</p>
+                            <p>$$= 1 + x - \frac{x^3}{6} + \frac{1}{2} \left(x^2 - \frac{x^4}{3} + o(x^4)\right) + o(x^2) = 1 + x - \frac{x^3}{6} + \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>$$= 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+
+                            <p><b>Simplification et calcul de la limite :</b></p>
+                            <p>Substituons ce développement limité dans l'expression de la limite :</p>
+                            <p>$$\frac{e^{\sin(x)} - 1 - x}{x^2} = \frac{\left(1 + x + \frac{x^2}{2} + o(x^2)\right) - 1 - x}{x^2} = \frac{\frac{x^2}{2} + o(x^2)}{x^2}$$</p>
+                            <p>Factorisons par \(x^2\) au numérateur :</p>
+                            <p>$$\frac{x^2 \left(\frac{1}{2} + \frac{o(x^2)}{x^2}\right)}{x^2} = \frac{1}{2} + \frac{o(x^2)}{x^2}$$</p>
+                            <p>En passant à la limite quand \(x \to 0\), et sachant que \(\lim_{x \to 0} \frac{o(x^2)}{x^2} = 0\), nous obtenons :</p>
+                            <p>$$\lim_{x \to 0} \frac{e^{\sin(x)} - 1 - x}{x^2} = \frac{1}{2} + 0 = \frac{1}{2}$$</p>
+
+                            <p class="encadre">La limite de \(\lim_{x \to 0} \frac{e^{\sin(x)} - 1 - x}{x^2}\) est \(\boxed{\frac{1}{2}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\cos(x) - e^{-x^2/2}}{x^4}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la forme indéterminée :</b></p>
+                            <p>En \(x = 0\), nous avons \(\cos(0) - e^{0} = 1 - 1 = 0\) au numérateur et \(0^4 = 0\) au dénominateur. Nous sommes donc en présence d'une forme indéterminée \(\frac{0}{0}\), ce qui justifie l'utilisation des développements limités.</p>
+
+                            <p><b>Développements limités pertinents et composition :</b></p>
+                            <p>Nous aurons besoin des développements limités de \(\cos(x)\) et \(e^u\) au voisinage de \(0\). Pour que le terme dominant apparaisse, il faudra pousser les développements à un ordre suffisamment élevé. Ici, l'ordre 4 sera nécessaire. Rappelons les développements :</p>
+                            <p>$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4) = 1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4) \quad \text{quand } x \to 0$$</p>
+                            <p>$$e^u = 1 + u + \frac{u^2}{2} + o(u^2) \quad \text{quand } u \to 0$$</p>
+                            <p>Nous allons composer le développement de l'exponentielle avec \(u = -\frac{x^2}{2}\). Notons que si \(x \to 0\), alors \(u = -\frac{x^2}{2} \to 0\), ce qui permet d'utiliser le développement limité de \(e^u\) en \(0\).</p>
+                            <p>$$e^{-x^2/2} = 1 + \left(-\frac{x^2}{2}\right) + \frac{\left(-\frac{x^2}{2}\right)^2}{2} + o\left(\left(-\frac{x^2}{2}\right)^2\right) = 1 - \frac{x^2}{2} + \frac{x^4}{8} + o(x^4)$$</p>
+
+                            <p><b>Substitution et simplification :</b></p>
+                            <p>Substituons les développements limités de \(\cos(x)\) et \(e^{-x^2/2}\) dans l'expression de la limite :</p>
+                            <p>$$\frac{\cos(x) - e^{-x^2/2}}{x^4} = \frac{\left(1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4)\right) - \left(1 - \frac{x^2}{2} + \frac{x^4}{8} + o(x^4)\right)}{x^4}$$</p>
+                            <p>Simplifions l'expression en regroupant les termes :</p>
+                            <p>$$= \frac{1 - \frac{x^2}{2} + \frac{x^4}{24} - 1 + \frac{x^2}{2} - \frac{x^4}{8} + o(x^4)}{x^4} = \frac{\frac{x^4}{24} - \frac{x^4}{8} + o(x^4)}{x^4} = \frac{\left(\frac{1}{24} - \frac{1}{8}\right)x^4 + o(x^4)}{x^4}$$</p>
+                            <p>Réduisons la fraction \(\frac{1}{24} - \frac{1}{8} = \frac{1}{24} - \frac{3}{24} = -\frac{2}{24} = -\frac{1}{12}\). Nous obtenons :</p>
+                            <p>$$\frac{-\frac{1}{12}x^4 + o(x^4)}{x^4} = -\frac{1}{12} + \frac{o(x^4)}{x^4}$$</p>
+
+                            <p><b>Passage à la limite et conclusion :</b></p>
+                            <p>En passant à la limite quand \(x \to 0\), et sachant que \(\lim_{x \to 0} \frac{o(x^4)}{x^4} = 0\), il vient :</p>
+                            <p>$$\lim_{x \to 0} \frac{\cos(x) - e^{-x^2/2}}{x^4} = -\frac{1}{12} + 0 = -\frac{1}{12}$$</p>
+
+                            <p class="encadre">La limite de \(\lim_{x \to 0} \frac{\cos(x) - e^{-x^2/2}}{x^4}\) est \(\boxed{-\frac{1}{12}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \left(\frac{1}{\sin(x)} - \frac{1}{x}\right)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la forme indéterminée :</b></p>
+                            <p>Quand \(x \to 0\), \(\sin(x) \to 0\) et \(x \to 0\). Ainsi, \(\frac{1}{\sin(x)} \to \infty\) et \(\frac{1}{x} \to \infty\). Nous sommes face à une forme indéterminée \(\infty - \infty\).</p>
+
+                            <p><b>Réduction au même dénominateur et développement limité :</b></p>
+                            <p>Pour lever cette indétermination, nous allons réduire les fractions au même dénominateur :</p>
+                            <p>$$\frac{1}{\sin(x)} - \frac{1}{x} = \frac{x - \sin(x)}{x \sin(x)}$$</p>
+                            <p>Nous retrouvons une forme \(\frac{0}{0}\). Utilisons maintenant les développements limités de \(\sin(x)\) et de \(x \sin(x)\) au voisinage de \(0\). Un développement à l'ordre 3 pour \(\sin(x)\) sera suffisant pour le numérateur, et à l'ordre 2 pour le produit au dénominateur.</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3) \quad \text{quand } x \to 0$$</p>
+                            <p>$$x \sin(x) = x \left(x - \frac{x^3}{6} + o(x^3)\right) = x^2 - \frac{x^4}{6} + o(x^4) = x^2 + o(x^2) \quad \text{quand } x \to 0$$</p>
+
+                            <p><b>Substitution et simplification :</b></p>
+                            <p>Substituons ces développements limités dans l'expression :</p>
+                            <p>$$\frac{x - \sin(x)}{x \sin(x)} = \frac{x - \left(x - \frac{x^3}{6} + o(x^3)\right)}{x^2 + o(x^2)} = \frac{\frac{x^3}{6} + o(x^3)}{x^2 + o(x^2)}$$</p>
+                            <p>Pour simplifier, factorisons par le terme dominant au numérateur et au dénominateur, respectivement \(x^3\) et \(x^2\) :</p>
+                            <p>$$\frac{x^3 \left(\frac{1}{6} + \frac{o(x^3)}{x^3}\right)}{x^2 \left(1 + \frac{o(x^2)}{x^2}\right)} = \frac{x \left(\frac{1}{6} + \frac{o(x^3)}{x^3}\right)}{1 + \frac{o(x^2)}{x^2}}$$</p>
+
+                            <p><b>Passage à la limite et conclusion :</b></p>
+                            <p>Lorsque \(x \to 0\), nous avons \(x \to 0\), \(\frac{o(x^3)}{x^3} \to 0\) et \(\frac{o(x^2)}{x^2} \to 0\). Par conséquent, la limite devient :</p>
+                            <p>$$\lim_{x \to 0} \frac{x \left(\frac{1}{6} + \frac{o(x^3)}{x^3}\right)}{1 + \frac{o(x^2)}{x^2}} = \frac{0 \cdot \left(\frac{1}{6} + 0\right)}{1 + 0} = \frac{0}{1} = 0$$</p>
+
+                            <p class="encadre">La limite de \(\lim_{x \to 0} \left(\frac{1}{\sin(x)} - \frac{1}{x}\right)\) est \(\boxed{0}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \left(\frac{\arctan(x) - x}{x^3}\right)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Forme indéterminée :</b></p>
+                            <p>En \(x = 0\), nous avons \(\arctan(0) - 0 = 0\) au numérateur et \(0^3 = 0\) au dénominateur, ce qui donne une forme indéterminée \(\frac{0}{0}\). Les développements limités sont donc adaptés.</p>
+
+                            <p><b>Développement limité de \(\arctan(x)\) :</b></p>
+                            <p>Le développement limité de la fonction arc tangente au voisinage de \(0\), à l'ordre 3, est un résultat à connaître :</p>
+                            <p>$$\arctan(x) = x - \frac{x^3}{3} + o(x^3) \quad \text{quand } x \to 0$$</p>
+
+                            <p><b>Substitution et simplification :</b></p>
+                            <p>Substituons ce développement dans l'expression de la limite :</p>
+                            <p>$$\frac{\arctan(x) - x}{x^3} = \frac{\left(x - \frac{x^3}{3} + o(x^3)\right) - x}{x^3} = \frac{- \frac{x^3}{3} + o(x^3)}{x^3}$$</p>
+                            <p>Factorisons par \(x^3\) au numérateur :</p>
+                            <p>$$\frac{x^3 \left(-\frac{1}{3} + \frac{o(x^3)}{x^3}\right)}{x^3} = -\frac{1}{3} + \frac{o(x^3)}{x^3}$$</p>
+
+                            <p><b>Passage à la limite et conclusion :</b></p>
+                            <p>En passant à la limite quand \(x \to 0\), et en utilisant la propriété \(\lim_{x \to 0} \frac{o(x^3)}{x^3} = 0\), nous obtenons :</p>
+                            <p>$$\lim_{x \to 0} \frac{\arctan(x) - x}{x^3} = -\frac{1}{3} + 0 = -\frac{1}{3}$$</p>
+
+                            <p class="encadre">La limite de \(\lim_{x \to 0} \left(\frac{\arctan(x) - x}{x^3}\right)\) est \(\boxed{-\frac{1}{3}}\).</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 1} \frac{\ln(x)}{x - 1}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la limite et changement de variable :</b></p>
+                            <p>Ici, la limite est en \(x = 1\), et non en \(x = 0\). Lorsque \(x \to 1\), \(\ln(x) \to \ln(1) = 0\) et \(x - 1 \to 0\). Nous avons donc une forme indéterminée \(\frac{0}{0}\). Pour utiliser les développements limités, qui sont centrés en \(0\), nous effectuons un changement de variable. Posons \(h = x - 1\). Alors, lorsque \(x \to 1\), \(h \to 0\), et \(x = 1 + h\).</p>
+                            <p>Réexprimons la limite en fonction de \(h\):</p>
+                            <p>$$\lim_{x \to 1} \frac{\ln(x)}{x - 1} = \lim_{h \to 0} \frac{\ln(1 + h)}{(1 + h) - 1} = \lim_{h \to 0} \frac{\ln(1 + h)}{h}$$</p>
+
+                            <p><b>Développement limité et simplification :</b></p>
+                            <p>Nous utilisons maintenant le développement limité de \(\ln(1 + h)\) au voisinage de \(0\), à l'ordre 1, qui est suffisant ici :</p>
+                            <p>$$\ln(1 + h) = h + o(h) \quad \text{quand } h \to 0$$</p>
+                            <p>Substituons ce développement dans l'expression de la limite :</p>
+                            <p>$$\lim_{h \to 0} \frac{\ln(1 + h)}{h} = \lim_{h \to 0} \frac{h + o(h)}{h} = \lim_{h \to 0} \frac{h \left(1 + \frac{o(h)}{h}\right)}{h} = \lim_{h \to 0} \left(1 + \frac{o(h)}{h}\right)$$</p>
+
+                            <p><b>Passage à la limite et conclusion :</b></p>
+                            <p>Puisque \(\lim_{h \to 0} \frac{o(h)}{h} = 0\), nous obtenons :</p>
+                            <p>$$\lim_{h \to 0} \left(1 + \frac{o(h)}{h}\right) = 1 + 0 = 1$$</p>
+                            <p>Et en revenant à la variable \(x\):</p>
+
+                            <p class="encadre">La limite de \(\lim_{x \to 1} \frac{\ln(x)}{x - 1}\) est \(\boxed{1}\).</p>
+                        </div>
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\sqrt{\arctan(\sin(x))} - \sin(\arctan(x)\ln(x+1))}{\sqrt{\ln(x+1)}}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse du domaine de définition et forme indéterminée :</b></p>
+                            <p>Pour que l'expression soit définie pour \(x\) proche de \(0\), il faut \(\ln(x+1) \ge 0\), ce qui implique \(x+1 \ge 1\), soit \(x \ge 0\). Nous allons donc étudier la limite lorsque \(x \to 0^{+}\).
+                                En \(x = 0\), évaluons le numérateur et le dénominateur :</p>
+                            <p>Numérateur en \(x=0\): $$\sqrt{\arctan(\sin(0))} - \sin(\arctan(0)\ln(0+1)) = \sqrt{\arctan(0)} - \sin(\arctan(0) \cdot \ln(1)) = \sqrt{0} - \sin(0 \cdot 0) = 0 - \sin(0) = 0$$</p>
+                            <p>Dénominateur en \(x=0\): $$\sqrt{\ln(0+1)} = \sqrt{\ln(1)} = \sqrt{0} = 0$$</p>
+                            <p>Nous sommes en présence d'une forme indéterminée \(\frac{0}{0}\) lorsque \(x \to 0^{+}\), ce qui justifie l'utilisation des développements limités au voisinage de \(0^{+}\).</p>
+
+                            <p><b>Développements limités des fonctions de base au voisinage de \(0\) :</b></p>
+                            <p>Nous rappelons les développements limités nécessaires à l'ordre 3 ou adaptés selon les besoins :</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+                            <p>$$\arctan(x) = x - \frac{x^3}{3} + o(x^3)$$</p>
+                            <p>$$\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$</p>
+                            <p>$$\sqrt{1+u} = 1 + \frac{1}{2}u - \frac{1}{8}u^2 + o(u^2)$$</p>
+
+                            <p><b>Développement limité du dénominateur \(\sqrt{\ln(x+1)}\) au voisinage de \(0^{+}\) :</b></p>
+                            <p>On utilise le développement limité de \(\ln(1+x)\) : \(\ln(x+1) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)\). Alors,</p>
+                            <p>$$\sqrt{\ln(x+1)} = \sqrt{x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)} = \sqrt{x} \sqrt{1 - \frac{x}{2} + \frac{x^2}{3} + o(x^2)}$$</p>
+                            <p>Posons \(v = -\frac{x}{2} + \frac{x^2}{3} + o(x^2)\). Lorsque \(x \to 0^{+}\), \(v \to 0\). On utilise le développement limité de \(\sqrt{1+v} = 1 + \frac{1}{2}v - \frac{1}{8}v^2 + o(v^2)\) :</p>
+                            <p>$$\sqrt{1 - \frac{x}{2} + \frac{x^2}{3} + o(x^2)} = 1 + \frac{1}{2}\left(-\frac{x}{2} + \frac{x^2}{3} + o(x^2)\right) - \frac{1}{8}\left(-\frac{x}{2} + \frac{x^2}{3} + o(x^2)\right)^2 + o\left(\left(-\frac{x}{2} + \frac{x^2}{3} + o(x^2)\right)^2\right)$$</p>
+                            <p>$$= 1 - \frac{x}{4} + \frac{x^2}{6} - \frac{1}{8}\left(\frac{x^2}{4} + o(x^2)\right) + o(x^2) = 1 - \frac{x}{4} + \frac{x^2}{6} - \frac{x^2}{32} + o(x^2) = 1 - \frac{x}{4} + \frac{13}{96}x^2 + o(x^2)$$</p>
+                            <p>Finalement, le développement limité du dénominateur est :</p>
+                            <p>$$\sqrt{\ln(x+1)} = \sqrt{x} \left(1 - \frac{x}{4} + \frac{13}{96}x^2 + o(x^2)\right) = x^{1/2} - \frac{1}{4}x^{3/2} + \frac{13}{96}x^{5/2} + o(x^{5/2})$$</p>
+
+                            <p><b>Développement limité du premier terme du numérateur \(\sqrt{\arctan(\sin(x))}\) au voisinage de \(0\) :</b></p>
+                            <p>On commence par le développement limité de \(\arctan(\sin(x))\) à l'ordre 3 :</p>
+                            <p>$$\arctan(\sin(x)) = \arctan\left(x - \frac{x^3}{6} + o(x^3)\right)$$</p>
+                            <p>En posant \(u = x - \frac{x^3}{6} + o(x^3)\) et en utilisant \(\arctan(u) = u - \frac{u^3}{3} + o(u^3)\) :</p>
+                            <p>$$\arctan(\sin(x)) = \left(x - \frac{x^3}{6} + o(x^3)\right) - \frac{1}{3}\left(x - \frac{x^3}{6} + o(x^3)\right)^3 + o\left(\left(x - \frac{x^3}{6} + o(x^3)\right)^3\right)$$</p>
+                            <p>$$\arctan(\sin(x)) = x - \frac{x^3}{6} - \frac{1}{3}x^3 + o(x^3) = x - \frac{1}{2}x^3 + o(x^3)$$</p>
+                            <p>Maintenant, pour \(\sqrt{\arctan(\sin(x))}\) :</p>
+                            <p>$$\sqrt{\arctan(\sin(x))} = \sqrt{x - \frac{1}{2}x^3 + o(x^3)} = \sqrt{x} \sqrt{1 - \frac{1}{2}x^2 + o(x^2)}$$</p>
+                            <p>Posons \(w = -\frac{1}{2}x^2 + o(x^2)\) et utilisons le développement limité de \(\sqrt{1+w} = 1 + \frac{1}{2}w + o(w)\) :</p>
+                            <p>$$\sqrt{1 - \frac{1}{2}x^2 + o(x^2)} = 1 + \frac{1}{2}\left(-\frac{1}{2}x^2 + o(x^2)\right) + o\left(-\frac{1}{2}x^2 + o(x^2)\right) = 1 - \frac{x^2}{4} + o(x^2)$$</p>
+                            <p>Donc :</p>
+                            <p>$$\sqrt{\arctan(\sin(x))} = \sqrt{x} \left(1 - \frac{x^2}{4} + o(x^2)\right) = x^{1/2} - \frac{1}{4}x^{5/2} + o(x^{5/2})$$</p>
+
+                            <p><b>Développement limité du second terme du numérateur \(\sin(\arctan(x)\ln(x+1))\) au voisinage de \(0^{+}\) :</b></p>
+                            <p>Calculons d'abord \(\arctan(x)\ln(x+1)\) à l'ordre 3 :</p>
+                            <p>$$\arctan(x)\ln(x+1) = \left(x - \frac{x^3}{3} + o(x^3)\right)\left(x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)\right) = x^2 - \frac{x^3}{2} + o(x^3)$$</p>
+                            <p>Posons \(t = x^2 - \frac{x^3}{2} + o(x^3)\) et utilisons le développement limité de \(\sin(t) = t + o(t)\) (puisque le premier terme est en \(x^2\), on aura \(\sin(t) = t + o(x^3)\)):</p>
+                            <p>$$\sin(\arctan(x)\ln(x+1)) = \sin\left(x^2 - \frac{x^3}{2} + o(x^3)\right) = \left(x^2 - \frac{x^3}{2} + o(x^3)\right) + o\left(x^2 - \frac{x^3}{2} + o(x^3)\right) = x^2 - \frac{x^3}{2} + o(x^3)$$</p>
+
+                            <p><b>Développement limité du numérateur complet :</b></p>
+                            <p>$$\sqrt{\arctan(\sin(x))} - \sin(\arctan(x)\ln(x+1)) = \left(x^{1/2} - \frac{1}{4}x^{5/2} + o(x^{5/2})\right) - \left(x^2 - \frac{x^3}{2} + o(x^3)\right)$$</p>
+                            <p>Le terme dominant du numérateur est \(x^{1/2}\).</p>
+
+                            <p><b>Calcul de la limite :</b></p>
+                            <p>$$\lim_{x \to 0^{+}} \frac{\sqrt{\arctan(\sin(x))} - \sin(\arctan(x)\ln(x+1))}{\sqrt{\ln(x+1)}} = \lim_{x \to 0^{+}} \frac{x^{1/2} - \frac{1}{4}x^{5/2} - x^2 + \frac{x^3}{2} + o(x^3)}{x^{1/2} - \frac{1}{4}x^{3/2} + \frac{13}{96}x^{5/2} + o(x^{5/2})}$$</p>
+                            <p>Factorisons par le terme dominant \(x^{1/2}\) au numérateur et au dénominateur :</p>
+                            <p>$$= \lim_{x \to 0^{+}} \frac{x^{1/2}\left(1 - \frac{1}{4}x^{2} - x^{3/2} + \frac{1}{2}x^{5/2} + o(x^{5/2})\right)}{x^{1/2}\left(1 - \frac{1}{4}x + \frac{13}{96}x^{2} + o(x^{2})\right)} = \lim_{x \to 0^{+}} \frac{1 - \frac{1}{4}x^{2} - x^{3/2} + \frac{1}{2}x^{5/2} + o(x^{5/2})}{1 - \frac{1}{4}x + \frac{13}{96}x^{2} + o(x^{2})}$$</p>
+                            <p>Lorsque \(x \to 0^{+}\), les termes en \(x\), \(x^{2}\), \(x^{3/2}\), \(x^{5/2}\) et les restes tendent vers \(0\). Donc la limite devient :</p>
+                            <p>$$= \frac{1 - 0}{1 - 0} = 1$$</p>
+
+
+                            <p class="encadre">La limite de $$\lim_{x \to 0} \frac{\sqrt{\arctan(\sin(x))} - \sin(\arctan(x)\ln(x+1))}{\sqrt{\ln(x+1)}}$$ est \(\boxed{1}\).</p>
+                        </div>
+                        <div class="question">
+                            <p class="consigne">Résoudre la limite suivante en à l'aide de développements limités :</p>
+                            <p>$$\lim_{x \to 0} \frac{\sin(\tan(x))}{\tan(\ln(x+e^x))}$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p><b>Analyse de la forme indéterminée :</b></p>
+                            <p>Nous devons évaluer la limite de la fonction \(f(x) = \frac{\sin(\tan(x))}{\tan(\ln(x+e^x))}\) lorsque \(x\) tend vers \(0\). Vérifions d'abord si nous sommes en présence d'une forme indéterminée en évaluant le numérateur et le dénominateur en \(x = 0\).</p>
+                            <p>Pour le numérateur : $$\lim_{x \to 0} \sin(\tan(x)) = \sin(\tan(0)) = \sin(0) = 0$$</p>
+                            <p>Pour le dénominateur : $$\lim_{x \to 0} \tan(\ln(x+e^x)) = \tan(\ln(0+e^0)) = \tan(\ln(1)) = \tan(0) = 0$$</p>
+                            <p>Puisque nous obtenons la forme indéterminée \(\frac{0}{0}\), nous pouvons utiliser les développements limités pour lever cette indétermination.</p>
+
+                            <p><b>Rappel des développements limités au voisinage de \(0\) :</b></p>
+                            <p>Pour résoudre cette limite, nous utiliserons les développements limités des fonctions suivantes au voisinage de \(0\), à un ordre suffisant pour déterminer la limite :</p>
+                            <p>$$\sin(u) = u - \frac{u^3}{3!} + o(u^3) = u - \frac{u^3}{6} + o(u^3)$$</p>
+                            <p>$$\tan(v) = v + \frac{v^3}{3} + o(v^3)$$</p>
+                            <p>$$e^x = 1 + x + \frac{x^2}{2!} + o(x^2) = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>$$\ln(1+u) = u - \frac{u^2}{2} + o(u^2)$$</p>
+                            <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
+
+                            <p><b>Développement limité du numérateur \(\sin(\tan(x))\) au voisinage de \(0\) :</b></p>
+                            <p>Nous allons effectuer une composition de développements limités. Partons de \(\tan(x) = x + \frac{x^3}{3} + o(x^3)\). Ensuite, nous substituons ce développement dans l'expression de \(\sin(u)\) avec \(u = \tan(x)\) :</p>
+                            <p>$$\sin(\tan(x)) = \sin\left(x + \frac{x^3}{3} + o(x^3)\right)$$</p>
+                            <p>Utilisons le développement limité de \(\sin(u) = u - \frac{u^3}{6} + o(u^3)\) avec \(u = x + \frac{x^3}{3} + o(x^3)\) :</p>
+                            <p>$$\sin(\tan(x)) = \left(x + \frac{x^3}{3} + o(x^3)\right) - \frac{1}{6}\left(x + \frac{x^3}{3} + o(x^3)\right)^3 + o\left(\left(x + \frac{x^3}{3} + o(x^3)\right)^3\right)$$</p>
+                            <p>En développant le cube et en ne conservant que les termes jusqu'à l'ordre 3, puisque nous sommes intéressés par un développement limité à l'ordre 3 pour le numérateur : \(\left(x + \frac{x^3}{3} + o(x^3)\right)^3 = x^3 + o(x^3)\). Donc,</p>
+                            <p>$$\sin(\tan(x)) = x + \frac{x^3}{3} - \frac{1}{6}x^3 + o(x^3) = x + \left(\frac{1}{3} - \frac{1}{6}\right)x^3 + o(x^3) = x + \frac{1}{6}x^3 + o(x^3)$$</p>
+
+                            <p><b>Développement limité du dénominateur \(\tan(\ln(x+e^x))\) au voisinage de \(0\) :</b></p>
+                            <p>Décomposons le développement de \(\tan(\ln(x+e^x))\) en plusieurs étapes. Commençons par développer \(x + e^x\) au voisinage de \(0\) :</p>
+                            <p>$$x + e^x = x + \left(1 + x + \frac{x^2}{2} + o(x^2)\right) = 1 + 2x + \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>Ensuite, nous développons \(\ln(x+e^x) = \ln(1 + (2x + \frac{x^2}{2} + o(x^2)))\). Utilisons le développement limité de \(\ln(1+u) = u - \frac{u^2}{2} + o(u^2)\) avec \(u = 2x + \frac{x^2}{2} + o(x^2)\) :</p>
+                            <p>$$\ln(x+e^x) = \left(2x + \frac{x^2}{2} + o(x^2)\right) - \frac{1}{2}\left(2x + \frac{x^2}{2} + o(x^2)\right)^2 + o\left(\left(2x + \frac{x^2}{2} + o(x^2)\right)^2\right)$$</p>
+                            <p>Développons \(\left(2x + \frac{x^2}{2} + o(x^2)\right)^2 = (2x)^2 + o(x^2) = 4x^2 + o(x^2)\). Donc,</p>
+                            <p>$$\ln(x+e^x) = 2x + \frac{x^2}{2} - \frac{1}{2}(4x^2) + o(x^2) = 2x + \frac{x^2}{2} - 2x^2 + o(x^2) = 2x - \frac{3}{2}x^2 + o(x^2)$$</p>
+                            <p>Enfin, nous développons \(\tan(\ln(x+e^x))\). Utilisons le développement limité de \(\tan(v) = v + \frac{v^3}{3} + o(v^3)\) avec \(v = \ln(x+e^x) = 2x - \frac{3}{2}x^2 + o(x^2)\) :</p>
+                            <p>$$\tan(\ln(x+e^x)) = \tan\left(2x - \frac{3}{2}x^2 + o(x^2)\right)$$</p>
+                            <p>$$\tan(\ln(x+e^x)) = \left(2x - \frac{3}{2}x^2 + o(x^2)\right) + \frac{1}{3}\left(2x - \frac{3}{2}x^2 + o(x^2)\right)^3 + o\left(\left(2x - \frac{3}{2}x^2 + o(x^2)\right)^3\right)$$</p>
+                            <p>Le terme \(\left(2x - \frac{3}{2}x^2 + o(x^2)\right)^3\) est d'ordre \(x^3\) et donc est négligeable devant \(o(x^2)\). Par conséquent,</p>
+                            <p>$$\tan(\ln(x+e^x)) = 2x - \frac{3}{2}x^2 + o(x^2)$$</p>
+
+                            <p><b>Calcul de la limite :</b></p>
+                            <p>Maintenant, substituons les développements limités du numérateur et du dénominateur dans l'expression de la limite :</p>
+                            <p>$$\lim_{x \to 0} \frac{\sin(\tan(x))}{\tan(\ln(x+e^x))} = \lim_{x \to 0} \frac{x + \frac{1}{6}x^3 + o(x^3)}{2x - \frac{3}{2}x^2 + o(x^2)}$$</p>
+                            <p>Pour évaluer cette limite, nous factorisons par le terme dominant au numérateur et au dénominateur, qui est \(x\) dans les deux cas :</p>
+                            <p>$$\lim_{x \to 0} \frac{x\left(1 + \frac{1}{6}x^2 + \frac{o(x^3)}{x}\right)}{x\left(2 - \frac{3}{2}x + \frac{o(x^2)}{x}\right)} = \lim_{x \to 0} \frac{1 + \frac{1}{6}x^2 + o(x^2)}{2 - \frac{3}{2}x + o(x)}$$</p>
+                            <p>Lorsque \(x \to 0\), les termes \(\frac{1}{6}x^2\), \(o(x^2)\), \(-\frac{3}{2}x\) et \(o(x)\) tendent vers \(0\). Donc, la limite devient :</p>
+                            <p>$$\lim_{x \to 0} \frac{1 + \frac{1}{6}x^2 + o(x^2)}{2 - \frac{3}{2}x + o(x)} = \frac{1 + 0}{2 - 0} = \frac{1}{2}$$</p>
+
+
+                            <p class="encadre">La limite de $$\lim_{x \to 0} \frac{\sin(\tan(x))}{\tan(\ln(x+e^x))}$$ est \(\boxed{\frac{1}{2}}\).</p>
                         </div>
                     </div>
                 </div>

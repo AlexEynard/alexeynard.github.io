@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sciences des matériaux</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <!-- Exercices de mathématiques -->
+                <li class="menu-item dropdown">
+                    <a href="#">Mathématiques</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown"><a href="#">Analyse</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="calcul_matriciel.html">Calcul matriciel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Exercices de physique -->
+                <li class="menu-item dropdown">
+                    <a href="#">Physique</a>
+                    <ul class="submenu">
+                        <li class="submenu-item dropdown">
+                            <a href="#">Mécanique</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+                                <li class="submenu-item"><a href="mécanique_fluides.html">Mécanique des fluides</a></li>
+                                <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Ressources -->
+                <li class="menu-item"><a href="ressources.html">Resources</a></li>
+                <li class="menu-item"><a href="a_propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Thèmes du chapitre</h2>
+            <ul>
+                <li><a href="#page1">Oscillation harmonique simple</a></li>
+                <li><a href="#page2">Pendules</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="page" id="page1">
+                <div class="section-content">
+                    <h1 class="titre-page">Sciences des matériaux</h1>
+                    <div class="test_qcm">
+                        <h2>QCM : Sciences des Matériaux</h2>
+                        <form id="qcm">
+
+                            <div class="q" data-correct-qcm="ac" data-explication="<br>Bien que les métaux aient tendance à <b>perdre</b> des électrons dans leurs réactions (devenant des cations),  on peut considérer qu'ils sont <b>donneurs d'électrons</b> dans le sens où ils cèdent facilement des électrons à d'autres éléments.  Le terme <b>réducteur</b> est également correct car les métaux sont des agents réducteurs : ils provoquent la réduction d'autres espèces chimiques en s'oxydant eux-mêmes (en perdant des électrons).">
+                                <p class="consigne">1. Dans leurs réactions avec les autres éléments chimiques, les métaux sont plutôt :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q1" value="a"><span class="checkbox-btn"></span> a. Donneurs d'électrons</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q1" value="b"><span class="checkbox-btn"></span> b. Accepteurs d'électrons</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q1" value="c"><span class="checkbox-btn"></span> c. Réducteurs</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q1" value="d"><span class="checkbox-btn"></span> d. Oxydants</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="ac" data-explication="<br>La <b>liaison métallique</b> est la liaison chimique principale dans les matériaux métalliques. Cependant, dans certains matériaux métalliques, notamment les <b>alliages</b> et les <b>composés intermétalliques</b>,  une part de <b>liaison covalente</b> peut également être présente, participant à la cohésion du matériau. Les liaisons ioniques et électrostatiques faibles sont négligeables dans les matériaux métalliques typiques.">
+                                <p class="consigne">2. Quelle(s) liaison(s) chimique(s) est/sont présente(s) dans un matériau métallique ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q2" value="a"><span class="checkbox-btn"></span> a. Métallique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q2" value="b"><span class="checkbox-btn"></span> b. Ionique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q2" value="c"><span class="checkbox-btn"></span> c. Covalente</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q2" value="d"><span class="checkbox-btn"></span> d. Électrostatique faible</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="b" data-explication="<br>Les <b>céramiques</b> sont typiquement des composés entre un <b>métal</b> et un <b>non-métal</b>.  La différence d'électronégativité importante entre ces éléments conduit majoritairement à la formation de <b>liaisons ioniques</b>.  Une part de <b>liaison covalente</b> peut également être présente dans certaines céramiques, notamment celles composées de non-métaux entre eux. Les liaisons électrostatiques faibles (Van der Waals, hydrogène) sont généralement négligeables dans la structure principale des céramiques denses.">
+                                <p class="consigne">3. Quelle est la nature principale des liaisons dans les céramiques ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q3" value="a"><span class="checkbox-btn"></span> a. Métalliques</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q3" value="b"><span class="checkbox-btn"></span> b. Ionique et/ou covalente</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q3" value="c"><span class="checkbox-btn"></span> c. Électrostatiques faibles</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q3" value="d"><span class="checkbox-btn"></span> d. Van der Waals</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="b" data-explication="<br>Les <b>polymères</b> sont constitués de longues chaînes macromoléculaires.  <b>Au sein de chaque chaîne</b>, les atomes sont liés par des <b>liaisons covalentes fortes</b>. <b>Entre les chaînes</b>,  les interactions sont assurées par des <b>liaisons faibles</b> de type Van der Waals, liaisons hydrogène, ou interactions dipôle-dipôle.  La liaison <b>covalente</b> est donc la liaison principale qui définit la structure et la cohésion de base des chaînes polymères.">
+                                <p class="consigne">4. Les polymères sont majoritairement constitués de liaisons :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q4" value="a"><span class="checkbox-btn"></span> a. Ionique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q4" value="b"><span class="checkbox-btn"></span> b. Covalente</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q4" value="c"><span class="checkbox-btn"></span> c. Métallique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q4" value="d"><span class="checkbox-btn"></span> d. Hydrogène</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="a" data-explication="<br>Le <b>silicium</b> pur cristallisé est un matériau <b>semi-conducteur</b> de type <b>covalent</b>.  Chaque atome de silicium partage ses \(4\) électrons de valence avec \(4\) atomes de silicium voisins, formant un réseau tridimensionnel de liaisons covalentes. Le cuivre et l'aluminium sont des métaux (liaisons métalliques). Le chlorure de sodium (NaCl) est un composé ionique (liaisons ioniques).">
+                                <p class="consigne">5. Parmi ces matériaux, lequel est essentiellement covalent ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q5" value="a"><span class="checkbox-btn"></span> a. Silicium</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q5" value="b"><span class="checkbox-btn"></span> b. Cuivre</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q5" value="c"><span class="checkbox-btn"></span> c. Chlorure de sodium</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q5" value="d"><span class="checkbox-btn"></span> d. Aluminium</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="bc" data-explication="<br>Les réseaux <b>hexagonaux compacts (HC)</b> et <b>cubiques à faces centrées (CFC)</b> sont les réseaux cristallins les plus denses. Ils ont tous les deux la même compacité maximale théorique de \(74\,\%\). Le réseau cubique centré (CC) a une compacité de \(68\,\%\) et le cubique simple (CS) de seulement \(52\,\%\).">
+                                <p class="consigne">6. Quel(s) est/sont le(s) réseau(x) cristallin(s) le plus dense(s) en matière d’occupation de l’espace ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q6" value="a"><span class="checkbox-btn"></span> a. Cubique centré (CC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q6" value="b"><span class="checkbox-btn"></span> b. Cubique à faces centrées (CFC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q6" value="c"><span class="checkbox-btn"></span> c. Hexagonal compact (HC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q6" value="d"><span class="checkbox-btn"></span> d. Cubique simple (CS)</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="c" data-explication="<br>La <b>compacité volumique</b> du réseau cubique à faces centrées (CFC) est de \(74\,\%\), ce qui signifie que \(74\,\%\) de l'espace est occupé par les atomes.">
+                                <p class="consigne">7. Quelle est la compacité volumique du réseau cubique à faces centrées (CFC) ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q7" value="a"><span class="checkbox-btn"></span> a. \(52\,\%\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q7" value="b"><span class="checkbox-btn"></span> b. \(68\,\%\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q7" value="c"><span class="checkbox-btn"></span> c. \(74\,\%\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q7" value="d"><span class="checkbox-btn"></span> d. \(100\,\%\)</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="c" data-explication="<br>Une maille CFC contient \(4\) atomes effectifs : <b>8</b> coins (\(\frac{1}{8}\) d'atome chacun) + <b>6</b> faces (\(\frac{1}{2}\) d'atome chacune) = <b>8</b>(\(\frac{1}{8}\)) + <b>6</b>(\(\frac{1}{2}\)) = <b>4</b>.">
+                                <p class="consigne">8. Dans une maille élémentaire cubique à faces centrées (CFC), combien d’atomes effectifs contient-elle ?</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q8" value="a"><span class="checkbox-btn"></span> a. \(1\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q8" value="b"><span class="checkbox-btn"></span> b. \(2\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q8" value="c"><span class="checkbox-btn"></span> c. \(4\)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q8" value="d"><span class="checkbox-btn"></span> d. \(6\)</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="a" data-explication="<br>À <b>température ambiante</b>, le <b>fer pur</b> adopte la structure <b>cubique centrée (CC)</b> (fer α, ferrite).  Au-delà de \(912\) °C, il subit une transformation allotropique et adopte la structure <b>cubique à faces centrées (CFC)</b> (fer γ, austénite). À encore plus haute température, il redevient cubique centré (fer δ). La phase hexagonale compacte (HC) n'est pas une phase stable du fer pur.">
+                                <p class="consigne">9. Le fer à température ambiante adopte une structure :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q9" value="a"><span class="checkbox-btn"></span> a. Cubique centré (CC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q9" value="b"><span class="checkbox-btn"></span> b. Cubique à faces centrées (CFC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q9" value="c"><span class="checkbox-btn"></span> c. Hexagonale compacte (HC)</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q9" value="d"><span class="checkbox-btn"></span> d. Amorphe</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="a" data-explication="<br>Lors de la <b>solidification rapide</b> d'un alliage, le système n'a pas le temps d'atteindre l'équilibre thermodynamique.  La <b>surfusion</b> (sous-refroidissement important en dessous de la température de solidification d'équilibre) est favorisée, ainsi qu'une croissance cristalline <b>non-plane</b> et <b>non-directionnelle</b>, menant à la formation de <b>structures dendritiques</b>, caractéristiques de la solidification hors d'équilibre. Les transformations allotropiques sont des transformations solide-solide.  Une réaction eutectique est un type spécifique de solidification mais ne cause pas directement l'apparition de dendrites. La nucléation homogène est un mécanisme de déclenchement de la solidification, et peut se produire dans les deux cas (équilibre ou hors-équilibre).">
+                                <p class="consigne">10. Lors du refroidissement d’un alliage, l’apparition d’une structure dendritique est généralement associée à :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q10" value="a"><span class="checkbox-btn"></span> a. Une solidification rapide</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q10" value="b"><span class="checkbox-btn"></span> b. Une transformation allotropique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q10" value="c"><span class="checkbox-btn"></span> c. Une réaction eutectique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q10" value="d"><span class="checkbox-btn"></span> d. Une nucléation homogène</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="bc" data-explication="<br>L'<b>augmentation de la taille des grains</b> dans un métal <b>diminue</b> la surface intergranulaire totale par unité de volume. Les <b>joints de grains</b> constituent des obstacles au mouvement des dislocations, qui sont les principaux vecteurs de la déformation plastique.  Moins de joints de grains signifie donc <b>moins d'obstacles</b> au mouvement des dislocations, ce qui se traduit par une <b>diminution de la limite d'élasticité</b> (le matériau devient plus facile à déformer).  Par ailleurs, l'augmentation de la taille des grains peut aussi diminuer la <b>ductilité</b> car la déformation sera moins homogène et peut se concentrer dans un moins grand nombre de grains, favorisant la rupture.">
+                                <p class="consigne">11. L’augmentation de la taille des grains dans un métal entraîne généralement :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q11" value="a"><span class="checkbox-btn"></span> a. Une augmentation de la dureté</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q11" value="b"><span class="checkbox-btn"></span> b. Une diminution de la ductilité</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q11" value="c"><span class="checkbox-btn"></span> c. Une diminution de la limite d’élasticité</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q11" value="d"><span class="checkbox-btn"></span> d. Une amélioration de la résistance à la fatigue</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="a" data-explication="<br>La <b>trempe</b> d'un acier consiste à le <b>chauffer</b> en phase <b>austénitique</b> (typiquement entre \(850\) et \(950\) °C pour un acier non allié), puis à le <b>refroidir très rapidement</b>. Ce refroidissement rapide (typiquement dans l'eau ou l'huile) <b>empêche</b> la transformation en phases d'équilibre (ferrite, perlite, bainite) et <b>favorise</b> la formation de <b>martensite</b>, une phase <b>dure et fragile</b>. ">
+                                <p class="consigne">12. La trempe d’un acier consiste principalement à :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q12" value="a"><span class="checkbox-btn"></span> a. Refroidir rapidement après chauffage en phase austénitique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q12" value="b"><span class="checkbox-btn"></span> b. Refroidir lentement après chauffage en phase austénitique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q12" value="c"><span class="checkbox-btn"></span> c. Maintenir à haute température</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q12" value="d"><span class="checkbox-btn"></span> d. Refroidir rapidement sans chauffage préalable</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="c" data-explication="<br>La <b>perlite</b> est un constituant microstructural lamellaire des aciers. Elle se forme par transformation <b>eutectoïde</b> de l'austénite lors d'un refroidissement lent, en un mélange biphasé de <b>ferrite</b> (fer α) et de <b>cémentite</b> (carbure de fer \(\mathrm{Fe_3C}\)) arrangées en lamelles alternées. La bainite et la martensite sont d'autres constituants, formés par refroidissement plus rapides. L'austénite est la phase mère de la perlite, elle ne constitue pas la perlite elle-même.">
+                                <p class="consigne">13. Une structure perlitique est une combinaison de :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q13" value="a"><span class="checkbox-btn"></span> a. Ferrite et austénite</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q13" value="b"><span class="checkbox-btn"></span> b. Martensite et bainite</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q13" value="c"><span class="checkbox-btn"></span> c. Ferrite et cémentite</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q13" value="d"><span class="checkbox-btn"></span> d. Austenite et cémentite</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="b" data-explication="<br>Un <b>alliage eutectique</b> se solidifie à une <b>température unique</b>, appelée <b>point eutectique</b>.  La transformation eutectique est une transformation isotherme (à température constante).  Les alliages non-eutectiques, eux, se solidifient sur une plage de température (entre le liquidus et le solidus).  La structure d'un alliage eutectique n'est généralement pas amorphe mais <b>cristalline</b>, et souvent de morphologie <b>lamellaire</b> ou <b>fibreuse</b> (eutectique de solidification).">
+                                <p class="consigne">14. Un alliage eutectique est caractérisé par :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q14" value="a"><span class="checkbox-btn"></span> a. Une seule phase solide</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q14" value="b"><span class="checkbox-btn"></span> b. Un point de fusion unique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q14" value="c"><span class="checkbox-btn"></span> c. Une structure amorphe</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q14" value="d"><span class="checkbox-btn"></span> d. Une solidification progressive sur une large plage de température</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+                            <div class="q" data-correct-qcm="b" data-explication="<br>Le <b>durcissement par écrouissage</b>, aussi appelé <b>travail à froid</b>, est un mécanisme de renforcement des métaux par déformation plastique à froid (typiquement à température ambiante ou en-dessous).  Il repose sur l'<b>augmentation de la densité de dislocations</b> dans la structure cristalline du matériau.  Ces dislocations, en interagissant entre elles, <b>gênent leur propre mouvement</b>, ce qui augmente la <b>résistance mécanique</b> et la <b>dureté</b> du matériau.  L'écrouissage diminue généralement la <b>ductilité</b>. La formation de précipités durs est le principe du durcissement structural ou précipitation. La formation d'une structure dendritique est liée à la solidification. La composition chimique peut être modifiée pour jouer sur d'autres mécanismes de durcissement (solution solide, précipitation...).">
+                                <p class="consigne">15. Le durcissement par écrouissage repose sur :</p>
+                                <div class="options">
+                                    <label class="custom-checkbox"><input type="checkbox" name="q15" value="a"><span class="checkbox-btn"></span> a. La formation de précipités durs</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q15" value="b"><span class="checkbox-btn"></span> b. L’augmentation du nombre de dislocations</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q15" value="c"><span class="checkbox-btn"></span> c. La formation d’une structure dendritique</label>
+                                    <label class="custom-checkbox"><input type="checkbox" name="q15" value="d"><span class="checkbox-btn"></span> d. La modification de la composition chimique</label>
+                                </div>
+                                <div class="explanation"></div>
+                            </div>
+
+
+                            <button type="button" class="button_qcm" id="valider">Valider</button>
+                        </form>
+
+                        <div id="resultat_qcm" class="resultat_qcm" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>

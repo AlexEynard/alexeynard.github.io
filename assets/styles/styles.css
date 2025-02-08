@@ -2,7 +2,7 @@
 :root,
 html {
   --primary-color: #0098b3;
-  --primary-color-transparent: #0098b3b9;
+  --primary-color-transparent: #0098b3aa;
   --primary-color-light: #0288a041;
   --contrast-color: #001c22;
   --blue-silk: #044f67;
@@ -41,6 +41,7 @@ html {
   --end-hue-page: 280;
   --page-saturation: 70%;
   --page-lightness: 75%;
+  --permanent_blue: rgb(86, 207, 216);
 }
 
 
@@ -68,7 +69,9 @@ body {
   margin: 0;
   line-height: 1.6em;
   background-color: var(--body-background-color);
+  color: var(--texte);
 }
+
 
 .separator {
   width: 15%;
@@ -76,6 +79,42 @@ body {
   border: none;
   height: 2px;
   background-color: var(--contrast-color);
+}
+
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 7px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  box-shadow: var(--shadow);
+  background-color: var(--black-0-2);
+  color: var(--texte);
+  cursor: pointer;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  font-size: 2em;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0.8;
+  visibility: hidden;
+}
+
+#back-to-top-btn.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top-btn:hover {
+  background-color: var(--black-0-2);
+}
+
+#back-to-top-btn:focus {
+  background-color: var(--contrast-color);
+  outline: 2px solid var(--primary-color, --primary-color-light);
+  outline-offset: 2px;
 }
 
 .hyperlink {
@@ -197,17 +236,17 @@ body {
 /* Menu latéral */
 .sidebar {
   position: fixed;
-  width: 13vw;
+  width: 14vw;
   background-color: var(--contrast-color);
   color: var(--white);
   text-align: center;
-  padding: 1em;
-  margin: 2em auto;
+  padding: 0.3em 1.2em;
+  margin: 1.4em auto;
   border-radius: 1em;
   box-shadow: var(--shadow);
   animation: slideInFromLeft 0.5s ease forwards;
   transition: box-shadow 0.5s ease, border-radius 0.5s ease;
-  margin-left: 2em;
+  margin-left: 0.7em;
   z-index: 2;
 }
 
@@ -221,11 +260,11 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2em;
-  margin-bottom: 1.25em;
+  margin-bottom: 1em;
 }
 
 .sidebar li {
-  margin-bottom: 0.625em;
+  margin-bottom: 0.5em;
   list-style: none;
 }
 
@@ -234,7 +273,7 @@ body {
   font-weight: bold;
   color: var(--white);
   display: block;
-  padding: 0.75em 0;
+  padding: 0.8em 0.1em;
   border-radius: var(--border-radius);
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
@@ -261,8 +300,8 @@ body {
 }
 
 .page {
-  min-height: 100vh;
-  width: 100%;
+  min-height: 90vh;
+  width: 102%;
   position: relative;
   overflow: hidden;
   border-radius: 0.8em;
@@ -288,16 +327,38 @@ body {
   position: static;
   color: var(--texte);
   width: 75%;
+  float: inline-end;
   font-size: 2.5em;
   text-align: center;
-  float: inline-end;
   margin: 0.8em 4%;
+  line-height: 1.2;
 }
 
 .titre-page-center {
   font-size: 4em;
   color: var(--texte);
   text-align: center;
+  line-height: 1.1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 90%;
+}
+
+.titre-qcm {
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em 0;
+  transition: color 0.3s ease;
+  margin-top: 0.4em;
+  margin-bottom: 3em;
+}
+
+.titre-qcm:hover {
+  text-shadow: var(--shadow);
+  text-decoration: underline;
+  transform: scale(1.01);
 }
 
 
@@ -423,6 +484,20 @@ body {
   animation: fade-in 0.5s ease;
   z-index: 1;
   color: var(--white);
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: initial;
+}
+
+.test_qcm.collapsed {
+  max-height: 10vh;
+  overflow: hidden;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.test_qcm:not(.collapsed) {
+  cursor: default;
 }
 
 .q {
@@ -795,9 +870,11 @@ body {
 @media (max-aspect-ratio: 1.6),
 (max-width: 1080px) {
   .titre-page {
-    font-size: 2.2em;
+    font-size: 2em;
     float: none;
     margin: 2% auto;
+    width: 100%;
+    margin-bottom: 1em;
   }
 
   .links {
@@ -902,17 +979,19 @@ body {
 
   .sidebar {
     position: static;
-    max-width: 100%;
+    max-width: 99%;
     width: 90%;
     animation: none;
     margin: auto auto 1% auto;
     z-index: 1;
     margin-top: 1em;
+    align-self: center;
+    margin-bottom: 1em;
   }
 
   .sidebar a:hover {
     background-color: var(--primary-color-transparent);
-    color: #8deeff;
+    color: var(--);
     transform: scale(1);
     box-shadow: var(--shadow);
   }
@@ -920,6 +999,7 @@ body {
   .page {
     border-radius: 0.5em;
     box-shadow: none;
+    align-self: center;
   }
 
   .section-content {
@@ -954,6 +1034,40 @@ body {
 
   .consigne {
     font-size: 1em;
+  }
+
+
+  .test_qcm {
+    width: 90%;
+    float: none;
+    margin: 2% auto;
+    padding-bottom: 12vh;
+  }
+
+  .test_qcm.collapsed {
+    max-height: 2em;
+  }
+
+  .titre-qcm {
+    font-size: 1.2em;
+    margin-bottom: 1.7em;
+    width: 100%;
+    padding: 0.4em 0;
+    text-align: center;
+  }
+
+  .titre-qcm:hover {
+    background-color: none;
+    color: none;
+    text-decoration: none;
+    text-decoration-color: none;
+  }
+
+  #back-to-top-btn {
+    bottom: 0.5em;
+    right: 0.5em;
+    padding: 0.6em 0.9em;
+    font-size: 1.2em;
   }
 
   .titre-page-center {
@@ -1023,8 +1137,6 @@ body {
   .gif {
     width: 70vw;
   }
-
-
 
   .navbar {
     flex-direction: column;

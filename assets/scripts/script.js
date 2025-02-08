@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 function loadMathJaxAsync() {
   const script = document.createElement('script');
   script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
@@ -63,7 +64,7 @@ function renderMathJax() {
   if (typeof MathJax !== 'undefined') {
     MathJax.typesetPromise()
       .catch(function (err) {
-        console.error('Typeset failed: ' + err.message);
+        console.error('Erreur de rendu MathJax: ' + err.message);
       });
   }
 }
@@ -71,14 +72,13 @@ function renderMathJax() {
 function renderLatexInCorrections() {
   const explanationDivs = document.querySelectorAll('.explanation');
 
-  for (let i = 0; i < explanationDivs.length; i++) {
-    const div = explanationDivs[i];
+  explanationDivs.forEach(div => {
     if (div.textContent.trim()) {
       MathJax.typesetPromise([div]).catch(function (err) {
-        console.error("MathJax typeset error:", err);
+        console.error("Erreur de rendu MathJax pour la correction:", err);
       });
     }
-  }
+  });
 }
 
 function applyNeutralExplanationStyle(explanationDiv) {
@@ -116,19 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleButtons = document.querySelectorAll('.toggle-correction');
   const allCorrections = document.querySelectorAll('.exercice-correction');
 
-  for (let i = 0; i < toggleButtons.length; i++) {
-    const button = toggleButtons[i];
+  toggleButtons.forEach(button => {
     button.addEventListener('click', function () {
       const correction = this.parentElement.nextElementSibling;
 
-      for (let j = 0; j < allCorrections.length; j++) {
-        const otherCorrection = allCorrections[j];
+      allCorrections.forEach(otherCorrection => {
         if (otherCorrection !== correction && !otherCorrection.classList.contains('hidden')) {
           otherCorrection.classList.add('hidden');
           otherCorrection.style.display = 'none';
           otherCorrection.style.animation = '';
         }
-      }
+      });
 
       const estCache = correction.classList.toggle('hidden');
       correction.style.display = estCache ? 'none' : 'block';
@@ -136,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       renderLatexInCorrections();
     });
-  }
+  });
 
 
   const validerButton = document.getElementById("valider");
@@ -146,71 +144,75 @@ document.addEventListener("DOMContentLoaded", function () {
   if (validerButton) {
     validerButton.addEventListener('click', function (event) {
       event.preventDefault();
+
       let score = 0;
       const total = questions.length;
       let resultatHTML = `<h3>Votre score : <span id="score-value">0</span>/${total} (<span id="note-value">0</span>/20)</h3>`;
       resultatDiv.innerHTML = resultatHTML;
 
-      for (let i = 0; i < questions.length; i++) {
-        const q = questions[i];
+      questions.forEach(q => {
         const explanationDiv = q.querySelector(".explanation");
         applyNeutralExplanationStyle(explanationDiv);
-        let isCorrect = false;
 
+        let questionScore = 0;
+        let isCorrect = false;
         const checkboxes = q.querySelectorAll(`input[type='checkbox']`);
         const radios = q.querySelectorAll(`input[type='radio']`);
 
         if (checkboxes.length > 0) {
           const correctAnswers = q.getAttribute("data-correct-qcm").split('');
-          const userAnswers = [];
-          const checkedCheckboxes = q.querySelectorAll(`input[type='checkbox']:checked`);
-          for (let k = 0; k < checkedCheckboxes.length; k++) {
-            userAnswers.push(checkedCheckboxes[k].value);
-          }
+          const userAnswers = Array.from(q.querySelectorAll(`input[type='checkbox']:checked`)).map(cb => cb.value);
 
+          let correctUserAnswersCount = 0;
+          userAnswers.forEach(answer => {
+            if (correctAnswers.includes(answer)) {
+              correctUserAnswersCount++;
+            }
+          });
 
-          if (userAnswers.length === correctAnswers.length) {
-            isCorrect = userAnswers.every(function (answer) {
-              return correctAnswers.includes(answer);
-            });
-          }
-          const correctAnswersText = correctAnswers.join(',').toUpperCase();
-          if (isCorrect) {
+          if (userAnswers.length === correctAnswers.length && correctUserAnswersCount === correctAnswers.length) {
+            isCorrect = true;
+            questionScore = 1;
             applyCorrectExplanationStyle(explanationDiv);
-          } else {
-            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), correctAnswersText);
+          } else if (correctUserAnswersCount > 0 && userAnswers.length <= correctAnswers.length) {
+            questionScore = correctUserAnswersCount / correctAnswers.length;
+            applyCorrectExplanationStyle(explanationDiv);
+          }
+          else {
+            questionScore = -0.25;
+            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), correctAnswers.join(',').toUpperCase());
           }
 
 
-        } else if (radios.length > 0) {
+        }
+        else if (radios.length > 0) {
           const correctValue = q.getAttribute("data-correct");
           const selectedRadio = q.querySelector(`input[type='radio']:checked`);
 
-          if (selectedRadio) {
-            if (selectedRadio.value === correctValue) {
-              isCorrect = true;
-            }
-          }
-          const correctAnswersText = q.getAttribute("data-correct").toUpperCase();
-          if (isCorrect) {
+          if (selectedRadio && selectedRadio.value === correctValue) {
+            isCorrect = true;
+            questionScore = 1;
             applyCorrectExplanationStyle(explanationDiv);
+          } else if (selectedRadio) {
+            questionScore = -0.25;
+            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), q.getAttribute("data-correct").toUpperCase());
           } else {
-            applyIncorrectExplanationStyle(explanationDiv, q.getAttribute("data-explication"), correctAnswersText);
+            questionScore = 0;
+            applyWarningExplanationStyle(explanationDiv);
           }
+        } else {
+          applyWarningExplanationStyle(explanationDiv);
         }
 
 
-        if (isCorrect) {
-          score++;
-        }
+        score += questionScore;
         explanationDiv.style.fontSize = "1.1em";
         explanationDiv.style.display = 'block';
         renderLatexInCorrections();
+      });
 
-      }
-
-      document.getElementById("score-value").textContent = score;
-      document.getElementById("note-value").textContent = ((score / total) * 20).toFixed(1);
+      document.getElementById("score-value").textContent = score.toFixed(2);
+      document.getElementById("note-value").textContent = ((Math.max(0, score) / total) * 20).toFixed(1);
       resultatDiv.style.display = "block";
       renderLatexInCorrections();
     });
@@ -220,10 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   const questions = document.querySelectorAll('.question');
 
-  for (let i = 0; i < questions.length; i++) {
-    const question = questions[i];
-    if (question.dataset.difficulte) {
-      const difficulte = parseInt(question.dataset.difficulte);
+  questions.forEach(question => {
+    const difficulte = parseInt(question.dataset.difficulte, 10);
+    if (difficulte) {
       const etoiles = document.createElement('span');
       etoiles.classList.add('etoiles');
       etoiles.setAttribute('aria-label', `Difficulté : ${difficulte} sur 5`);
@@ -241,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
         consigne.prepend(etoiles);
       }
     }
-  }
+  });
 });
 
 
@@ -257,12 +258,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const theme = isDark ? 'dark' : 'light';
     const root = document.documentElement;
 
-    const themeEntries = Object.entries(themeSwitcher.themes[theme]);
-    for (let i = 0; i < themeEntries.length; i++) {
-      const [varName, value] = themeEntries[i];
+    Object.entries(themeSwitcher.themes[theme]).forEach(([varName, value]) => {
       root.style.setProperty(varName, value);
-    }
-
+    });
 
     localStorage.setItem('theme', theme);
   };
@@ -270,7 +268,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const createThemeButton = function (initialDark) {
     const navbar = document.querySelector('.navbar');
     const toggleBtn = document.createElement('button');
-
     toggleBtn.id = 'theme-toggle';
     toggleBtn.className = 'theme-toggle';
     toggleBtn.innerHTML = initialDark ? '☀️' : '🌙';
@@ -288,6 +285,60 @@ document.addEventListener('DOMContentLoaded', function () {
   initTheme();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const titreQcmElements = document.querySelectorAll('.titre-qcm');
+
+  titreQcmElements.forEach(titre => {
+    const testQcmDiv = titre.closest('.test_qcm');
+
+    if (testQcmDiv) {
+      testQcmDiv.classList.add('collapsed');
+
+      titre.addEventListener('click', function (event) {
+        resetQcmScore();
+        testQcmDiv.classList.toggle('collapsed');
+      });
+
+      testQcmDiv.querySelectorAll('*').forEach(elementEnfant => {
+        elementEnfant.addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+      });
+    }
+  });
+});
+
+function resetQcmScore() {
+  const resultatDiv = document.getElementById("resultat_qcm");
+  if (resultatDiv) {
+    resultatDiv.style.display = "none";
+    resultatDiv.innerHTML = '';
+  }
+
+  const questions = document.querySelectorAll(".q");
+  questions.forEach(q => {
+    const explanationDiv = q.querySelector(".explanation");
+    applyNeutralExplanationStyle(explanationDiv);
+
+    const checkboxes = q.querySelectorAll(`input[type='checkbox']`);
+    checkboxes.forEach(cb => {
+      cb.checked = false;
+    });
+
+    const radios = q.querySelectorAll(`input[type='radio']`);
+    radios.forEach(radio => {
+      radio.checked = false;
+    });
+  });
+}
+
+function applyNeutralExplanationStyle(explanationDiv) {
+  explanationDiv.style.border = "1px solid var(--grey-ddd)";
+  explanationDiv.style.backgroundColor = '';
+  explanationDiv.style.color = '';
+  explanationDiv.innerHTML = '';
+  explanationDiv.style.display = 'none';
+}
 
 const themeSwitcher = {
   themes: {
@@ -299,6 +350,7 @@ const themeSwitcher = {
       '--blue-silk': '#044f67',
       '--light-color': '#a2f1ff',
       '--white': '#f4f4f9',
+      '--texte': '#001114',
       '--qcm_box': '#2b9884bf',
       '--qcm_q': '#167671bf',
       '--shadow': '0.15em 0.15em 0.25em rgba(0, 0, 0, 0.15)',
@@ -307,7 +359,6 @@ const themeSwitcher = {
       '--correct': '#4CAF50',
       '--correct-light': '#e8f5e9',
       '--false': '#d82c1f',
-      '--texte': '#001114',
       '--false-light': '#ffebee',
       '--body-background-color': '#f8f9fa',
       '--hover-background-menu': '#005a80',
@@ -388,11 +439,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const numPages = pages.length;
   const virtualNumPages = Math.max(numPages, 10);
 
-  for (let i = 0; i < pages.length; i++) {
-    const page = pages[i];
+  pages.forEach(page => {
     const pageId = page.id;
     const pageNumber = parseInt(pageId.replace('page', ''), 10);
     const ratio = (pageNumber - 1) / (virtualNumPages - 1 <= 0 ? 1 : virtualNumPages - 1);
     page.style.setProperty('--page-ratio', ratio.toString());
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const backToTopBtn = document.getElementById("back-to-top-btn");
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    scrollToTop();
+  });
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 });

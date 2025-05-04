@@ -206,7 +206,7 @@
                     </div>
                     <!-- exercice 1 -->
                     <div class="exercice">
-                        <h2>Les fonctions indispensables</h2>
+                        <h2>Les développements à connaître</h2>
 
                         <!-- Question 1 -->
                         <div class="question">
@@ -253,11 +253,6 @@
                             <p>Le développement limité de \((x+1)^\alpha\) à l'ordre 4 en 0 est :</p>
                             <p>$$ (x+1)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2}x^2 + \frac{\alpha(\alpha-1)(\alpha-2)}{6}x^3 + \frac{\alpha(\alpha-1)(\alpha-2)(\alpha-3)}{24}x^4 + o(x^4) $$</p>
                         </div>
-                    </div>
-
-                    <!-- exercice 2 -->
-                    <div class="exercice">
-                        <h2>Les formes usuelles importantes</h2>
 
                         <div class="question">
                             <p class="consigne">Calculer :</p>
@@ -269,7 +264,6 @@
                             <p>$$\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} + o(x^5)$$</p>
                         </div>
 
-                        <!-- Question 3 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_6(0) : \frac{1}{1 - x}$$</p>
@@ -279,19 +273,21 @@
                             <p>Le développement limité de \(\frac{1}{1 - x}\) à l'ordre 6 en 0 est :</p>
                             <p>$$\frac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + x^5 + o(x^6)$$</p>
                         </div>
+                    </div>
 
-                        <!-- Question 7 -->
+                    <!-- exercice 2 -->
+                    <div class="exercice">
+                        <h2>Les autres développements importants</h2>
+
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_6(0) : \cosh(x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>Le développement limité de \(\cosh(x)\) à l'ordre 6 en 0 est :</p>
-                            <p>$$\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^6)$$</p>
+                            <p>$$\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + o(x^6)$$</p>
                         </div>
 
-                        <!-- Question 8 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_6(0) : \sinh(x)$$</p>
@@ -302,19 +298,52 @@
                             <p>$$\sinh(x) = x + \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$</p>
                         </div>
 
-                        <!-- Question 9 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_4(0) : \sqrt{x + 1}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On commence par réécrire la fonction :</p>
+                            <p>Nous commençons par réécrire la fonction :</p>
                             <p>$$\sqrt{1 + x} = (1 + x)^{\frac{1}{2}}$$</p>
                             <p>Nous utilisons ensuite le développement limité de \( (1 + x)^\alpha \) à l'ordre 4 en 0 pour \( \alpha = \frac{1}{2} \) :</p>
                             <p>$$\sqrt{x + 1} = (1 + x)^{\frac{1}{2}} = 1 + \frac{1}{2}x + \left(\frac{1}{2} \times \frac{-1}{2}\right)\frac{x^2}{2} + \left(\frac{1}{2} \times \frac{-1}{2} \times \frac{-3}{2}\right)\frac{x^3}{6} + \left(\frac{1}{2} \times \frac{-1}{2} \times \frac{-3}{2} \times \frac{-5}{2}\right)\frac{x^4}{24} + o(x^4)$$</p>
                             <p>En simplifiant, nous obtenons :</p>
                             <p>$$\sqrt{x + 1} = 1 + \frac{1}{2}x - \frac{1}{8}x^2 + \frac{1}{16}x^3 - \frac{5}{128}x^4 + o(x^4)$$</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Calculer :</p>
+                            <p>$$dl_5(0) : \arctan(x)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Nous partons de l'expression intégrale :</p>
+                            <p>$$\arctan(x) = \int_0^x \frac{1}{1+t^2}\,dt$$</p>
+                            <p>Développons la fonction \(\frac{1}{1+t^2}\) en série autour de 0 :</p>
+                            <p>$$\frac{1}{1+t^2} = 1 - t^2 + t^4 + o(t^4)$$</p>
+                            <p>En intégrant terme à terme de 0 à \(x\), on obtient :</p>
+                            <p>$$\arctan(x) = \int_0^x \left(1 - t^2 + t^4 + o(t^4)\right) dt = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^5)$$</p>
+                            <p>Le développement limité à l'ordre 5 en 0 est donc :</p>
+                            <p>$$\arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^5)$$</p>
+                        </div>
+
+                        <div class="question">
+                            <p class="consigne">Calculer :</p>
+                            <p>$$dl_6(0) : \tan(x)$$</p>
+                            <button class="toggle-correction"><b>&#10003;</b></button>
+                        </div>
+                        <div class="exercice-correction hidden">
+                            <p>Nous allons utiliser les développements limités de \(\sin(x)\) et \(\cos(x)\) pour trouver celui de \(\tan(x)\). L'idée est d'effectuer une division de polynômes, en s'arrêtant à l'ordre 6.</p>
+                            <p>$$\tan(x) = \frac{x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)}{1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^6)}$$</p>
+                            <p>Pour faciliter la division, on peut utiliser le développement limité de \(\frac{1}{1-u}\) :</p>
+                            <p>$$\frac{1}{1 - u} = 1 + u + u^2 + o(u^2)$$</p>
+                            <p>avec \(u = \frac{x^2}{2} - \frac{x^4}{24} + o(x^6)\). On obtient :</p>
+                            <p>$$\frac{1}{\cos(x)} = 1 + \left(\frac{x^2}{2} - \frac{x^4}{24}\right) + \left(\frac{x^2}{2} - \frac{x^4}{24}\right)^2 + o(x^6) = 1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)$$</p>
+                            <p>En multipliant le développement limité de \(\sin(x)\) par celui de \(\frac{1}{\cos(x)}\), on obtient :</p>
+                            <p>$$\tan(x) = \left(x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)\right) \left(1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)\right)$$</p>
+                            <p>Après développement et simplification (en ne gardant que les termes jusqu'à l'ordre 6), on trouve :</p>
+                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
                         </div>
                     </div>
 
@@ -371,61 +400,44 @@
                     <!-- exercice 1 -->
                     <div class="exercice">
                         <h2>Pour comprendre</h2>
-                        <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_4(0) : \sin(x) \cdot \cos(x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>On utilise les développements limités à l'ordre 4 :</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^4)$$</p>
+                            <p>$$\cos(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4)$$</p>
                             <p>On multiplie les deux développements :</p>
-                            <p>$$\sin(x) \cdot \cos(x) = \left(x - \frac{x^3}{6}\right) \left(1 - \frac{x^2}{2}\right)$$</p>
-                            <p>Effectuons la multiplication terme à terme :</p>
-                            <p>$$= x \cdot 1 + x \left(-\frac{x^2}{2}\right) - \frac{x^3}{6} \cdot 1 - \frac{x^3}{6} \left(-\frac{x^2}{2}\right) + o(x^3)$$</p>
-                            <p>$$= x - \frac{x^3}{2} - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>Maintenant, on additionne les termes en \(x^3\) :</p>
-                            <p>$$= x - \left(\frac{3x^3}{6} + \frac{x^3}{6}\right) + o(x^3) = x - \frac{2x^3}{3} + o(x^3)$$</p>
+                            <p>$$\sin(x)\cos(x) = \left(x - \frac{x^3}{6} + \frac{x^5}{120}\right) \left(1 - \frac{x^2}{2} + \frac{x^4}{24}\right)$$</p>
+                            <p>On effectue le produit et on ne conserve que les termes jusqu'à l'ordre 4 :</p>
+                            <p>$$\sin(x)\cos(x) = x \cdot 1 + x \cdot \left(-\frac{x^2}{2}\right) + x \cdot \frac{x^4}{24} - \frac{x^3}{6} \cdot 1 - \frac{x^3}{6} \cdot \left(-\frac{x^2}{2}\right) + o(x^4)$$</p>
+                            <p>On simplifie les termes restants :</p>
+                            <p>$$\sin(x)\cos(x) = x - \frac{x^3}{2} - \frac{x^3}{6} + o(x^4)$$</p>
+                            <p>On regroupe les termes en \(x^3\) :</p>
+                            <p>$$\sin(x)\cos(x) = x - \left(\frac{1}{2} + \frac{1}{6}\right)x^3 + o(x^4) = x - \frac{2}{3}x^3 + o(x^4)$$</p>
                         </div>
 
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_6(0) : \tan(x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>Nous allons utiliser les développements limités de \(\sin(x)\) et \(\cos(x)\) pour trouver celui de \(\tan(x)\). L'idée est d'effectuer une division de polynômes, en s'arrêtant à l'ordre 6.</p>
-                            <p>$$\tan(x) = \frac{x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)}{1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^6)}$$</p>
-                            <p>Pour faciliter la division, on peut utiliser le développement limité de \(\frac{1}{1-u}\) :</p>
-                            <p>$$\frac{1}{1 - u} = 1 + u + u^2 + o(u^2)$$</p>
-                            <p>avec \(u = \frac{x^2}{2} - \frac{x^4}{24} + o(x^6)\). On obtient :</p>
-                            <p>$$\frac{1}{\cos(x)} = 1 + \left(\frac{x^2}{2} - \frac{x^4}{24}\right) + \left(\frac{x^2}{2} - \frac{x^4}{24}\right)^2 + o(x^6) = 1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)$$</p>
-                            <p>En multipliant le développement limité de \(\sin(x)\) par celui de \(\frac{1}{\cos(x)}\), on obtient :</p>
-                            <p>$$\tan(x) = \left(x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^6)\right) \left(1 + \frac{x^2}{2} + \frac{5x^4}{24} + o(x^6)\right)$$</p>
-                            <p>Après développement et simplification (en ne gardant que les termes jusqu'à l'ordre 6), on trouve :</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$</p>
-                        </div>
-
-                        <!-- Question 2 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_4(0) : e^x \cdot \ln(1 + x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>$$\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>On utilise les développements limités à l'ordre 4 :</p>
+                            <p>$$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + o(x^4)$$</p>
+                            <p>$$\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + o(x^4)$$</p>
                             <p>On multiplie les deux développements :</p>
-                            <p>$$e^x \cdot \ln(1 + x) = \left(1 + x + \frac{x^2}{2}\right) \left(x - \frac{x^2}{2}\right)$$</p>
-                            <p>Effectuons la multiplication :</p>
-                            <p>$$= 1 \cdot x + 1 \left(-\frac{x^2}{2}\right) + x \cdot x + x \left(-\frac{x^2}{2}\right) + \frac{x^2}{2} \cdot x + \frac{x^2}{2} \left(-\frac{x^2}{2}\right) + o(x^2)$$</p>
-                            <p>$$= x - \frac{x^2}{2} + x^2 - \frac{x^3}{2} + \frac{x^3}{2} + o(x^2)$$</p>
-                            <p>En simplifiant les termes :</p>
-                            <p>$$= x + \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>$$e^x \cdot \ln(1 + x) = \left(1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24}\right) \left(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4}\right)$$</p>
+                            <p>On effectue le produit et on ne conserve que les termes jusqu'à l'ordre 4 :</p>
+                            <p>$$e^x \cdot \ln(1 + x) = 1 \cdot x + 1 \cdot \left(-\frac{x^2}{2}\right) + 1 \cdot \frac{x^3}{3} + 1 \cdot \left(-\frac{x^4}{4}\right) + x \cdot x + x \cdot \left(-\frac{x^2}{2}\right) + x \cdot \frac{x^3}{3} + \frac{x^2}{2} \cdot x + \frac{x^2}{2} \cdot \left(-\frac{x^2}{2}\right) + \frac{x^3}{6} \cdot x + o(x^4)$$</p>
+                            <p>On simplifie les termes restants :</p>
+                            <p>$$e^x \cdot \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + x^2 - \frac{x^3}{2} + \frac{x^4}{3} + \frac{x^3}{2} - \frac{x^4}{4} + \frac{x^4}{6} + o(x^4)$$</p>
+                            <p>On regroupe les termes :</p>
+                            <p>$$e^x \cdot \ln(1 + x) = x + \frac{1}{2}x^2 + \frac{1}{3}x^3 - \frac{1}{12}x^4 + o(x^4)$$</p>
                         </div>
+
 
                         <!-- Question 3 -->
                         <div class="question">
@@ -434,18 +446,21 @@
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
+                            <p>On utilise les développements limités à l'ordre 4 :</p>
+                            <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \frac{5x^4}{128} + o(x^4)$$</p>
+                            <p>$$\sin(x) = x - \frac{x^3}{6} + \frac{x^5}{120} + o(x^4)$$</p>
                             <p>On multiplie les deux développements :</p>
-                            <p>$$\sqrt{1 + x} \cdot \sin(x) = \left(1 + \frac{x}{2} - \frac{x^2}{8}\right) \left(x - \frac{x^3}{6}\right)$$</p>
-                            <p>Effectuons la multiplication :</p>
-                            <p>$$= 1 \cdot x + 1 \left(-\frac{x^3}{6}\right) + \frac{x}{2} \cdot x + \frac{x}{2} \left(-\frac{x^3}{6}\right) - \frac{x^2}{8} \cdot x + o(x^3)$$</p>
-                            <p>$$= x - \frac{x^3}{6} + \frac{x^2}{2} - \frac{x^4}{12} - \frac{x^3}{8} + o(x^3)$$</p>
-                            <p>En simplifiant les termes :</p>
-                            <p>$$= x + \frac{x^2}{2} - \left(\frac{4x^3}{24} + \frac{3x^3}{24}\right) + o(x^3)$$</p>
-                            <p>$$= x + \frac{x^2}{2} - \left(\frac{7x^3}{24}\right) + o(x^3)$$</p>
+                            <p>$$\sqrt{1 + x} \cdot \sin(x) = \left(1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \frac{5x^4}{128}\right) \left(x - \frac{x^3}{6}\right)$$</p>
+                            <p>On effectue le produit et on ne conserve que les termes jusqu'à l'ordre 4 :</p>
+                            <p>$$\sqrt{1 + x} \cdot \sin(x) = 1 \cdot x + 1 \cdot \left(-\frac{x^3}{6}\right) + \frac{x}{2} \cdot x + \frac{x}{2} \cdot \left(-\frac{x^3}{6}\right) - \frac{x^2}{8} \cdot x + \frac{x^3}{16} \cdot x - \frac{5x^4}{128} \cdot x + o(x^4)$$</p>
+                            <p>On simplifie les termes restants :</p>
+                            <p>$$\sqrt{1 + x} \cdot \sin(x) = x - \frac{x^3}{6} + \frac{x^2}{2} - \frac{x^4}{12} - \frac{x^3}{8} + \frac{x^4}{16} - \frac{5x^5}{128} + o(x^4)$$</p>
+                            <p>On regroupe les termes jusqu'à l'ordre 4 :</p>
+                            <p>$$\sqrt{1 + x} \cdot \sin(x) = x + \frac{x^2}{2} - \left(\frac{1}{6} + \frac{1}{8}\right)x^3 + \left(-\frac{1}{12} + \frac{1}{16}\right)x^4 + o(x^4)$$</p>
+                            <p>Ainsi en simplifiant on obtient finalement :</p>
+                            <p>$$\sqrt{1 + x} \cdot \sin(x) = x + \frac{x^2}{2} - \frac{7x^3}{24} - \frac{x^4}{48} + o(x^4)$$</p>
                         </div>
+
 
                         <!-- Question 4 -->
                         <div class="question">
@@ -454,151 +469,135 @@
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
-                            <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
+                            <p>On utilise les développements limités à l'ordre 4 :</p>
+                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^4)$$</p>
+                            <p>$$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + o(x^4)$$</p>
                             <p>On multiplie les deux développements :</p>
-                            <p>$$\tan(x) \cdot e^x = \left(x + \frac{x^3}{3}\right)\left(1 + x + \frac{x^2}{2}\right)$$</p>
-                            <p>Effectuons la multiplication :</p>
-                            <p>$$= x \cdot 1 + x \cdot x + x \cdot \frac{x^2}{2} + \frac{x^3}{3} \cdot 1 + \frac{x^3}{3} \cdot x + \frac{x^3}{3} \cdot \frac{x^2}{2} + o(x^3)$$</p>
-                            <p>$$= x + x^2 + \frac{x^3}{2} + \frac{x^3}{3} + o(x^3)$$</p>
-                            <p>En combinant les termes en \(x^3\) :</p>
-                            <p>$$= x + x^2 + \left(\frac{3x^3}{6} + \frac{2x^3}{6}\right) + o(x^3)$$</p>
-                            <p>$$= x + x^2 + \frac{5x^3}{6} + o(x^3)$$</p>
+                            <p>$$\tan(x) \cdot e^x = \left(x + \frac{x^3}{3}\right)\left(1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24}\right)$$</p>
+                            <p>On effectue le produit et on ne conserve que les termes jusqu'à l'ordre 4 :</p>
+                            <p>$$\tan(x) \cdot e^x = x \cdot 1 + x \cdot x + x \cdot \frac{x^2}{2} + x \cdot \frac{x^3}{6} + \frac{x^3}{3} \cdot 1 + \frac{x^3}{3} \cdot x + o(x^4)$$</p>
+                            <p>On simplifie les termes restants :</p>
+                            <p>$$\tan(x) \cdot e^x = x + x^2 + \frac{x^3}{2} + \frac{x^4}{6} + \frac{x^3}{3} + \frac{x^4}{3} + o(x^4)$$</p>
+                            <p>On regroupe les termes en \(x^3\) et \(x^4\) :</p>
+                            <p>$$\tan(x) \cdot e^x = x + x^2 + \left(\frac{1}{2} + \frac{1}{3}\right)x^3 + \left(\frac{1}{6} + \frac{1}{3}\right)x^4 + o(x^4)$$</p>
+                            <p>Ainsi en simplifiant on obtient finalement :</p>
+                            <p>$$\tan(x) \cdot e^x = x + x^2 + \frac{5x^3}{6} + \frac{x^4}{2} + o(x^4)$$</p>
                         </div>
 
-                        <!-- Question 5 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \sin(x) \cdot \sqrt{1 + x}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>$$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</p>
-                            <p>On multiplie les deux développements :</p>
-                            <p>$$\sin(x) \cdot \sqrt{1 + x} = \left(x - \frac{x^3}{6}\right) \left(1 + \frac{x}{2} - \frac{x^2}{8}\right)$$</p>
-                            <p>Effectuons la multiplication :</p>
-                            <p>$$= x \cdot 1 + x \cdot \frac{x}{2} - x \cdot \frac{x^2}{8} - \frac{x^3}{6} \cdot 1 - \frac{x^3}{6} \cdot \frac{x}{2} + o(x^3)$$</p>
-                            <p>$$= x + \frac{x^2}{2} - \frac{x^3}{8} - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>En combinant les termes en \(x^3\) :</p>
-                            <p>$$= x + \frac{x^2}{2} - \left(\frac{3x^3}{24} + \frac{4x^3}{24}\right) + o(x^3)$$</p>
-                            <p>$$= x + \frac{x^2}{2} - \frac{7x^3}{24} + o(x^3)$$</p>
-                        </div>
-
-                        <!-- Question 6 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \cos(x) \cdot e^x$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>$$e^x = 1 + x + \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>On multiplie les deux développements :</p>
-                            <p>$$\cos(x) \cdot e^x = \left(1 - \frac{x^2}{2}\right) \left(1 + x + \frac{x^2}{2}\right)$$</p>
-                            <p>Effectuons la multiplication :</p>
-                            <p>$$= 1 \cdot 1 + 1 \cdot x + 1 \cdot \frac{x^2}{2} - \frac{x^2}{2} \cdot 1 - \frac{x^2}{2} \cdot x + o(x^2)$$</p>
-                            <p>$$= 1 + x + \frac{x^2}{2} - \frac{x^2}{2} - \frac{x^3}{2} + o(x^2)$$</p>
-                            <p>Les termes \( \frac{x^2}{2} \) se simplifient :</p>
-                            <p>$$= 1 + x + o(x^2)$$</p>
-                        </div>
                     </div>
                     <!-- exercice 1 -->
                     <div class="exercice">
                         <h2>Pour approfondir</h2>
-                        <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_5(0) : \sin(2x) \cdot \cos(3x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(2x) = 2x - \frac{(2x)^3}{6} + o(x^3) = 2x - \frac{4x^3}{3} + o(x^3)$$</p>
-                            <p>$$\cos(3x) = 1 - \frac{(3x)^2}{2} + o(x^2) = 1 - \frac{9x^2}{2} + o(x^2)$$</p>
-                            <p>On multiplie les deux développements :</p>
-                            <p>$$\sin(2x) \cdot \cos(3x) = \left(2x - \frac{4x^3}{3}\right)\left(1 - \frac{9x^2}{2}\right)$$</p>
-                            <p>$$= 2x - \frac{18x^3}{2} - \frac{4x^3}{3} + o(x^3)$$</p>
-                            <p>$$= 2x - 9x^3 - \frac{4x^3}{3} + o(x^3)$$</p>
-                            <p>$$= 2x - \left(9 + \frac{4}{3}\right)x^3 + o(x^3) = 2x - \frac{31x^3}{3} + o(x^3)$$</p>
+                            <p>On utilise les développements limités au voisinage de 0 à l'ordre 5 pour les fonctions sinus et cosinus :</p>
+                            <p>$$\sin(u) = u - \frac{u^3}{3!} + \frac{u^5}{5!} + o(u^5)$$</p>
+                            <p>$$\cos(v) = 1 - \frac{v^2}{2!} + \frac{v^4}{4!} + o(v^5)$$</p>
+                            <p>Appliquons ces formules avec \(u = 2x\) et \(v = 3x\) :</p>
+                            <p>$$\sin(2x) = (2x) - \frac{(2x)^3}{6} + \frac{(2x)^5}{120} + o(x^5) = 2x - \frac{8x^3}{6} + \frac{32x^5}{120} + o(x^5) = 2x - \frac{4}{3}x^3 + \frac{4}{15}x^5 + o(x^5)$$</p>
+                            <p>$$\cos(3x) = 1 - \frac{(3x)^2}{2} + \frac{(3x)^4}{24} + o(x^5) = 1 - \frac{9x^2}{2} + \frac{81x^4}{24} + o(x^5) = 1 - \frac{9}{2}x^2 + \frac{27}{8}x^4 + o(x^5)$$</p>
+                            <p>On effectue le produit des deux développements limités en ne conservant que les termes jusqu'à l'ordre 5 :</p>
+                            <p>$$\sin(2x) \cdot \cos(3x) = \left(2x - \frac{4}{3}x^3 + \frac{4}{15}x^5 + o(x^5)\right) \left(1 - \frac{9}{2}x^2 + \frac{27}{8}x^4 + o(x^5)\right)$$</p>
+                            <p>$$= 2x \cdot \left(1 - \frac{9}{2}x^2 + \frac{27}{8}x^4\right) - \frac{4}{3}x^3 \cdot \left(1 - \frac{9}{2}x^2\right) + \frac{4}{15}x^5 \cdot 1 + o(x^5)$$</p>
+                            <p>$$= \left(2x - 9x^3 + \frac{27}{4}x^5\right) + \left(-\frac{4}{3}x^3 + 6x^5\right) + \frac{4}{15}x^5 + o(x^5)$$</p>
+                            <p>On regroupe les termes de même degré :</p>
+                            <p>$$\sin(2x) \cdot \cos(3x) = 2x + \left(-9 - \frac{4}{3}\right)x^3 + \left(\frac{27}{4} + 6 + \frac{4}{15}\right)x^5 + o(x^5)$$</p>
+                            <p>On simplifie les coefficients :</p>
+                            <p>$$-9 - \frac{4}{3} = -\frac{27}{3} - \frac{4}{3} = -\frac{31}{3}$$</p>
+                            <p>$$\frac{27}{4} + 6 + \frac{4}{15} = \frac{27 \cdot 15 + 6 \cdot 60 + 4 \cdot 4}{60} = \frac{405 + 360 + 16}{60} = \frac{781}{60}$$</p>
+                            <p>Finalement, le développement limité de $\sin(2x) \cdot \cos(3x)$ à l'ordre 5 au voisinage de 0 est :</p>
+                            <p>$$\sin(2x) \cdot \cos(3x) = 2x - \frac{31}{3}x^3 + \frac{781}{60}x^5 + o(x^5)$$</p>
                         </div>
 
-                        <!-- Question 2 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_5(0) : \ln(1 + 3x) \cdot \sqrt{1 - x^2}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\ln(1 + 3x) = 3x - \frac{(3x)^2}{2} + \frac{(3x)^3}{3} + o(x^3) = 3x - \frac{9x^2}{2} + 9x^3 + o(x^3)$$</p>
-                            <p>$$\sqrt{1 - x^2} = 1 - \frac{x^2}{2} + \frac{x^4}{8} + o(x^4)$$</p>
-                            <p>On multiplie les deux développements :</p>
-                            <p>$$\ln(1 + 3x) \cdot \sqrt{1 - x^2} = \left(3x - \frac{9x^2}{2} + 9x^3\right)\left(1 - \frac{x^2}{2} + \frac{x^4}{8}\right)$$</p>
-                            <p>$$= 3x - \frac{3x^3}{2} - \frac{9x^2}{2} + \frac{9x^4}{8} + o(x^3)$$</p>
-                            <p>$$= 3x - \frac{9x^2}{2} + \left(9 - \frac{3}{2}\right)x^3 + o(x^3)$$</p>
-                            <p>$$= 3x - \frac{9x^2}{2} + \frac{69x^4}{8} + o(x^4)$$</p>
+                            <p>On utilise les développements limités au voisinage de 0 à l'ordre 5 pour les fonctions logarithme et racine carrée :</p>
+                            <p>$$\ln(1 + u) = u - \frac{u^2}{2} + \frac{u^3}{3} - \frac{u^4}{4} + \frac{u^5}{5} + o(u^5)$$</p>
+                            <p>$$\sqrt{1 + v} = 1 + \frac{1}{2}v - \frac{1}{8}v^2 + \frac{1}{16}v^3 - \frac{5}{128}v^4 + o(v^4)$$</p>
+                            <p>Appliquons ces formules avec \(u = 3x\) et \(v = -x^2\) :</p>
+                            <p>$$\ln(1 + 3x) = (3x) - \frac{(3x)^2}{2} + \frac{(3x)^3}{3} - \frac{(3x)^4}{4} + \frac{(3x)^5}{5} + o(x^5)$$</p>
+                            <p>$$= 3x - \frac{9x^2}{2} + \frac{27x^3}{3} - \frac{81x^4}{4} + \frac{243x^5}{5} + o(x^5) = 3x - \frac{9}{2}x^2 + 9x^3 - \frac{81}{4}x^4 + \frac{243}{5}x^5 + o(x^5)$$</p>
+                            <p>$$\sqrt{1 - x^2} = 1 + \frac{1}{2}(-x^2) - \frac{1}{8}(-x^2)^2 + \frac{1}{16}(-x^2)^3 + o(x^6)$$</p>
+                            <p>$$= 1 - \frac{1}{2}x^2 - \frac{1}{8}x^4 + o(x^6) = 1 - \frac{1}{2}x^2 - \frac{1}{8}x^4 + o(x^5)$$</p>
+                            <p>On effectue le produit des deux développements limités en ne conservant que les termes jusqu'à l'ordre 5 :</p>
+                            <p>$$\ln(1 + 3x) \cdot \sqrt{1 - x^2} = \left(3x - \frac{9}{2}x^2 + 9x^3 - \frac{81}{4}x^4 + \frac{243}{5}x^5\right) \left(1 - \frac{1}{2}x^2 - \frac{1}{8}x^4\right) + o(x^5)$$</p>
+                            <p>$$= 3x \cdot \left(1 - \frac{1}{2}x^2 - \frac{1}{8}x^4\right) - \frac{9}{2}x^2 \cdot \left(1 - \frac{1}{2}x^2\right) + 9x^3 \cdot \left(1 - \frac{1}{2}x^2\right) - \frac{81}{4}x^4 \cdot 1 + \frac{243}{5}x^5 \cdot 1 + o(x^5)$$</p>
+                            <p>$$= \left(3x - \frac{3}{2}x^3 - \frac{3}{8}x^5\right) + \left(-\frac{9}{2}x^2 + \frac{9}{4}x^4\right) + \left(9x^3 - \frac{9}{2}x^5\right) - \frac{81}{4}x^4 + \frac{243}{5}x^5 + o(x^5)$$</p>
+                            <p>On regroupe les termes de même degré :</p>
+                            <p>$$= 3x - \frac{9}{2}x^2 + \left(-\frac{3}{2} + 9\right)x^3 + \left(\frac{9}{4} - \frac{81}{4}\right)x^4 + \left(-\frac{3}{8} - \frac{9}{2} + \frac{243}{5}\right)x^5 + o(x^5)$$</p>
+                            <p>On simplifie les coefficients :</p>
+                            <p>$$-\frac{3}{2} + 9 = -\frac{3}{2} + \frac{18}{2} = \frac{15}{2}$$</p>
+                            <p>$$\frac{9}{4} - \frac{81}{4} = -\frac{72}{4} = -18$$</p>
+                            <p>$$-\frac{3}{8} - \frac{9}{2} + \frac{243}{5} = -\frac{15}{40} - \frac{180}{40} + \frac{1944}{40} = \frac{1749}{40}$$</p>
+                            <p>Finalement, le développement limité de $\ln(1 + 3x) \cdot \sqrt{1 - x^2}$ à l'ordre 5 au voisinage de 0 est :</p>
+                            <p>$$\ln(1 + 3x) \cdot \sqrt{1 - x^2} = 3x - \frac{9}{2}x^2 + \frac{15}{2}x^3 - 18x^4 + \frac{1749}{40}x^5 + o(x^5)$$</p>
                         </div>
 
-                        <!-- Question 3 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_5(0) : e^{2x} \cdot \tan(x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$e^{2x} = 1 + 2x + \frac{(2x)^2}{2} + \frac{(2x)^3}{6} + o(x^3) = 1 + 2x + 2x^2 + \frac{4x^3}{3} + o(x^3)$$</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
-                            <p>On multiplie les deux développements :</p>
-                            <p>$$e^{2x} \cdot \tan(x) = \left(1 + 2x + 2x^2 + \frac{4x^3}{3}\right)\left(x + \frac{x^3}{3}\right)$$</p>
-                            <p>$$= x + 2x^2 + 2x^3 + \frac{4x^4}{3} + \frac{x^4}{3} + o(x^4)$$</p>
-                            <p>$$= x + 2x^2 + \left(2 + \frac{5}{3}\right)x^3 + o(x^4) = x + 2x^2 + \frac{11x^3}{3} + o(x^4)$$</p>
+                            <p>On utilise les développements limités au voisinage de 0 à l'ordre 5 pour les fonctions exponentielle et tangente :</p>
+                            <p>$$e^u = 1 + u + \frac{u^2}{2!} + \frac{u^3}{3!} + \frac{u^4}{4!} + \frac{u^5}{5!} + o(u^5)$$</p>
+                            <p>$$\tan(v) = v + \frac{v^3}{3} + \frac{2v^5}{15} + o(v^5)$$</p>
+                            <p>Appliquons ces formules avec \(u = 2x\) et \(v = x\) :</p>
+                            <p>$$e^{2x} = 1 + (2x) + \frac{(2x)^2}{2} + \frac{(2x)^3}{6} + \frac{(2x)^4}{24} + \frac{(2x)^5}{120} + o(x^5)$$</p>
+                            <p>$$= 1 + 2x + \frac{4x^2}{2} + \frac{8x^3}{6} + \frac{16x^4}{24} + \frac{32x^5}{120} + o(x^5) = 1 + 2x + 2x^2 + \frac{4}{3}x^3 + \frac{2}{3}x^4 + \frac{4}{15}x^5 + o(x^5)$$</p>
+                            <p>$$\tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^5)$$</p>
+                            <p>On effectue le produit des deux développements limités en ne conservant que les termes jusqu'à l'ordre 5 :</p>
+                            <p>$$e^{2x} \cdot \tan(x) = \left(1 + 2x + 2x^2 + \frac{4}{3}x^3 + \frac{2}{3}x^4 + \frac{4}{15}x^5\right) \left(x + \frac{x^3}{3} + \frac{2x^5}{15}\right) + o(x^5)$$</p>
+                            <p>$$= 1 \cdot \left(x + \frac{x^3}{3} + \frac{2x^5}{15}\right) + 2x \cdot \left(x + \frac{x^3}{3}\right) + 2x^2 \cdot \left(x + \frac{x^3}{3}\right) + \frac{4}{3}x^3 \cdot x + \frac{2}{3}x^4 \cdot x + o(x^5)$$</p>
+                            <p>$$= \left(x + \frac{x^3}{3} + \frac{2x^5}{15}\right) + \left(2x^2 + \frac{2}{3}x^4\right) + \left(2x^3 + \frac{2}{3}x^5\right) + \frac{4}{3}x^4 + \frac{2}{3}x^5 + o(x^5)$$</p>
+                            <p>On regroupe les termes de même degré :</p>
+                            <p>$$= x + 2x^2 + \left(\frac{1}{3} + 2\right)x^3 + \left(\frac{2}{3} + \frac{4}{3}\right)x^4 + \left(\frac{2}{15} + \frac{2}{3} + \frac{2}{3}\right)x^5 + o(x^5)$$</p>
+                            <p>On simplifie les coefficients :</p>
+                            <p>$$\frac{1}{3} + 2 = \frac{1}{3} + \frac{6}{3} = \frac{7}{3}$$</p>
+                            <p>$$\frac{2}{3} + \frac{4}{3} = \frac{6}{3} = 2$$</p>
+                            <p>$$\frac{2}{15} + \frac{2}{3} + \frac{2}{3} = \frac{2}{15} + \frac{10}{15} + \frac{10}{15} = \frac{22}{15}$$</p>
+                            <p>Finalement, le développement limité de \(e^{2x} \cdot \tan(x)\) à l'ordre 5 au voisinage de 0 est :</p>
+                            <p>$$e^{2x} \cdot \tan(x) = x + 2x^2 + \frac{7}{3}x^3 + 2x^4 + \frac{22}{15}x^5 + o(x^5)$$</p>
                         </div>
-
-                        <!-- Question 4 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_5(0) : \cos(2x) \cdot \sin(3x) \cdot \ln(1 + x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^4) = 1 - 2x^2 + \frac{2x^4}{3} + o(x^4)$$</p>
-                            <p>$$\sin(3x) = 3x - \frac{(3x)^3}{6} + o(x^3) = 3x - \frac{27x^3}{6} + o(x^3) = 3x - \frac{9x^3}{2} + o(x^3)$$</p>
-                            <p>$$\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>On multiplie les trois développements :</p>
-                            <p>$$= \left(1 - 2x^2 + \frac{2x^4}{3}\right)\left(3x - \frac{9x^3}{2}\right)\left(x - \frac{x^2}{2}\right)$$</p>
-                            <p>Effectuons d'abord les deux premiers produits :</p>
-                            <p>$$= (3x - 9x^3)\left(1 - 2x^2 + \frac{2x^4}{3}\right)$$</p>
-                            <p>$$= 3x - 6x^3 + 9x^3 + o(x^3) = 3x + 3x^3 + o(x^3)$$</p>
-                            <p>Ensuite, ajoutons le terme de \(\ln(1 + x)\) :</p>
-                            <p>$$= (3x + 3x^3)\left(x - \frac{x^2}{2}\right)$$</p>
-                            <p>$$= 3x^2 + \frac{3x^3}{2} + o(x^3)$$</p>
-                        </div>
-
-                        <!-- Question 5 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_5(0) : e^{3x} \cdot \cos(4x) \cdot \sin(5x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$e^{3x} = 1 + 3x + \frac{(3x)^2}{2} + \frac{(3x)^3}{6} + o(x^3) = 1 + 3x + \frac{9x^2}{2} + \frac{27x^3}{6} + o(x^3)$$</p>
-                            <p>$$\cos(4x) = 1 - \frac{(4x)^2}{2} + \frac{(4x)^4}{24} + o(x^4) = 1 - 8x^2 + \frac{8x^4}{3} + o(x^4)$$</p>
-                            <p>$$\sin(5x) = 5x - \frac{(5x)^3}{6} + o(x^3) = 5x - \frac{125x^3}{6} + o(x^3)$$</p>
-                            <p>On multiplie les trois développements :</p>
-                            <p>$$e^{3x} \cdot \cos(4x) \cdot \sin(5x) = \left(1 + 3x + \frac{9x^2}{2} + \frac{27x^3}{6}\right)\left(1 - 8x^2 + \frac{8x^4}{3}\right)\left(5x - \frac{125x^3}{6}\right)$$</p>
-                            <p>Calculons d'abord \(e^{3x} \cdot \cos(4x)\) :</p>
-                            <p>$$= (1 - 8x^2 + \frac{8x^4}{3})(1 + 3x + \frac{9x^2}{2})$$</p>
-                            <p>$$= 1 + 3x - 8x^2 - 24x^3 + o(x^3)$$</p>
-                            <p>Maintenant, multiplions avec \(\sin(5x)\) :</p>
-                            <p>$$= \left(1 + 3x - 8x^2\right)\left(5x - \frac{125x^3}{6}\right)$$</p>
-                            <p>$$= 5x + 15x^2 - 40x^3 + o(x^3)$$</p>
+                            <p>On utilise les développements limités au voisinage de 0 à l'ordre 5 pour les fonctions cosinus, sinus et logarithme :</p>
+                            <p>$$\cos(u) = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} + o(u^5)$$</p>
+                            <p>$$\sin(v) = v - \frac{v^3}{3!} + \frac{v^5}{5!} + o(v^5)$$</p>
+                            <p>$$\ln(1 + w) = w - \frac{w^2}{2} + \frac{w^3}{3} - \frac{w^4}{4} + \frac{w^5}{5} + o(w^5)$$</p>
+                            <p>Appliquons ces formules avec \(u = 2x\), \(v = 3x\) et \(w = x\) :</p>
+                            <p>$$\cos(2x) = 1 - \frac{(2x)^2}{2} + \frac{(2x)^4}{24} + o(x^5) = 1 - 2x^2 + \frac{16x^4}{24} + o(x^5) = 1 - 2x^2 + \frac{2}{3}x^4 + o(x^5)$$</p>
+                            <p>$$\sin(3x) = (3x) - \frac{(3x)^3}{6} + \frac{(3x)^5}{120} + o(x^5) = 3x - \frac{27x^3}{6} + \frac{243x^5}{120} + o(x^5) = 3x - \frac{9}{2}x^3 + \frac{81}{40}x^5 + o(x^5)$$</p>
+                            <p>$$\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} + o(x^5)$$</p>
+                            <p>On effectue le produit des trois développements limités en ne conservant que les termes jusqu'à l'ordre 5 :</p>
+                            <p>$$\cos(2x) \cdot \sin(3x) \cdot \ln(1 + x) = \left(1 - 2x^2 + \frac{2}{3}x^4\right) \left(3x - \frac{9}{2}x^3 + \frac{81}{40}x^5\right) \left(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\right) + o(x^5)$$</p>
+                            <p>Calculons d'abord le produit des deux premiers termes :</p>
+                            <p>$$\left(1 - 2x^2 + \frac{2}{3}x^4\right) \left(3x - \frac{9}{2}x^3 + \frac{81}{40}x^5\right) = 1 \cdot \left(3x - \frac{9}{2}x^3 + \frac{81}{40}x^5\right) - 2x^2 \cdot \left(3x - \frac{9}{2}x^3\right) + \frac{2}{3}x^4 \cdot 3x + o(x^5)$$</p>
+                            <p>$$= 3x - \frac{9}{2}x^3 + \frac{81}{40}x^5 - 6x^3 + 9x^5 + 2x^5 + o(x^5) = 3x + \left(-\frac{9}{2} - 6\right)x^3 + \left(\frac{81}{40} + 9 + 2\right)x^5 + o(x^5)$$</p>
+                            <p>$$= 3x - \frac{21}{2}x^3 + \left(\frac{81 + 360 + 80}{40}\right)x^5 + o(x^5) = 3x - \frac{21}{2}x^3 + \frac{521}{40}x^5 + o(x^5)$$</p>
+                            <p>Maintenant, multiplions ce résultat par le développement de $\ln(1 + x)$ :</p>
+                            <p>$$\left(3x - \frac{21}{2}x^3 + o(x^4)\right) \left(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\right) + o(x^5)$$</p>
+                            <p>$$= 3x \cdot \left(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\right) - \frac{21}{2}x^3 \cdot \left(x - \frac{x^2}{2}\right) + o(x^5)$$</p>
+                            <p>$$= \left(3x^2 - \frac{3}{2}x^3 + x^4 - \frac{3}{4}x^5\right) + \left(-\frac{21}{2}x^4 + \frac{21}{4}x^5\right) + o(x^5)$$</p>
+                            <p>On regroupe les termes de même degré :</p>
+                            <p>$$= 3x^2 - \frac{3}{2}x^3 + \left(1 - \frac{21}{2}\right)x^4 + \left(-\frac{3}{4} + \frac{21}{4}\right)x^5 + o(x^5)$$</p>
+                            <p>On simplifie les coefficients :</p>
+                            <p>$$1 - \frac{21}{2} = \frac{2}{2} - \frac{21}{2} = -\frac{19}{2}$$</p>
+                            <p>$$-\frac{3}{4} + \frac{21}{4} = \frac{18}{4} = \frac{9}{2}$$</p>
+                            <p>Finalement, le développement limité de \(\cos(2x) \cdot \sin(3x) \cdot \ln(1 + x)\) à l'ordre 5 au voisinage de 0 est :</p>
+                            <p>$$\cos(2x) \cdot \sin(3x) \cdot \ln(1 + x) = 3x^2 - \frac{3}{2}x^3 - \frac{19}{2}x^4 + \frac{9}{2}x^5 + o(x^5)$$</p>
                         </div>
                     </div>
                 </div>
@@ -608,84 +607,13 @@
             <div class="page" id="page3">
                 <div class="section-content" id="integrations_par_parties">
                     <h1 class="titre-page">Les compositions de fonctions</h1>
-                    <!-- Exercice 1 -->
+
                     <div class="exercice">
                         <h2>Les compositions simples</h2>
 
-                        <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : e^{\sin(x)}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>$$e^{u} = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \sin(x)\)</p>
-                            <p>Substituons \(u\) dans l'expression :</p>
-                            <p>$$e^{\sin(x)} = 1 + \left(x - \frac{x^3}{6}\right) + \frac{1}{2}\left(x - \frac{x^3}{6}\right)^2 + o(x^3)$$</p>
-                            <p>Calculons le terme au carré :</p>
-                            <p>$$= 1 + x - \frac{x^3}{6} + \frac{1}{2}\left(x^2 - \frac{x^4}{3} + o(x^2)\right) + o(x^3)$$</p>
-                            <p>Ce qui donne :</p>
-                            <p>$$= 1 + x + \frac{x^2}{2} - \frac{x^3}{6} + o(x^3)$$</p>
-                        </div>
-
-                        <!-- Question 2 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_3(0) : \ln(1 + \tan(x))$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
-                            <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x)\)</p>
-                            <p>Substituons \(u\) dans l'expression :</p>
-                            <p>$$\ln(1 + \tan(x)) = \left(x + \frac{x^3}{3}\right) - \frac{1}{2}\left(x + \frac{x^3}{3}\right)^2 + o(x^3)$$</p>
-                            <p>Calculons le terme au carré :</p>
-                            <p>$$= x + \frac{x^3}{3} - \frac{1}{2}\left(x^2 + \frac{2x^4}{3} + o(x^2)\right) + o(x^3)$$</p>
-                            <p>Ce qui donne :</p>
-                            <p>$$= x - \frac{x^2}{2} + o(x^3)$$</p>
-                        </div>
-
-                        <!-- Question 3 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_3(0) : \sqrt{1 + \sin(x)}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = \sin(x)\)</p>
-                            <p>Substituons \(u\) dans l'expression :</p>
-                            <p>$$\sqrt{1 + \sin(x)} = 1 + \frac{x - \frac{x^3}{6}}{2} - \frac{1}{8}\left(x - \frac{x^3}{6}\right)^2 + o(x^3)$$</p>
-                            <p>Ce qui donne :</p>
-                            <p>$$= 1 + \frac{x}{2} - \frac{x^3}{12} - \frac{1}{8}(x^2 + o(x^2)) + o(x^3)$$</p>
-                            <p>$$= 1 + \frac{x}{2} - \frac{x^2}{8} - \frac{x^3}{12} + o(x^3)$$</p>
-                        </div>
-
-                        <!-- Question 4 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \cos(\ln(1+x))$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\ln(1+x) = x - \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>$$\cos(u) = 1 - \frac{u^2}{2} + o(u^2)$$ avec \(u = \ln(1+x)\)</p>
-                            <p>Substituons \(u\) dans l'expression :</p>
-                            <p>$$\cos(\ln(1+x)) = 1 - \frac{(x - \frac{x^2}{2})^2}{2} + o(x^2)$$</p>
-                            <p>Calculons le terme au carré :</p>
-                            <p>$$= 1 - \frac{x^2 - x^3 + \frac{x^4}{4}}{2} + o(x^2)$$</p>
-                            <p>$$= 1 - \frac{x^2}{2} + \frac{x^3}{2} + o(x^2)$$</p>
-                        </div>
-
-                        <!-- Question 5 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_5(0) : \tan(e^x)$$</p>
+                            <p>$$dl_3(0) : \tan(e^x)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
@@ -701,36 +629,6 @@
                             <p>$$= \frac{4}{3} + 2x + \left(\frac{5}{6} + \frac{1}{2}\right)x^2 + o(x^3)$$</p>
                         </div>
 
-                        <!-- Question 6 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(1) : \sqrt{1 + x^2}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = x^2\)</p>
-                            <p>Nous évaluons autour de \(x = 1\):</p>
-                            <p>$$\sqrt{1 + x^2} = \sqrt{1 + (1 + h)^2} = \sqrt{1 + 1 + 2h + h^2} = \sqrt{2 + 2h + h^2}$$</p>
-                            <p>En utilisant un développement limité :</p>
-                            <p>$$= 1 + \frac{h}{\sqrt{2}} - \frac{(2 + 2h + h^2 - 2)}{8} + o(h)$$</p>
-                            <p>$$= 1 + \frac{h}{\sqrt{2}} - \frac{h^2}{8} + o(h)$$</p>
-                        </div>
-
-                        <!-- Question 7 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \frac{1}{\sqrt{1 + x}}$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\frac{1}{\sqrt{1 + u}} = 1 - \frac{u}{2} + \frac{3u^2}{8} + o(u^2)$$ avec \(u = x\)</p>
-                            <p>Substituons \(u\) dans l'expression :</p>
-                            <p>$$\frac{1}{\sqrt{1 + x}} = 1 - \frac{x}{2} + \frac{3x^2}{8} + o(x^2)$$</p>
-                        </div>
-
-                        <!-- Question 8 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_3(0) : \frac{\sin(x)}{x^2 + 1}$$</p>
@@ -746,10 +644,9 @@
                             <p>$$= x - \frac{7x^3}{6} + o(x^3)$$</p>
                         </div>
 
-                        <!-- Question 9 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : \tan(\sin(x))$$</p>
+                            <p>$$dl_3(0) : \tan(\sin(x))$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
@@ -764,10 +661,9 @@
                             <p>$$= x + \frac{x^3}{6} + o(x^3)$$</p>
                         </div>
 
-                        <!-- Question 10 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(0) : e^{\tan(x)}$$</p>
+                            <p>$$dl_3(0) : e^{\tan(x)}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
@@ -788,100 +684,71 @@
                         <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_3(0) : \sin(\ln(1 + \cos(x)))$$</p>
+                            <p>$$dl_4(0) : e^{\sin(x)}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
-
-                            <p>Substituons \( \cos(x) \) dans \( \ln(1 + \cos(x)) \) :</p>
-                            <p>$$\ln(1 + \cos(x)) = \ln\left(1 + \left(1 - \frac{x^2}{2} + o(x^2)\right)\right) = \ln\left(2 - \frac{x^2}{2} + o(x^2)\right)$$</p>
-
-                            <p>Pour un \( x \) proche de \( 0 \), nous appliquons le développement limité de \( \ln(1 + u) \) :</p>
-                            <p>$$\ln(2 - \frac{x^2}{2}) \approx \ln(2) + \frac{1}{2}\left(-\frac{x^2}{2}\right) = \ln(2) - \frac{x^2}{4} + o(x^2)$$</p>
-
-                            <p>En utilisant le développement limité de \( \sin(u) \) autour de \( 0 \) :</p>
-                            <p>$$\sin(u) = u - \frac{u^3}{6} + o(u^3) \text{avec} u = \ln(1 + \cos(x)) \approx \ln(2) - \frac{x^2}{4}$$</p>
-
-                            <p>En substituant dans l'expression de \( \sin(u) \) :</p>
-                            <p>$$\sin\left(\ln(2) - \frac{x^2}{4}\right) = \sin(\ln(2)) - \cos(\ln(2))\frac{x^2}{4} + o(x^2)$$</p>
-
-                            <p>Le développement limité de \( \sin(\ln(1 + \cos(x))) \) est :</p>
-                            <p>$$dl_3(0) : \sin(\ln(1 + \cos(x))) = \sin(\ln(2)) - \cos(\ln(2))\frac{x^2}{4} + o(x^2)$$</p>
+                            <p>Pour obtenir le développement limité de \( f(x)=e^{\sin(x)} \) à l'ordre 4 en 0, nous procédons en deux étapes sans recours à une numérotation ou liste :</p>
+                            <p>D'abord, rappelons le développement limité de \(\sin(x)\) au voisinage de 0 :</p>
+                            <p>$$ \sin(x)=x-\frac{x^3}{6}+o(x^4) $$</p>
+                            <p>Ensuite, nous utilisons le développement de \( e^u \) pour \( u=\sin(x) \), défini par :</p>
+                            <p>$$ e^u=1+u+\frac{u^2}{2}+\frac{u^3}{6}+\frac{u^4}{24}+o(u^4) $$</p>
+                            <p>En substituant \( u=x-\frac{x^3}{6}+o(x^4) \), nous avons :</p>
+                            <p>$$ e^{\sin(x)}=1+\Bigl(x-\frac{x^3}{6}\Bigr)+\frac{1}{2}\Bigl(x-\frac{x^3}{6}\Bigr)^2+\frac{1}{6}\Bigl(x-\frac{x^3}{6}\Bigr)^3+\frac{1}{24}\Bigl(x-\frac{x^3}{6}\Bigr)^4+o(x^4) $$</p>
+                            <p>Après développement et en ne retenant que les termes jusqu'à l'ordre 4, on trouve :</p>
+                            <p>$$ e^{\sin(x)}=1+x+\frac{x^2}{2}-\frac{x^4}{8}+o(x^4) $$</p>
+                            <p>Ce résultat constitue le développement limité à l'ordre 4 de \( e^{\sin(x)} \) en 0.</p>
                         </div>
 
-
-                        <!-- Question 2 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_3(0) : \ln(\cos(x^2))$$</p>
+                            <p>$$dl_4(0) : \ln\bigl(\cos(x^2)\bigr)$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\cos(x) = 1 - \frac{x^2}{2} + o(x^2)$$</p>
-                            <p>Donc : $$\cos(x^2) = 1 - \frac{x^4}{2} + o(x^4)$$</p>
-                            <p>Ensuite, on applique :</p>
-                            <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \cos(x^2) - 1 = -\frac{x^4}{2} + o(x^4)$$</p>
-                            <p>Substituons : </p>
-                            <p>$$\ln(\cos(x^2)) = -\frac{x^4}{2} - \frac{1}{2}\left(-\frac{x^4}{2}\right)^2 + o(x^4)$$</p>
-                            <p>Ce qui donne :</p>
-                            <p>$$= -\frac{x^4}{2} + o(x^4)$$</p>
+                            <p>Pour déterminer le développement limité à l'ordre 4 de \( f(x)=\ln\bigl(\cos(x^2)\bigr) \) en 0, nous procédons de la manière suivante :</p>
+                            <p>Nous commençons par développer \(\cos(x^2)\) au voisinage de 0 :</p>
+                            <p>$$ \cos(x^2)=1-\frac{(x^2)^2}{2}+o(x^4)=1-\frac{x^4}{2}+o(x^4) $$</p>
+                            <p>Ensuite, en utilisant le développement de \(\ln(1+u)=u+o(u)\) pour \( u \to 0 \) avec \( u=-\frac{x^4}{2}+o(x^4) \), on obtient :</p>
+                            <p>$$ \ln\bigl(\cos(x^2)\bigr)= -\frac{x^4}{2}+o(x^4) $$</p>
+                            <p>Ainsi, le développement limité à l'ordre 4 est :</p>
+                            <p>$$ dl_4(0) : \ln\bigl(\cos(x^2)\bigr)=-\frac{x^4}{2}+o(x^4) $$</p>
                         </div>
 
-                        <!-- Question 3 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_4(0) : e^{\tan(x^3)}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\tan(x) = x + \frac{x^3}{3} + o(x^3)$$</p>
-                            <p>Donc : $$\tan(x^3) = x^3 + \frac{x^9}{3} + o(x^9)$$</p>
-                            <p>Ensuite, on applique :</p>
-                            <p>$$e^u = 1 + u + \frac{u^2}{2} + o(u^2)$$ avec \(u = \tan(x^3)\)</p>
-                            <p>Substituons : </p>
-                            <p>$$e^{\tan(x^3)} = 1 + \left(x^3 + \frac{x^9}{3}\right) + \frac{1}{2}\left(x^3 + \frac{x^9}{3}\right)^2 + o(x^9)$$</p>
-                            <p>Calculons le terme au carré :</p>
-                            <p>$$= 1 + x^3 + \frac{x^9}{3} + \frac{1}{2}(x^6 + o(x^6)) + o(x^9)$$</p>
-                            <p>Ce qui donne :</p>
-                            <p>$$= 1 + x^3 + \frac{x^6}{2} + o(x^6)$$</p>
+                            <p>Pour déterminer le développement limité à l'ordre 4 de \( f(x)=e^{\tan(x^3)} \) en 0, nous procédons de la manière suivante :</p>
+                            <p>Nous commençons par développer \(\tan(x^3)\). Pour \( z \) proche de 0, nous avons :</p>
+                            <p>$$\tan(z)=z+\frac{z^3}{3}+o(z^3)$$</p>
+                            <p>En posant \( z=x^3 \), il vient :</p>
+                            <p>$$\tan(x^3)=x^3+\frac{x^9}{3}+o(x^9)=x^3+o(x^4)$$</p>
+                            <p>Nous utilisons ensuite le développement de \( e^u \) pour \( u=\tan(x^3)=x^3+o(x^4) \) :</p>
+                            <p>$$e^u=1+u+\frac{u^2}{2}+\frac{u^3}{6}+\frac{u^4}{24}+o(u^4)$$</p>
+                            <p>Or, \( u^2 \) est d'ordre \( x^6 \) et supérieur, ce qui ne contribue pas jusqu'à l'ordre 4. Ainsi, nous obtenons :</p>
+                            <p>$$e^{\tan(x^3)}=1+x^3+o(x^4)$$</p>
+                            <p>Le développement limité à l'ordre 4 est donc :</p>
+                            <p>$$dl_4(0) : e^{\tan(x^3)}=1+x^3+o(x^4)$$</p>
                         </div>
 
-                        <!-- Question 4 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
-                            <p>$$dl_5(0) : \frac{1}{\sqrt{1 + \sin(x^2)}}$$</p>
+                            <p>$$dl_5(0) : \frac{1}{\sqrt{1+\sin(x^2)}}$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>$$\sin(x) = x - \frac{x^3}{6} + o(x^3)$$</p>
-                            <p>Donc : $$\sin(x^2) = x^2 - \frac{x^6}{6} + o(x^6)$$</p>
-                            <p>Ensuite, on applique :</p>
-                            <p>$$\sqrt{1 + u} = 1 + \frac{u}{2} - \frac{u^2}{8} + o(u^2)$$ avec \(u = \sin(x^2)\)</p>
-                            <p>Substituons : </p>
-                            <p>$$\frac{1}{\sqrt{1 + \sin(x^2)}} = 1 - \frac{x^2}{4} + \frac{x^4}{48} + o(x^4)$$</p>
-                        </div>
-
-                        <!-- Question 5 -->
-                        <div class="question">
-                            <p class="consigne">Calculer :</p>
-                            <p>$$dl_4(1) : \ln(\sqrt{1 + x^2} + x)$$</p>
-                            <button class="toggle-correction"><b>&#10003;</b></button>
-                        </div>
-                        <div class="exercice-correction hidden">
-                            <p>On utilise les développements limités :</p>
-                            <p>Pour \(x\) proche de \(1\), on a : $$\sqrt{1 + x^2} = \sqrt{2 + 2h} = \sqrt{2}\sqrt{1 + h} \approx \sqrt{2} + \frac{h}{\sqrt{2}}$$</p>
-                            <p>Nous voulons donc : </p>
-                            <p>$$\sqrt{1 + x^2} + x = \sqrt{2} + \frac{h}{\sqrt{2}} + 1 + h$$</p>
-                            <p>$$\approx \sqrt{2} + 1 + \left(\frac{1}{\sqrt{2}} + 1\right)h$$</p>
-                            <p>Ensuite, on applique :</p>
-                            <p>$$\ln(1 + u) = u - \frac{u^2}{2} + o(u^2)$$ avec \(u = \sqrt{1 + x^2} + x - (\sqrt{2} + 1)\)</p>
-                            <p>Calculons : </p>
-                            <p>$$= \ln\left(\sqrt{2} + 1 + \left(\frac{1}{\sqrt{2}} + 1\right)h\right)$$</p>
-                            <p>$$= \ln(\sqrt{2} + 1) + \frac{1}{\sqrt{2} + 1}\left(\frac{1}{\sqrt{2}} + 1\right)h + o(h)$$</p>
+                            <p>Pour déterminer le développement limité à l'ordre 5 de \( f(x)=\frac{1}{\sqrt{1+\sin(x^2)}} \) en 0, nous procédons de la manière suivante :</p>
+                            <p>Nous commençons par développer \(\sin(x^2)\) au voisinage de 0 :</p>
+                            <p>$$\sin(x^2)=x^2+o(x^5)$$</p>
+                            <p>Ensuite, nous utilisons le développement de \(\frac{1}{\sqrt{1+u}}\) pour \( u=\sin(x^2) \), qui est :</p>
+                            <p>$$\frac{1}{\sqrt{1+u}}=1-\frac{1}{2}u+\frac{3}{8}u^2+o(u^2)$$</p>
+                            <p>En substituant \( u=x^2+o(x^5) \), nous obtenons :</p>
+                            <p>$$\frac{1}{\sqrt{1+\sin(x^2)}}=1-\frac{1}{2}x^2+\frac{3}{8}x^4+o(x^5)$$</p>
+                            <p>Le développement limité à l'ordre 5 de \( f(x) \) en 0 est donc :</p>
+                            <p>$$dl_5(0) : \frac{1}{\sqrt{1+\sin(x^2)}}=1-\frac{1}{2}x^2+\frac{3}{8}x^4+o(x^5)$$</p>
                         </div>
                     </div>
                 </div>
@@ -893,7 +760,6 @@
                     <h1 class="titre-page">Pas en zéro</h1>
                     <!-- Exercice 1 -->
                     <div class="exercice">
-                        <h2></h2>
                         <!-- Question 1 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
@@ -901,27 +767,23 @@
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise la formule de Taylor centrée en \(a = \frac{\pi}{4}\) :</p>
-                            <p>$$\sin(x) = \sin\left(\frac{\pi}{4}\right) + \cos\left(\frac{\pi}{4}\right)\left(x - \frac{\pi}{4}\right) - \frac{\sin\left(\frac{\pi}{4}\right)}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{\cos\left(\frac{\pi}{4}\right)}{6}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
-                            <p>Calculons les termes :</p>
-                            <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{1}{2} \cdot \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^2 - \frac{1}{6} \cdot \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
-                            <p>En simplifiant :</p>
-                            <p>$$= \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\left(x - \frac{\pi}{4}\right) - \frac{\sqrt{2}}{4}\left(x - \frac{\pi}{4}\right)^2 - \frac{\sqrt{2}}{12}\left(x - \frac{\pi}{4}\right)^3 + o\left((x - \frac{\pi}{4})^3\right)$$</p>
+                            <p>Pour déterminer le développement limité à l'ordre 3 de \( f(x)=\sin(x) \) au voisinage de \( \frac{\pi}{4} \), nous utilisons la formule de Taylor autour de \( a=\frac{\pi}{4} \) :</p>
+                            <p>$$ \sin(x)=\sin\left(\frac{\pi}{4}\right)+\cos\left(\frac{\pi}{4}\right)(x-\frac{\pi}{4})-\frac{\sin\left(\frac{\pi}{4}\right)}{2}(x-\frac{\pi}{4})^2-\frac{\cos\left(\frac{\pi}{4}\right)}{6}(x-\frac{\pi}{4})^3+o\left((x-\frac{\pi}{4})^3\right) $$</p>
+                            <p>En évaluant les dérivées en \( a=\frac{\pi}{4} \), nous avons \( \sin\left(\frac{\pi}{4}\right)=\frac{\sqrt{2}}{2} \) et \( \cos\left(\frac{\pi}{4}\right)=\frac{\sqrt{2}}{2} \). Ainsi, le développement s'écrit :</p>
+                            <p>$$ \sin(x)=\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}(x-\frac{\pi}{4})-\frac{\sqrt{2}}{4}(x-\frac{\pi}{4})^2-\frac{\sqrt{2}}{12}(x-\frac{\pi}{4})^3+o\left((x-\frac{\pi}{4})^3\right) $$</p>
                         </div>
 
-                        <!-- Question 2 -->
                         <div class="question">
                             <p class="consigne">Calculer :</p>
                             <p>$$dl_4(1) : e^x$$</p>
                             <button class="toggle-correction"><b>&#10003;</b></button>
                         </div>
                         <div class="exercice-correction hidden">
-                            <p>On utilise la formule de Taylor centrée en \(a = 1\) :</p>
-                            <p>$$e^x = e^1 + e^1(x - 1) + \frac{e^1}{2!}(x - 1)^2 + \frac{e^1}{3!}(x - 1)^3 + \frac{e^1}{4!}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
-                            <p>Calculons les termes :</p>
-                            <p>$$= e + e(x - 1) + \frac{e}{2}(x - 1)^2 + \frac{e}{6}(x - 1)^3 + \frac{e}{24}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
-                            <p>En regroupant, nous obtenons :</p>
-                            <p>$$= e + e(x - 1) + \frac{e}{2}(x - 1)^2 + \frac{e}{6}(x - 1)^3 + \frac{e}{24}(x - 1)^4 + o\left((x - 1)^4\right)$$</p>
+                            <p>Pour déterminer le développement limité à l'ordre 4 de \( f(x)=e^x \) autour du point \( a=1 \), nous utilisons la formule de Taylor :</p>
+                            <p>$$ f(x)=\sum_{k=0}^{4}\frac{f^{(k)}(1)}{k!}(x-1)^k+o((x-1)^4) $$</p>
+                            <p>Or, pour \( f(x)=e^x \), toutes les dérivées sont égales à \( e^x \) et donc \( f^{(k)}(1)=e \) pour tout \( k \). Nous avons ainsi :</p>
+                            <p>$$ e^x=e\Bigl[1+(x-1)+\frac{(x-1)^2}{2}+\frac{(x-1)^3}{6}+\frac{(x-1)^4}{24}\Bigr]+o((x-1)^4) $$</p>
+                            <p>Ce qui constitue le développement limité à l'ordre 4 de \( e^x \) autour de 1.</p>
                         </div>
 
                         <!-- Question 3 -->

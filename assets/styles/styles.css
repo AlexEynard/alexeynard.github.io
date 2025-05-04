@@ -53,7 +53,7 @@ html {
   cursor: pointer;
   font-size: 1.5rem;
   padding: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   color: var(--texte);
 }
 
@@ -96,7 +96,7 @@ body {
   padding: 0.2em 0.6em;
   border-radius: 50%;
   font-size: 2em;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
   opacity: 0.8;
   visibility: hidden;
 }
@@ -166,7 +166,7 @@ body {
   padding: 1rem;
   display: block;
   border-radius: var(--border-radius);
-  transition: background-color 0.3s, tranform 0.3s ease;
+  transition: background-color 0.2s, tranform 0.2s ease;
 }
 
 .menu-item a:hover,
@@ -350,7 +350,7 @@ body {
   align-items: center;
   cursor: pointer;
   padding: 0.5em 0;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
   margin-top: 0.4em;
   margin-bottom: 3em;
 }
@@ -396,7 +396,7 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .question:hover {
@@ -453,7 +453,7 @@ body {
 .toggle-correction:hover {
   color: var(--correct);
   filter: drop-shadow(0 0 0.2em var(--correct));
-  animation: enlarge-on-hover 0.3s ease-out;
+  animation: enlarge-on-hover 0.2s ease-out;
 }
 
 .toggle-correction:active {
@@ -485,7 +485,7 @@ body {
   z-index: 1;
   color: var(--white);
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.2s ease-out;
   max-height: initial;
 }
 
@@ -542,7 +542,7 @@ body {
   margin: -0.25em;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='gold'%3E%3Cpath d='M12 17.27l-4.24 2.54 1.57-5.22-3.36-3.27 5.38-.37L12 6.1l1.65 5.27 5.38.37-3.36 3.27 1.57 5.22z'/%3E%3C/svg%3E");
   background-size: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
   filter: drop-shadow(0 0 3px var(--gold));
   animation: etoile-brille 1.5s infinite ease-in-out;
   vertical-align: middle;
@@ -578,7 +578,7 @@ body {
   font-size: 1.5em;
   margin-right: 0.5em;
   cursor: default;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
   animation: coeur-battant 2s infinite ease-in-out;
 }
 
@@ -715,7 +715,7 @@ body {
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .custom-radio input[type="radio"]:checked+.radio-btn {
@@ -775,6 +775,7 @@ body {
 .encadre p {
   margin: 0;
   font-size: 1.1em;
+  color: var(--contrast-color);
 }
 
 
@@ -787,13 +788,17 @@ body {
   font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   margin-top: 1em;
   margin-bottom: 1em;
+  transition: transform 0.15s ease-in-out;
 }
 
 .button_qcm:hover {
   background-color: var(--correct);
+  box-shadow: var(--shadow);
+  transform: scale(1.02);
+  color: var(--contrast-color);
 }
 
 .button_qcm:active {
@@ -1022,6 +1027,7 @@ body {
 
   .explanation {
     font-size: 1.6vw;
+    align-self: center;
   }
 
   .hyperlink {
@@ -1036,31 +1042,34 @@ body {
     font-size: 1em;
   }
 
-
   .test_qcm {
     width: 90%;
     float: none;
     margin: 2% auto;
     padding-bottom: 12vh;
+    align-self: center;
   }
 
   .test_qcm.collapsed {
     max-height: 2em;
   }
 
+  .test_qcm.collapsed:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+  }
+
   .titre-qcm {
     font-size: 1.2em;
-    margin-bottom: 2.2em;
+    margin-bottom: 10vh;
     width: 100%;
     padding: 0.4em 0;
     text-align: center;
+    transition: text-decoration 0.2s ease;
   }
 
   .titre-qcm:hover {
-    background-color: none;
-    color: none;
-    text-decoration: none;
-    text-decoration-color: none;
+    text-decoration: underline;
   }
 
   #back-to-top-btn {
@@ -1080,6 +1089,7 @@ body {
     align-items: flex-start;
     width: 100%;
     margin-bottom: 2%;
+    align-self: center;
   }
 
   .menu {
@@ -1100,6 +1110,7 @@ body {
   .exercice-correction {
     overflow-x: auto;
     padding: 5%;
+    align-self: center;
   }
 
   .titre-page {
@@ -1132,14 +1143,10 @@ body {
 
   .dropdown .submenu .submenu {
     left: 0;
+    align-self: center;
   }
 
   .gif {
     width: 70vw;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

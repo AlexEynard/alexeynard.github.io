@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombres complexes</title>
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li class="menu-item"><a href="../index.html">Accueil</a></li>
+        <!-- Exercices de mathématiques -->
+        <li class="menu-item dropdown">
+          <a href="#">Mathématiques</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown"><a href="#">Analyse</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="equations_differentielles.html">Équations différentielles</a></li>
+                <li class="submenu-item"><a href="integration.html">Intégration</a></li>
+                <li class="submenu-item"><a href="developpements_limites.html">Développements limités</a></li>
+                <li class="submenu-item"><a href="fonctions_variables.html">Fonctions de plusieurs variables</a></li>
+              </ul>
+            </li>
+            <li class="submenu-item dropdown"><a href="#">Algèbre linéaire</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="calcul_matriciel.html">Calcul matriciel</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Exercices de physique -->
+        <li class="menu-item dropdown">
+          <a href="#">Physique</a>
+          <ul class="submenu">
+            <li class="submenu-item dropdown">
+              <a href="#">Mécanique</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="cinématique.html">Cinématique</a></li>
+                <li class="submenu-item"><a href="dynamique.html">Dynamique</a></li>
+                <li class="submenu-item"><a href="mécanique_fluides.html">Mécanique des fluides</a></li>
+                <li class="submenu-item"><a href="mécanique_vibratoire.html">Mécanique vibratoire</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <!-- Ressources -->
+        <li class="menu-item"><a href="ressources.html">Resources</a></li>
+        <li class="menu-item"><a href="a_propos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Thèmes du chapitre</h2>
+      <ul>
+        <li><a href="#page1">Équations homogènes</a></li>
+        <li><a href="#page2">Équations différentielles du \( 1^{\text{er}} \) ordre</a></li>
+        <li><a href="#page3">Équations différentielles du \( 2^{\text{nd}} \) ordre</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="page" id="page2">
+        <div class="section-content">
+          <h1 class="titre-page">Fondamentaux des nombres complexes</h1>
+
+          <div class="exercice">
+            <h2>Exercice 1 : Opérations de base et forme algébrique</h2>
+            <p class="énoncé">
+              Soient les nombres complexes \(z_1 = 3 - 2i\) et \(z_2 = -1 + 4i\). Calculer les expressions suivantes et donner les résultats sous forme algébrique \(a + bi\) :
+            </p>
+            <div class="question">
+              <p><b>Calculer \(z_1 + z_2\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer \(z_1 + z_2\), nous additionnons séparément les parties réelles et les parties imaginaires de \(z_1\) et \(z_2\).</p>
+              <p>
+                $$ z_1 + z_2 = (3 - 2i) + (-1 + 4i) $$
+                $$ z_1 + z_2 = (3 + (-1)) + (-2i + 4i) $$
+                $$ z_1 + z_2 = (3 - 1) + (-2 + 4)i $$
+                $$ z_1 + z_2 = 2 + 2i $$
+              </p>
+              <p><b>Résultat :</b> La somme \(z_1 + z_2\) sous forme algébrique est \(2 + 2i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer \(z_1 - z_2\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer \(z_1 - z_2\), nous soustrayons séparément les parties réelles et les parties imaginaires de \(z_2\) à \(z_1\).</p>
+              <p>
+                $$ z_1 - z_2 = (3 - 2i) - (-1 + 4i) $$
+                $$ z_1 - z_2 = (3 - (-1)) + (-2i - 4i) $$
+                $$ z_1 - z_2 = (3 + 1) + (-2 - 4)i $$
+                $$ z_1 - z_2 = 4 - 6i $$
+              </p>
+              <p><b>Résultat :</b> La différence \(z_1 - z_2\) sous forme algébrique est \(4 - 6i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer \(z_1 \cdot z_2\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer \(z_1 \cdot z_2\), nous utilisons la distributivité et la propriété \(i^2 = -1\).</p>
+              <p>
+                $$ z_1 \cdot z_2 = (3 - 2i) \cdot (-1 + 4i) $$
+                $$ z_1 \cdot z_2 = 3 \cdot (-1) + 3 \cdot (4i) + (-2i) \cdot (-1) + (-2i) \cdot (4i) $$
+                $$ z_1 \cdot z_2 = -3 + 12i + 2i - 8i^2 $$
+                $$ z_1 \cdot z_2 = -3 + 14i - 8(-1) \quad \text{car } i^2 = -1 $$
+                $$ z_1 \cdot z_2 = -3 + 14i + 8 $$
+                $$ z_1 \cdot z_2 = 5 + 14i $$
+              </p>
+              <p><b>Résultat :</b> Le produit \(z_1 \cdot z_2\) sous forme algébrique est \(5 + 14i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer \(3z_1 - 2z_2\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer \(3z_1 - 2z_2\), nous multiplions d'abord chaque nombre complexe par le scalaire correspondant, puis nous effectuons la soustraction.</p>
+              <p>
+                $$ 3z_1 - 2z_2 = 3(3 - 2i) - 2(-1 + 4i) $$
+                $$ 3z_1 - 2z_2 = (9 - 6i) - (-2 + 8i) $$
+                $$ 3z_1 - 2z_2 = 9 - 6i + 2 - 8i $$
+                $$ 3z_1 - 2z_2 = (9 + 2) + (-6i - 8i) $$
+                $$ 3z_1 - 2z_2 = 11 - 14i $$
+              </p>
+              <p><b>Résultat :</b> L'expression \(3z_1 - 2z_2\) sous forme algébrique est \(11 - 14i\).</p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Exercice 2 : Conjugaison et Module</h2>
+            <p class="énoncé">
+              Soit le nombre complexe \(z = \frac{2 + i}{1 - i}\).
+            </p>
+            <div class="question">
+              <p><b>Écrire \(z\) sous forme algébrique \(a + bi\).</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour écrire \(z\) sous forme algébrique, nous multiplions le numérateur et le dénominateur par le conjugué du dénominateur, qui est \(1 + i\), afin d'éliminer la partie imaginaire du dénominateur.</p>
+              <p>
+                $$ z = \frac{2 + i}{1 - i} = \frac{2 + i}{1 - i} \times \frac{1 + i}{1 + i} $$
+                $$ z = \frac{(2 + i)(1 + i)}{(1 - i)(1 + i)} $$
+              <p>Développons le numérateur :</p>
+              $$ (2 + i)(1 + i) = 2 \cdot 1 + 2 \cdot i + i \cdot 1 + i \cdot i = 2 + 2i + i + i^2 = 2 + 3i - 1 = 1 + 3i $$
+              <p>Développons le dénominateur (en utilisant l'identité remarquable \((a-b)(a+b) = a^2 - b^2\)):</p>
+              $$ (1 - i)(1 + i) = 1^2 - i^2 = 1 - (-1) = 2 $$
+              <p>Donc, \(z\) sous forme algébrique est :</p>
+              $$ z = \frac{1 + 3i}{2} = \frac{1}{2} + \frac{3}{2}i $$
+              </p>
+              <p><b>Résultat :</b> La forme algébrique de \(z\) est \(z = \frac{1}{2} + \frac{3}{2}i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Déterminer le conjugué \(\overline{z}\) de \(z\).</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Le conjugué d'un nombre complexe \(z = a + bi\) est donné par \(\overline{z} = a - bi\). Pour \(z = \frac{1}{2} + \frac{3}{2}i\), nous changeons le signe de la partie imaginaire.</p>
+              <p>
+                $$ \overline{z} = \overline{\frac{1}{2} + \frac{3}{2}i} $$
+                $$ \overline{z} = \frac{1}{2} - \frac{3}{2}i $$
+              </p>
+              <p><b>Résultat :</b> Le conjugué de \(z\) est \(\overline{z} = \frac{1}{2} - \frac{3}{2}i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer le module \(|z|\) de \(z\).</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Le module d'un nombre complexe \(z = a + bi\) est donné par \(|z| = \sqrt{a^2 + b^2}\). Pour \(z = \frac{1}{2} + \frac{3}{2}i\), nous appliquons cette définition.</p>
+              <p>
+                $$ |z| = \left| \frac{1}{2} + \frac{3}{2}i \right| $$
+                $$ |z| = \sqrt{\left(\frac{1}{2}\right)^2 + \left(\frac{3}{2}\right)^2} $$
+                $$ |z| = \sqrt{\frac{1}{4} + \frac{9}{4}} $$
+                $$ |z| = \sqrt{\frac{10}{4}} = \frac{\sqrt{10}}{\sqrt{4}} = \frac{\sqrt{10}}{2} $$
+              </p>
+              <p><b>Résultat :</b> Le module de \(z\) est \(|z| = \frac{\sqrt{10}}{2}\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer \(z \cdot \overline{z}\) et vérifier que \(z \cdot \overline{z} = |z|^2\).</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Calculons \(z \cdot \overline{z}\) et \(|z|^2\) et vérifions qu'ils sont égaux, illustrant une propriété fondamentale des nombres complexes.</p>
+              <p>
+                $$ z \cdot \overline{z} = \left(\frac{1}{2} + \frac{3}{2}i\right) \left(\frac{1}{2} - \frac{3}{2}i\right) $$
+              <p>Utilisons l'identité remarquable \((a+b)(a-b) = a^2 - b^2\) avec \(a = \frac{1}{2}\) et \(b = \frac{3}{2}i\):</p>
+              $$ z \cdot \overline{z} = \left(\frac{1}{2}\right)^2 - \left(\frac{3}{2}i\right)^2 = \frac{1}{4} - \frac{9}{4}i^2 = \frac{1}{4} - \frac{9}{4}(-1) = \frac{1}{4} + \frac{9}{4} = \frac{10}{4} = \frac{5}{2} $$
+              <p>Calculons maintenant \(|z|^2\):</p>
+              $$ |z|^2 = \left(\frac{\sqrt{10}}{2}\right)^2 = \frac{(\sqrt{10})^2}{2^2} = \frac{10}{4} = \frac{5}{2} $$
+              </p>
+              <p><b>Vérification :</b> Nous constatons que \(z \cdot \overline{z} = |z|^2 = \frac{5}{2}\), ce qui confirme la propriété \(z \cdot \overline{z} = |z|^2\).</p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Exercice 3 : Forme Trigonométrique et Exponentielle</h2>
+            <p class="énoncé">
+              Écrire les nombres complexes suivants sous forme trigonométrique et exponentielle :
+            </p>
+            <div class="question">
+              <p><b>\(z_3 = -1 + i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour écrire \(z_3 = -1 + i\) sous forme trigonométrique et exponentielle, nous devons calculer son module et son argument.</p>
+              <p><b>Module :</b>
+                $$ |z_3| = |-1 + i| = \sqrt{(-1)^2 + (1)^2} = \sqrt{1 + 1} = \sqrt{2} $$
+              </p>
+              <p><b>Argument :</b> Soit \(\theta_3\) l'argument de \(z_3\). Nous cherchons \(\theta_3\) tel que
+                $$ \cos \theta_3 = \frac{\operatorname{Re}(z_3)}{|z_3|} = \frac{-1}{\sqrt{2}} = -\frac{\sqrt{2}}{2} $$
+                $$ \sin \theta_3 = \frac{\operatorname{Im}(z_3)}{|z_3|} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2} $$
+                L'argument principal qui satisfait ces conditions est \(\theta_3 = \frac{3\pi}{4}\) (ou \(135^\circ\)), car le point représentant \(z_3\) est dans le deuxième quadrant (partie réelle négative, partie imaginaire positive).
+              </p>
+              <p><b>Forme trigonométrique :</b>
+                $$ z_3 = |z_3|(\cos \theta_3 + i\sin \theta_3) = \sqrt{2} \left( \cos\left(\frac{3\pi}{4}\right) + i\sin\left(\frac{3\pi}{4}\right) \right) $$
+              </p>
+              <p><b>Forme exponentielle :</b>
+                $$ z_3 = |z_3|e^{i\theta_3} = \sqrt{2} e^{i\frac{3\pi}{4}} $$
+              </p>
+              <p><b>Résultat :</b>
+                Forme trigonométrique : \(z_3 = \sqrt{2} \left( \cos\left(\frac{3\pi}{4}\right) + i\sin\left(\frac{3\pi}{4}\right) \right)\).
+                Forme exponentielle : \(z_3 = \sqrt{2} e^{i\frac{3\pi}{4}}\).
+              </p>
+            </div>
+
+            <div class="question">
+              <p><b>\(z_4 = -\sqrt{3} - i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour écrire \(z_4 = -\sqrt{3} - i\) sous forme trigonométrique et exponentielle, nous devons calculer son module et son argument.</p>
+              <p><b>Module :</b>
+                $$ |z_4| = |-\sqrt{3} - i| = \sqrt{(-\sqrt{3})^2 + (-1)^2} = \sqrt{3 + 1} = \sqrt{4} = 2 $$
+              </p>
+              <p><b>Argument :</b> Soit \(\theta_4\) l'argument de \(z_4\). Nous cherchons \(\theta_4\) tel que
+                $$ \cos \theta_4 = \frac{\operatorname{Re}(z_4)}{|z_4|} = \frac{-\sqrt{3}}{2} $$
+                $$ \sin \theta_4 = \frac{\operatorname{Im}(z_4)}{|z_4|} = \frac{-1}{2} $$
+                L'argument principal qui satisfait ces conditions est \(\theta_4 = -\frac{5\pi}{6}\) (ou \(-150^\circ\)), car le point représentant \(z_4\) est dans le troisième quadrant (parties réelle et imaginaire négatives). On peut aussi utiliser \(\theta_4 = \frac{7\pi}{6}\) comme argument.
+              </p>
+              <p><b>Forme trigonométrique :</b>
+                $$ z_4 = |z_4|(\cos \theta_4 + i\sin \theta_4) = 2 \left( \cos\left(-\frac{5\pi}{6}\right) + i\sin\left(-\frac{5\pi}{6}\right) \right) $$
+              </p>
+              <p><b>Forme exponentielle :</b>
+                $$ z_4 = |z_4|e^{i\theta_4} = 2 e^{-i\frac{5\pi}{6}} $$
+                (ou \(z_4 = 2 e^{i\frac{7\pi}{6}}\) en utilisant l'autre argument).
+              </p>
+              <p><b>Résultat :</b>
+                Forme trigonométrique : \(z_4 = 2 \left( \cos\left(-\frac{5\pi}{6}\right) + i\sin\left(-\frac{5\pi}{6}\right) \right)\).
+                Forme exponentielle : \(z_4 = 2 e^{-i\frac{5\pi}{6}}\) (ou \(2 e^{i\frac{7\pi}{6}}\)).
+              </p>
+            </div>
+
+            <div class="question">
+              <p><b>\(z_5 = 2i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour écrire \(z_5 = 2i\) sous forme trigonométrique et exponentielle, nous devons calculer son module et son argument.</p>
+              <p><b>Module :</b>
+                $$ |z_5| = |2i| = \sqrt{(0)^2 + (2)^2} = \sqrt{4} = 2 $$
+              </p>
+              <p><b>Argument :</b> Le nombre complexe \(z_5 = 2i\) est un imaginaire pur positif, donc son argument est directement \(\theta_5 = \frac{\pi}{2}\) (ou \(90^\circ\)).</p>
+              <p><b>Forme trigonométrique :</b>
+                $$ z_5 = |z_5|(\cos \theta_5 + i\sin \theta_5) = 2 \left( \cos\left(\frac{\pi}{2}\right) + i\sin\left(\frac{\pi}{2}\right) \right) $$
+              </p>
+              <p><b>Forme exponentielle :</b>
+                $$ z_5 = |z_5|e^{i\theta_5} = 2 e^{i\frac{\pi}{2}} $$
+              </p>
+              <p><b>Résultat :</b>
+                Forme trigonométrique : \(z_5 = 2 \left( \cos\left(\frac{\pi}{2}\right) + i\sin\left(\frac{\pi}{2}\right) \right)\).
+                Forme exponentielle : \(z_5 = 2 e^{i\frac{\pi}{2}}\).
+              </p>
+            </div>
+
+            <div class="question">
+              <p><b>\(z_6 = -3\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour écrire \(z_6 = -3\) sous forme trigonométrique et exponentielle, nous devons calculer son module et son argument.</p>
+              <p><b>Module :</b>
+                $$ |z_6| = |-3| = \sqrt{(-3)^2 + (0)^2} = \sqrt{9} = 3 $$
+              </p>
+              <p><b>Argument :</b> Le nombre complexe \(z_6 = -3\) est un réel négatif, donc son argument est directement \(\theta_6 = \pi\) (ou \(180^\circ\)).</p>
+              <p><b>Forme trigonométrique :</b>
+                $$ z_6 = |z_6|(\cos \theta_6 + i\sin \theta_6) = 3 \left( \cos(\pi) + i\sin(\pi) \right) $$
+              </p>
+              <p><b>Forme exponentielle :</b>
+                $$ z_6 = |z_6|e^{i\theta_6} = 3 e^{i\pi} $$
+              </p>
+              <p><b>Résultat :</b>
+                Forme trigonométrique : \(z_6 = 3 \left( \cos(\pi) + i\sin(\pi) \right)\).
+                Forme exponentielle : \(z_6 = 3 e^{i\pi}\).
+              </p>
+            </div>
+          </div>
+          <div class="exercice">
+            <h2>Exercice 1 : Racine carrée d'un nombre complexe simple</h2>
+            <p class="énoncé">
+              Calculer les racines carrées des nombres complexes suivants et donner les résultats sous forme algébrique \(a + bi\).
+            </p>
+            <div class="question">
+              <p><b>Calculer les racines carrées de \(z = 4\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer les racines carrées du nombre complexe \(z = 4\), nous recherchons les nombres complexes \(w\) qui, élevés au carré, donnent \(z\). Posons \(w = x + yi\), où \(x\) et \(y\) sont des nombres réels. Nous devons résoudre l'équation \(w^2 = z\), c'est-à-dire \((x + yi)^2 = 4\).</p>
+              <p>
+                Développons \(w^2\) :
+                $$ w^2 = (x + yi)^2 = x^2 + 2xyi + (yi)^2 = x^2 + 2xyi - y^2 = (x^2 - y^2) + (2xy)i $$
+              </p>
+              <p>
+                Nous égalons la partie réelle et la partie imaginaire de \(w^2\) avec celles de \(z = 4 = 4 + 0i\) :
+                $$ \begin{cases} x^2 - y^2 = 4 & \text{(Partie réelle)} \\ 2xy = 0 & \text{(Partie imaginaire)} \end{cases} $$
+              </p>
+              <p>
+                Analysons la deuxième équation, \(2xy = 0\). Pour que le produit de deux nombres réels soit nul, au moins l'un d'eux doit être nul. Donc, soit \(x = 0\), soit \(y = 0\).
+              </p>
+              <p>
+                <b>Cas 1 : \(x = 0\)</b>. Si \(x = 0\), la première équation \(x^2 - y^2 = 4\) devient \(0^2 - y^2 = 4\), ce qui donne \(-y^2 = 4\) ou \(y^2 = -4\). Il n'existe aucun nombre réel \(y\) dont le carré soit négatif. Donc, \(x = 0\) ne mène à aucune solution réelle pour \(y\).
+              </p>
+              <p>
+                <b>Cas 2 : \(y = 0\)</b>. Si \(y = 0\), la première équation \(x^2 - y^2 = 4\) devient \(x^2 - 0^2 = 4\), ce qui donne \(x^2 = 4\). Les solutions réelles pour cette équation sont \(x = 2\) ou \(x = -2\).
+              </p>
+              <p>
+                Par conséquent, nous avons trouvé deux solutions pour \(w = x + yi\) :
+              <ul>
+                <li>Pour \(x = 2\) et \(y = 0\), nous obtenons \(w_1 = 2 + 0i = 2\).</li>
+                <li>Pour \(x = -2\) et \(y = 0\), nous obtenons \(w_2 = -2 + 0i = -2\).</li>
+              </ul>
+              </p>
+              <p>
+                Vérifions ces solutions :
+                $$ w_1^2 = 2^2 = 4 = z $$
+                $$ w_2^2 = (-2)^2 = 4 = z $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(4\) sont les nombres complexes \(2\) et \(-2\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer les racines carrées de \(z = -9\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer les racines carrées du nombre complexe \(z = -9\), nous recherchons les nombres complexes \(w = x + yi\) tels que \(w^2 = z\). Nous devons résoudre l'équation \((x + yi)^2 = -9\).</p>
+              <p>
+                En développant \(w^2 = (x + yi)^2 = (x^2 - y^2) + (2xy)i\) et en égalant avec \(z = -9 = -9 + 0i\), nous obtenons le système :
+                $$ \begin{cases} x^2 - y^2 = -9 \\ 2xy = 0 \end{cases} $$
+              </p>
+              <p>
+                De \(2xy = 0\), nous avons soit \(x = 0\) soit \(y = 0\).
+              </p>
+              <p>
+                <b>Cas 1 : \(y = 0\)</b>. Si \(y = 0\), l'équation \(x^2 - y^2 = -9\) devient \(x^2 - 0^2 = -9\), soit \(x^2 = -9\). Aucun nombre réel \(x\) ne vérifie cette équation.
+              </p>
+              <p>
+                <b>Cas 2 : \(x = 0\)</b>. Si \(x = 0\), l'équation \(x^2 - y^2 = -9\) devient \(0^2 - y^2 = -9\), soit \(-y^2 = -9\) ou \(y^2 = 9\). Les solutions réelles sont \(y = 3\) ou \(y = -3\).
+              </p>
+              <p>
+                Nous trouvons deux solutions pour \(w = x + yi\) :
+              <ul>
+                <li>Pour \(x = 0\) et \(y = 3\), nous avons \(w_1 = 0 + 3i = 3i\).</li>
+                <li>Pour \(x = 0\) et \(y = -3\), nous avons \(w_2 = 0 - 3i = -3i = -3i\).</li>
+              </ul>
+              </p>
+              <p>
+                Vérification :
+                $$ w_1^2 = (3i)^2 = 9i^2 = 9(-1) = -9 = z $$
+                $$ w_2^2 = (-3i)^2 = (-3)^2 i^2 = 9i^2 = 9(-1) = -9 = z $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(-9\) sont les nombres complexes \(3i\) et \(-3i\).</p>
+            </div>
+
+            <div class="question">
+              <p><b>Calculer les racines carrées de \(z = i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer les racines carrées du nombre complexe \(z = i\), nous recherchons \(w = x + yi\) tel que \(w^2 = i\). Nous devons résoudre \((x + yi)^2 = i = 0 + 1i\).</p>
+              <p>
+                En développant \(w^2 = (x^2 - y^2) + (2xy)i\) et en égalant avec \(z = 0 + 1i\), nous obtenons le système :
+                $$ \begin{cases} x^2 - y^2 = 0 \\ 2xy = 1 \end{cases} $$
+              </p>
+              <p>
+                De la première équation, \(x^2 - y^2 = 0\), nous déduisons \(x^2 = y^2\). Comme \(x\) et \(y\) sont réels, cela implique \(y = x\) ou \(y = -x\).
+              </p>
+              <p>
+                <b>Cas 1 : \(y = x\)</b>. Substituons \(y = x\) dans la deuxième équation \(2xy = 1\), on obtient \(2x(x) = 1\), soit \(2x^2 = 1\), ou \(x^2 = \frac{1}{2}\). Les solutions réelles sont \(x = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}\) ou \(x = -\frac{1}{\sqrt{2}} = -\frac{\sqrt{2}}{2}\). Puisque \(y = x\), nous avons les solutions \(w_1 = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\) et \(w_2 = -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}i\).
+              </p>
+              <p>
+                <b>Cas 2 : \(y = -x\)</b>. Substituons \(y = -x\) dans la deuxième équation \(2xy = 1\), on obtient \(2x(-x) = 1\), soit \(-2x^2 = 1\), ou \(x^2 = -\frac{1}{2}\). Il n'y a pas de solution réelle pour \(x\) dans ce cas.
+              </p>
+              <p>
+                Ainsi, les racines carrées de \(i\) sont \(w_1 = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\) et \(w_2 = -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}i\).
+              </p>
+              <p>
+                Vérification :
+                $$ w_1^2 = \left(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\right)^2 = \left(\frac{\sqrt{2}}{2}\right)^2 + 2 \cdot \left(\frac{\sqrt{2}}{2}\right) \cdot \left(\frac{\sqrt{2}}{2}i\right) + \left(\frac{\sqrt{2}}{2}i\right)^2 = \frac{2}{4} + 2 \cdot \frac{2}{4}i + \frac{2}{4}i^2 = \frac{1}{2} + i - \frac{1}{2} = i = z $$
+                $$ w_2^2 = \left(-\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}i\right)^2 = \left(-\left(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\right)\right)^2 = \left(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\right)^2 = i = z $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(i\) sont \(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i\) et \(-\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}i\).</p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Exercice 2 : Racine carrée d'un nombre complexe sous forme algébrique</h2>
+            <p class="énoncé">
+              Calculer les racines carrées du nombre complexe \(z = 3 + 4i\) et donner les résultats sous forme algébrique \(a + bi\).
+            </p>
+            <div class="question">
+              <p><b>Calcul des racines carrées de \(z = 3 + 4i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer les racines carrées de \(z = 3 + 4i\), nous cherchons \(w = x + yi\) tel que \(w^2 = z\). Résolvons l'équation \((x + yi)^2 = 3 + 4i\).</p>
+              <p>
+                En développant et en égalant les parties réelles et imaginaires, nous obtenons le système :
+                $$ \begin{cases} x^2 - y^2 = 3 & \text{(1)} \\ 2xy = 4 & \text{(2)} \end{cases} $$
+              </p>
+              <p>
+                De l'équation (2), nous exprimons \(y\) en fonction de \(x\) (en supposant \(x \neq 0\)) : \(y = \frac{4}{2x} = \frac{2}{x}\).
+                Substituons cette expression de \(y\) dans l'équation (1) :
+                $$ x^2 - \left(\frac{2}{x}\right)^2 = 3 $$
+                $$ x^2 - \frac{4}{x^2} = 3 $$
+              </p>
+              <p>
+                Pour éliminer la fraction, multiplions toute l'équation par \(x^2\) (en supposant \(x \neq 0\)):
+                $$ x^4 - 4 = 3x^2 $$
+                $$ x^4 - 3x^2 - 4 = 0 $$
+              </p>
+              <p>
+                Ceci est une équation bicarrée. Posons \(X = x^2\). L'équation devient \(X^2 - 3X - 4 = 0\), une équation du second degré en \(X\).
+                Calculons le discriminant \(\Delta = b^2 - 4ac = (-3)^2 - 4(1)(-4) = 9 + 16 = 25\). Comme \(\Delta > 0\), il y a deux solutions réelles pour \(X\):
+                $$ X_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{-(-3) \pm \sqrt{25}}{2(1)} = \frac{3 \pm 5}{2} $$
+                $$ X_1 = \frac{3 + 5}{2} = 4 \quad \text{et} \quad X_2 = \frac{3 - 5}{2} = -1 $$
+              </p>
+              <p>
+                Puisque \(X = x^2\) et que \(x\) doit être un nombre réel, \(X = x^2\) doit être positif ou nul. Donc, nous rejetons \(X_2 = -1\) et conservons \(X_1 = 4\).
+                Ainsi, \(x^2 = 4\), ce qui donne \(x = 2\) ou \(x = -2\).
+              </p>
+              <p>
+                Utilisons \(y = \frac{2}{x}\) pour trouver les valeurs de \(y\) correspondant à ces valeurs de \(x\):
+              <ul>
+                <li>Si \(x = 2\), alors \(y = \frac{2}{2} = 1\). Donc, \(w_1 = 2 + i\).</li>
+                <li>Si \(x = -2\), alors \(y = \frac{2}{-2} = -1\). Donc, \(w_2 = -2 - i\).</li>
+              </ul>
+              </p>
+              <p>
+                Vérification :
+                $$ w_1^2 = (2 + i)^2 = 4 + 4i + i^2 = 3 + 4i = z $$
+                $$ w_2^2 = (-2 - i)^2 = (-1)^2(2 + i)^2 = (2 + i)^2 = 3 + 4i = z $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(3 + 4i\) sont \(2 + i\) et \(-2 - i\).</p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Exercice 3 : Racine carrée d'un nombre complexe sous forme trigonométrique</h2>
+            <p class="énoncé">
+              Calculer les racines carrées du nombre complexe \(z = 2e^{i\frac{\pi}{3}}\) et donner les résultats sous forme exponentielle et algébrique.
+            </p>
+            <div class="question">
+              <p><b>Calcul des racines carrées de \(z = 2e^{i\frac{\pi}{3}}\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer les racines carrées de \(z = 2e^{i\frac{\pi}{3}}\), nous exploitons la forme exponentielle. Un nombre complexe \(z = re^{i\theta}\) a deux racines carrées données par la formule :
+                $$ w_k = \sqrt{r} e^{i\left(\frac{\theta + 2k\pi}{2}\right)}, \quad \text{pour } k = 0, 1 $$
+                Ici, \(z = 2e^{i\frac{\pi}{3}}\), donc \(r = 2\) et \(\theta = \frac{\pi}{3}\).</p>
+              <p>
+                Calculons les racines pour \(k = 0\) et \(k = 1\).
+              </p>
+              <p>
+                Pour \(k = 0\) :
+                $$ w_0 = \sqrt{2} e^{i\left(\frac{\frac{\pi}{3} + 2 \cdot 0 \cdot \pi}{2}\right)} = \sqrt{2} e^{i\frac{\pi}{6}} $$
+              </p>
+              <p>
+                Pour \(k = 1\) :
+                $$ w_1 = \sqrt{2} e^{i\left(\frac{\frac{\pi}{3} + 2 \cdot 1 \cdot \pi}{2}\right)} = \sqrt{2} e^{i\left(\frac{\frac{\pi}{3} + \frac{6\pi}{3}}{2}\right)} = \sqrt{2} e^{i\left(\frac{\frac{7\pi}{3}}{2}\right)} = \sqrt{2} e^{i\frac{7\pi}{6}} $$
+              </p>
+              <p>
+                Les racines carrées sous forme exponentielle sont donc \(w_0 = \sqrt{2} e^{i\frac{\pi}{6}}\) et \(w_1 = \sqrt{2} e^{i\frac{7\pi}{6}}\).
+              </p>
+              <p>
+                Convertissons ces formes exponentielles en formes algébriques en utilisant \(e^{i\theta} = \cos \theta + i\sin \theta\).
+              </p>
+              <p>
+                Pour \(w_0 = \sqrt{2} e^{i\frac{\pi}{6}}\) :
+                $$ w_0 = \sqrt{2} \left( \cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right) \right) = \sqrt{2} \left( \frac{\sqrt{3}}{2} + i\frac{1}{2} \right) = \frac{\sqrt{2}\sqrt{3}}{2} + i\frac{\sqrt{2}}{2} = \frac{\sqrt{6}}{2} + \frac{\sqrt{2}}{2}i $$
+              </p>
+              <p>
+                Pour \(w_1 = \sqrt{2} e^{i\frac{7\pi}{6}}\) :
+                $$ w_1 = \sqrt{2} \left( \cos\left(\frac{7\pi}{6}\right) + i\sin\left(\frac{7\pi}{6}\right) \right) = \sqrt{2} \left( -\frac{\sqrt{3}}{2} - i\frac{1}{2} \right) = -\frac{\sqrt{2}\sqrt{3}}{2} - i\frac{\sqrt{2}}{2} = -\frac{\sqrt{6}}{2} - \frac{\sqrt{2}}{2}i $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(2e^{i\frac{\pi}{3}}\) sont :
+                <br />
+                Forme exponentielle : \(w_0 = \sqrt{2} e^{i\frac{\pi}{6}}\) et \(w_1 = \sqrt{2} e^{i\frac{7\pi}{6}}\).
+                <br />
+                Forme algébrique : \(w_0 = \frac{\sqrt{6}}{2} + \frac{\sqrt{2}}{2}i\) et \(w_1 = -\frac{\sqrt{6}}{2} - \frac{\sqrt{2}}{2}i\).
+              </p>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h2>Exercice 4 : Racine carrée d'un nombre complexe avec partie réelle et imaginaire non nulles</h2>
+            <p class="énoncé">
+              Calculer les racines carrées du nombre complexe \(z = -5 - 12i\) et donner les résultats sous forme algébrique \(a + bi\).
+            </p>
+            <div class="question">
+              <p><b>Calcul des racines carrées de \(z = -5 - 12i\)</b></p>
+              <button class="toggle-correction" title="Afficher la correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour calculer les racines carrées de \(z = -5 - 12i\), nous utilisons la méthode algébrique. Soit \(w = x + yi\) une racine carrée de \(z\). Nous devons résoudre \(w^2 = z\), c'est-à-dire \((x + yi)^2 = -5 - 12i\).</p>
+              <p>
+                En développant \(w^2 = (x^2 - y^2) + (2xy)i\) et en égalant avec \(z = -5 - 12i\), nous obtenons le système d'équations :
+                $$ \begin{cases} x^2 - y^2 = -5 & \text{(1)} \\ 2xy = -12 & \text{(2)} \end{cases} $$
+              </p>
+              <p>
+                De l'équation (2), nous exprimons \(y\) en fonction de \(x\) : \(y = \frac{-12}{2x} = -\frac{6}{x}\) (pour \(x \neq 0\)).
+                Substituons cette expression de \(y\) dans l'équation (1) :
+                $$ x^2 - \left(-\frac{6}{x}\right)^2 = -5 $$
+                $$ x^2 - \frac{36}{x^2} = -5 $$
+              </p>
+              <p>
+                Multiplions par \(x^2\) pour éliminer le dénominateur :
+                $$ x^4 - 36 = -5x^2 $$
+                $$ x^4 + 5x^2 - 36 = 0 $$
+              </p>
+              <p>
+                Posons \(X = x^2\), nous obtenons l'équation du second degré \(X^2 + 5X - 36 = 0\).
+                Calculons le discriminant \(\Delta = b^2 - 4ac = (5)^2 - 4(1)(-36) = 25 + 144 = 169\). Les solutions pour \(X\) sont :
+                $$ X_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{-5 \pm \sqrt{169}}{2(1)} = \frac{-5 \pm 13}{2} $$
+                $$ X_1 = \frac{-5 + 13}{2} = \frac{8}{2} = 4 \quad \text{et} \quad X_2 = \frac{-5 - 13}{2} = -9 $$
+              </p>
+              <p>
+                Comme \(X = x^2\) doit être positif ou nul pour \(x\) réel, nous retenons \(X = X_1 = 4\), donc \(x^2 = 4\), ce qui donne \(x = 2\) ou \(x = -2\). Nous rejetons \(X_2 = -9\) car \(x^2\) ne peut être négatif pour un réel \(x\).
+              </p>
+              <p>
+                Utilisons \(y = -\frac{6}{x}\) pour trouver les valeurs de \(y\) :
+              <ul>
+                <li>Si \(x = 2\), alors \(y = -\frac{6}{2} = -3\). Donc \(w_1 = 2 - 3i\).</li>
+                <li>Si \(x = -2\), alors \(y = -\frac{6}{-2} = 3\). Donc \(w_2 = -2 + 3i\).</li>
+              </ul>
+              </p>
+              <p>
+                Vérification :
+                $$ w_1^2 = (2 - 3i)^2 = 4 - 12i + (3i)^2 = 4 - 12i - 9 = -5 - 12i = z $$
+                $$ w_2^2 = (-2 + 3i)^2 = (-1)^2(2 - 3i)^2 = (2 - 3i)^2 = -5 - 12i = z $$
+              </p>
+              <p><b>Résultat :</b> Les racines carrées de \(-5 - 12i\) sont \(2 - 3i\) et \(-2 + 3i\).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="page" id="page1">
+        <div class="section-content">
+          <h1 class="titre-page">Nombres complexes</h1>
+          <div class="exercice">
+            <h2>Équations quadratiques complexes</h2>
+
+            <div class="question">
+              <p class="consigne">Trouver les racines complexes de l'équation quadratique suivante :</p>
+              <p>$$ z^2 + 2z + 5 = 0 $$</p>
+              <button class="toggle-correction"><b>&#10003;</b></button>
+            </div>
+            <div class="exercice-correction hidden">
+              <p>Pour déterminer les racines complexes de l'équation du second degré \( z^2 + 2z + 5 = 0 \), nous allons utiliser la méthode générale de résolution des équations quadratiques, applicable aussi bien aux nombres réels qu'aux nombres complexes. Cette méthode repose sur le calcul du discriminant et l'utilisation de la formule quadratique.</p>
+
+              <p><b>1. Calcul du discriminant (\(\Delta\)) :</b></p>
+              <p>Pour une équation quadratique de la forme \( az^2 + bz + c = 0 \), le discriminant est donné par la formule :</p>
+              <p>$$ \Delta = b^2 - 4ac $$</p>
+              <p>Dans notre équation \( z^2 + 2z + 5 = 0 \), nous identifions les coefficients : \( a = 1 \), \( b = 2 \), et \( c = 5 \). Calculons le discriminant :</p>
+              <p>$$ \Delta = (2)^2 - 4(1)(5) = 4 - 20 = -16 $$</p>
+              <p>Nous obtenons un discriminant négatif, \(\Delta = -16\). Dans le domaine des nombres réels, cela signifierait qu'il n'y a pas de solutions réelles. Cependant, dans le domaine des nombres complexes, un discriminant négatif n'empêche pas l'existence de solutions, qui seront des nombres complexes non réels.</p>
+
+              <p><b>2. Calcul des racines complexes :</b></p>
+              <p>Les racines complexes \(z_1\) et \(z_2\) de l'équation quadratique sont données par la formule quadratique généralisée :</p>
+              <p>$$ z_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a} $$</p>
+              <p>Dans notre cas, avec \( a = 1 \), \( b = 2 \), et \( \Delta = -16 \), nous substituons ces valeurs dans la formule :</p>
+              <p>$$ z_{1,2} = \frac{-2 \pm \sqrt{-16}}{2(1)} = \frac{-2 \pm \sqrt{16 \cdot (-1)}}{2} $$</p>
+              <p>Nous savons que \( \sqrt{-1} = i \) (l'unité imaginaire), et \( \sqrt{16} = 4 \). Ainsi, \( \sqrt{-16} = \sqrt{16} \cdot \sqrt{-1} = 4i \). Substituons cette valeur :</p>
+              <p>$$ z_{1,2} = \frac{-2 \pm 4i}{2} $$</p>
+              <p>Divisons le numérateur et le dénominateur par 2 pour simplifier l'expression :</p>
+              <p>$$ z_{1,2} = \frac{-2}{2} \pm \frac{4i}{2} = -1 \pm 2i $$</p>
+
+              <p><b>3. Identification des racines :</b></p>
+              <p>Nous obtenons donc deux racines complexes distinctes, qui sont conjuguées l'une de l'autre :</p>
+              <p>$$ z_1 = -1 + 2i \quad \text{et} \quad z_2 = -1 - 2i $$</p>
+
+              <p class="encadre">Les racines complexes de l'équation \( z^2 + 2z + 5 = 0 \) sont \( \boxed{z_1 = -1 + 2i} \) et \( \boxed{z_2 = -1 - 2i} \). Ces racines sont des nombres complexes conjugués, comme attendu pour une équation quadratique à coefficients réels avec un discriminant négatif.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../assets/scripts/script.js"></script>
+</body>
+
+</html>
